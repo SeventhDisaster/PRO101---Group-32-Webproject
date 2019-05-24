@@ -69,11 +69,12 @@ hr{
 }
 
 #boardContainer .taskColumn .colHead{
+    position: relative;
     height: 15%;
     width: 100%;
     margin-top: -10%;
     background-color: #323232;
-    transform: skewY(-5deg);
+    z-index: 3;
 }
 
 #boardContainer .taskColumn .colHead h3{
@@ -84,11 +85,12 @@ hr{
     display: inline-block;
     text-align: center;
     color: white;
-    transform: skewX(5deg) skewY(5deg);
+    transform: skewX(5deg);
 }
 
 /* TASK LIST */
 #boardContainer .taskColumn .colBody{
+    z-index: 2;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -96,18 +98,35 @@ hr{
 }
 
 #boardContainer .taskColumn .colBody .colTask{
-    position: absolute;
-    margin: 10px 0px 0px 0px;
+    position: relative;
     right: 0;
-    height: 10vh;
-    max-height: 30vh;
-    width: 90%;
-    background-image: linear-gradient(to left, rgba(200,200,200,1), rgba(200,200,200,0));
-    transition: background-image .2s ease;
+    width: 100%;
+    background-color: #efefef;
+    transition: .18s ease;
+    padding: 20px 0px 20px 0px;
 }
 
 #boardContainer .taskColumn .colBody .colTask:hover{
-    background-image: linear-gradient(to left, red, rgba(200,200,200,0))
+    background-color: rgb(255,200,200);
+    cursor: pointer;
+}
+
+#boardContainer .taskColumn .colBody .colTask .colTaskHead{
+    transform: skewX(5deg);
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif; 
+    margin: 0px 5% 5px 20px;
+
+}
+#boardContainer .taskColumn .colBody .colTask .colTaskHead::before{
+    content: "~ ";
+}
+
+#boardContainer .taskColumn .colBody .colTask .colTaskDesc{
+    transform: skewX(5deg);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px 30% 0px 10px;
 }
 
 /* TASK DETAIL BOX BELOW */
@@ -115,7 +134,7 @@ hr{
     position: fixed;
     transform: skewX(-10deg);
     z-index: 10;
-    background-image: linear-gradient(white,#ececec);
+    background-image: linear-gradient(gray,#ececec);
     height: 50vh;
     width: 60vw;
     bottom: 0px;
