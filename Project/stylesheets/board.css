@@ -21,7 +21,7 @@ hr{
 }
 
 #sidebarContainer{
-    opacity: 0.1; /* REMOVE LATER */
+   /* opacity: 0.1;  REMOVE LATER */
     position: fixed;
     background-image: linear-gradient(to bottom, #323232, #343434 );
     left: -20vw;
@@ -70,10 +70,12 @@ hr{
     height: 10%;
     width: 100%;
     background-color: #323232;
+    vertical-align: middle;
 }
 
 #boardContainer .taskColumn .colHead{
     position: relative;
     text-align: center;
+    vertical-align: middle;
     color: white;
 }
