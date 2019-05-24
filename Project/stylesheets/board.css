@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+#sidebarContainer{
+    position: fixed;
+    background-color: blue;
+    left: -20vw;
+    width: 40vw;
+    height: 100vh;
+    border: solid red;
+    transform: skewX(-5deg);
+    
+}
