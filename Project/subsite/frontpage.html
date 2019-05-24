@@ -83,6 +83,7 @@
 	}
 	.messageList > li {
 		margin-bottom: 10px;
+		display: flex;
 	}
 
 	.title {
@@ -132,6 +133,34 @@
 		background-color: yellow;
 	}
 
+	.message {
+		display: 
+	}
+
+	.dateBox {
+		display: flex;
+		margin-left: auto;
+		padding: 0 5px 0 5px;
+		font-size: 13px;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(250, 50, 50);
+		color: white;
+		border-radius: 5px;
+	}
+
+	.lightblue {
+		background-color: #63d3f5;
+	}
+
+	.purple {
+		background-color: #de0bde;
+	}
+
+	.yellow {
+		background-color: #ffd91e;
+	}
+
 </style>
 <body>
 
@@ -174,13 +203,33 @@
 				
 			</div>
 			<div id="weeklyTasks" class="blocks">
-				<h2 class="title">Weekly tasks!</h2>
+				<h2 class="title">Tasks this week!</h2>
 
 				<ul class="messageList">
-					<li>Design!</li>
-					<li>Code!</li>
-					<li>Code!</li>
-					<li>Design!</li>
+					<li>
+						<span class="message">Design!</span>
+						<span class="dateBox">
+							<span>3. May</span>
+						</span>
+					</li>
+					<li>
+						<span class="message">Design!</span>
+						<span class="dateBox lightblue">
+							<span>6. May</span>
+						</span>
+					</li>
+					<li>
+						<span class="message">Design!</span>
+						<span class="dateBox yellow">
+							<span>13. May</span>
+						</span>
+					</li>
+					<li>
+						<span class="message">Design!</span>
+						<span class="dateBox purple">
+							<span>16. May</span>
+						</span>
+					</li>
 				</ul>
 				
 			</div>
