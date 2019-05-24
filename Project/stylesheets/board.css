@@ -17,11 +17,10 @@ hr{
     transform: skewX(-5deg);
     width: 1px;
     height: 100%;
-    background-image: radial-gradient(circle, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: linear-gradient(to bottom, rgba(10,10,10,1), rgba(255,255,255,0));
 }
 
 #sidebarContainer{
-   /* opacity: 0.1;  REMOVE LATER */
     position: fixed;
     background-image: linear-gradient(to bottom, #323232, #343434 );
     left: -20vw;
@@ -53,7 +52,9 @@ hr{
     padding-left: 20vw;
     display: flex;
     flex-direction: row;
-    background-color: gray;/* #fefefe; */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background-color: #fefefe; 
     width: 80vw;
     height: 100vh;
     right: 0;
@@ -62,20 +63,67 @@ hr{
 
 #boardContainer .taskColumn{
     transform: skewX(-5deg);
-    width: 15%;
-    border: dashed red;
+    width: 20%;
+    /*border: dashed red;*/
+    padding: 0;
 }
 
 #boardContainer .taskColumn .colHead{
-    height: 10%;
+    height: 15%;
     width: 100%;
+    margin-top: -10%;
     background-color: #323232;
-    vertical-align: middle;
+    transform: skewY(-5deg);
 }
 
-#boardContainer .taskColumn .colHead{
-    position: relative;
+#boardContainer .taskColumn .colHead h3{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin-top: 20%;
+    font-size: 25px;
+    display: inline-block;
     text-align: center;
-    vertical-align: middle;
     color: white;
+    transform: skewX(5deg) skewY(5deg);
+}
+
+/* TASK LIST */
+#boardContainer .taskColumn .colBody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+#boardContainer .taskColumn .colBody .colTask{
+    position: absolute;
+    margin: 10px 0px 0px 0px;
+    right: 0;
+    height: 10vh;
+    max-height: 30vh;
+    width: 90%;
+    background-image: linear-gradient(to left, rgba(200,200,200,1), rgba(200,200,200,0));
+    transition: background-image .2s ease;
+}
+
+#boardContainer .taskColumn .colBody .colTask:hover{
+    background-image: linear-gradient(to left, red, rgba(200,200,200,0))
+}
+
+/* TASK DETAIL BOX BELOW */
+#taskDetailContainer{
+    position: fixed;
+    transform: skewX(-10deg);
+    z-index: 10;
+    background-image: linear-gradient(white,#ececec);
+    height: 50vh;
+    width: 60vw;
+    bottom: 0px;
+    right: -5vw;
+    opacity: 0.5;
+    transition: .2s ease;
+}
+
+#taskDetailContainer:hover{
+    opacity: 1;
 }
