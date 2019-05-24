@@ -2,13 +2,78 @@ body{
     margin: 0;
 }
 
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr{
+    border-style: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,1), rgba(255,255,255,0));
+    width: 50%;
+    height: 1px;
+}
+
+.vr{
+    transform: skewX(-5deg);
+    width: 1px;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
 #sidebarContainer{
+    opacity: 0.1; /* REMOVE LATER */
     position: fixed;
-    background-color: blue;
+    background-image: linear-gradient(to bottom, #323232, #343434 );
     left: -20vw;
     width: 40vw;
     height: 100vh;
-    border: solid red;
     transform: skewX(-5deg);
-    
+    z-index: 5;
+}
+
+#sidebarContainer #logo{
+    position: relative;
+    width: 60%;
+    max-height: 20%;
+    margin-left: 15vw;
+}
+
+#sidebarContainer hr{
+    position: relative;
+    margin-left: 50%;
+    margin-right: 10px;
+}
+
+
+
+/* KANBAN BOARD CONTAINER AND CONTENT */
+
+#boardContainer{
+    position: absolute;
+    padding-left: 20vw;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;/* #fefefe; */
+    width: 80vw;
+    height: 100vh;
+    right: 0;
+    z-index: 2;
+}
+
+#boardContainer .taskColumn{
+    transform: skewX(-5deg);
+    width: 15%;
+    border: dashed red;
+}
+
+#boardContainer .taskColumn .colHead{
+    height: 10%;
+    width: 100%;
+    background-color: #323232;
+}
+
+#boardContainer .taskColumn .colHead{
+    position: relative;
+    text-align: center;
+    color: white;
 }
