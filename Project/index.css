@@ -1,0 +1,140 @@
+body {
+    margin: auto;
+}
+#bckGr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #3d3f43, #455055, #4f6262, #607469, #7c836d);
+    
+    
+}
+.topContainer {
+    margin: auto;
+    z-index: 1; /*får ikke classen i div til å være "preset"*/
+}
+#topContainer {
+    z-index: 1;
+    
+    
+}
+
+#logo {
+    /*fix border*/
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    height: 190px;
+    background-color: linear;
+    z-index: 1;
+    
+    
+    
+
+}
+
+#videoBox {
+    position: absolute;
+    width 50%;
+    left: 38%;
+    top: 30%;
+    /*background-color: white;*/
+    z-index: 1;
+}
+#getStartedButton {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    background-color: yellow;
+    z-index: 1;
+}
+#m1 {
+    width: 50%;
+    top: 30%;
+    left: 15%;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#m2 {
+    width: 50%;
+    top: 38%;
+    left: 27%;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#m3 {
+    width: 50%;
+    top: 30%;
+    left: 68%;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#m4 {
+    width: 50%;
+    top: 38%;
+    left: 68%;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#getStartedButton {
+    background-color: #9555af;
+    color: #ffffff;
+    font-size: 56px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    border: 2px solid black;
+    display: inline-block;/*?*/
+}
+#star1 {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 400px;
+}
+#star2 {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 350px;
+}
+#star3 {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 300px;
+}
+#star4 {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 250px;
+}
+#star5 {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 200px;
+}
+#starContainer {
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    right: 150px;
+    top: 400px;
+    
+}
+#box1 {
+    width: 300px;
+    background-color: white;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    font-size: 100px;
+    right: 0px;
+}
