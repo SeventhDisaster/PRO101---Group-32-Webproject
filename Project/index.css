@@ -1,140 +1,397 @@
 body {
     margin: auto;
 }
-#bckGr {
+#scene {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle, #3d3f43, #455055, #4f6262, #607469, #7c836d);
-    
-    
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #cfd3c6, #c8cbc1, #c1c4bc, #bbbcb7, #b4b5b2);
+    overflow: hidden;
 }
-.topContainer {
-    margin: auto;
-    z-index: 1; /*får ikke classen i div til å være "preset"*/
-}
-#topContainer {
-    z-index: 1;
-    
-    
-}
-
+/*1.mulig å sette logoen lenger til venstre, så når man resizer flytter den seg ikke?
+2. logon "rister" litt ved zoom, fixed av riktig viewport på resten du har fucka opp?
+*/
 #logo {
-    /*fix border*/
-    margin: auto;
+    right: 83%;
     position: absolute;
-    width: 300px;
-    height: 190px;
-    background-color: linear;
-    z-index: 1;
-    
-    
-    
-
+    width: 20vw;
+    height: 20vh;
+    top: 0px;
+    background-color: linear;/*useless?*/
+    z-index: 4;
+    transform: skewX(-5deg);
 }
-
-#videoBox {
+/*demo section*/
+#demo {
+    position: absolute;
+    z-index: 1;
+    font-size: 2vmin;
+    color: white;
+    background-color: black;
+    width: 42vw;
+    height: 50vh;
+    right: 0%;
+    top: 13%;
+}
+#play {
+    width: 10vw;
+    cursor: pointer;
+    right: 14%;
+    top: 27%;
+    position: absolute;
+    z-index: 1;
+}
+/*#videoBox {
     position: absolute;
     width 50%;
     left: 38%;
     top: 30%;
-    /*background-color: white;*/
     z-index: 1;
-}
-#getStartedButton {
+}*/
+
+/*bottom line*/
+#demoLine1 {
+    z-index: 2;
     position: absolute;
-    top: 65%;
-    left: 40%;
-    background-color: yellow;
-    z-index: 1;
+    width: 100vw;
+    height: 15vh;
+    background-color: black;
+    bottom: 0px;
+    background-image: linear-gradient(to left, #000000, #323030, #615f5e, #93928f, #c8c9c5);/*MATCHER IKKE*/
+    
+    
 }
+/*left line*/
+#demoLine2 {
+    z-index: 3;
+    position: absolute;
+    width: 15vw;
+    height: 150vh;
+    background-color: black;
+    top: 15%;
+    background-image: linear-gradient(to bottom, #000000, #323030, #615f5e, #93928f, #C8C9C5);
+
+}
+
+/*mantras*/
+
 #m1 {
-    width: 50%;
-    top: 30%;
-    left: 15%;
+    width: 50vw;
+    height: 5vh;
+    font-size: 3vmin;
+    color: #806000;
+    top: 71%;
+    left: 70%;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     z-index: 1;
 }
 #m2 {
-    width: 50%;
-    top: 38%;
-    left: 27%;
+    width: 40vw;
+    height: 5vh;
+    top: 76%;
+    left: 70%;
+    font-size: 2vmin;
+    color: darkslategray;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     z-index: 1;
 }
-#m3 {
-    width: 50%;
-    top: 30%;
-    left: 68%;
-    font-family: 'Montserrat', sans-serif;
+#m3{
     position: absolute;
     z-index: 1;
+    width: 50vw;
+    top: 38%;
+    left: 15%;
+    font-size: 5vmin;
+    font-family: sans-serif;
+}
+/*class for recoloring av "matters"*/
+.wordMatters {
+    color: #6600cc;
+    z-index: 1;
+    font-style: 
 }
 #m4 {
-    width: 50%;
-    top: 38%;
-    left: 68%;
-    font-family: 'Montserrat', sans-serif;
     position: absolute;
     z-index: 1;
+    width: 50vw;
+    top: 50%;
+    left: 24%;
+    font-size: 3vmin;
+    font-family: sans-serif; 
 }
+/*class for recoloring av "NexTask"*/
+.wordNexTask {
+    color: #6600cc;
+    z-index: 1;
+    font-style:
+}
+/*checkmarks*/
+.check {
+    position: absolute;
+    z-index: 1;
+    width: 1vw;
+    top: 60%;
+    left: 20%;
+    
+}
+#check1 {
+    top: 63%;
+    
+}
+#check2 {
+    top: 66%;
+    
+}
+#check3 {
+    top: 69%;
+    
+}
+#check4 {
+    top: 72%;
+    
+}
+.checkText {
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
+    height: 2vh;
+    top: 57.6%;
+    left: 21.5%;
+    color: white;
+    font-size: 2vmin;
+    font-family: 'Montserrat'
+}
+#checkText1 {
+    
+}
+#checkText2 {
+    top: 61%;
+}
+#checkText3 {
+    top: 64%;
+}
+#checkText4 {
+    top: 67%;
+}
+#checkText5 {
+    top: 70%;
+}
+/*cursor pointer buggy og zoom er fucked*/
 #getStartedButton {
     background-color: #9555af;
-    color: #ffffff;
-    font-size: 56px;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 50px;
-    border: 2px solid black;
-    display: inline-block;/*?*/
+    color: #f2f2f2;
+    font-size: 5vmin;
+    font-family: sans-serif;
+    position: absolute;
+    width: 15vw;
+    height: 7vh;
+    top: 70%;
+    left: 50%;
+    z-index: 1;
+    cursor: pointer;
+    
 }
 #star1 {
     position: absolute;
-    width: 50px;
+    width: 2vw;
+    height: 3vh;
     z-index: 1;
-    right: 400px;
+    right: 500%;
 }
 #star2 {
     position: absolute;
-    width: 50px;
+    width: 2vw;
+    height: 3vh;
     z-index: 1;
-    right: 350px;
+    right: 460%;
 }
 #star3 {
     position: absolute;
-    width: 50px;
+    width: 2vw;
+    height: 3vh;
     z-index: 1;
-    right: 300px;
+    right: 420%;
 }
 #star4 {
     position: absolute;
-    width: 50px;
+    width: 2vw;
+    height: 3vh;
     z-index: 1;
-    right: 250px;
+    right: 380%;
 }
 #star5 {
     position: absolute;
-    width: 50px;
+    width: 2vw;
+    height: 3vh;
     z-index: 1;
-    right: 200px;
+    right: 340%;
 }
 #starContainer {
     position: absolute;
-    width: 50px;
+    width: 5vw;
+    height: 5vh;
     z-index: 1;
-    right: 150px;
-    top: 400px;
+    right: 0%;
+    top: 81%;
     
 }
-#box1 {
-    width: 300px;
-    background-color: white;
-    height: 100px;
-    border: 1px solid blue;
-    box-sizing: border-box;
+/*Top menu */
+#contact {
+    position: absolute;
+    right: 15%;
+    color: #d9d9d9;
+    z-index: 1;
+    font-size: 2vmin;
+    cursor: pointer;
+    top: 10.5%;
+    font-family: 'Montserrat';
+}
+#FAQ {
+    position: absolute;
+    right: 20%;
+    color: #d9d9d9;
     position: absolute;
     z-index: 1;
-    font-size: 100px;
+    font-size: 2vmin;
+    cursor: pointer;
+    top: 10.5%;
+    font-family: 'Montserrat';
+}
+#about {
+    position: absolute;
+    right: 25%;
+    color: #d9d9d9;
+    position: absolute;
+    z-index: 1;
+    font-size: 2vmin;
+    cursor: pointer;
+    top: 10.5%;
+    font-family: 'Montserrat';
+}
+#ex2 {
+    position: absolute;
+    right: 30%;
+    color: #d9d9d9;
+    position: absolute;
+    z-index: 1;
+    font-size: 2vmin;
+    cursor: pointer;
+    top: 10.5%;
+    font-family: 'Montserrat';
+}
+#ex3 {
+    position: absolute;
+    right: 35%;
+    color: #d9d9d9;
+    position: absolute;
+    z-index: 1;
+    font-size: 2vmin;
+    cursor: pointer;
+    top: 10.5%;
+    font-family: 'Montserrat';
+}
+#topLogo {
+    position: absolute;
+    background-image: linear-gradient(to top, #000000, #1a1918, #2d2a29, #403e3a, #51534d);
+    width: 100vw;
+    height: 15vh;
+}
+/*tekst linjeskift på 400-500% zoom-FIX*/
+#topGetStartedButton {
+    width: 8vw;
+    height: 3.6vh;
+    position: absolute;
+    background-color: #9555af;
+    color: #f2f2f2;
+    font-size: 2vmin;
+    font-family: 'Montserrat', sans-serif;
+    border: 0.1px solid black;
+    top: 11.4%;
+    left: 90%;
+    z-index: 1;
+    cursor: pointer;
+
+}
+#menuLineContainer {
+    position: absolute;
+    width: 40vw;
+    height: 15vh;
+    z-index: 1;
     right: 0px;
 }
+/*skrå line*/
+#stLine1 {
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    color: white;
+    width: 0.7vw;
+    height: 3.5vh;
+    left: -2.5%;
+    top: 77%;
+    transform: skewX(-50deg);
+        
+}
+/*rett line over menu*/
+#stLine2 {
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    color: white;
+    width: 39.6vw;
+    height: 0.30vh;
+    right: 0%;
+    bottom: 20.9%;
+    
+}
+
+.midCl {
+    position: absolute;
+    z-index: 1;
+    width: 0.2vw;
+    height: 75vh;
+    background-color: black;
+    top: 15%;
+    right: 40%;
+    overflow: hidden;
+    visibility: hidden;
+}
+#pepes {
+    position: absolute;
+    z-index: 1;
+    width: 5vw;
+    top: 20%;
+    right: 75%;
+    animation: pepeAnim 5s linear ease-in-out;
+    
+    
+    
+    
+    
+} /*Fail*/
+@keyframes pepeAnim {
+    0% {top: 20%;}
+    100% {top: 50%;}
+}
+
+    
+  /*  
+  ANDRE LINES-uferdig  
+}
+#midLine1 {
+    background-color: black;
+    z-index: 2;
+    width: 50vw;
+    height: 5vh;
+    top: 5%;
+    right: 2%;
+    transform: skewX(180deg);
+}
+#midLine2 {
+    right: 45%;
+    width: 50vw;
+}
+    */
+
