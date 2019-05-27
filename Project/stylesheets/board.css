@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow: hidden;
 }
 
 h3{
@@ -59,13 +60,13 @@ hr{
     height: 100vh;
     right: 0;
     z-index: 2;
+    overflow-x: auto;
 }
 
 #boardContainer .taskColumn{
     transform: skewX(-5deg);
-    width: 20%;
-    /*border: dashed red;*/
-    padding: 0;
+    width: 250px;
+    margin: 0px 0px 0px 5px;
 }
 
 #boardContainer .taskColumn .colHead{
@@ -95,6 +96,7 @@ hr{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    overflow-y: auto;
 }
 
 #boardContainer .taskColumn .colBody .colTask{
@@ -134,15 +136,16 @@ hr{
     position: fixed;
     transform: skewX(-10deg);
     z-index: 10;
-    background-image: linear-gradient(gray,#ececec);
     height: 50vh;
     width: 60vw;
     bottom: 0px;
-    right: -5vw;
+    right: -60vw;
     opacity: 0.5;
     transition: .2s ease;
+    box-shadow: 0px 0px 5px black;
 }
 
 #taskDetailContainer:hover{
     opacity: 1;
+    right: -5vw;
 }
