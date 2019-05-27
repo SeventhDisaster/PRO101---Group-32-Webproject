@@ -1,0 +1,1 @@
+// This JS file contains info displayed on the sidebar (Project Information)

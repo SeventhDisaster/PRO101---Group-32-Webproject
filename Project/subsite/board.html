@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel=icon href="../img/favicon.png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/board.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/project.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet"> 
     <title>NexTask Board</title>
 </head>
@@ -25,8 +25,9 @@
             <!-- Below is a sample hard-coded column for testing and css Purposes -->
             <div class="taskColumn">
                 <div class="colHead">
-                    <h3>HARDCODED COLUMN</h3>
+                    <h3>HARDCODED</h3>
                 </div>
+                <button class="addTaskBtn">+</button>
                 <div class="colBody">
                     <div class="colTask">
                         <h4 class="colTaskHead">Sample Task</h4>
@@ -38,9 +39,37 @@
                     </div>
                 </div>
             </div>
-
-        <div id="taskDetailContainer">
-            <h1>hi</h1>
+        </div>
+        <!-- Task Detail can be in Create Task or Edit Task mode-->
+        <div id="taskDetailContainer" class="newTask editTask">
+            <input id="taskName" type="text" placeholder="Set a Task Name">
+            <div id="descriptionAndColor">
+                <textarea id="taskDescription" type="text" placeholder="Description"></textarea>
+                <input id="taskColorSet" type="text" placeholder="#Hex Color">
+                <div id="taskColorPick"></div>
+            </div>
+            <div id="assignedMembers"></div>
+            <input id="taskDeadline" placeholder="Deadline">
+            <select id="prioritySetter">
+                <option>Normal</option>
+                <option>High</option>
+                <option>Critical</option>
+            </select>
+            <div id="subtaskList">
+                <!--Dynamically Generate subtasks -->
+                <label class="subtaskCheckContainer">
+                    <input type="checkBox">
+                    <span class="subTaskCheckbox">
+                        <svg class="checkmarkIcon">
+                           <path fill-rule="evenodd"  stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            d="M6.676,11.320 L11.865,14.982 L20.408,3.820 "/>
+                        </svg>
+                    </span>
+                </label>
+                <input class="subtask" placeholder="Type to add subtask...">
+            </div>
+            <button id="taskConfirm">Confirm</button>
+            <button id="taskCancel">Cancel</button>
         </div>
     </section>
     <footer>

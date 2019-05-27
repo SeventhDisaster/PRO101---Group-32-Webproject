@@ -1,16 +1,5 @@
-/*
-            <div class="taskColumn">
-                <div class="colHead">
-                    <h3>To-Do</h3>
-                </div>
-                <div class="colBody">
-                    <div class="colTask">
-                        <h4 class="colTaskHead">Sample Task</h4>
-                        <p class="colTaskDesc"> This is a sample description that is longer</p>
-                    </div>
-                </div>
-            </div>
-*/
+//This file contains the rendering of the project columns and tasks
+
 let boardContainer = document.getElementById("boardContainer");
 
 let project = projects[0];
@@ -33,6 +22,15 @@ function renderColumn(title, column){
     columnTitle.innerText = title;
     columnHead.appendChild(columnTitle);
 
+    
+    let taskAddBtn = document.createElement("button");
+    taskAddBtn.classList.add("addTaskBtn");
+    taskAddBtn.innerText = "+";
+    taskAddBtn.addEventListener("click",function(){
+        alert("Hello " + column.columnId);
+    })
+    newColumn.appendChild(taskAddBtn);
+    
     let columnBody = document.createElement("div");
     columnBody.classList.add("colBody");
     newColumn.appendChild(columnBody);
