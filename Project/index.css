@@ -7,17 +7,15 @@ body {
     height: 100vh;
     background-image: linear-gradient(to top, #cfd3c6, #c8cbc1, #c1c4bc, #bbbcb7, #b4b5b2);
     overflow: hidden;
+    
 }
-/*1.mulig å sette logoen lenger til venstre, så når man resizer flytter den seg ikke?
-2. logon "rister" litt ved zoom, fixed av riktig viewport på resten du har fucka opp?
-*/
+
 #logo {
-    right: 83%;
+    left: 0px;
     position: absolute;
-    width: 20vw;
-    height: 20vh;
+    width: 15%;
+    height: 20%;
     top: 0px;
-    background-color: linear;/*useless?*/
     z-index: 4;
     transform: skewX(-5deg);
 }
@@ -25,31 +23,22 @@ body {
 #demo {
     position: absolute;
     z-index: 1;
-    font-size: 2vmin;
-    color: white;
     background-color: black;
-    width: 42vw;
-    height: 50vh;
+    width: 35%;
+    height: 35%;
     right: 0%;
     top: 13%;
 }
 #play {
-    width: 10vw;
+    width: 8%;
     cursor: pointer;
-    right: 14%;
+    right: 12%;
     top: 27%;
     position: absolute;
     z-index: 1;
 }
-/*#videoBox {
-    position: absolute;
-    width 50%;
-    left: 38%;
-    top: 30%;
-    z-index: 1;
-}*/
 
-/*bottom line*/
+/*bottom line ER HIDDEN*/
 #demoLine1 {
     z-index: 2;
     position: absolute;
@@ -57,56 +46,55 @@ body {
     height: 15vh;
     background-color: black;
     bottom: 0px;
-    background-image: linear-gradient(to left, #000000, #323030, #615f5e, #93928f, #c8c9c5);/*MATCHER IKKE*/
-    
+    background-image: linear-gradient(to top, #ffffff, #dad5f9, #b3acf2, #8885ea, #5360e1);
+    visibility: hidden;
     
 }
 /*left line*/
 #demoLine2 {
     z-index: 3;
     position: absolute;
-    width: 15vw;
-    height: 150vh;
+    width: 13%;
+    height: 100%;
     background-color: black;
     top: 15%;
-    background-image: linear-gradient(to bottom, #000000, #323030, #615f5e, #93928f, #C8C9C5);
-
+background-image: radial-gradient(circle, #252525, #242424, #232323, #222222, #212121);
 }
 
 /*mantras*/
-
 #m1 {
-    width: 50vw;
-    height: 5vh;
-    font-size: 3vmin;
+    width: 10%;
+    height: 10%;
+    font-size: 200%;
     color: #806000;
-    top: 71%;
-    left: 70%;
+    bottom: 20%;
+    right: 2%;
+    color: silver;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 }
 #m2 {
     width: 40vw;
     height: 5vh;
-    top: 76%;
-    left: 70%;
+    top: 82%;
+    left: 82%;
     font-size: 2vmin;
-    color: darkslategray;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 #m3{
     position: absolute;
-    z-index: 1;
-    width: 50vw;
+    z-index: 5;
+    width: 50%;
     top: 38%;
     left: 15%;
-    font-size: 5vmin;
+    font-size: 300%;
     font-family: sans-serif;
 }
-/*class for recoloring av "matters"*/
+/*class for recoloring av ordet "matters"*/
 .wordMatters {
     color: #6600cc;
     z-index: 1;
@@ -121,7 +109,7 @@ body {
     font-size: 3vmin;
     font-family: sans-serif; 
 }
-/*class for recoloring av "NexTask"*/
+/*class for recoloring av ordet "NexTask"*/
 .wordNexTask {
     color: #6600cc;
     z-index: 1;
@@ -130,67 +118,69 @@ body {
 /*checkmarks*/
 .check {
     position: absolute;
-    z-index: 1;
-    width: 1vw;
+    z-index: 5;
+    width: 2%;
     top: 60%;
     left: 20%;
     
 }
 #check1 {
-    top: 63%;
+    top: 65%;
     
 }
 #check2 {
-    top: 66%;
+    top: 70%;
     
 }
 #check3 {
-    top: 69%;
+    top: 75%;
     
 }
 #check4 {
-    top: 72%;
+    top: 80%;
     
 }
 .checkText {
     position: absolute;
     z-index: 1;
-    width: 50vw;
-    height: 2vh;
-    top: 57.6%;
-    left: 21.5%;
+    width: 15%;
+    height: 10%;
+    top: 180%;
+    left: 23%;
     color: white;
-    font-size: 2vmin;
+    font-size: 100%;
     font-family: 'Montserrat'
 }
 #checkText1 {
-    
+    top: 79%
 }
 #checkText2 {
-    top: 61%;
+    top: 58%;
 }
 #checkText3 {
-    top: 64%;
+    top: 63%;
 }
 #checkText4 {
-    top: 67%;
+    top: 69%;
 }
 #checkText5 {
-    top: 70%;
+    top: 73%;
 }
+
 /*cursor pointer buggy og zoom er fucked*/
 #getStartedButton {
     background-color: #9555af;
     color: #f2f2f2;
-    font-size: 5vmin;
+    font-size: 200%;
     font-family: sans-serif;
     position: absolute;
-    width: 15vw;
-    height: 7vh;
+    width: 15%;
+    height: 7&;
     top: 70%;
     left: 50%;
     z-index: 1;
     cursor: pointer;
+    box-shadow: 5px 5px #000;
     
 }
 #star1 {
@@ -232,37 +222,17 @@ body {
     position: absolute;
     width: 5vw;
     height: 5vh;
-    z-index: 1;
-    right: 0%;
-    top: 81%;
+    z-index: 2;
+    right: -13%;
+    top: 88%;
     
 }
-/*Top menu */
-#contact {
-    position: absolute;
-    right: 15%;
-    color: #d9d9d9;
-    z-index: 1;
-    font-size: 2vmin;
-    cursor: pointer;
-    top: 10.5%;
-    font-family: 'Montserrat';
-}
-#FAQ {
-    position: absolute;
-    right: 20%;
-    color: #d9d9d9;
-    position: absolute;
-    z-index: 1;
-    font-size: 2vmin;
-    cursor: pointer;
-    top: 10.5%;
-    font-family: 'Montserrat';
-}
+
 #about {
     position: absolute;
     right: 25%;
     color: #d9d9d9;
+    
     position: absolute;
     z-index: 1;
     font-size: 2vmin;
@@ -281,25 +251,16 @@ body {
     top: 10.5%;
     font-family: 'Montserrat';
 }
-#ex3 {
-    position: absolute;
-    right: 35%;
-    color: #d9d9d9;
-    position: absolute;
-    z-index: 1;
-    font-size: 2vmin;
-    cursor: pointer;
-    top: 10.5%;
-    font-family: 'Montserrat';
-}
+
 #topLogo {
     position: absolute;
-    background-image: linear-gradient(to top, #000000, #1a1918, #2d2a29, #403e3a, #51534d);
+    background-image: radial-gradient(circle, #252525, #242424, #232323, #222222, #212121);
     width: 100vw;
     height: 15vh;
+    
 }
-/*tekst linjeskift på 400-500% zoom-FIX*/
-#topGetStartedButton {
+
+#loginBtn {
     width: 8vw;
     height: 3.6vh;
     position: absolute;
@@ -308,28 +269,28 @@ body {
     font-size: 2vmin;
     font-family: 'Montserrat', sans-serif;
     border: 0.1px solid black;
-    top: 11.4%;
+    top: 11.8%;
     left: 90%;
-    z-index: 1;
+    z-index: 5;
     cursor: pointer;
 
 }
 #menuLineContainer {
     position: absolute;
-    width: 40vw;
-    height: 15vh;
+    width: 40%;
+    height: 15%;
     z-index: 1;
-    right: 0px;
+    right: 0%;
 }
 /*skrå line*/
 #stLine1 {
     position: absolute;
     z-index: 3;
-    background-color: white;
+    background-color: whitesmoke;
     color: white;
-    width: 0.7vw;
-    height: 3.5vh;
-    left: -2.5%;
+    width: 1%;
+    height: 25%;
+    left: -2.6%;
     top: 77%;
     transform: skewX(-50deg);
         
@@ -338,14 +299,62 @@ body {
 #stLine2 {
     position: absolute;
     z-index: 3;
-    background-color: white;
+    background-color: whitesmoke;
     color: white;
-    width: 39.6vw;
-    height: 0.30vh;
+    width: 99%;
+    height: 2.1%;
     right: 0%;
     bottom: 20.9%;
     
+}/*siden skrå line*/
+#stLine3 {
+    position: absolute;
+    z-index: 2;
+    background-color: whitesmoke;
+    color: white;
+    width: 10%;
+    height: 25%;
+    left: -1.7%;
+    top: 77%;
+    transform: skewX(-50deg);
+        
 }
+/*3x black line i hvit skrå blockline*/
+#stLine4 {
+    position: absolute;
+    z-index: 4;
+    background-color: black;
+    width: 0.5%;
+    height: 25%;
+    left: 6%;
+    top: 77%;
+    transform: skewX(-50deg);
+        
+}
+#stLine5 {
+    position: absolute;
+    z-index: 4;
+    background-color: black;
+    width: 0.5%;
+    height: 25%;
+    left: 3%;
+    top: 77%;
+    transform: skewX(-50deg);
+        
+}
+#stLine6 {
+    position: absolute;
+    z-index: 4;
+    background-color: black;
+    width: 0.5%;
+    height: 25%;
+    left: 0.1%;
+    top: 77%;
+    transform: skewX(-50deg);
+        
+}
+/*end black lines*/
+
 
 .midCl {
     position: absolute;
@@ -366,32 +375,24 @@ body {
     right: 75%;
     animation: pepeAnim 5s linear ease-in-out;
     
-    
-    
-    
-    
 } /*Fail*/
 @keyframes pepeAnim {
     0% {top: 20%;}
     100% {top: 50%;}
 }
-
-    
-  /*  
-  ANDRE LINES-uferdig  
-}
-#midLine1 {
-    background-color: black;
+#bubble {
     z-index: 2;
-    width: 50vw;
-    height: 5vh;
-    top: 5%;
-    right: 2%;
-    transform: skewX(180deg);
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    bottom: -10%;
+    right: -10%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: radial-gradient(circle, #0035f0, #003bdc, #053fc8, #1941b3, #26429d);
+    
 }
-#midLine2 {
-    right: 45%;
-    width: 50vw;
-}
-    */
+
+
+
 
