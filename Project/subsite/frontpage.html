@@ -43,6 +43,7 @@
 		align-content: center;
 		justify-content: center;
 		position: relative;
+		background-color: #b2645c;
 
 
 	}
@@ -53,7 +54,8 @@
 		/*font-style: oblique;*/
 		position: absolute;
 		top: calc(50% - 20px); /*Subtracting font-size/2 so it's centered*/
-		color: black;
+		color: white;
+		text-shadow: 0px 0px 50px rgba(0,0,0, 0.4);
 	}
 
 	#frontImg > img {
@@ -68,16 +70,25 @@
 		color: white;
 	}
 
+	/*
+	
+	#0082C7
+	#73616F
+	#E8846C
+	#4393a6
+
+	*/
+
 	#notifications {
-		background-color: #0082C7;
+		background-color: #285079;
 	}
 
 	#weeklyTasks {
-		background-color: #73616F;
+		background-color: #285079;
 	}
 
 	#achievements {
-		background-color: #E8846C;
+		background-color: #285079;
 	}
 
 
@@ -101,12 +112,15 @@
 		/*border-style: solid;*/
 		width: 33.33%;
 		padding: 5px 10px 5px 10px;
-		overflow-y: scroll;
+		/*overflow-y: scroll;*/
 		/*border-color: black;*/
 
 	}
 
-	
+	.blocks > div {
+		height: calc(100% - 65px);
+		overflow-y: scroll;
+	}
 
 	.title {
 		font-family: 'Montserrat', sans-serif;
@@ -124,11 +138,6 @@
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: center;
-	}
-
-	.blocks > div, table {
-		overflow-y: scroll;
-		height: calc(100% - 65px);
 	}
 
 	.achievement {
@@ -205,6 +214,7 @@
 	.messageList {
 		font-size: 20px;
 		width: 100%;
+		min-height: 100%;
 	}
 
 	tr:not(:first-of-type) > td{
@@ -268,81 +278,85 @@
 			<div id="notifications" class="blocks">
 				<h2 class="title">Notifications!</h2>
 
-				<table class="messageList indent">
-					<tr>
-						<td>
+				<div class="indent">
+					<table class="messageList">
+						<tr>
+							<td>
 
-							<span class="message">New message!</span>
-							<span class="dateBox">
-								<span>3. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">New message!</span>
-							<span class="dateBox lightblue">
-								<span>6. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">New message!</span>
-							<span class="dateBox yellow">
-								<span>7. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">New message!</span>
-							<span class="dateBox purple">
-								<span>10. May</span>
-							</span>
-						</td>
-					</tr>
-				</table>
+								<span class="message">New message!</span>
+								<span class="dateBox">
+									<span>3. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">New message!</span>
+								<span class="dateBox lightblue">
+									<span>6. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">New message!</span>
+								<span class="dateBox yellow">
+									<span>7. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">New message!</span>
+								<span class="dateBox purple">
+									<span>10. May</span>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
 				
 			</div>
 			<div id="weeklyTasks" class="blocks">
 				<h2 class="title">Tasks this week!</h2>
 
-				<table class="messageList indent">
-					<tr>
-						<td>
+				<div class="indent">
+					<table class="messageList">
+						<tr>
+							<td>
 
-							<span class="message">Design!</span>
-							<span class="dateBox">
-								<span>3. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">Design!</span>
-							<span class="dateBox lightblue">
-								<span>6. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">Design!</span>
-							<span class="dateBox yellow">
-								<span>7. May</span>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="message">Design!</span>
-							<span class="dateBox purple">
-								<span>10. May</span>
-							</span>
-						</td>
-					</tr>
-				</table>
+								<span class="message">Design!</span>
+								<span class="dateBox">
+									<span>3. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">Design!</span>
+								<span class="dateBox lightblue">
+									<span>6. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">Design!</span>
+								<span class="dateBox yellow">
+									<span>7. May</span>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="message">Design!</span>
+								<span class="dateBox purple">
+									<span>10. May</span>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
 				
 			</div>
 			<div id="achievements" class="blocks">
