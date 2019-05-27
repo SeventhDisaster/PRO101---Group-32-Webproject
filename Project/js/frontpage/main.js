@@ -32,7 +32,31 @@ function getProjectsThisWeek () {
 
 	console.log(arr);
 
-	return arr;
+	// Not ideal, but quick fix. Efficiency is not a priority when dealing with small arrays and good time.
+	
+	let temp = [];
+	for (var i = 0; i < arr.length; i++) {
+		temp.push(arr[i].due);
+	}
+
+	let sorted = temp.sort();
+	let temp2 = [];
+	
+	for (var j = 0; j < sorted.length; j++) {
+		for (var i = 0; i < arr.length; i++) {
+
+			if (arr[i].due === sorted[j]) {
+				temp2.push(arr[i]);
+				arr.splice(i, 1);
+				console.log(arr);
+				i--;
+				break;
+			}
+
+		}
+	}
+
+	return temp2;
 
 }	
 
