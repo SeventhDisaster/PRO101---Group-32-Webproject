@@ -61,9 +61,7 @@ function renderRow(task, column){
     /* Other Task Variables will be added here */
 
     newTask.addEventListener("click",function(){
-        let taskDetailWindow = document.getElementById("taskDetailContainer");
-        let taskSelect = column.indexOf(task);
-        renderDetailWindow(taskDetailWindow, taskSelect);
+        renderDetailWindow(task);
     })
 
     column.appendChild(newTask);

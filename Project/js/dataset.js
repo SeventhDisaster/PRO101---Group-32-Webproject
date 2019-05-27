@@ -28,10 +28,21 @@ let projects = [
                     },
                     {
                         name: "Sample Task 2",
-                        desc: "Description Sample",
+                        desc: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa",
                         due: "4/6/2019",
                         assignee: [004,003],
-                        priority: 2
+                        priority: 2,
+                        subtasks: [
+                            {
+                                status: 0,
+                                name: ""
+                            },
+                            {
+                                status: 1,
+                                name: "Sample complete subtask"
+                            }
+
+                        ]
                     }
                 ]
             },
@@ -44,7 +55,18 @@ let projects = [
                         desc: "Description Sample",
                         due: "2/6/2019",
                         assignee: [005],
-                        priority: 3
+                        priority: 3,
+                        subtasks: [
+                            {
+                                status: 0,
+                                name: "Sample incomplete subtask 1"
+                            },
+                            {
+                                status: 1,
+                                name: "Sample complete subtask"
+                            }
+
+                        ]
                     }
                 ]
             },
@@ -57,7 +79,18 @@ let projects = [
                         desc: "Description Sample",
                         due: "2/6/2019",
                         assignee: [000], // Assigned 000 = No assignment. 
-                        priority: 3
+                        priority: 3,
+                        subtasks: [
+                            {
+                                status: 0,
+                                name: "Sample incomplete subtask 1"
+                            },
+                            {
+                                status: 1,
+                                name: "Sample complete subtask"
+                            }
+
+                        ]
                     }
                 ]
             },

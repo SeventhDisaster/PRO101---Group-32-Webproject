@@ -143,6 +143,7 @@ hr{
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     margin: 0px 30% 0px 10px;
+    word-wrap: normal;
 }
 
 /* TASK DETAIL BOX BELOW */
@@ -157,7 +158,7 @@ hr{
     height: 50vh;
     width: 60vw;
     bottom: 0px;
-    right: -5vw;
+    right: -100vw;
     opacity: 0.5;
     transition: .2s ease;
     box-shadow: 0px 0px 5px black;
