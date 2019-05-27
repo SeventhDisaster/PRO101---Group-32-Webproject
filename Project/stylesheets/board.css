@@ -14,13 +14,6 @@ hr{
     height: 1px;
 }
 
-.vr{
-    transform: skewX(-5deg);
-    width: 1px;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(10,10,10,1), rgba(255,255,255,0));
-}
-
 #sidebarContainer{
     position: fixed;
     background-image: linear-gradient(to bottom, #323232, #343434 );
@@ -29,6 +22,7 @@ hr{
     height: 100vh;
     transform: skewX(-5deg);
     z-index: 5;
+    box-shadow: 0px 0px 5px black;
 }
 
 #sidebarContainer #logo{
@@ -49,22 +43,21 @@ hr{
 /* KANBAN BOARD CONTAINER AND CONTENT */
 
 #boardContainer{
-    position: absolute;
+    position: relative;
     padding-left: 20vw;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     background-color: #fefefe; 
-    width: 80vw;
     height: 100vh;
-    right: 0;
     z-index: 2;
     overflow-x: auto;
 }
 
 #boardContainer .taskColumn{
     transform: skewX(-5deg);
+    min-width: 250px;
     width: 250px;
     margin: 0px 0px 0px 5px;
 }
