@@ -252,6 +252,8 @@ hr{
     stroke: gray;
     stroke-width: 3px;
     transition: .2s ease;
+    width: 100%;
+    height: 100%;
 }
 
 .subTaskCheckbox:hover .checkmarkIcon{
@@ -266,7 +268,18 @@ hr{
     padding-left: 10px;
 }
 
+.subtaskCheckContainer input:checked ~ .subTaskCheckbox .checkmarkIcon{
+    stroke: white;
+    stroke-width: 3px;
+}
 
+.subtaskCheckContainer input:checked ~ .subTaskCheckbox{
+    background-color: rgb(150, 255, 150);
+}
+
+.subtaskCheckContainer input:checked ~ .subtask{
+    background-color: rgb(190, 255, 190)
+}
 
 
 #taskConfirm{

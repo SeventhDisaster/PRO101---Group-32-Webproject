@@ -6,7 +6,7 @@ let project = projects[0];
 
 function renderBoard(){
     for(let column of project.columns){
-        renderColumn(column.columnName, column)
+        renderColumn(column.name, column)
     }
 }
 
@@ -49,17 +49,22 @@ function renderRow(task, column){
 
     let taskHeader = document.createElement("h4");
     taskHeader.classList.add("colTaskHead");
-    taskHeader.innerText = task.taskName;
+    taskHeader.innerText = task.name;
     newTask.appendChild(taskHeader);
     
     let taskDescription = document.createElement("p");
     taskDescription.classList.add("colTaskDesc");
-    taskDescription.innerText = task.taskDesc;
+    taskDescription.innerText = task.desc;
     newTask.appendChild(taskDescription);
 
     
     /* Other Task Variables will be added here */
 
+    newTask.addEventListener("click",function(){
+        let taskDetailWindow = document.getElementById("taskDetailContainer");
+        let taskSelect = column.indexOf(task);
+        renderDetailWindow(taskDetailWindow, taskSelect);
+    })
 
     column.appendChild(newTask);
 }

@@ -1,83 +1,90 @@
 let projects = [
     {
-        projectName: "PROJECT 1",
-        projectDescription: "THIS IS THE FIRST PROJECT",
-        projectTeam: [001,002,003,004,005],
+        name: "PROJECT 1",
+        description: "THIS IS THE FIRST PROJECT",
+        team: [001,002,003,004,005],
         columns: [
             {
-                columnName: "To-do",
-                columnId: 1,
+                name: "To-do",
+                id: 1,
                 tasks: [
                     {
-                        taskName: "Sample Task 1",
-                        taskDesc: "Description Sample",
-                        taskId: 1,
-                        taskDue: "7/6/2019",
-                        taskAssignee: [001,002],
-                        taskPriority: 1
+                        name: "Sample Task 1",
+                        desc: "Description Sample",
+                        due: "7/6/2019",
+                        assignee: [001,002],
+                        priority: 1,
+                        subtasks: [
+                            {
+                                status: 0,
+                                name: "Sample incomplete subtask 1"
+                            },
+                            {
+                                status: 1,
+                                name: "Sample complete subtask"
+                            }
+
+                        ]
                     },
                     {
-                        taskName: "Sample Task 2",
-                        taskDesc: "Description Sample",
-                        taskId: 2,
-                        taskDue: "4/6/2019",
-                        taskAssignee: [004,003],
-                        taskPriority: 2
+                        name: "Sample Task 2",
+                        desc: "Description Sample",
+                        due: "4/6/2019",
+                        assignee: [004,003],
+                        priority: 2
                     }
                 ]
             },
             {
-                columnName: "In Progress",
-                columnId: 2,
+                name: "In Progress",
+                id: 2,
                 tasks:[
                     {
-                        taskName: "Sample Task 3",
-                        taskDesc: "Description Sample",
-                        taskId: 3,
-                        taskDue: "2/6/2019",
-                        taskAssignee: [005],
-                        taskPriority: 3
+                        name: "Sample Task 3",
+                        desc: "Description Sample",
+                        due: "2/6/2019",
+                        assignee: [005],
+                        priority: 3
                     }
                 ]
             },
             {
-                columnName: "Completed",
-                columnId: 3,
+                name: "Completed",
+                id: 3,
                 tasks: [
                     {
-                        taskName: "Sample Task 4",
-                        taskDesc: "Description Sample",
-                        taskId: 3,
-                        taskDue: "2/6/2019",
-                        taskAssignee: [000], // Assigned 000 = No assignment. 
-                        taskPriority: 3
+                        name: "Sample Task 4",
+                        desc: "Description Sample",
+                        due: "2/6/2019",
+                        assignee: [000], // Assigned 000 = No assignment. 
+                        priority: 3
                     }
                 ]
             },
             {
-                columnName: "Etc",
-                columnId: 4,
+                name: "Etc",
+                id: 4,
                 tasks: [
         
                 ]
             },
             {
-                columnName: "Etc2",
-                columnId: 5,
+                name: "Etc2",
+                id: 5,
                 tasks: [
         
                 ]
             },
             {
-                columnName: "Etc3",
-                columnId: 6,
+                name: "Etc3",
+                id: 6,
                 tasks: [
         
                 ]
             },
             {
-                columnName: "Etc4",
-                columnId: 7,
+                name: "Etc4",
+                id: 7,
                 tasks: [
         
                 ]
@@ -88,23 +95,28 @@ let projects = [
 
 let users = [
     {
-        userId: 001,
-        userName: "Krister Emanuelsen"
+        id: 001,
+        name: "Krister Emanuelsen",
+        imagePath: "ADDPATH"
     },
     {
-        userId: 002,
-        userName: "Andreas Østby"
+        id: 002,
+        name: "Andreas Østby",
+        imagePath: "ADDPATH"
     },
     {
-        userId: 003,
-        userName: "Helene Margel"
+        id: 003,
+        name: "Helene Margel",
+        imagePath: "ADDPATH"
     },
     {
-        userId: 004,
-        userName: "Simen Nordli Elserud"
+        id: 004,
+        name: "Simen Nordli Elserud",
+        imagePath: "ADDPATH"
     },
     {
-        userId: 005,
-        userName: "Zemen Tedros"
+        id: 005,
+        name: "Zemen Tedros",
+        imagePath: "ADDPATH"
     },
 ]
