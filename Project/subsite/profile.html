@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frontpage</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        
+        .card {
+          position: absolute;
+          border-radius: 5%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 500px; 
+          height: 550px;
+          margin: 0 auto;
+          border: 2px solid;
+          background-color: gray;
+          text-align: center;
+        }
+        
+        .card * {  
+            position: relative;
+        }
+
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        #profilePic{    
+            display: block;
+            box-shadow: 4px 4px 4px -1px darkgrey;
+            border-radius: 50%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+        }
+        
+        button {
+          display: inline-block;
+          border-radius: 2.5%;
+          cursor: grabbing;
+          font-size: 20px;
+          width: 49%;
+          height: 50px;
+          bottom: -25px;
+        }
+        
+        #button1{
+            background-color: rgb(50,205,50);
+            color: darkmagenta;
+            border: 2px solid rgb(0,128,0);
+            box-shadow: 1px 1px 1px 1px rgb(0,128,0);
+            left: 0;
+        }
+        #button2{
+            background-color: rgb(255,205,0);
+            color: darkmagenta;
+            border: 2px solid rgb(255,165,0);
+            box-shadow: 1px 1px 1px 1px rgb(255,165,0);
+            right: 0;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+        
+        #title{
+            color: darkslategrey;
+        }
+        
+        #linkIcon{
+            width: 25px;
+            height: 25px;
+        }
+        
+    </style>
+    
+    
+    <body>
+        
+        <div class="card">
+            
+            <img id="profilePic" src="../img/Zemen/profile_pic.png" alt="firstName">
+          
+            <h1 id="fullName"></h1>   
+            <h2 id="title"></h2>
+            <h3 id="school"></h3>
+            
+            <a href="https://github.com"> 
+                <img id="linkIcon" src="../img/Zemen/github_icon.png"> 
+            </a>
+            
+            <div>
+                <button id="button1">Add Friend</button>     
+                <button id="button2">Message</button>   
+            </div>
+        
+        </div>
+        
+        
+        
+        <script>
+
+        var firstName = "Zemen";
+        var lastName = "Tedros";
+        var fullName = firstName + " " + lastName;
+        var title = "Programmer";
+        var school = "Høyskolen Krisitiania";
+
+        document.getElementById("fullName").innerHTML = fullName;
+        document.getElementById("title").innerHTML = title;
+        document.getElementById("school").innerHTML = school;
+
+        </script>
+        
+    </body>
+    
+</html>
