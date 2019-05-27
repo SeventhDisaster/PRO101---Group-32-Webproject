@@ -60,7 +60,22 @@ hr{
     min-width: 250px;
     width: 250px;
     margin: 0px 0px 0px 5px;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.addColumnBtn{
+    transform: skewX(-5deg);
+    margin: 0px 0px 0px 10px;
+    border-style: none;
+    width: 100px;
+    opacity: .3;
+    transition: .2s ease;
+    font-size: 72px;
+}
+
+.addColumnBtn:hover{
+    opacity: .9;
+    cursor: pointer;
 }
 
 #boardContainer .taskColumn .colHead{
@@ -110,6 +125,7 @@ hr{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    max-height: 80%;
     overflow-y: auto;
 }
 
@@ -118,12 +134,15 @@ hr{
     right: 0;
     width: 100%;
     background-color: #efefef;
+    background-image: linear-gradient(to-left rgba(255,255,255,0) rgba(255,255,255,0));
     transition: .18s ease;
     padding: 20px 0px 20px 0px;
 }
 
 #boardContainer .taskColumn .colBody .colTask:hover{
-    background-color: rgb(255,200,200);
+    background-color: rgba(200,200,255,.5);
+    background-image: linear-gradient(to-left rgba(255,255,255,0) rgba(255,255,255,1));
+    margin: 5px 0px;
     cursor: pointer;
 }
 
@@ -143,10 +162,16 @@ hr{
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     margin: 0px 30% 0px 10px;
-    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    max-width: 70%;
+    
 }
 
+/* ============================================================================================== */
 /* TASK DETAIL BOX BELOW */
+/* */ 
 #taskDetailContainer{
     position: fixed;
     display: grid;
@@ -216,13 +241,22 @@ hr{
     grid-column: 1/4;
     grid-row: 4;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     overflow-x: hidden;
     overflow-y: auto;
+}
+.subtaskContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 30px auto;
 }
 
 .subtaskCheckContainer{
     display: inline-block;
     position: relative;
+    grid-column: 1;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -232,8 +266,6 @@ hr{
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
 }
 
 .subTaskCheckbox{
@@ -263,8 +295,8 @@ hr{
 
 
 .subtask{
-    width: 90%;
-    max-height: 30px;
+    grid-column: 2/3;
+    height: 30px;
     border-style: none;
     padding-left: 10px;
 }

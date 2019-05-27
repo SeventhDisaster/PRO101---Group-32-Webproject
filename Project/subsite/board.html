@@ -22,7 +22,7 @@
 
         <div id="boardContainer">
             
-            <!-- Below is a sample hard-coded column for testing and css Purposes -->
+            <!-- Below is a sample hard-coded column for testing and css Purposes
             <div class="taskColumn">
                 <div class="colHead">
                     <h3>HARDCODED</h3>
@@ -38,10 +38,11 @@
                         <p class="colTaskDesc">Description</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
         </div>
         <!-- Task Detail can be in Create Task or Edit Task mode-->
-        <div id="taskDetailContainer" class="newTask editTask">
+        <div id="taskDetailContainer">
             <input id="taskName" type="text" placeholder="Set a Task Name">
             <div id="descriptionAndColor">
                 <textarea id="taskDescription" type="text" placeholder="Description"></textarea>
@@ -56,17 +57,6 @@
                 <option>Critical</option>
             </select>
             <div id="subtaskList">
-                <!--Dynamically Generate subtasks -->
-                <label class="subtaskCheckContainer">
-                    <input type="checkBox">
-                    <span class="subTaskCheckbox">
-                        <svg class="checkmarkIcon">
-                           <path fill-rule="evenodd"  stroke-linecap="round" stroke-linejoin="round" fill="none"
-                            d="M6.676,11.320 L11.865,14.982 L20.408,3.820 "/>
-                        </svg>
-                    </span>
-                </label>
-                <input class="subtask" placeholder="Type to add subtask...">
             </div>
             <button id="taskConfirm">Confirm</button>
             <button id="taskCancel">Cancel</button>

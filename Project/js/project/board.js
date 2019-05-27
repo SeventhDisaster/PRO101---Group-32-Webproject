@@ -8,8 +8,18 @@ function renderBoard(){
     for(let column of project.columns){
         renderColumn(column.name, column)
     }
+    let newColumnBtn = document.createElement("button");
+    newColumnBtn.classList.add("addColumnBtn");
+    newColumnBtn.innerText = "+";
+    newColumnBtn.addEventListener("click", e => {
+        let addedColumn = new column(prompt("Column Name"), project.columns.length , []);
+        project.columns.push(addedColumn);
+        refreshBoard();
+    })
+    boardContainer.append(newColumnBtn);
 }
 
+// Render each COLUMN
 function renderColumn(title, column){
     let newColumn = document.createElement("div");
     newColumn.classList.add("taskColumn");
@@ -27,7 +37,9 @@ function renderColumn(title, column){
     taskAddBtn.classList.add("addTaskBtn");
     taskAddBtn.innerText = "+";
     taskAddBtn.addEventListener("click",function(){
-        alert("Hello " + column.columnId);
+        let addedTask = new task("","","","",[],"",[]);
+        column.tasks.push(addedTask);
+        renderRow(addedTask,columnBody)
     })
     newColumn.appendChild(taskAddBtn);
     
@@ -42,6 +54,7 @@ function renderColumn(title, column){
     boardContainer.appendChild(newColumn);
 }
 
+//Render each ROW (For every column)
 function renderRow(task, column){
     let newTask = document.createElement("div");
     newTask.classList.add("colTask");
@@ -57,7 +70,7 @@ function renderRow(task, column){
     taskDescription.innerText = task.desc;
     newTask.appendChild(taskDescription);
 
-    
+
     /* Other Task Variables will be added here */
 
     newTask.addEventListener("click",function(){

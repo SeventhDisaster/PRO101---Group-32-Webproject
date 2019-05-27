@@ -1,3 +1,25 @@
+//This file contains the dataset used to store information for the project.
+//Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
+
+//Data
+function column(name, id, tasks){
+    this.name = name;
+    this.id = id;
+    this.tasks = tasks;
+}
+
+function task(name,desc,due,color,assignee,priority,subtasks){
+    this.name = name;
+    this.desc = desc;
+    this.due = due;
+    this.color = color;
+    this.assignee = assignee;
+    this.priority = priority;
+    this.subtasks = subtasks;
+}
+
+
+
 let projects = [
     {
         name: "PROJECT 1",
@@ -9,9 +31,10 @@ let projects = [
                 id: 1,
                 tasks: [
                     {
-                        name: "Sample Task 1",
+                        name: "Make the board page",
                         desc: "Description Sample",
                         due: "7/6/2019",
+                        color: "#c3c3c3",
                         assignee: [001,002],
                         priority: 1,
                         subtasks: [
@@ -27,22 +50,40 @@ let projects = [
                         ]
                     },
                     {
-                        name: "Sample Task 2",
-                        desc: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa",
+                        name: "Create some fancy CSS",
+                        desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         due: "4/6/2019",
+                        color: "#c3c3c3",
                         assignee: [004,003],
                         priority: 2,
-                        subtasks: [
-                            {
-                                status: 0,
-                                name: ""
-                            },
-                            {
-                                status: 1,
-                                name: "Sample complete subtask"
-                            }
-
-                        ]
+                        subtasks: []
+                    },
+                    {
+                        name: "Implement detail window",
+                        desc: "A lot more complex than expected",
+                        due: "4/6/2019",
+                        color: "#c3c3c3",
+                        assignee: [004,003],
+                        priority: 2,
+                        subtasks: []
+                    },
+                    {
+                        name: "Cry",
+                        desc: "Life is suffering :')",
+                        due: "4/6/2019",
+                        color: "#c3c3c3",
+                        assignee: [004,003],
+                        priority: 2,
+                        subtasks: []
+                    },
+                    {
+                        name: "Figure things out",
+                        desc: "Do things with that.",
+                        due: "4/6/2019",
+                        color: "#c3c3c3",
+                        assignee: [004,003],
+                        priority: 2,
+                        subtasks: []
                     }
                 ]
             },
@@ -54,6 +95,7 @@ let projects = [
                         name: "Sample Task 3",
                         desc: "Description Sample",
                         due: "2/6/2019",
+                        color: "#c3c3c3",
                         assignee: [005],
                         priority: 3,
                         subtasks: [
@@ -78,6 +120,7 @@ let projects = [
                         name: "Sample Task 4",
                         desc: "Description Sample",
                         due: "2/6/2019",
+                        color: "#c3c3c3",
                         assignee: [000], // Assigned 000 = No assignment. 
                         priority: 3,
                         subtasks: [
@@ -100,32 +143,13 @@ let projects = [
                 tasks: [
         
                 ]
-            },
-            {
-                name: "Etc2",
-                id: 5,
-                tasks: [
-        
-                ]
-            },
-            {
-                name: "Etc3",
-                id: 6,
-                tasks: [
-        
-                ]
-            },
-            {
-                name: "Etc4",
-                id: 7,
-                tasks: [
-        
-                ]
-            },
+            }
         ]
     }
 ]
 
+
+//Sample Userlist
 let users = [
     {
         id: 001,
