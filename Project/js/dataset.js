@@ -144,6 +144,13 @@ let projects = [
     }
 ]
 
+function getImage (id) {
+    if (users[id].imagePath) {
+        return users[id].imagePath;
+    }
+
+    return "../img/DefaultProfile.png"
+}
 
 //Sample Userlist
 let users = [
