@@ -1,6 +1,31 @@
 //This file contains the dataset used to store information for the project.
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
+// Saves data to local computer
+function saveStorage (key, value) {
+
+    if (typeof value !== "string") {
+        value = JSON.stringify(value);
+    }
+
+    localStorage.setItem(key, value);
+
+}
+
+// Retrieves data saved from local computer
+function getStorage (key) {
+
+    let item = localStorage.getItem(key);
+
+    // Checking if the item starts with a bracket or number
+    if (/^(\{|\}|\[|\]|[0-9])/.test(item)) {
+        return JSON.parse(item);
+    }
+
+    return item;
+
+}
+
 //Data
 function column(name, tasks){
     this.name = name;
@@ -16,8 +41,6 @@ function task(name,desc,due,color,assignee,priority,subtasks){
     this.priority = priority;
     this.subtasks = subtasks;
 }
-
-
 
 let projects = [
     {
