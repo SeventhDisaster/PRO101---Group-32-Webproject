@@ -157,26 +157,36 @@ let users = [
     {
         id: 1,
         name: "Krister Emanuelsen",
-        imagePath: "../img/Profile_pictures/Krister.jpg"
+        imagePath: "../img/Profile_pictures/Krister.jpg",
+        notifications: [],
+        achievements: []
     },
     {
         id: 2,
         name: "Andreas Østby",
-        imagePath: "../img/Profile_pictures/Andreas.jpg"
+        imagePath: "../img/Profile_pictures/Andreas.jpg",
+        notifications: [],
+        achievements: []
     },
     {
         id: 3,
         name: "Helene Margel",
-        imagePath: "../img/Profile_pictures/Helene.jpg"
+        imagePath: "../img/Profile_pictures/Helene.jpg",
+        notifications: [],
+        achievements: []
     },
     {
         id: 4,
         name: "Simen Nordli Elserud",
-        imagePath: "../img/Profile_pictures/Simen.jpg"
+        imagePath: "../img/Profile_pictures/Simen.jpg",
+        notifications: [],
+        achievements: []
     },
     {
         id: 5,
         name: "Zemen Tedros",
-        imagePath: "../img/Profile_pictures/Zemen.jpg"
+        imagePath: "../img/Profile_pictures/Zemen.jpg",
+        notifications: [],
+        achievements: []
     },
 ]
