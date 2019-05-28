@@ -150,26 +150,26 @@ let users = [
     {
         id: 001,
         name: "Krister Emanuelsen",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Krister.jpg"
     },
     {
         id: 002,
         name: "Andreas Østby",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Andreas.jpg"
     },
     {
         id: 003,
         name: "Helene Margel",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Helene.jpg"
     },
     {
         id: 004,
         name: "Simen Nordli Elserud",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Simen.jpg"
     },
     {
         id: 005,
         name: "Zemen Tedros",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Zemen.jpg"
     },
 ]
