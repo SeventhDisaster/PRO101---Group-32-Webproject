@@ -1,10 +1,6 @@
 window.addEventListener("load", setup);
 
 let notifications = [{
-	msg: "Deadline approaching!",
-	date: "16. May",
-	href: "board.html?project=0"
-}, {
 	msg: "Added to project!",
 	date: "7. May",
 	href: "board.html?project=0"
@@ -26,8 +22,8 @@ function setup() {
 
     fillDomList(fullnameList, fullname);
 
-    renderTasks(getProjectsThisWeek());
     renderNotifications(notifications);
+    renderTasks(getProjectsThisWeek());
 
 }
 
@@ -58,7 +54,10 @@ function getProjectsThisWeek() {
         for (var j = 0; j < projects[i].columns.length; j++) {
             var a = projects[i].columns[j];
             for (var x = 0; x < a.tasks.length; x++) {
-                if (timeBetweenDate(stringToDate(a.tasks[x].due)) / 24 < 7 && timeBetweenDate(stringToDate(a.tasks[x].due)) / 24 > 0) {
+            	let hoursUntil = timeBetweenDate(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()), stringToDate(a.tasks[x].due));
+            	// console.log(hoursUntil/24);
+                if (hoursUntil / 24 <= 7 && hoursUntil / 24 >= 0) {
+
                     arr.push({
                         taskInfo: a.tasks[x],
                         task: x,
@@ -69,33 +68,35 @@ function getProjectsThisWeek() {
             }
         }
     }
+	
+	// Not ideal, but quick fix. Efficiency is not a priority when dealing with small arrays and good time.
+    
+    // let temp = [];
+    // for (var i = 0; i < arr.length; i++) {
+    //     temp.push(timeBetweenDate(stringToDate(arr[i].taskInfo.due)));
+    // }
 
 
-    // Not ideal, but quick fix. Efficiency is not a priority when dealing with small arrays and good time.
 
-    let temp = [];
-    for (var i = 0; i < arr.length; i++) {
-        temp.push(timeBetweenDate(stringToDate(arr[i].taskInfo.due)));
-    }
+    // temp = temp.sort(function(a, b) { return a - b });
+    // let temp2 = [];
+
+    // for (var j = 0; j < temp.length; j++) {
+    //     for (var i = 0; i < arr.length; i++) {
+
+    //         if (timeBetweenDate(stringToDate(arr[i].taskInfo.due)) === temp[j]) {
+    //             temp2.push(arr[i]);
+    //             arr.splice(i, 1);
+    //             break;
+    //         }
+
+    //     }
+    // }
 
 
+    let sorted = arr.sort(function (a, b){return timeBetweenDate(stringToDate(a.taskInfo.due))-timeBetweenDate(stringToDate(b.taskInfo.due))})
 
-    temp = temp.sort(function(a, b) { return a - b });
-    let temp2 = [];
-
-    for (var j = 0; j < temp.length; j++) {
-        for (var i = 0; i < arr.length; i++) {
-
-            if (timeBetweenDate(stringToDate(arr[i].taskInfo.due)) === temp[j]) {
-                temp2.push(arr[i]);
-                arr.splice(i, 1);
-                break;
-            }
-
-        }
-    }
-
-    return temp2;
+    return sorted;
 
 }
 
@@ -158,17 +159,23 @@ function renderTasks(arr) {
 
     for (var i = 0; i < arr.length; i++) {
 
+    	let currentDate = new Date();
+
+    	let link = 'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&task=' + arr[i].task;
+
         let time;
-        if (stringToDate(arr[i].taskInfo.due).getDate() === new Date().getDate()) {
+        if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {
             time = "Today";
-            newNotification();
-        } else if (timeBetweenDate(stringToDate(arr[i].taskInfo.due)) < 24) {
+           
+            newNotification("Deadline approaching!", monthToString(currentDate.getDate(), currentDate.getMonth()+1), link);
+        
+        } else if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()+1) {
             time = "Tomorrow"
         } else {
             time = Math.ceil(timeBetweenDate(stringToDate(arr[i].taskInfo.due)) / 24) + "d";
         }
 
-        let template = '<td onclick="window.location.href = \'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&task=' + arr[i].task + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
+        let template = '<td onclick="window.location.href = \'' + link + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
 
         let dom = document.createElement("tr");
         dom.innerHTML = template;
