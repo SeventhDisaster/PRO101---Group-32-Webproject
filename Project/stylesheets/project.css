@@ -224,6 +224,61 @@ hr{
 .assignedMembers{
     grid-column: 1/2;
     grid-row: 3;
+    display: grid;
+    grid-template-columns: 40% 30px auto;
+    grid-template-rows: 100%;
+}
+
+.assignTitle{
+    font-family: 'Montserrat', sans-serif;
+    max-height: 90%;
+    margin: 5px auto auto 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.assignMemberBtn{
+    margin: auto;
+    font-size: 17px;
+    color: white;
+    border-style: none;
+    border-radius: 100%;
+    background-color: #cecece;
+    grid-column: 2;
+    grid-row: 1;
+    width: 24px;
+    height: 24px;
+    transition: .2s ease;
+}
+
+.assignMemberBtn:hover{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    background-color: #dcdcdc;
+    cursor: pointer;
+}
+
+.assignedMemberList{
+    height:100%;
+    width:100%;
+    background-color: red;
+    grid-column: 3/4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+}
+
+.memberIcon{
+    transition: .2s ease;
+    
+}
+
+.memberIcon:hover{
+    cursor: pointer;
+    -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
 }
 
 .taskDeadline{

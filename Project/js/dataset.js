@@ -23,7 +23,7 @@ let projects = [
     {
         name: "PROJECT 1",
         description: "THIS IS THE FIRST PROJECT",
-        team: [001,002,003,004,005],
+        team: [1,2,3,4,5],
         columns: [
             {
                 name: "To-do",
@@ -33,7 +33,7 @@ let projects = [
                         desc: "Description Sample",
                         due: "7/6/2019",
                         color: "#c3c3c3",
-                        assignee: [001,002],
+                        assignee: [1,2],
                         priority: 1,
                         subtasks: [
                             {
@@ -52,7 +52,7 @@ let projects = [
                         desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         due: "4/6/2019",
                         color: "#c3c3c3",
-                        assignee: [004,003],
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -61,7 +61,7 @@ let projects = [
                         desc: "A lot more complex than expected",
                         due: "4/6/2019",
                         color: "#c3c3c3",
-                        assignee: [004,003],
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -70,7 +70,7 @@ let projects = [
                         desc: "Life is suffering :')",
                         due: "4/6/2019",
                         color: "#c3c3c3",
-                        assignee: [004,003],
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -79,7 +79,7 @@ let projects = [
                         desc: "Do things with that.",
                         due: "4/6/2019",
                         color: "#c3c3c3",
-                        assignee: [004,003],
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     }
@@ -93,7 +93,7 @@ let projects = [
                         desc: "Description Sample",
                         due: "2/6/2019",
                         color: "#c3c3c3",
-                        assignee: [005],
+                        assignee: [5],
                         priority: 3,
                         subtasks: [
                             {
@@ -117,7 +117,7 @@ let projects = [
                         desc: "Description Sample",
                         due: "2/6/2019",
                         color: "#c3c3c3",
-                        assignee: [000], // Assigned 000 = No assignment. 
+                        assignee: [0], // Assigned 000 = No assignment. 
                         priority: 3,
                         subtasks: [
                             {
@@ -155,27 +155,27 @@ function getImage (id) {
 //Sample Userlist
 let users = [
     {
-        id: 001,
+        id: 1,
         name: "Krister Emanuelsen",
         imagePath: "../img/Profile_pictures/Krister.jpg"
     },
     {
-        id: 002,
+        id: 2,
         name: "Andreas Østby",
         imagePath: "../img/Profile_pictures/Andreas.jpg"
     },
     {
-        id: 003,
+        id: 3,
         name: "Helene Margel",
         imagePath: "../img/Profile_pictures/Helene.jpg"
     },
     {
-        id: 004,
+        id: 4,
         name: "Simen Nordli Elserud",
         imagePath: "../img/Profile_pictures/Simen.jpg"
     },
     {
-        id: 005,
+        id: 5,
         name: "Zemen Tedros",
         imagePath: "../img/Profile_pictures/Zemen.jpg"
     },

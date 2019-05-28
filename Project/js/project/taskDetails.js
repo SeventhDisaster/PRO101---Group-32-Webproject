@@ -38,12 +38,38 @@ function renderDetailWindow(task){
         
     let assignee = document.createElement("div");
     assignee.classList.add("assignedMembers")
+        let assignTitle = document.createElement("h4");
+        assignTitle.classList.add("assignTitle");
+        assignTitle.innerText = "Assigned Members: ";
+        assignee.appendChild(assignTitle);
+
+        let assignMemberBtn = document.createElement("button");
+        assignMemberBtn.innerText = "+";
+        assignMemberBtn.classList.add("assignMemberBtn");
+        assignee.appendChild(assignMemberBtn);
+
+        let assignedMemberList = document.createElement("div");
+        assignedMemberList.classList.add("assignedMemberList");
+        assignee.appendChild(assignedMemberList);
+
+        //Render assigned members on task:
+        for(let member of project.team){
+            for(let assignation of task.assignee){
+                if(member == assignation){
+                    let setMember = document.createElement("img");
+                    setMember.setAttribute("src",getImage(member))
+                }
+            }
+        }
+
+
+
     detailWindow.appendChild(assignee);
-    //TODO
         
     let deadline = document.createElement("input");
     deadline.value = task.due;
     deadline.classList.add("taskDeadline");
+    deadline.setAttribute("type","date");
     deadline.setAttribute("placeholder","Task Deadline");
     detailWindow.appendChild(deadline);
 
