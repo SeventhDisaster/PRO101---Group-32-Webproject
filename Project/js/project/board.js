@@ -1,8 +1,8 @@
 //This file contains the rendering of the project columns and tasks
 
 let boardContainer = document.getElementById("boardContainer");
-
 let project = projects[0];
+
 
 function renderBoard(){
     for(let column of project.columns){
@@ -12,7 +12,7 @@ function renderBoard(){
     newColumnBtn.classList.add("addColumnBtn");
     newColumnBtn.innerText = "+";
     newColumnBtn.addEventListener("click", e => {
-        let addedColumn = new column(prompt("Column Name"), project.columns.length , []);
+        let addedColumn = new column(prompt("Column Name"), []);
         project.columns.push(addedColumn);
         refreshBoard();
     })
@@ -39,7 +39,7 @@ function renderColumn(title, column){
     taskAddBtn.addEventListener("click",function(){
         let addedTask = new task("","","","",[],"",[]);
         column.tasks.push(addedTask);
-        renderRow(addedTask,columnBody)
+        renderRow(addedTask,columnBody,true);
     })
     newColumn.appendChild(taskAddBtn);
     
@@ -55,7 +55,7 @@ function renderColumn(title, column){
 }
 
 //Render each ROW (For every column)
-function renderRow(task, column){
+function renderRow(task, column, added){
     let newTask = document.createElement("div");
     newTask.classList.add("colTask");
     column.appendChild(newTask);
@@ -70,12 +70,21 @@ function renderRow(task, column){
     taskDescription.innerText = task.desc;
     newTask.appendChild(taskDescription);
 
-
+    let color = task.color;
+    if(color){
+        newTask.style.backgroundColor = color;
+    } else {
+        newTask.style.backgroundColor = "#f3f3f3";
+    }
     /* Other Task Variables will be added here */
 
     newTask.addEventListener("click",function(){
         renderDetailWindow(task);
     })
+
+    if(added){
+        renderDetailWindow(task);
+    }
 
     column.appendChild(newTask);
 }

@@ -1,10 +1,34 @@
 //This file contains the dataset used to store information for the project.
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
+// Saves data to local computer
+function saveStorage (key, value) {
+
+    if (typeof value !== "string") {
+        value = JSON.stringify(value);
+    }
+
+    localStorage.setItem(key, value);
+
+}
+
+// Retrieves data saved from local computer
+function getStorage (key) {
+
+    let item = localStorage.getItem(key);
+
+    // Checking if the item starts with a bracket or number
+    if (/^(\{|\}|\[|\]|[0-9])/.test(item)) {
+        return JSON.parse(item);
+    }
+
+    return item;
+
+}
+
 //Data
-function column(name, id, tasks){
+function column(name, tasks){
     this.name = name;
-    this.id = id;
     this.tasks = tasks;
 }
 
@@ -18,24 +42,21 @@ function task(name,desc,due,color,assignee,priority,subtasks){
     this.subtasks = subtasks;
 }
 
-
-
 let projects = [
     {
         name: "PROJECT 1",
         description: "THIS IS THE FIRST PROJECT",
-        team: [001,002,003,004,005],
+        team: [1,2,3,4,5],
         columns: [
             {
                 name: "To-do",
-                id: 1,
                 tasks: [
                     {
                         name: "Make the board page",
                         desc: "Description Sample",
                         due: "7/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [001,002],
+                        color: null,
+                        assignee: [1,2],
                         priority: 1,
                         subtasks: [
                             {
@@ -53,8 +74,8 @@ let projects = [
                         name: "Create some fancy CSS",
                         desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [004,003],
+                        color: null,
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -62,8 +83,8 @@ let projects = [
                         name: "Implement detail window",
                         desc: "A lot more complex than expected",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [004,003],
+                        color: null,
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -71,8 +92,8 @@ let projects = [
                         name: "Cry",
                         desc: "Life is suffering :')",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [004,003],
+                        color: null,
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     },
@@ -80,8 +101,8 @@ let projects = [
                         name: "Figure things out",
                         desc: "Do things with that.",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [004,003],
+                        color: null,
+                        assignee: [4,3],
                         priority: 2,
                         subtasks: []
                     }
@@ -89,14 +110,13 @@ let projects = [
             },
             {
                 name: "In Progress",
-                id: 2,
                 tasks:[
                     {
                         name: "Sample Task 3",
                         desc: "Description Sample",
                         due: "2/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [005],
+                        color: null,
+                        assignee: [5],
                         priority: 3,
                         subtasks: [
                             {
@@ -114,14 +134,13 @@ let projects = [
             },
             {
                 name: "Completed",
-                id: 3,
                 tasks: [
                     {
                         name: "Sample Task 4",
                         desc: "Description Sample",
                         due: "2/6/2019",
-                        color: "#c3c3c3",
-                        assignee: [000], // Assigned 000 = No assignment. 
+                        color: null,
+                        assignee: [], //Empty Array - No Assignment
                         priority: 3,
                         subtasks: [
                             {
@@ -148,32 +167,49 @@ let projects = [
     }
 ]
 
+function getImage (id) {
+    if (users[id-1].imagePath) {
+        return users[id-1].imagePath;
+    }
+
+    return "../img/DefaultProfile.png"
+}
 
 //Sample Userlist
 let users = [
     {
-        id: 001,
+        id: 1,
         name: "Krister Emanuelsen",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Krister.jpg",
+        notifications: [],
+        achievements: []
     },
     {
-        id: 002,
+        id: 2,
         name: "Andreas Østby",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Andreas.jpg",
+        notifications: [],
+        achievements: []
     },
     {
-        id: 003,
+        id: 3,
         name: "Helene Margel",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Helene.jpg",
+        notifications: [],
+        achievements: []
     },
     {
-        id: 004,
+        id: 4,
         name: "Simen Nordli Elserud",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Simen.jpg",
+        notifications: [],
+        achievements: []
     },
     {
-        id: 005,
+        id: 5,
         name: "Zemen Tedros",
-        imagePath: "ADDPATH"
+        imagePath: "../img/Profile_pictures/Zemen.jpg",
+        notifications: [],
+        achievements: []
     },
 ]

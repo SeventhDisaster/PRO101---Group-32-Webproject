@@ -1,121 +1,135 @@
 window.addEventListener("load", setup);
 
+let notifications = [{
+	msg: "You have been assigned a task!",
+	date: "27. May",
+	href: "board.html?project=0&columns=0&tasks=0"
+}, {
+	msg: "Added to project!",
+	date: "27. May",
+	href: "board.html?project=0"
+}];
 
-function setup (){
-	let firstname = "Andreas";
-	let lastname = "Østby";
-	let fullname = firstname + " " + lastname;
-	let fullnameList = document.getElementsByClassName("fullnameInput");
-	console.log(fullnameList);
+let fullnameList;
 
 
-	fillDomList(fullnameList, fullname);
+function setup() {
+    let firstname = "Andreas";
+    let lastname = "Østby";
+    let fullname = firstname + " " + lastname;
+    fullnameList = document.getElementsByClassName("fullnameInput");
 
-	renderTasks(getProjectsThisWeek());
+
+    fillDomList(fullnameList, fullname);
+
+    renderNotifications(notifications);
+    renderTasks(getProjectsThisWeek());
 
 }
 
-function getProjectsThisWeek () {
+function renderNotifications (arr) {
 
-	let arr = [];
-
-	for (var i = 0; i < projects.length; i++) {
-		for (var j = 0; j < projects[i].columns.length; j++) {
-			var a = projects[i].columns[j];
-			for (var x = 0; x < a.tasks.length; x++) {
-				if(timeBetweenDate(stringToDate(a.tasks[x].due))/24 < 7) {
-					arr.push(a.tasks[x]);
-				}
-			}	
-		}
+	for (var i = notifications.length - 1; i >= 0; i--) {
+		newNotification(notifications[i].msg, notifications[i].date, notifications[i].href);
 	}
 
-	console.log(arr);
+}
 
+function newNotification(msg, date, href) {
+	
+	let notificationContainer = document.getElementById("notificationContainer");;
+    let template = '<td onclick="window.location.href = \'' + href + '\' " title="Goto"><span class="message">' + msg + '</span><span class="dateBox"><span>' + date + '</span></span></td>';
+    let dom = document.createElement("tr");
+    
+    dom.innerHTML = template;
+    notificationContainer.insertBefore(dom, notificationContainer.childNodes[0]);
+
+}
+
+function getProjectsThisWeek() {
+
+    let arr = [];
+
+    for (var i = 0; i < projects.length; i++) {
+        for (var j = 0; j < projects[i].columns.length; j++) {
+            var a = projects[i].columns[j];
+            for (var x = 0; x < a.tasks.length; x++) {
+            	let hoursUntil = timeBetweenDate(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()), stringToDate(a.tasks[x].due));
+            	// console.log(hoursUntil/24);
+                if (hoursUntil / 24 <= 7 && hoursUntil / 24 >= 0) {
+
+                    arr.push({
+                        taskInfo: a.tasks[x],
+                        task: x,
+                        columns: j,
+                        project: i
+                    });
+                }
+            }
+        }
+    }
+	
 	// Not ideal, but quick fix. Efficiency is not a priority when dealing with small arrays and good time.
-	
-	let temp = [];
-	for (var i = 0; i < arr.length; i++) {
-		temp.push(arr[i].due);
-	}
+    
+    // let temp = [];
+    // for (var i = 0; i < arr.length; i++) {
+    //     temp.push(timeBetweenDate(stringToDate(arr[i].taskInfo.due)));
+    // }
 
-	let sorted = temp.sort();
-	let temp2 = [];
-	
-	for (var j = 0; j < sorted.length; j++) {
-		for (var i = 0; i < arr.length; i++) {
 
-			if (arr[i].due === sorted[j]) {
-				temp2.push(arr[i]);
-				arr.splice(i, 1);
-				console.log(arr);
-				i--;
-				break;
-			}
 
-		}
-	}
+    // temp = temp.sort(function(a, b) { return a - b });
+    // let temp2 = [];
 
-	return temp2;
+    // for (var j = 0; j < temp.length; j++) {
+    //     for (var i = 0; i < arr.length; i++) {
 
-}	
+    //         if (timeBetweenDate(stringToDate(arr[i].taskInfo.due)) === temp[j]) {
+    //             temp2.push(arr[i]);
+    //             arr.splice(i, 1);
+    //             break;
+    //         }
 
-function renderTasks (arr) {
-	
-	let taskContainer = document.getElementById("taskContainer");
-	
-	for (var i = 0; i < arr.length; i++) {
-		console.log(timeBetweenDate(stringToDate(arr[i].due)));
+    //     }
+    // }
 
-		let time;
-		if (stringToDate(arr[i].due).getDate() === new Date().getDate()) {
-			time = "Today";
-		} else if (timeBetweenDate(stringToDate(arr[i].due)) < 24) {
-			time = "Tomorrow"
-		} else {
-			time = Math.ceil(timeBetweenDate(stringToDate(arr[i].due))/24) + "d";
-		}
-	
-		let template = '<td><span class="message">' + arr[i].name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
 
-		let dom = document.createElement("tr");
-		dom.innerHTML = template;
+    let sorted = arr.sort(function (a, b){return timeBetweenDate(stringToDate(a.taskInfo.due))-timeBetweenDate(stringToDate(b.taskInfo.due))})
 
-		console.log(taskContainer);
-		taskContainer.appendChild(dom);
-
-	}
+    return sorted;
 
 }
 
-function stringToDate (str) {
+function renderTasks(arr) {
 
-	let date = ["", "", ""];
-	let indx = 0;
+    let taskContainer = document.getElementById("taskContainer");
 
-	for (var i = 0; i < str.length; i++) {
-		if (str[i] === "/") {
-			indx++;
-			continue;
-		} 
-		date[indx] += str[i]
-	}
+    for (var i = 0; i < arr.length; i++) {
 
-	return new Date(date[2], date[1]-1, date[0]);
-}
+    	let currentDate = new Date();
 
-function timeBetweenDate (from, to) {
+    	let link = 'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&task=' + arr[i].task;
 
-	if (!to) {
-		to = from;
-		from = new Date();
-	}
+        let time;
+        if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {
+            time = "Today";
+           
+            newNotification("Deadline approaching!", formatMonthToString(currentDate.getDate(), currentDate.getMonth()+1), link);
+        
+        } else if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()+1) {
+            time = "Tomorrow"
+        } else {
+            time = Math.ceil(timeBetweenDate(stringToDate(arr[i].taskInfo.due)) / 24) + "d";
+        }
 
-	let difference = to.getTime() - from.getTime();
+        let template = '<td onclick="window.location.href = \'' + link + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
 
-	let hours = Math.floor(difference/1000/60/60);
+        let dom = document.createElement("tr");
+        dom.innerHTML = template;
 
-	return hours;
+        taskContainer.appendChild(dom);
+
+    }
 
 }
 
