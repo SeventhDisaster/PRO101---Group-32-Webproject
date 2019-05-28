@@ -117,7 +117,7 @@ let projects = [
                         desc: "Description Sample",
                         due: "2/6/2019",
                         color: "#c3c3c3",
-                        assignee: [0], // Assigned 000 = No assignment. 
+                        assignee: [], //Empty Array - No Assignment
                         priority: 3,
                         subtasks: [
                             {
