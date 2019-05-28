@@ -1,12 +1,12 @@
 window.addEventListener("load", setup);
 
 let notifications = [{
-	msg: "Added to project!",
-	date: "7. May",
-	href: "board.html?project=0"
+	msg: "You have been assigned a task!",
+	date: "27. May",
+	href: "board.html?project=0&columns=0&tasks=0"
 }, {
-	msg: "New message from Andreas!",
-	date: "3. May",
+	msg: "Added to project!",
+	date: "27. May",
 	href: "board.html?project=0"
 }];
 
@@ -100,59 +100,6 @@ function getProjectsThisWeek() {
 
 }
 
-function monthToString (day, month, year) {
-
-	switch (month){
-		case 1:
-			month = "January"
-		break;
-		case 2:
-			month = "February"
-		break;
-		case 3:
-			month = "Mars"
-		break;
-		case 4:
-			month = "April"
-		break;
-		case 5:
-			month = "May"
-		break;
-		case 6:
-			month = "June"
-		break;
-		case 7:
-			month = "July"
-		break;
-		case 8:
-			month = "August"
-		break;
-		case 9:
-			month = "September"
-		break;
-		case 10:
-			month = "October"
-		break;
-		case 11:
-			month = "November"
-		break;
-		case 12:
-			month = "December"
-		break;
-	}
-
-
-	let str = "";
-	str += day + ". " + month;
-
-	if (year) {
-		str += " " + year
-	}
-
-	return str;
-
-}
-
 function renderTasks(arr) {
 
     let taskContainer = document.getElementById("taskContainer");
@@ -167,7 +114,7 @@ function renderTasks(arr) {
         if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {
             time = "Today";
            
-            newNotification("Deadline approaching!", monthToString(currentDate.getDate(), currentDate.getMonth()+1), link);
+            newNotification("Deadline approaching!", formatMonthToString(currentDate.getDate(), currentDate.getMonth()+1), link);
         
         } else if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()+1) {
             time = "Tomorrow"
@@ -183,37 +130,6 @@ function renderTasks(arr) {
         taskContainer.appendChild(dom);
 
     }
-
-}
-
-function stringToDate(str) {
-
-    let date = ["", "", ""];
-    let indx = 0;
-
-    for (var i = 0; i < str.length; i++) {
-        if (str[i] === "/") {
-            indx++;
-            continue;
-        }
-        date[indx] += str[i]
-    }
-
-    return new Date(date[2], date[1] - 1, date[0]);
-}
-
-function timeBetweenDate(from, to) {
-
-    if (!to) {
-        to = from;
-        from = new Date();
-    }
-
-    let difference = to.getTime() - from.getTime();
-
-    let hours = Math.floor(difference / 1000 / 60 / 60);
-
-    return hours;
 
 }
 

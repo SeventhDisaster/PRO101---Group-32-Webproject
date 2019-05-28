@@ -145,8 +145,8 @@ let projects = [
 ]
 
 function getImage (id) {
-    if (users[id].imagePath) {
-        return users[id].imagePath;
+    if (users[id-1].imagePath) {
+        return users[id-1].imagePath;
     }
 
     return "../img/DefaultProfile.png"
