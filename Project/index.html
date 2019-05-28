@@ -15,6 +15,7 @@
             <div id="lineUnder"></div>
             <div id="lineRight"></div>
     </div>
+    
     <div id="scene">
         <div id="bubble"></div>
         <div id="videoBox">
@@ -22,6 +23,7 @@
             <div id="demoLine1"></div>
             <div id="demoLine2"></div>
         </div>
+        
         <!--middle lines-->
         <div class="midCl">
             <div id="midLine1" class="midCl"></div>reeee
@@ -47,6 +49,46 @@
             <div id="whiteLine1" class="lineClassWh"></div>
             
         </div>
+          
+<!-- loginBox -->
+    <div id=loginBox>
+        <h1 id=h1>Welcome to NexTask!</h1>
+        
+        
+    <!-- checkbox to help switch to Register -->
+    <input type='checkbox' id='formSwitch'>
+    
+    <!-- login form -->
+     
+<form id='loginForm'  >
+    <h3 class=h3>Login to see your tasks</h3>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button type='submit' ><a href="subsite/frontpage.html" style="text-decoration: none">Login</a></button>
+    <label id="registerButton" for='formSwitch'><span>Create user</span></label>
+</form>
+    
+    <!-- Register new user -->
+    
+<form id='registerForm' >
+    <h3 class=h3> Create a new user here</h3>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <input type="password" placeholder="Retype Password">
+  <button type='submit'><a href="frontpage.html" style="text-decoration: none" >Login</a></button>
+  <label id="backButton" for='formSwitch'>Back</label>
+</form>
+    </div>
+
+<script>
+function loginFunction(){
+    document.getElementById("loginBox").style.display="block";
+}        
+</script>        
+
+        
+<!-- end loginBox -->            
+        
         <button id="getStartedButton">Get started</button>
         <!--mantras-->
         <h1 id="m1">Better then average!</h1>
@@ -82,7 +124,10 @@
             <h3 id="about">About</h3>
             <h3 id="ex2">Example</h3>
             <!--<h3 id="ex3">Example</h3>-->
-            <button id="loginBtn">Login</button>
+            
+            
+            <button onclick="loginFunction()" id="loginBtn">Login</button>
+            
             <!--top menu style lines-->
             <div id="menuLineContainer">
                 <div id=stLine1></div>
@@ -101,10 +146,7 @@
     <img id="play" src="img/Simen/play.svg">
     <img id="pepes" src="img/Simen/pepes.svg">
     
-    
-    
-    
-        
+     
     
 </body>
 </html>
