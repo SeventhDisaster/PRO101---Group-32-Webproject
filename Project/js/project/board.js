@@ -70,7 +70,12 @@ function renderRow(task, column, added){
     taskDescription.innerText = task.desc;
     newTask.appendChild(taskDescription);
 
-
+    let color = task.color;
+    if(color){
+        newTask.style.backgroundColor = color;
+    } else {
+        newTasl.style.backgroundColor = "red";
+    }
     /* Other Task Variables will be added here */
 
     newTask.addEventListener("click",function(){

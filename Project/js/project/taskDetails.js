@@ -57,9 +57,27 @@ function renderDetailWindow(task){
             for(let assignation of task.assignee){
                 if(member == assignation){
                     let setMember = document.createElement("img");
-                    setMember.setAttribute("src",getImage(member))
+                    setMember.classList.add("memberIcon")
+                    setMember.setAttribute("src",getImage(member));
+                    setMember.dataset.id = member;
+                    setMember.addEventListener("click",e => {
+                        for(let i in task.assignee){
+                            task.assignee.splice(i,1);
+                            refreshBoard();
+                            renderDetailWindow(task);
+                        }
+                    })
+
+                    assignedMemberList.appendChild(setMember);
                 }
             }
+        }
+
+        if(task.assignee.length == 0){
+            let noMember = document.createElement("p");
+            noMember.classList.add("noMemberIcon")
+            noMember.innerText = "No members assigned";
+            assignedMemberList.appendChild(noMember);
         }
 
 
@@ -71,6 +89,7 @@ function renderDetailWindow(task){
     deadline.classList.add("taskDeadline");
     deadline.setAttribute("type","date");
     deadline.setAttribute("placeholder","Task Deadline");
+    deadline.setAttribute("required","required");
     detailWindow.appendChild(deadline);
 
     let priority = document.createElement("select");
