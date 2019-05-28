@@ -55,7 +55,7 @@ let projects = [
                         name: "Make the board page",
                         desc: "Description Sample",
                         due: "7/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [1,2],
                         priority: 1,
                         subtasks: [
@@ -74,7 +74,7 @@ let projects = [
                         name: "Create some fancy CSS",
                         desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [4,3],
                         priority: 2,
                         subtasks: []
@@ -83,7 +83,7 @@ let projects = [
                         name: "Implement detail window",
                         desc: "A lot more complex than expected",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [4,3],
                         priority: 2,
                         subtasks: []
@@ -92,7 +92,7 @@ let projects = [
                         name: "Cry",
                         desc: "Life is suffering :')",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [4,3],
                         priority: 2,
                         subtasks: []
@@ -101,7 +101,7 @@ let projects = [
                         name: "Figure things out",
                         desc: "Do things with that.",
                         due: "4/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [4,3],
                         priority: 2,
                         subtasks: []
@@ -115,7 +115,7 @@ let projects = [
                         name: "Sample Task 3",
                         desc: "Description Sample",
                         due: "2/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [5],
                         priority: 3,
                         subtasks: [
@@ -139,7 +139,7 @@ let projects = [
                         name: "Sample Task 4",
                         desc: "Description Sample",
                         due: "2/6/2019",
-                        color: "#c3c3c3",
+                        color: null,
                         assignee: [], //Empty Array - No Assignment
                         priority: 3,
                         subtasks: [

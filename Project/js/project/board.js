@@ -74,7 +74,7 @@ function renderRow(task, column, added){
     if(color){
         newTask.style.backgroundColor = color;
     } else {
-        newTasl.style.backgroundColor = "red";
+        newTask.style.backgroundColor = "#f3f3f3";
     }
     /* Other Task Variables will be added here */
 
