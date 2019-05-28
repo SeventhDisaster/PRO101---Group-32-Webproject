@@ -2,9 +2,8 @@
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
 //Data
-function column(name, id, tasks){
+function column(name, tasks){
     this.name = name;
-    this.id = id;
     this.tasks = tasks;
 }
 
@@ -28,7 +27,6 @@ let projects = [
         columns: [
             {
                 name: "To-do",
-                id: 1,
                 tasks: [
                     {
                         name: "Make the board page",
@@ -89,7 +87,6 @@ let projects = [
             },
             {
                 name: "In Progress",
-                id: 2,
                 tasks:[
                     {
                         name: "Sample Task 3",
@@ -114,7 +111,6 @@ let projects = [
             },
             {
                 name: "Completed",
-                id: 3,
                 tasks: [
                     {
                         name: "Sample Task 4",
