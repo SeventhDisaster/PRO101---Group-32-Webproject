@@ -135,7 +135,7 @@ p{
 }
 
 /* TASK LIST */
-#boardContainer .taskColumn .colBody{
+.colBody{
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -145,7 +145,7 @@ p{
     overflow-y: auto;
 }
 
-#boardContainer .taskColumn .colBody .colTask{
+.colTask{
     position: relative;
     right: 0;
     width: 100%;
@@ -155,23 +155,25 @@ p{
     padding: 20px 0px 20px 0px;
 }
 
-#boardContainer .taskColumn .colBody .colTask:hover{
+.colTask:hover{
     background-color: #b3d3e6 !important;
     filter: grayscale(0);
     margin: 5px 0px;
     cursor: pointer;
 }
 
-#boardContainer .taskColumn .colBody .colTask .colTaskHead{
+.colTaskHead{
     transform: skewX(5deg);
     font-size: 17px;
     font-family: 'Roboto', sans-serif; 
+    max-width: 70%;
     text-overflow: ellipsis;
+    white-space: normal;
     margin: 0px 5% 5px 20px;
 
 }
 
-#boardContainer .taskColumn .colBody .colTask .colTaskDesc{
+.colTaskDesc{
     transform: skewX(5deg);
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
