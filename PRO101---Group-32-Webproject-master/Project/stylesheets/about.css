@@ -40,23 +40,23 @@ body {
 }
 #about {
     position: absolute;
-    right: 45%;
+    right: 43%;
     top: -5%;
     font-size: 500%;
     z-index: 2;
     color: #b3d3e6;
     text-decoration: inherit;
-    font-family: monospace;
+    font-family: 'verdana';
     overflow: hidden;
 }
 .lineUnderFoot {
     position: absolute;
     z-index: 2;
     height: 0.1%;
-    width: 10%;
+    width: 16%;
     background-image: radial-gradient(circle, rgba(0,0,0,1),rgba(0,0,0,0));
-    top: 8%;
-    right: 44.8%;
+    top: 11%;
+    right: 42%;
 }
 #nexTask {
      position: absolute;
@@ -66,7 +66,7 @@ body {
     z-index: 2;
     color: white;
     text-decoration: inherit;
-    font-family: sans-serif  
+    font-family: 'arial'; 
 }
 #nexTask1 {
     position: absolute;
@@ -76,14 +76,14 @@ body {
     z-index: 2;
     color: white;
     text-decoration: inherit;
-    font-family: sans-serif  
+    font-family: 'arial';  
 }
 #team {
     position: absolute;
     z-index: 2;
     color: #d8e9f3;
     font-size: 200%;
-    font-family: Roboto;
+    font-family: 'Georgia';
     right: 43.5%;
     top: 55%;
 }
@@ -101,7 +101,7 @@ body {
     top: 68%;
     left: 21.5%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #andSubTxt {
     position: absolute;
@@ -109,6 +109,7 @@ body {
     top: 72%;
     left: 22%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*HELENE*/
 #helenePic {
@@ -124,7 +125,7 @@ body {
     top: 72%;
     left: 34.2%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #helSubTxt {
     position: absolute;
@@ -132,6 +133,7 @@ body {
     top: 76%;
     left: 34.1%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*KRISTER*/
 #kristerPic {
@@ -147,7 +149,7 @@ body {
     top: 68%;
     left: 44.2%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #kriSubTxt {
     position: absolute;
@@ -155,6 +157,7 @@ body {
     top: 72%;
     left: 46.1%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*ZEMEN*/
 #zemenPic {
@@ -170,7 +173,7 @@ body {
     top: 72.5%;
     left: 58.6%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #zemSubTxt {
     position: absolute;
@@ -178,6 +181,7 @@ body {
     top: 76%;
     left: 59.7%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*SIMEN*/
 #simenPic {
@@ -192,9 +196,9 @@ body {
     position: absolute;
     z-index: 2;
     top: 68%;
-    right: 21.1%;
+    right: 19.3%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #simSubTxt {
     position: absolute;
@@ -202,4 +206,5 @@ body {
     top: 72%;
     right: 23.3%;
     color: #ffd7de;
+    font-family: 'arial';
 }
