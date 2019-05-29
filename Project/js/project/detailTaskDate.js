@@ -1,6 +1,6 @@
 function renderTaskDeadline(task, parent){
     let deadline = document.createElement("input");
-    deadline.value = stringToDate(task.due);
+    deadline.value = task.due;
     deadline.classList.add("taskDeadline");
     deadline.setAttribute("type","date");
     deadline.setAttribute("placeholder","Task Deadline");

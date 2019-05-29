@@ -7,7 +7,7 @@ function column(name, tasks){
     this.tasks = tasks;
 }
 
-function task(name = "",desc = "",due = "",color = "",assignee = [],priority = 0,subtasks = []){
+function task(name = "",desc = "",due = null,color = null,assignee = [],priority = 0,subtasks = []){
     this.name = name;
     this.desc = desc;
     this.due = due;
@@ -29,7 +29,7 @@ let projects = [
                     {
                         name: "Make the board page",
                         desc: "Description Sample",
-                        due: "7/6/2019",
+                        due: "2019-03-07",
                         color: null,
                         assignee: [1,2],
                         priority: 1,
@@ -48,7 +48,7 @@ let projects = [
                     {
                         name: "Create some fancy CSS",
                         desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                        due: "4/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -57,7 +57,7 @@ let projects = [
                     {
                         name: "Implement detail window",
                         desc: "A lot more complex than expected",
-                        due: "4/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -66,7 +66,7 @@ let projects = [
                     {
                         name: "Cry",
                         desc: "Life is suffering :')",
-                        due: "4/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -75,7 +75,7 @@ let projects = [
                     {
                         name: "Figure things out",
                         desc: "Do things with that.",
-                        due: "4/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -89,7 +89,7 @@ let projects = [
                     {
                         name: "Sample Task 3",
                         desc: "Description Sample",
-                        due: "2/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [5],
                         priority: 3,
@@ -113,7 +113,7 @@ let projects = [
                     {
                         name: "Sample Task 4",
                         desc: "Description Sample",
-                        due: "2/6/2019",
+                        due: "2019-02-06",
                         color: null,
                         assignee: [], //Empty Array - No Assignment
                         priority: 3,

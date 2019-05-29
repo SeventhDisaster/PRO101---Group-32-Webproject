@@ -8,13 +8,12 @@ window.addEventListener("load", s =>{
 
 let url = new URL(location.href);
 let pURL = parseInt(url.searchParams.get("project"));
+let projectIndex = pURL;
+let project = projects[projectIndex];
 
 if(pURL === undefined){
     alert("No project found");
 } else {
-    let projectIndex = pURL;
-    let project = projects[projectIndex];
-
     let tabTitle = document.getElementById("tabTitle");
     tabTitle.innerText = project.name;
 

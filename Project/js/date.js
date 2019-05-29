@@ -16,7 +16,7 @@ function stringToDate(str) {
 
 function dateToString(date) {
 
-    return date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
 }
 
 function timeBetweenDate(from, to) {

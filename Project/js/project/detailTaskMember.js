@@ -44,36 +44,39 @@ function renderTaskMembers(task, parent){
                 if(!currentList.includes(member)){
                     currentList.push(member);
                     pushNotification(member, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
-                    renderDetailWindow(task);
+                    renderMemberList(task);
                 } else {
                     alert("User already assigned to this task");
                 }
             });
             btnListContainer.appendChild(addMember);
         }
-
-
+        
         let assignedMemberList = document.createElement("div");
         assignedMemberList.classList.add("assignedMemberList");
         assignee.appendChild(assignedMemberList);
+        
+        function renderMemberList(){
 
-        //Render assigned members on task
-        for(let member of project.team){
-            for(let assignation of task.assignee){
-                if(member == assignation){
-                    let setMember = document.createElement("img");
-                    setMember.classList.add("memberIcon")
-                    setMember.setAttribute("src",getImage(member));
-                    setMember.dataset.id = member;
+            //Render assigned members on task
+            assignedMemberList.innerHTML = "";
+            for(let member of project.team){
+                for(let assignation of task.assignee){
+                    if(member == assignation){
+                        let setMember = document.createElement("img");
+                        setMember.classList.add("memberIcon")
+                        setMember.setAttribute("src",getImage(member));
+                        setMember.dataset.id = member;
 
-                    // Unassigning member from task
-                    setMember.addEventListener("click",e => {
-                        console.log(currentList);
-                        currentList.splice(currentList.indexOf(member),1);
-                        renderDetailWindow(task,parent);
-                    });
+                        // Unassigning member from task
+                        setMember.addEventListener("click", e => {
+                            console.log(currentList);
+                            currentList.splice(currentList.indexOf(member),1);
+                            renderMemberList(task);
+                        });
 
-                    assignedMemberList.appendChild(setMember);
+                        assignedMemberList.appendChild(setMember);
+                    }
                 }
             }
         }
@@ -83,6 +86,8 @@ function renderTaskMembers(task, parent){
             noMember.classList.add("noMemberIcon")
             noMember.innerText = "No members assigned";
             assignedMemberList.appendChild(noMember);
+        } else {
+            renderMemberList(task);
         }
 
 

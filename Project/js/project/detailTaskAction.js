@@ -15,6 +15,7 @@ function renderActionButtons(task, parent){
             subtask: []
         }
         console.log(task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
+        console.log(detailContent.date + " = " + typeof(detailContent.date));
         applyChanges(task,detailContent);
         /*for(let user of detailContent.assignee){
             pushNotification(user, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
