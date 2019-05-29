@@ -14,9 +14,10 @@ let fullnameList;
 
 
 function setup() {
-    let firstname = "Andreas";
-    let lastname = "Østby";
-    let fullname = firstname + " " + lastname;
+
+	confirmLogin();
+
+    let fullname = user.name;
     fullnameList = document.getElementsByClassName("fullnameInput");
 
 

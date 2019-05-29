@@ -1,30 +1,6 @@
 //This file contains the dataset used to store information for the project.
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
-// Saves data to local computer
-function saveStorage (key, value) {
-
-    if (typeof value !== "string") {
-        value = JSON.stringify(value);
-    }
-
-    localStorage.setItem(key, value);
-
-}
-
-// Retrieves data saved from local computer
-function getStorage (key) {
-
-    let item = localStorage.getItem(key);
-
-    // Checking if the item starts with a bracket or number
-    if (/^(\{|\}|\[|\]|[0-9])/.test(item)) {
-        return JSON.parse(item);
-    }
-
-    return item;
-
-}
 
 //Data
 function column(name, tasks){
@@ -167,19 +143,12 @@ let projects = [
     }
 ]
 
-function getImage (id) {
-    if (users[id-1].imagePath) {
-        return users[id-1].imagePath;
-    }
-
-    return "../img/DefaultProfile.png"
-}
-
 //Sample Userlist
 let users = [
     {
         id: 1,
         name: "Krister Emanuelsen",
+        password: "KaffeIsLoveKaffeIsLife",
         imagePath: "../img/Profile_pictures/Krister.jpg",
         notifications: [],
         achievements: []
@@ -187,6 +156,7 @@ let users = [
     {
         id: 2,
         name: "Andreas Østby",
+        password: "correct horse battery staple",
         imagePath: "../img/Profile_pictures/Andreas.jpg",
         notifications: [],
         achievements: []
@@ -194,6 +164,7 @@ let users = [
     {
         id: 3,
         name: "Helene Margel",
+        password: "123456789",
         imagePath: "../img/Profile_pictures/Helene.jpg",
         notifications: [],
         achievements: []
@@ -201,6 +172,7 @@ let users = [
     {
         id: 4,
         name: "Simen Nordli Elserud",
+        password: "password432",
         imagePath: "../img/Profile_pictures/Simen.jpg",
         notifications: [],
         achievements: []
@@ -208,6 +180,7 @@ let users = [
     {
         id: 5,
         name: "Zemen Tedros",
+        password: "password123",
         imagePath: "../img/Profile_pictures/Zemen.jpg",
         notifications: [],
         achievements: []
