@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    overflow: hidden;
+    height: 100%; 
+    overflow-y: scroll;
     background-color: #e0f7f8
 }
 
@@ -102,11 +103,11 @@ body{
      
 #loginBox {
     z-index: 5; 
-    position: relative;  
+    position: fixed;  
     height: auto; 
     width: 600px;
-    left: 850px;
-    top: 400px; 
+    left: 35%;
+    top: 25%; 
     text-align: center; 
     border: 2px solid rgb(0,0,0, 0.3);
     transform: skewX(-5deg);
@@ -123,8 +124,8 @@ body{
         top: 400px; 
         z-index: 4; 
     } to {
-        left: 850px; 
-        top: 400; 
+        left: 35%; 
+        top: 25%; 
         z-index: 4;
     }
 }
