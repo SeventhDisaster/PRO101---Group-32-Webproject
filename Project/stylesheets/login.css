@@ -1,32 +1,144 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: #e0f7f8
+}
+
+/*Start:  Sidebar container, same as Board.html*/
+#loginSideContainer{
+    position: fixed;
+    background-image: linear-gradient(to bottom, #68a7ca, #e0f7f8 );
+    left: -20vw;
+    width: 40vw;
+    height: 100vh;
+    transform: skewX(-5deg);
+    z-index: 5;
+    box-shadow: 0px 0px 5px #434343;
+}
+
+#loginSideContainer #loginLogo{
+    position: relative;
+    width: 60%;
+    max-height: 20%;
+    margin-left: 15vw;
+}
+
+/* Information about NexTask */
+#aboutContainer {
+    background-color: #d8e9f3; 
+    width: 500px; 
+    height: auto; 
+    position: fixed;  
+    transform: skewX(-5deg);
+    border: 2px solid #f3f3f3; 
+    box-shadow: 20px 15px 15px #434343;
+    display: none; 
+}
+
+#infoTextHead {
+    font-size: 40px;
+    font-family: Montserrat;
+    margin-left: 20px; 
+    color: #434343;
+}
+
+#infoText{
+    font-size: 20px;
+    font-family: sans-serif; 
+    margin-left: 20px; 
+    color: #434343;
+}
+
+#readMoreBtn {
+    margin: auto; 
+    padding: 0; 
+    border: none; 
+    background: #f3f3f3; 
+    border: #f3f3f3; 
+    margin-top: 10px; 
+    margin-bottom: 30px; 
+    position: relative; 
+    width: 50%;
+    height: 10%; 
+    font-family: sans-serif; 
+    font-size: 25px; 
+    line-height: 1.5; 
+    color: #434343;
+    cursor: pointer; 
+}
 
 
-/*login and register box*/
+#loginSideContainer:hover #aboutContainer{
+    display: block;
+    animation-name: aboutAnimation; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes aboutAnimation{
+    from {
+        display: none;
+        left: 1px;
+        top: 350px; 
+        z-index: -1px; 
+    }
+    to {
+        display:block;
+        left: 460px; 
+        top: 350px; 
+        z-index: -1px;
+    }
+}
+
+#loginSideContainer hr{
+    position: relative;
+    margin-left: 50%;
+    margin-right: 10px;
+}
+
+/*-------------------end sidebar--------------- */
+
+/* Start: login and register box*/
      
 #loginBox {
-    z-index: 10 !important; 
-    position: relative; 
-    margin: auto; 
-    margin-top: 450px; 
-    z-index: 1; 
-    width: 600px;   
+    z-index: 5; 
+    position: relative;  
+    height: auto; 
+    width: 600px;
+    left: 850px;
+    top: 400px; 
     text-align: center; 
     border: 2px solid rgb(0,0,0, 0.3);
-    border-radius: 10px; 
-    background-color: #68a7ca; 
-    box-shadow: 20px 15px 15px rgb(0,0,0);
+    transform: skewX(-5deg);
+    background-color: #8dbdd8; 
+    box-shadow: 20px 15px 15px #434343;
     display: block; 
-     
+    animation-name: loginSlideIn;
+    animation-duration: 3s; 
+}
+
+@keyframes loginSlideIn {
+    from {
+        left: -200px; 
+        top: 400px; 
+        z-index: 4; 
+    } to {
+        left: 850px; 
+        top: 400; 
+        z-index: 4;
+    }
 }
 
 #h1 {
     font-size: 40px;
-    font-family: Arial; 
-    
+    font-family: Montserrat; 
+    color: #f3f3f3; 
 }
 
 .h3 {
     font-size: 30px; 
-    font-family: Arial; 
+    font-family: Montserrat; 
+    color: #f3f3f3; 
 }
 
 input {
@@ -35,16 +147,16 @@ input {
     padding:10px;
     width: 70%;
     border:2px solid #8dbdd8;
-    border-radius: 7px; 
+    transform: skewX(-5deg); 
     text-align: center; 
     font-size: 18px; 
-    font-family: Arial; 
+    font-family: sans-serif; 
     background-color: #68a7ca;
     transition-duration:0.25; 
 }
 
 input:hover{
-    background-color: #e0f7f8;
+    background-color: #f3f3f3;
 }
 
 button {
@@ -58,14 +170,14 @@ button {
     position: relative; 
     width: 50%;
     height: 10%; 
-    font-family: Arial; 
+    font-family: sans-serif; 
     font-size: 30px; 
     line-height: 1.5; 
-    color: rgb(0,0,0);
+    color: #f3f3f3;
     cursor: pointer; 
 }
 a:visited {
-    color: rgb(0,0,0);
+    color: #f3f3f3;
 }
 
 label {
@@ -78,10 +190,10 @@ label {
     position: relative; 
     width: 50%;
     height: 10%; 
-    font-family: Arial; 
+    font-family: sans-serif; 
     font-size: 30px; 
     line-height: 1.5; 
-    color: rgb(0,0,0);
+    color: #f3f3f3;
     text-align: center; 
     cursor: pointer;    
 }
@@ -99,4 +211,4 @@ label {
   display:none
 }
 
-/* end of loginBox */
+/* ------------end of loginBox ----------- */
