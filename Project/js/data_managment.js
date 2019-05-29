@@ -13,6 +13,9 @@
 // Gets the value appointed to the key name from local storage:             //
 //                    getStorage("key"); // returns value                   //
 //                                                                          //
+// If user is not logged in, redirects them to login page:                  //
+//                             confirmLogin();                              //
+//                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
 if (!getStorage("userCount")) {
