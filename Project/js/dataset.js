@@ -7,7 +7,7 @@ function column(name, tasks){
     this.tasks = tasks;
 }
 
-function task(name = "",desc = "",due = null,color = null,assignee = [],priority = 0,subtasks = []){
+function task(name = "", desc = "", due = null, color = null, assignee = [] , priority = 0, subtasks = []){
     this.name = name;
     this.desc = desc;
     this.due = due;
@@ -15,6 +15,11 @@ function task(name = "",desc = "",due = null,color = null,assignee = [],priority
     this.assignee = assignee;
     this.priority = priority;
     this.subtasks = subtasks;
+}
+
+function makeSubtask(status = 0, name = ""){
+    this.status = status;
+    this.name = name;
 }
 
 let projects = [

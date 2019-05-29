@@ -16,12 +16,12 @@ function renderTaskMembers(task, parent){
         assignMemberBtn.classList.add("assignMemberBtn");
         assignee.appendChild(assignMemberBtn);
 
-        // Assigning members to task
+        // Opening the group memberlist
         assignButtonActive = false;
         let btnListContainer = document.createElement("div");
         btnListContainer.style.height = (project.team.length * 40) + "px";
         btnListContainer.style.bottom = (project.team.length * 100) + "%";
-        assignMemberBtn.addEventListener("click", e =>{
+        assignMemberBtn.addEventListener("click", e => {
             if(assignButtonActive){
                 btnListContainer.classList.remove("addAssignListShown");
                 assignee.removeChild(btnListContainer);
@@ -32,6 +32,7 @@ function renderTaskMembers(task, parent){
                 assignButtonActive = true;
             }
         });
+
         for(let member of project.team){
             let addMember = document.createElement("img");
             addMember.setAttribute("src",getImage(member));
@@ -55,10 +56,13 @@ function renderTaskMembers(task, parent){
         let assignedMemberList = document.createElement("div");
         assignedMemberList.classList.add("assignedMemberList");
         assignee.appendChild(assignedMemberList);
-        
-        function renderMemberList(){
 
+        function renderMemberList(){
             //Render assigned members on task
+            if(currentList[0] === 0){
+                currentList = [];
+            }
+
             assignedMemberList.innerHTML = "";
             for(let member of project.team){
                 for(let assignation of task.assignee){
@@ -67,31 +71,33 @@ function renderTaskMembers(task, parent){
                         setMember.classList.add("memberIcon")
                         setMember.setAttribute("src",getImage(member));
                         setMember.dataset.id = member;
+                        assignee.dataset.list = currentList;
 
                         // Unassigning member from task
                         setMember.addEventListener("click", e => {
                             console.log(currentList);
                             currentList.splice(currentList.indexOf(member),1);
                             renderMemberList(task);
+                            assignee.dataset.list = currentList;
                         });
 
                         assignedMemberList.appendChild(setMember);
                     }
                 }
             }
+            if(task.assignee.length == 0){
+                let noMember = document.createElement("p");
+                noMember.classList.add("noMemberIcon")
+                noMember.innerText = "No members assigned";
+                assignedMemberList.appendChild(noMember);
+                assignee.dataset.list = [0];
+            } 
         }
-
-        if(task.assignee.length == 0){
-            let noMember = document.createElement("p");
-            noMember.classList.add("noMemberIcon")
-            noMember.innerText = "No members assigned";
-            assignedMemberList.appendChild(noMember);
-        } else {
-            renderMemberList(task);
-        }
+                
+        renderMemberList(task);
 
 
 
     parent.appendChild(assignee);
-    assignee.dataset.list = currentList;
+    
 }

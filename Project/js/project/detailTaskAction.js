@@ -9,13 +9,13 @@ function renderActionButtons(task, parent){
             name: document.getElementById("name").value,
             desc: document.getElementById("description").value,
             color: document.getElementById("colorType").value,
-            assignee: document.getElementById("members").dataset.list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
+            assignee: document.getElementById("members").list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
             date: document.getElementById("deadline").value,
             priority: parseInt(document.getElementById("priority").selectedIndex),
-            subtask: []
+            subtask: document.getElementById("subtasks").list.split(",") //TODO: Fix Bugs
         }
         console.log(task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
-        console.log(detailContent.priority);
+        console.log("Assignee: " + detailContent.assignee);
         applyChanges(task,detailContent);
         /*for(let user of detailContent.assignee){
             pushNotification(user, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);

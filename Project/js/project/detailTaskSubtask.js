@@ -2,11 +2,28 @@ function renderTaskSubtasklist(task, parent){
     let subTaskList = document.createElement("div");
     subTaskList.classList.add("subtaskList");
     subTaskList.id = "subtasks";
-
+    
     subTaskList.innerHTML = ""; //Clear the existing set of subtasks to set up the correct ones.
+    
+    subTaskList.dataset.list = task.subtasks;
+
+    let addSubTaskBtn = document.createElement("button");
+    addSubTaskBtn.innerText = "+   Add Subtask   +";
+    addSubTaskBtn.classList.add("addSubTaskBtn");
+    subTaskList.appendChild(addSubTaskBtn);
+    addSubTaskBtn.addEventListener("click", e =>{
+        let createSubTask = new makeSubtask(null,null);
+        task.subtasks.push(createSubTask);
+        subTaskList.innerHTML = "";
+        renderTaskSubtasklist(task, parent);
+    });
+    
     for(subtask of task.subtasks){
-        renderSubtasks(subtask, parent);
+        renderSubtasks(subtask, subTaskList);
     }
+
+
+    parent.appendChild(subTaskList);
 }
 
 function renderSubtasks(subtask, list){
