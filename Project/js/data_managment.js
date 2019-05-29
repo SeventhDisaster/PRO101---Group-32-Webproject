@@ -1,18 +1,44 @@
+//////////////////////////////////////////////////////////////////////////////
+//                             Helpful commands                             //
+//                                                                          //
+// Creates user and logs them in:                                           //
+//                 login(createUser("Username", "Password"));               //
+//                                                                          //
+// Logs in existing user if name and passwords match:                       //
+//           login(getUser("ExistingUsername", "MatchingPassword"));        //
+//                                                                          //
+// Stores the value under the key name in local storage:                    //
+//                        setStorage("key", value)                          //
+//                                                                          //
+// Gets the value appointed to the key name from local storage:             //
+//                    getStorage("key"); // returns value                   //
+//                                                                          //
+//////////////////////////////////////////////////////////////////////////////
+
 if (!getStorage("userCount")) {
     setStorage("userCount", 0);
 }
 
 var userCount = getStorage("userCount");
 
-
 var user = getStorage("activeUser");
 
 function confirmLogin () {
 
-    if (!user) {
-        location.href = "login.html";
+    if (!user || !user.name) {
+        redirectTo("login.html");
     }
 
+}
+
+function redirectTo (href) {
+
+    location.href = href;
+
+}
+
+function getTotalUsers () {
+    return userCount + users.length;
 }
 
 function createUser(name, password) {
@@ -37,7 +63,7 @@ function createUser(name, password) {
 }
 
 
-// Debugger function
+// Debugger function, removes every locally stored user
 function clearStorage() {
     localStorage.clear();
 }
@@ -50,6 +76,7 @@ function login(USER) {
 
 function logout() {
     localStorage.removeItem("activeUser");
+    redirectTo("../index.html");
 }
 
 
