@@ -21,10 +21,17 @@
 if (!getStorage("userCount")) {
     setStorage("userCount", 0);
 }
+if (!getStorage("users")) {
+    setStorage("users", users);
+} else {
+    users = getStorage("users");
+}
+
 
 var userCount = getStorage("userCount");
 
-var user = getStorage("activeUser");
+var user = users[getStorage("activeUser")-1];
+
 
 function confirmLogin () {
 
@@ -57,9 +64,10 @@ function createUser(name, password) {
         imagePath: null
     }
 
-    setStorage(name + "/" + password, USER);
-
+    //setStorage(name + "/" + password, USER);
     users.push(USER);
+
+    saveUserChanges();
 
     return USER;
 
@@ -72,8 +80,8 @@ function clearStorage() {
 }
 
 // Sets userinfo to activeUser
-function login(USER) {
-    setStorage("activeUser", USER);
+function login(user) {
+    setStorage("activeUser", user.id);
     location.href = "frontpage.html"
 }
 
@@ -84,8 +92,7 @@ function logout() {
 
 function saveUserChanges () {
 
-    setStorage(user.name + "/" + user.password, user);
-    setStorage("activeUser", user);
+    setStorage("users", users);
 
 }
 
@@ -93,7 +100,7 @@ function getUser(name, password) {
 
     // Not secure, but its what we have ¯\_(ツ)_/¯
 
-    // Checking if user matches in the active database
+    // Checking if user matches in the "database"
     for (var i = users.length - 1; i >= 0; i--) {
         if (users[i].name === name && users[i].password === password) {
 
@@ -101,8 +108,7 @@ function getUser(name, password) {
         }
     }
 
-    // Checking if user exists in local database
-    return getStorage(name + "/" + password)
+    return false;
 
 }
 
@@ -114,6 +120,8 @@ function setStorage(key, value) {
     }
 
     localStorage.setItem(key, value);
+
+    return value;
 
 }
 
@@ -131,7 +139,7 @@ function getStorage(key) {
 
 }
 
-function pushNotification (msg, href) {
+function pushNotification (userid, msg, href) {
 
     let notification = {
         msg: msg,
@@ -139,7 +147,7 @@ function pushNotification (msg, href) {
         href: href
     }
 
-    user.notifications.push(notification);
+    users[userid-1].notifications.push(notification);
 
     saveUserChanges();
 
