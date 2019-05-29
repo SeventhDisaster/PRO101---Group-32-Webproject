@@ -113,7 +113,7 @@ function renderTasks(arr) {
 
     	let currentDate = new Date();
 
-    	let link = 'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&task=' + arr[i].task;
+    	let link = 'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&tasks=' + arr[i].task;
 
         let time;
         if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {

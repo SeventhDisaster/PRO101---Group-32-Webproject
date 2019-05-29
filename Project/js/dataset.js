@@ -7,7 +7,7 @@ function column(name, tasks){
     this.tasks = tasks;
 }
 
-function task(name,desc,due,color,assignee,priority,subtasks){
+function task(name = "",desc = "",due = "",color = "",assignee = [],priority = 0,subtasks = []){
     this.name = name;
     this.desc = desc;
     this.due = due;

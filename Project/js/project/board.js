@@ -1,7 +1,12 @@
+window.addEventListener("load", s =>{
+    renderBoard();
+})
+
 //This file contains the rendering of the project columns and tasks
 
 let boardContainer = document.getElementById("boardContainer");
-let project = projects[0];
+let projectIndex = 0;
+let project = projects[projectIndex];
 
 
 function renderBoard(){
@@ -12,11 +17,26 @@ function renderBoard(){
     newColumnBtn.classList.add("addColumnBtn");
     newColumnBtn.innerText = "+";
     newColumnBtn.addEventListener("click", e => {
-        let addedColumn = new column(prompt("Column Name"), []);
+        let addedColumn = new column(prompt("Column Name"), []); // DO LATER
         project.columns.push(addedColumn);
         refreshBoard();
     })
     boardContainer.append(newColumnBtn);
+
+    let url = new URL(location.href);
+    let pURL = parseInt(url.searchParams.get("project"));
+    console.log(pURL);
+    if(typeof(pURL) == "number"){
+        let cURL = parseInt(url.searchParams.get("columns"));
+        console.log(cURL);
+        if(typeof(cURL) == "number"){
+            let tURL = parseInt(url.searchParams.get("tasks"));
+            console.log(tURL);
+            console.log(projects[pURL].columns[cURL].tasks[tURL]);
+            renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
+        }
+    }
+
 }
 
 // Render each COLUMN
@@ -37,7 +57,7 @@ function renderColumn(title, column){
     taskAddBtn.classList.add("addTaskBtn");
     taskAddBtn.innerText = "+";
     taskAddBtn.addEventListener("click",function(){
-        let addedTask = new task("","","","",[],"",[]);
+        let addedTask = new task();
         column.tasks.push(addedTask);
         renderRow(addedTask,columnBody,true);
     })
@@ -47,8 +67,11 @@ function renderColumn(title, column){
     columnBody.classList.add("colBody");
     newColumn.appendChild(columnBody);
 
-    for(let task of column.tasks){
-        renderRow(task, columnBody)
+    for(let i = 0; i < column.tasks.length; i++){
+        column.tasks[i].projectIndex = projectIndex;
+        column.tasks[i].columnIndex = project.columns.indexOf(column);
+        column.tasks[i].rowIndex = i;
+        renderRow(column.tasks[i], columnBody);
     }
 
     boardContainer.appendChild(newColumn);
@@ -79,7 +102,11 @@ function renderRow(task, column, added){
     /* Other Task Variables will be added here */
 
     newTask.addEventListener("click",function(){
-        renderDetailWindow(task);
+        closeDetailWindow();
+        function wait(){
+            renderDetailWindow(task);
+        };
+        setTimeout(wait,100);
     })
 
     if(added){
@@ -88,9 +115,6 @@ function renderRow(task, column, added){
 
     column.appendChild(newTask);
 }
-
-//Render Board on page Load
-renderBoard();
 
 //Call on this function to refresh the entire board
 function refreshBoard(){
