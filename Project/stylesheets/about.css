@@ -2,4 +2,211 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    
+}
+#scene {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #434343;
+}
+#blueLeft {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    height: 100%;
+    background-color: #68a7ca;
+}
+#blueRight {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    height: 100%;
+    background-color: #68a7ca;
+    right: 0%;
+}
+#logo {
+    left: 0%;
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 0%;
+    z-index: 3
+    
+    
+}
+#about {
+    position: absolute;
+    right: 45%;
+    top: -5%;
+    font-size: 500%;
+    z-index: 2;
+    color: #b3d3e6;
+    text-decoration: inherit;
+    font-family: monospace;
+    overflow: hidden;
+
+    
+}
+.lineUnderFoot {
+    position: absolute;
+    z-index: 2;
+    height: 0.1%;
+    width: 20%;
+    background-image: radial-gradient(circle, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+    top: 12%;
+    right: 41%;
+}
+#nexTask {
+     position: absolute;
+    right: 20.5%;
+    top: 20%;
+    font-size: 200%;
+    z-index: 2;
+    color: white;
+    text-decoration: inherit;
+    font-family: sans-serif  
+}
+#nexTask1 {
+    position: absolute;
+    right: 25%;
+    top: 30%;
+    font-size: 180%;
+    z-index: 2;
+    color: white;
+    text-decoration: inherit;
+    font-family: sans-serif  
+}
+#team {
+    position: absolute;
+    z-index: 2;
+    color: #68a7ca;
+    font-size: 200%;
+    font-family: monospace;
+    right: 46%;
+    top: 50%;
+    
+}
+/*ANDREAS*/
+#andreasPic {
+    position: absolute;
+    z-index: 2;
+    width: 9%;
+    left: 21%;
+    bottom: 5%;
+}
+#andreasTxt {
+    position: absolute;
+    z-index: 2;
+    top: 66%;
+    left: 20.5%;
+    color: #b3d3e6;
+    font-family: 'Roboto', sans-serif;
+}
+#andSubTxt {
+    position: absolute;
+    z-index: 2;
+    top: 71%;
+    left: 21.1%;
+    color: #ffd7de;
+}
+/*HELENE*/
+
+#helenePic {
+    position: absolute;
+    z-index: 2;
+    width: 9%;
+    left: 34%;
+    bottom: 1%;
+}
+#heleneTxt {
+    position: absolute;
+    z-index: 2;
+    top: 72.5%;
+    left: 33.5%;
+    color: #b3d3e6;
+    font-family: 'Roboto', sans-serif;
+}
+#helSubTxt {
+    position: absolute;
+    z-index: 2;
+    top: 76%;
+    left: 33%;
+    color: #ffd7de;
+}
+
+
+/*KRISTER*/
+
+#kristerPic {
+    position: absolute;
+    z-index: 2;
+    width: 9%;
+    left: 46%;
+    bottom: 5%;
+}
+#kristerTxt {
+    position: absolute;
+    z-index: 2;
+    top: 66%;
+    left: 43%;
+    color: #b3d3e6;
+    font-family: 'Roboto', sans-serif;
+}
+#kriSubTxt {
+    position: absolute;
+    z-index: 2;
+    top: 71%;
+    left: 45%;
+    color: #ffd7de;
+}
+/*ZEMEN*/
+
+#zemenPic {
+    position: absolute;
+    z-index: 2;
+    width: 9%;
+    left: 58%;
+    bottom: 1%;
+}
+#zemenTxt {
+    position: absolute;
+    z-index: 2;
+    top: 72.5%;
+    left: 57.5%;
+    color: #b3d3e6;
+    font-family: 'Roboto', sans-serif;
+}
+#zemSubTxt {
+    position: absolute;
+    z-index: 2;
+    top: 76%;
+    left: 59%;
+    color: #ffd7de;
+}
+
+/*SIMEN*/
+#simenPic {
+    position: absolute;
+    z-index: 2;
+    width: 9%;
+    height: 20%;
+    right: 21%;
+    bottom: 5%;
+}
+#simenTxt {
+    position: absolute;
+    z-index: 2;
+    top: 66%;
+    right: 20%;
+    color: #b3d3e6;
+    font-family: 'Roboto', sans-serif;
+}
+#simSubTxt {
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    right: 22%;
+    color: #ffd7de;
 }
