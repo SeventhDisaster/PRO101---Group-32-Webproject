@@ -23,23 +23,27 @@ function setup() {
 
     fillDomList(fullnameList, fullname);
 
+
     renderNotifications(notifications);
     renderTasks(getProjectsThisWeek());
 
 }
 
-function renderNotifications (arr) {
+function renderNotifications () {
 
 	for (var i = notifications.length - 1; i >= 0; i--) {
-		newNotification(notifications[i].msg, notifications[i].date, notifications[i].href);
+		newNotification(notifications[i]);
+	}
+	for (var i = 0; i < user.notifications.length; i++) {
+		newNotification(user.notifications[i]);
 	}
 
 }
 
-function newNotification(msg, date, href) {
+function newNotification(obj) {
 	
 	let notificationContainer = document.getElementById("notificationContainer");;
-    let template = '<td onclick="window.location.href = \'' + href + '\' " title="Goto"><span class="message">' + msg + '</span><span class="dateBox"><span>' + date + '</span></span></td>';
+    let template = '<td onclick="window.location.href = \'' + obj.href + '\' " title="Goto"><span class="message">' + obj.msg + '</span><span class="dateBox"><span>' + obj.date + '</span></span></td>';
     let dom = document.createElement("tr");
     
     dom.innerHTML = template;
@@ -115,7 +119,7 @@ function renderTasks(arr) {
         if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {
             time = "Today";
            
-            newNotification("Deadline approaching!", formatMonthToString(currentDate.getDate(), currentDate.getMonth()+1), link);
+            newNotification("Deadline approaching!", formatMonthToString(), link);
         
         } else if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()+1) {
             time = "Tomorrow"

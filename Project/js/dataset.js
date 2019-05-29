@@ -1,7 +1,6 @@
 //This file contains the dataset used to store information for the project.
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
-
 //Data
 function column(name, tasks){
     this.name = name;

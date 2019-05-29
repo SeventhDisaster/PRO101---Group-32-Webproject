@@ -57,7 +57,7 @@ function createUser(name, password) {
         imagePath: null
     }
 
-    setStorage(name + password, USER);
+    setStorage(name + "/" + password, USER);
 
     users.push(USER);
 
@@ -82,6 +82,12 @@ function logout() {
     redirectTo("../index.html");
 }
 
+function saveUserChanges () {
+
+    setStorage(user.name + "/" + user.password, user);
+    setStorage("activeUser", user);
+
+}
 
 function getUser(name, password) {
 
@@ -96,7 +102,7 @@ function getUser(name, password) {
     }
 
     // Checking if user exists in local database
-    return getStorage(name + password)
+    return getStorage(name + "/" + password)
 
 }
 
@@ -122,6 +128,28 @@ function getStorage(key) {
     }
 
     return item;
+
+}
+
+function pushNotification (msg, href) {
+
+    let notification = {
+        msg: msg,
+        date: formatMonthToString(),
+        href: href
+    }
+
+    user.notifications.push(notification);
+
+    saveUserChanges();
+
+    return notification;
+
+    //{
+    //    msg: "You have been assigned a task!",
+    //    date: "27. May",
+    //    href: "board.html?project=0&columns=0&tasks=0"
+    //}
 
 }
 

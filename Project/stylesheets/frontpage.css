@@ -252,6 +252,7 @@ td {
     margin: 0;
     display: flex;
     padding: 20px 10px 20px 10px;
+    align-items: center;
 
 }
 

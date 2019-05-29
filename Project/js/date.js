@@ -79,6 +79,12 @@ function getMonthName (month) {
 
 function formatMonthToString (day, month, year) {
 
+	if (!day) {
+		let currentDate = new Date();
+		day = currentDate.getDate();
+		month = currentDate.getMonth()+1;
+	}
+
 	month = getMonthName(month);
 
 	let str = "";
