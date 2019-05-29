@@ -17,18 +17,12 @@
 //                             confirmLogin();                              //
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
-
-if (!getStorage("userCount")) {
-    setStorage("userCount", 0);
-}
 if (!getStorage("users")) {
     setStorage("users", users);
 } else {
     users = getStorage("users");
 }
 
-
-var userCount = getStorage("userCount");
 
 var user = users[getStorage("activeUser")-1];
 
@@ -47,16 +41,10 @@ function redirectTo (href) {
 
 }
 
-function getTotalUsers () {
-    return userCount + users.length;
-}
-
 function createUser(name, password) {
 
-    setStorage("userCount", ++userCount);
-
     let USER = {
-        id: users.length + userCount,
+        id: users.length+1,
         name: name,
         password: password,
         notifications: [],
