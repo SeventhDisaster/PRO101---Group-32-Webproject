@@ -11,11 +11,11 @@ function renderActionButtons(task, parent){
             color: document.getElementById("colorType").value,
             assignee: document.getElementById("members").dataset.list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
             date: document.getElementById("deadline").value,
-            priority: parseInt(document.getElementById("priority").dataset.selectedIndex),
+            priority: parseInt(document.getElementById("priority").selectedIndex),
             subtask: []
         }
         console.log(task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
-        console.log(detailContent.date + " = " + typeof(detailContent.date));
+        console.log(detailContent.priority);
         applyChanges(task,detailContent);
         /*for(let user of detailContent.assignee){
             pushNotification(user, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);

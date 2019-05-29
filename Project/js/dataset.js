@@ -92,7 +92,7 @@ let projects = [
                         due: "2019-02-06",
                         color: null,
                         assignee: [5],
-                        priority: 3,
+                        priority: 2,
                         subtasks: [
                             {
                                 status: 0,
@@ -116,7 +116,7 @@ let projects = [
                         due: "2019-02-06",
                         color: null,
                         assignee: [], //Empty Array - No Assignment
-                        priority: 3,
+                        priority: 2,
                         subtasks: [
                             {
                                 status: 0,
