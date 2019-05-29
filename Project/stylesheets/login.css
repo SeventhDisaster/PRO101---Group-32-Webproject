@@ -120,8 +120,8 @@ body{
 
 @keyframes loginSlideIn {
     from {
-        left: -200px; 
-        top: 400px; 
+        left: 0%; 
+        top: 25%; 
         z-index: 4; 
     } to {
         left: 35%; 
