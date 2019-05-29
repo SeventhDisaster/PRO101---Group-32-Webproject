@@ -9,26 +9,16 @@ function renderDetailWindow(task){
     detailWindow.innerHTML = ""; 
     
     renderTaskName(task,detailWindow); //detailTaskName.js
-
     let descColorContainer = document.createElement("div");
         descColorContainer.classList.add("descriptionAndColor");
         detailWindow.appendChild(descColorContainer);
     renderTaskDesc(task,descColorContainer); //detailTaskDesc.js
     renderTaskColor(task,descColorContainer); //detailTaskColor.js
-
     renderTaskMembers(task, detailWindow); //detailTaskMember.js
-
     renderTaskDeadline(task,detailWindow); //detailTaskDate.js
-
     renderTaskPriority(task,detailWindow); //detailTaskPriority.js
-
     renderTaskSubtasklist(task,detailWindow); //detailTaskSubtask.js
-
-
-
     renderActionButtons(task, detailWindow); //detailTaskAction.js
-    
-
 }
 
 function openDetailWindow(){
