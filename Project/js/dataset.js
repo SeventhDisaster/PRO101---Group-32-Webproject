@@ -7,13 +7,14 @@ function column(name, tasks){
     this.tasks = tasks;
 }
 
-function task(name = "", desc = "", due = null, color = null, assignee = [] , priority = 0, subtasks = []){
+function task(name = "", desc = "", due = null, color = null, assignee = [] , priority = 0, isComplete = false, subtasks = []){
     this.name = name;
     this.desc = desc;
     this.due = due;
     this.color = color;
     this.assignee = assignee;
     this.priority = priority;
+    this.isComplete = isComplete;
     this.subtasks = subtasks;
 }
 
@@ -38,6 +39,7 @@ let projects = [
                         color: null,
                         assignee: [1,2],
                         priority: 1,
+                        isComplete: false,
                         subtasks: [
                             {
                                 isComplete: false,
@@ -57,6 +59,7 @@ let projects = [
                         color: null,
                         assignee: [4,3],
                         priority: 2,
+                        isComplete: false,
                         subtasks: []
                     },
                     {
@@ -66,6 +69,7 @@ let projects = [
                         color: null,
                         assignee: [4,3],
                         priority: 2,
+                        isComplete: true,
                         subtasks: []
                     },
                     {
@@ -75,6 +79,7 @@ let projects = [
                         color: null,
                         assignee: [4,3],
                         priority: 2,
+                        isComplete: true,
                         subtasks: []
                     },
                     {
@@ -84,6 +89,7 @@ let projects = [
                         color: null,
                         assignee: [4,3],
                         priority: 2,
+                        isComplete: false,
                         subtasks: []
                     }
                 ]
@@ -98,6 +104,7 @@ let projects = [
                         color: null,
                         assignee: [5],
                         priority: 2,
+                        isComplete: false,
                         subtasks: [
                             {
                                 isComplete: false,
@@ -122,6 +129,7 @@ let projects = [
                         color: null,
                         assignee: [], //Empty Array - No Assignment
                         priority: 2,
+                        isComplete: true,
                         subtasks: [
                             {
                                 isComplete: false,
