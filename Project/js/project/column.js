@@ -26,19 +26,20 @@ function renderColumn(column, columnIndex){
         let addedTask = new Task();
         column.tasks.push(addedTask);
         renderRow(addedTask,columnBody,true, columnIndex, column.tasks.length[-1]);
+        // Three last params are passed because of drag-drop
     })
     newColumn.appendChild(taskAddBtn);
     
     let columnBody = document.createElement("div");
     columnBody.classList.add("colBody");
     newColumn.appendChild(columnBody);
-
+    
     //Render all of the tasks in the column
     for(let i = 0; i < column.tasks.length; i++){
         column.tasks[i].projectIndex = projectIndex;
         column.tasks[i].columnIndex = project.columns.indexOf(column);
         column.tasks[i].rowIndex = i;
-        renderRow(column.tasks[i], columnBody, columnIndex, i);
+        renderRow(column.tasks[i], columnBody, false, columnIndex, i);
     }
 
     boardContainer.appendChild(newColumn);

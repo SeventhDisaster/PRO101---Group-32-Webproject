@@ -10,10 +10,12 @@ let project = projects[projectIndex];
 if(pURL === undefined){
     alert("No project found");
 } else {
+    console.log("Loaded Project from ULR-Param: Project: " + pURL);
     let tabTitle = document.getElementById("tabTitle");
     tabTitle.innerText = project.name;
 
     let boardContainer = document.getElementById("boardContainer");
+
     function renderBoard(){
         for(let i = 0; i < project.columns.length; i++){
             renderColumn(project.columns[i], i)
@@ -29,7 +31,6 @@ if(pURL === undefined){
         boardContainer.append(newColumnBtn);
 
         
-        console.log("Loaded Project from ULR-Param: Project: " + pURL);
         if(typeof(pURL) == "number"){
             let cURL = parseInt(url.searchParams.get("columns"));
             if(cURL === undefined){console.log("No URL-Param for Task-Selection. No task loaded")}
@@ -42,4 +43,10 @@ if(pURL === undefined){
             }
         }
     }
+}
+
+//Call on this function to refresh the entire board
+function refreshBoard(){
+    boardContainer.innerHTML = "";
+    renderBoard();
 }

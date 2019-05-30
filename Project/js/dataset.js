@@ -105,23 +105,18 @@ let projects = [
                 name: "In Progress",
                 tasks:[
                     {
-                        name: "Sample Task 3",
-                        desc: "Description Sample",
+                        name: "Fix Drag-&-Drop bugs",
+                        desc: "This one involves dragging to an unspecified index.",
                         due: "2019-02-06",
                         color: null,
-                        assignee: [5],
+                        assignee: [1],
                         priority: 2,
                         isComplete: false,
                         subtasks: [
                             {
                                 isComplete: false,
-                                name: "This subtask should be INCOMPLETE"
-                            },
-                            {
-                                isComplete: true,
-                                name: "This one IS completed!"
+                                name: "'I am tired...' ~ Krister 30.5.2019"
                             }
-
                         ]
                     }
                 ]

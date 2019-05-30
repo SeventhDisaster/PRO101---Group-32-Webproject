@@ -81,14 +81,6 @@ p{
     border-left: 0px;
 }
 
-.incomingColumn{
-    border-left: solid 50px #8dbdd8;
-}
-
-.incomingColumn *{
-    pointer-events: none !important;
-}
-
 .columnTitle{
     position: absolute;
     width: 90%;
@@ -170,6 +162,7 @@ p{
     filter:grayscale(.5);
     transition: .18s ease;
     padding: 20px 0px 20px 0px;
+    pointer-events: all;
 }
 
 .colTask:hover{
@@ -183,6 +176,10 @@ p{
     border-top: solid 30px #8dbdd8; 
 }
 
+.incomingRow *{
+    pointer-events: none !important;
+}
+
 .colTaskHead{
     transform: skewX(5deg);
     font-size: 17px;
@@ -192,7 +189,10 @@ p{
     overflow: hidden;
     white-space: normal;
     margin: 0px 5% 5px 20px;
+}
 
+.colTaskHead *{
+    pointer-events: none;
 }
 
 .colTaskDesc{
