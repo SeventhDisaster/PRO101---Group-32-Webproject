@@ -34,9 +34,8 @@ function renderSubtasks(subtask, list, index, task, parent){
     let checkBox = document.createElement("input");
     checkBox.id = "subStatus" + index; //Used to retrieve data on Apply
     checkBox.setAttribute("type","checkBox");
-    if(subtask.status){
+    if(subtask.isComplete){
         checkBox.checked = true;
-        container.style.backgroundColor = "rgba(215, 255, 240, 1)";
     }
     newSubtaskCheck.appendChild(checkBox);
     let customCheckBox = document.createElement("span");

@@ -265,6 +265,25 @@ p{
     background-color: #fcfcfc;
 }
 
+.taskColorPick{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.taskColorBox{
+    border-style: none;
+    transition: .1s ease;
+    margin: 2px;
+}
+
+.taskColorBox:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px #434343;
+}
+
 .assignedMembers{
     grid-column: 1/2;
     grid-row: 3;
