@@ -3,24 +3,37 @@ function renderActionButtons(task, parent){
     //Confirm changes - Push out to dataset
     let confirmBtn = document.createElement("button");
     confirmBtn.classList.add("taskConfirm");
+    confirmBtn.classList.add("taskActionButton");
     confirmBtn.innerText = "Confirm";
     confirmBtn.addEventListener("click", e => {
+        let assignedMemberList = [];
+        let assignedElem = document.getElementById("members");
+        console.log(assignedElem.dataset.list);
+
+        // Subtask object handling
+        let subtaskList = [];
+        for(let i = 0; i < task.subtasks.length; i++){
+            let subtaskStatus = document.getElementById("subStatus" + i)
+            let subtaskText = document.getElementById("subText" + i);
+            subtaskList.push({
+                    status: subtaskStatus.checked,
+                    name: subtaskText.value
+                });
+        }
+
         let detailContent = {
             name: document.getElementById("name").value,
             desc: document.getElementById("description").value,
             color: document.getElementById("colorType").value,
-            assignee: document.getElementById("members").list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
+            //assignee: document.getElementById("members").dataset.list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
+            assignee: assignedMemberList,
             date: document.getElementById("deadline").value,
             priority: parseInt(document.getElementById("priority").selectedIndex),
-            subtask: document.getElementById("subtasks").list.split(",") //TODO: Fix Bugs
+            subtask: subtaskList
         }
-        console.log(task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
-        console.log("Assignee: " + detailContent.assignee);
+        console.log("Task Selected: " + task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
+        
         applyChanges(task,detailContent);
-        /*for(let user of detailContent.assignee){
-            pushNotification(user, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
-        }*/
-
 
         closeDetailWindow();
     });
@@ -31,6 +44,7 @@ function renderActionButtons(task, parent){
     //Abort changes - Don't push out to dataset
     let cancelBtn = document.createElement("button");
     cancelBtn.classList.add("taskCancel");
+    cancelBtn.classList.add("taskActionButton");
     cancelBtn.innerText = "Cancel";
     cancelBtn.addEventListener("click",e => {
         closeDetailWindow();
