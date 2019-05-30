@@ -19,8 +19,8 @@ if(pURL === undefined){
 
     let boardContainer = document.getElementById("boardContainer");
     function renderBoard(){
-        for(let column of project.columns){
-            renderColumn(column)
+        for(let i = 0; i < project.columns.length; i++){
+            renderColumn(project.columns[i], i)
         }
         let newColumnBtn = document.createElement("button");
         newColumnBtn.classList.add("addColumnBtn");
@@ -49,19 +49,17 @@ if(pURL === undefined){
     }
 
     // Render each COLUMN
-    function renderColumn(column){
+    function renderColumn(column, columnIndex){
         let newColumn = document.createElement("div");
         newColumn.classList.add("taskColumn");
 
-        //Drag & Drop Settings
-        newColumn.setAttribute("ondragover","allowColumnDrop(e)");
-        newColumn.setAttribute("ondrop","dropColumn(event)");
-        newColumn.setAttribute("draggable","true");
-        newColumn.setAttribute("ondragstart","dragColumn(event)");
-
+        
         let columnHead = document.createElement("div");
         columnHead.classList.add("colHead");
         newColumn.appendChild(columnHead)
+        
+        //Drag & Drop For Columns
+        dragDropColumn(newColumn,columnHead,columnIndex);
 
         let columnTitle = document.createElement("input");
         columnTitle.classList.add("columnTitle");

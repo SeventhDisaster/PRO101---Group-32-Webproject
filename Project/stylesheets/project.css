@@ -77,10 +77,16 @@ p{
     width: 250px;
     margin: 0px 0px 0px 5px;
     overflow: hidden;
+    transition: .2s ease;
+    border-left: 0px;
 }
 
-.taskColumn[drop-active=true]{
-    border-left: 30px #8dbdd8;
+.incomingColumn{
+    border-left: solid 50px #8dbdd8;
+}
+
+.incomingColumn *{
+    pointer-events: none !important;
 }
 
 .columnTitle{
