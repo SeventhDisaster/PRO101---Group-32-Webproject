@@ -7,8 +7,12 @@ function renderActionButtons(task, parent){
     confirmBtn.innerText = "Confirm";
     confirmBtn.addEventListener("click", e => {
         let assignedMemberList = [];
-        let assignedElem = document.getElementById("members");
-        console.log(assignedElem.dataset.list);
+        for(let user of task.assignee){
+            assignedMemberList.push(user);
+        }
+        if(assignedMemberList.length === 0){
+            assignedMemberList = [0]; //For default empty
+        }
 
         // Subtask object handling
         let subtaskList = [];
@@ -16,9 +20,9 @@ function renderActionButtons(task, parent){
             let subtaskStatus = document.getElementById("subStatus" + i)
             let subtaskText = document.getElementById("subText" + i);
             subtaskList.push({
-                    status: subtaskStatus.checked,
-                    name: subtaskText.value
-                });
+                isComplete: subtaskStatus.checked,
+                name: subtaskText.value
+            });
         }
 
         let detailContent = {

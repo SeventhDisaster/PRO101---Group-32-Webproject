@@ -12,12 +12,14 @@
 <body>
     <section id="pageContainer">
         <div id="sidebarContainer">
-            <img id="logo" src="../img/NexTaskLogoWhite.svg">
-            <hr>
-            <h2>Project Name</h2>
-            <p>Project Description goes here</p>
-            <p>Project Status:</p>
-            <!-- TBA: Team members and stuff -->
+            <div id="sideBarContent">
+                <img id="logo" src="../img/NexTaskLogoWhite.svg">
+                <hr>
+                <h2>Project Name</h2>
+                <p>Project Description goes here</p>
+                <p>Project Status:</p>
+                <!-- TBA: Team members and stuff -->
+            </div>
         </div>
 
         <!-- All board columns and rows are generated here -->
@@ -26,10 +28,13 @@
         <!-- Task Detail can be in Create Task or Edit Task mode-->
         <div id="taskDetailContainer"></div>
     </section>
+
     <script src="../js/date.js"></script>
     <script src="../js/dataset.js"></script>
     <script src="../js/data_managment.js"></script>
+    <script src="../js/project/dragdropColumn.js"></script>
     <script src="../js/project/board.js"></script>
+
     <script src="../js/project/taskDetails.js"></script>
         <script src="../js/project/detailTaskName.js"></script>
         <script src="../js/project/detailTaskDesc.js"></script>

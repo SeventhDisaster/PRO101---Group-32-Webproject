@@ -20,7 +20,7 @@ if(pURL === undefined){
     let boardContainer = document.getElementById("boardContainer");
     function renderBoard(){
         for(let column of project.columns){
-            renderColumn(column.name, column)
+            renderColumn(column)
         }
         let newColumnBtn = document.createElement("button");
         newColumnBtn.classList.add("addColumnBtn");
@@ -49,16 +49,26 @@ if(pURL === undefined){
     }
 
     // Render each COLUMN
-    function renderColumn(title, column){
+    function renderColumn(column){
         let newColumn = document.createElement("div");
         newColumn.classList.add("taskColumn");
+
+        //Drag & Drop Settings
+        newColumn.setAttribute("ondragover","allowColumnDrop(e)");
+        newColumn.setAttribute("ondrop","dropColumn(event)");
+        newColumn.setAttribute("draggable","true");
+        newColumn.setAttribute("ondragstart","dragColumn(event)");
 
         let columnHead = document.createElement("div");
         columnHead.classList.add("colHead");
         newColumn.appendChild(columnHead)
 
-        let columnTitle = document.createElement("h3");
-        columnTitle.innerText = title;
+        let columnTitle = document.createElement("input");
+        columnTitle.classList.add("columnTitle");
+        columnTitle.value = column.name;
+        columnTitle.addEventListener("keyup", e => {
+            column.name = columnTitle.value;
+        });
         columnHead.appendChild(columnTitle);
 
         

@@ -43,7 +43,7 @@ function renderTaskMembers(task, parent){
             //Assign Member to Task
             addMember.addEventListener("click", e => {
                 if(!currentList.includes(member)){
-                    currentList.push(member);
+                    task.assignee.push(member);
                     pushNotification(member, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
                     renderMemberList(task);
                 } else {
@@ -70,7 +70,7 @@ function renderTaskMembers(task, parent){
                         let setMember = document.createElement("img");
                         setMember.classList.add("memberIcon")
                         setMember.setAttribute("src",getImage(member));
-                        setMember.dataset.id = member;
+                        setMember.id = "User" + member;
                         assignee.dataset.list = currentList;
 
                         // Unassigning member from task

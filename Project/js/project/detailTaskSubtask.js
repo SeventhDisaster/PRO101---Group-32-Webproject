@@ -22,25 +22,26 @@ function renderTaskSubtasklist(task, parent){
     parent.appendChild(subTaskList);
 }
 
-function renderSubtasks(subtask, list, index, task, parent){
+function renderSubtasks(subtask, list, index, task){
     let container = document.createElement("div");
     container.classList.add("subtaskContainer");
 
 
-    //Subtask Completion Mark
+    //Subtask checkmark
     let newSubtaskCheck = document.createElement("label");
     newSubtaskCheck.classList.add("subtaskCheckContainer");
     
     let checkBox = document.createElement("input");
     checkBox.id = "subStatus" + index; //Used to retrieve data on Apply
     checkBox.setAttribute("type","checkBox");
-    if(subtask.isComplete){
-        checkBox.checked = true;
-    }
+    checkBox.checked = subtask.isComplete;
     newSubtaskCheck.appendChild(checkBox);
     let customCheckBox = document.createElement("span");
     customCheckBox.innerText = "✓";
     customCheckBox.classList.add("subTaskCheckbox");
+    customCheckBox.addEventListener("click", e => {
+        subtask.isComplete = !subtask.isComplete;
+    });
     newSubtaskCheck.appendChild(customCheckBox);
 
     //Remove Subtask Button
@@ -59,7 +60,9 @@ function renderSubtasks(subtask, list, index, task, parent){
     newSubtaskText.classList.add("subtask");
     newSubtaskText.setAttribute("placeholder","Type to add subtask..");
     newSubtaskText.value = subtask.name;
-
+    newSubtaskText.addEventListener("keyup", e => {
+        subtask.name = newSubtaskText.value;
+    });
 
     container.appendChild(newSubtaskCheck);
     container.appendChild(removeSubTaskBtn);

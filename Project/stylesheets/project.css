@@ -71,12 +71,31 @@ p{
     overflow-x: auto;
 }
 
-#boardContainer .taskColumn{
+.taskColumn{
     transform: skewX(-5deg);
     min-width: 250px;
     width: 250px;
     margin: 0px 0px 0px 5px;
     overflow: hidden;
+}
+
+.taskColumn[drop-active=true]{
+    border-left: 30px #8dbdd8;
+}
+
+.columnTitle{
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transform: skewX(5deg);
+    background-color: #434343;
+    border-style: none;
 }
 
 .addColumnBtn{
@@ -94,24 +113,15 @@ p{
     cursor: pointer;
 }
 
-#boardContainer .taskColumn .colHead{
+.colHead{
     position: relative;
     height: 15%;
     width: 100%;
     margin-top: -10%;
     background-color: #434343;
     z-index: 3;
-}
-
-#boardContainer .taskColumn .colHead h3{
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    margin-top: 20%;
-    font-size: 25px;
-    display: inline-block;
-    text-align: center;
-    color: white;
-    transform: skewX(5deg);
+    display: flex;
+    
 }
 
 /* ADD NEW TASK BUTTON */
