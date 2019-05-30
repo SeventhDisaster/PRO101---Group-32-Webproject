@@ -2,10 +2,6 @@ window.addEventListener("load", s =>{
     renderBoard();
 })
 
-//This file contains the rendering of the project columns and tasks
-
-
-
 let url = new URL(location.href);
 let pURL = parseInt(url.searchParams.get("project"));
 let projectIndex = pURL;
@@ -26,7 +22,7 @@ if(pURL === undefined){
         newColumnBtn.classList.add("addColumnBtn");
         newColumnBtn.innerText = "+";
         newColumnBtn.addEventListener("click", e => {
-            let addedColumn = new column(prompt("Column Name"), []); // DO LATER
+            let addedColumn = new Column(prompt("Column Name"), []); // DO LATER
             project.columns.push(addedColumn);
             refreshBoard();
         })
@@ -45,97 +41,5 @@ if(pURL === undefined){
                 renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
             }
         }
-
-    }
-
-    // Render each COLUMN
-    function renderColumn(column, columnIndex){
-        let newColumn = document.createElement("div");
-        newColumn.classList.add("taskColumn");
-
-        
-        let columnHead = document.createElement("div");
-        columnHead.classList.add("colHead");
-        newColumn.appendChild(columnHead)
-        
-        //Drag & Drop For Columns
-        dragDropColumn(newColumn,columnHead,columnIndex);
-
-        let columnTitle = document.createElement("input");
-        columnTitle.classList.add("columnTitle");
-        columnTitle.value = column.name;
-        columnTitle.addEventListener("keyup", e => {
-            column.name = columnTitle.value;
-        });
-        columnHead.appendChild(columnTitle);
-
-        
-        let taskAddBtn = document.createElement("button");
-        taskAddBtn.classList.add("addTaskBtn");
-        taskAddBtn.innerText = "+";
-        taskAddBtn.addEventListener("click",function(){
-            let addedTask = new task();
-            column.tasks.push(addedTask);
-            renderRow(addedTask,columnBody,true);
-        })
-        newColumn.appendChild(taskAddBtn);
-        
-        let columnBody = document.createElement("div");
-        columnBody.classList.add("colBody");
-        newColumn.appendChild(columnBody);
-
-        for(let i = 0; i < column.tasks.length; i++){
-            column.tasks[i].projectIndex = projectIndex;
-            column.tasks[i].columnIndex = project.columns.indexOf(column);
-            column.tasks[i].rowIndex = i;
-            renderRow(column.tasks[i], columnBody);
-        }
-
-        boardContainer.appendChild(newColumn);
-    }
-
-    //Render each ROW (For every column)
-    function renderRow(task, column, added){
-        let newTask = document.createElement("div");
-        newTask.classList.add("colTask");
-        column.appendChild(newTask);
-
-        let taskHeader = document.createElement("h4");
-        taskHeader.classList.add("colTaskHead");
-        taskHeader.innerText = task.name;
-        newTask.appendChild(taskHeader);
-        
-        let taskDescription = document.createElement("p");
-        taskDescription.classList.add("colTaskDesc");
-        taskDescription.innerText = task.desc;
-        newTask.appendChild(taskDescription);
-
-        let color = task.color;
-        if(color){
-            newTask.style.backgroundColor = color;
-        } else {
-            newTask.style.backgroundColor = "#f3f3f3";
-        }
-        /* Other Task Variables will be added here */
-
-        newTask.addEventListener("click",function(){
-            closeDetailWindow();
-            function wait(){
-                renderDetailWindow(task);
-            };
-            setTimeout(wait,100);
-        })
-
-        if(added){
-            renderDetailWindow(task);
-        }
-
-        column.appendChild(newTask);
-    }
-
-    //Call on this function to refresh the entire board
-    function refreshBoard(){
-        boardContainer.innerHTML = "";
-        renderBoard();
     }
 }

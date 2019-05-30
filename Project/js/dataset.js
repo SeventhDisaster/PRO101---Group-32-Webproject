@@ -2,12 +2,19 @@
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
 //Data
-function column(name, tasks){
+function Project(name = "", description = "", team = [], columns = []){
+    this.name = name;
+    this.description = description;
+    this.team = team;
+    this.columns = columns;
+}
+
+function Column(name = "", tasks = []){
     this.name = name;
     this.tasks = tasks;
 }
 
-function task(name = "", desc = "", due = null, color = null, assignee = [] , priority = 0, isComplete = false, subtasks = []){
+function Task(name = "", desc = "", due = null, color = null, assignee = [] , priority = 0, isComplete = false, subtasks = []){
     this.name = name;
     this.desc = desc;
     this.due = due;
@@ -18,7 +25,7 @@ function task(name = "", desc = "", due = null, color = null, assignee = [] , pr
     this.subtasks = subtasks;
 }
 
-function makeSubtask(status = false, name = ""){
+function Subtask(status = false, name = ""){
     this.isComplete = status;
     this.name = name;
 }

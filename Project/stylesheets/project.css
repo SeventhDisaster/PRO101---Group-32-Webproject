@@ -159,6 +159,7 @@ p{
     justify-content: flex-start;
     max-height: 80%;
     overflow-y: auto;
+    transition: .2s ease;
 }
 
 .colTask{
@@ -176,6 +177,10 @@ p{
     filter: grayscale(0);
     margin: 5px 0px;
     cursor: pointer;
+}
+
+.incomingRow{
+    border-top: solid 30px #8dbdd8; 
 }
 
 .colTaskHead{

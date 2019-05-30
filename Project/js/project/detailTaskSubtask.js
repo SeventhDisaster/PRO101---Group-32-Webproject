@@ -10,7 +10,7 @@ function renderTaskSubtasklist(task, parent){
     addSubTaskBtn.classList.add("addSubTaskBtn");
     subTaskList.appendChild(addSubTaskBtn);
     addSubTaskBtn.addEventListener("click", e =>{
-        let createSubTask = new makeSubtask(null,null);
+        let createSubTask = new Subtask(null,null);
         task.subtasks.push(createSubTask);
         renderSubtasks(task.subtasks[task.subtasks.length-1], subTaskList, [task.subtasks.length -1], task, parent);
     });
