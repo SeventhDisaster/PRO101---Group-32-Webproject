@@ -17,8 +17,8 @@ function task(name = "", desc = "", due = null, color = null, assignee = [] , pr
     this.subtasks = subtasks;
 }
 
-function makeSubtask(status = 0, name = ""){
-    this.status = status;
+function makeSubtask(status = false, name = ""){
+    this.isComplete = status;
     this.name = name;
 }
 
@@ -40,12 +40,12 @@ let projects = [
                         priority: 1,
                         subtasks: [
                             {
-                                status: 0,
-                                name: "Sample incomplete subtask 1"
+                                isComplete: false,
+                                name: "This subtask should be INCOMPLETE"
                             },
                             {
-                                status: 1,
-                                name: "Sample complete subtask"
+                                isComplete: true,
+                                name: "This one IS completed!"
                             }
 
                         ]
@@ -100,12 +100,12 @@ let projects = [
                         priority: 2,
                         subtasks: [
                             {
-                                status: 0,
-                                name: "Sample incomplete subtask 1"
+                                isComplete: false,
+                                name: "This subtask should be INCOMPLETE"
                             },
                             {
-                                status: 1,
-                                name: "Sample complete subtask"
+                                isComplete: true,
+                                name: "This one IS completed!"
                             }
 
                         ]
@@ -124,12 +124,12 @@ let projects = [
                         priority: 2,
                         subtasks: [
                             {
-                                status: 0,
-                                name: "Sample incomplete subtask 1"
+                                isComplete: false,
+                                name: "This subtask should be INCOMPLETE"
                             },
                             {
-                                status: 1,
-                                name: "Sample complete subtask"
+                                isComplete: true,
+                                name: "This one IS completed!"
                             }
 
                         ]
