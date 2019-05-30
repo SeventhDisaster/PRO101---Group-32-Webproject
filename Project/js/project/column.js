@@ -23,6 +23,7 @@ function renderColumn(column, columnIndex){
     taskAddBtn.classList.add("addTaskBtn");
     taskAddBtn.innerText = "+";
     taskAddBtn.addEventListener("click",function(){
+        refreshBoard();
         let addedTask = new Task();
         column.tasks.push(addedTask);
         renderRow(addedTask,columnBody,true, columnIndex, column.tasks.length[-1]);

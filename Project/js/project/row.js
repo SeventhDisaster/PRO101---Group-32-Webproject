@@ -19,6 +19,8 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     let color = task.color;
     if(color){
         newTask.style.backgroundColor = color;
+    } else if(rowIndex % 2 === 0) {
+        newTask.style.backgroundColor = "#e9e9e9"
     } else {
         newTask.style.backgroundColor = "#f3f3f3";
     }

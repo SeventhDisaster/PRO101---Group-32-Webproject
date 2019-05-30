@@ -12,7 +12,7 @@ function dragDropColumn(newColumn, columnHead, columnIndex){
             } else {
                 newColumn.style.borderLeft = "solid 10px #8dbdd8"
                 newColumn.style.borderRight = "solid 10px #8dbdd8"
-                newColumn.style.backgroundColor = "red";
+                newColumn.style.backgroundColor = "#e0f7f8";
             }
             e.preventDefault();
         });

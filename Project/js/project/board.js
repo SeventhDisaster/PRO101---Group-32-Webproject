@@ -11,10 +11,10 @@ if(pURL === undefined){
     alert("No project found");
 } else {
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
-    let tabTitle = document.getElementById("tabTitle");
-    tabTitle.innerText = project.name;
 
     let boardContainer = document.getElementById("boardContainer");
+
+    renderProjectInfo(project);
 
     function renderBoard(){
         for(let i = 0; i < project.columns.length; i++){
@@ -24,7 +24,7 @@ if(pURL === undefined){
         newColumnBtn.classList.add("addColumnBtn");
         newColumnBtn.innerText = "+";
         newColumnBtn.addEventListener("click", e => {
-            let addedColumn = new Column(prompt("Column Name"), []); // DO LATER
+            let addedColumn = new Column();
             project.columns.push(addedColumn);
             refreshBoard();
         })

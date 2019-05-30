@@ -15,9 +15,15 @@
             <div id="sideBarContent">
                 <img id="logo" src="../img/NexTaskLogoWhite.svg">
                 <hr>
-                <h2>Project Name</h2>
-                <p>Project Description goes here</p>
-                <p>Project Status:</p>
+                <input id="projectName" type="text">
+                <div id="descContainer">
+                    <textarea id="projectDescription" type="text" spellcheck="false" placeholder="Project Description"></textarea>
+                </div>
+                <select id="projectStatus">
+                    <option>• On Track</option>
+                    <option>• At Risk</option>
+                    <option>• Behind Schedule!</option>
+                </select>
                 <!-- TBA: Team members and stuff -->
             </div>
         </div>
@@ -32,6 +38,7 @@
     <script src="../js/date.js"></script>
     <script src="../js/dataset.js"></script>
     <script src="../js/data_managment.js"></script>
+    <script src="../js/project/projectInfo.js"></script>
     <script src="../js/project/board.js"></script>
         <script src="../js/project/column.js"></script>
         <script src="../js/project/row.js"></script>
