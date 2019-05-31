@@ -15,7 +15,7 @@ if(pURL === undefined){
 } else {
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
 
-    let boardContainer = document.getElementById("boardContainer");
+    let boardContainer = getElemById("boardContainer");
 
     renderProjectInfo(project);
 
@@ -23,15 +23,15 @@ if(pURL === undefined){
         for(let i = 0; i < project.columns.length; i++){
             renderColumn(project.columns[i], i)
         }
-        let newColumnBtn = document.createElement("button");
-        newColumnBtn.classList.add("addColumnBtn");
-        newColumnBtn.innerText = "+";
-        newColumnBtn.addEventListener("click", e => {
+        let addColumn = newElem("button");
+        addColumn.classList.add("addColumnBtn");
+        addColumn.innerText = "+";
+        addColumn.addEventListener("click", e => {
             let addedColumn = new Column();
             project.columns.push(addedColumn);
             refreshBoard();
         })
-        boardContainer.append(newColumnBtn);
+        boardContainer.append(addColumn);
 
         
     }

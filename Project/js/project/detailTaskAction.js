@@ -1,7 +1,7 @@
 function renderActionButtons(task, parent){
 
     //Confirm changes - Push out to dataset
-    let confirmBtn = document.createElement("button");
+    let confirmBtn = newElem("button");
     confirmBtn.classList.add("taskConfirm");
     confirmBtn.classList.add("taskActionButton");
     confirmBtn.innerText = "Confirm";
@@ -11,27 +11,27 @@ function renderActionButtons(task, parent){
             assignedMemberList.push(user);
         }
         if(assignedMemberList.length === 0){
-            assignedMemberList = [0]; //For default empty
+            assignedMemberList = []; //For default empty
         }
 
         // Subtask object handling
         let subtaskList = [];
         for(let i = 0; i < task.subtasks.length; i++){
-            let subtaskStatus = document.getElementById("subStatus" + i)
-            let subtaskText = document.getElementById("subText" + i);
+            let subtaskStatus = getElemById("subStatus" + i)
+            let subtaskText = getElemById("subText" + i);
             subtaskList.push({
                 isComplete: subtaskStatus.checked,
                 name: subtaskText.value
             });
         }
         let detailContent = {
-            name: document.getElementById("name").value,
-            desc: document.getElementById("description").value,
-            color: document.getElementById("colorType").value,
+            name: getElemById("name").value,
+            desc: getElemById("description").value,
+            color: getElemById("colorType").value,
             assignee: assignedMemberList,
-            date: document.getElementById("deadline").value,
-            priority: parseInt(document.getElementById("priority").selectedIndex),
-            isComplete: document.getElementById("complete").checked,
+            date: getElemById("deadline").value,
+            priority: parseInt(getElemById("priority").selectedIndex),
+            isComplete: getElemById("complete").checked,
             subtask: subtaskList
         }
         console.log(detailContent.isComplete);
@@ -46,7 +46,7 @@ function renderActionButtons(task, parent){
 
 
     //Abort changes - Don't push out to dataset
-    let cancelBtn = document.createElement("button");
+    let cancelBtn = newElem("button");
     cancelBtn.classList.add("taskCancel");
     cancelBtn.classList.add("taskActionButton");
     cancelBtn.innerText = "Cancel";

@@ -1,5 +1,5 @@
 function renderTaskColor(task,parent){
-    let colorType = document.createElement("input");
+    let colorType = newElem("input");
         colorType.id = "colorType";
         colorType.value = task.color;
         colorType.setAttribute("type","text");
@@ -19,11 +19,11 @@ function renderTaskColor(task,parent){
         ["#ffabab", "#ffc9de", "#ecd4ff", "#fcc2ff", "#f6a6ff"]
     ]
 
-    let colorPickContainer = document.createElement("div");
+    let colorPickContainer = newElem("div");
     colorPickContainer.classList.add("taskColorPick")
     for(let i = 0; i < defaultPalette.length; i++){
         for(let j = 0; j < defaultPalette[i].length; j++){
-            let newColor = document.createElement("button");
+            let newColor = newElem("button");
             newColor.classList.add("taskColorBox");
             newColor.style.backgroundColor = defaultPalette[i][j];
             newColor.addEventListener("click", e => {

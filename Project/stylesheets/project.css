@@ -285,7 +285,7 @@ label{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    background-color: #fefefe; 
+    background-image: linear-gradient(to left, #f2f8f8 , #e8f9fa); 
     height: 100vh;
     z-index: 2;
     overflow-x: auto;
@@ -315,7 +315,7 @@ label{
     transform: skewX(-5deg);
     min-width: 250px;
     width: 250px;
-    margin: 0px 0px 0px 1vw;
+    margin: 0px 0px 0px 0.5vw;
     background-color: #fafafa;
     overflow: hidden;
     transition: .2s ease;
@@ -337,6 +337,24 @@ label{
     border-style: none;
 }
 
+.delColumn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 30px;
+    border-style: none;
+    background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    transition: .1s ease;
+}
+
+.delColumn:hover{
+    cursor: pointer;
+    background-color: rgba(200, 67, 67,0.5);
+    transform: scale(1.3);
+}
+
 .addColumnBtn{
     transform: skewX(-5deg);
     margin: 0px 0px 0px 10px;
@@ -345,6 +363,7 @@ label{
     opacity: .3;
     transition: .2s ease;
     font-size: 72px;
+    box-shadow: 0px 0px 10px #434343;
 }
 
 .addColumnBtn:hover{
@@ -418,9 +437,9 @@ label{
     right: 0;
     width: 100%;
     background-color: #f3f3f3;
-    filter:grayscale(.5);
+    filter:grayscale(.1);
     transition: .18s ease;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 0px 0px;
     pointer-events: all;
 }
 
@@ -455,7 +474,86 @@ label{
     white-space: normal;
     overflow: hidden;
     max-width: 70%;
+    padding-bottom: 10px;
     
+}
+
+.completeMark{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    font-size: 50px;
+    text-align: right;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    padding: 0 10%;
+    font-weight: bold;
+    color: white;
+    opacity: .4;
+    background-image: linear-gradient(to left, rgba(160, 255, 218,1), rgba(0,0,0,0))
+}
+
+.highPri{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: rgb(255, 191, 94);
+}
+
+.criticalPri{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: rgb(255, 117, 117);
+}
+
+.deadLine{
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: rgb(126, 126, 126);
+    padding-left: 5%;
+    padding-bottom: 15px;
+    margin-top: 5%;
+    font-size: 13px;
+    height: 20px;
+    transition: .2s ease;
+}
+
+.deadLine::before{
+    content: url("../img/TinyCalendarIcon.png");
+    height: 20px;
+}
+
+.colTask:hover .assigneeContainer{
+    height: 40px;
+    opacity: .9;
+}
+
+.colTask:hover .assigneeContainer .assigneeMember{
+    height: 40px;
+}
+
+.assigneeContainer{
+    position: relative;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: .1;
+    transition: .2s ease;
+    margin: 0px;
+}
+
+.assigneeMember{
+    width: 40px;
+    height: 0px;
+    transition: .2s ease;
+    margin: 0px 5px;
 }
 
 .rowTaker{
@@ -818,7 +916,7 @@ input[type=date]::-webkit-inner-spin-button {
 
 
 .subtaskCheckContainer input:checked ~ .subTaskCheckbox{
-    background-color: rgba(215, 255, 240, 1) !important;
+    background-color: #a0ffda !important;
     color: #237323;
 
 }
@@ -896,6 +994,7 @@ input[type=date]::-webkit-inner-spin-button {
     left: -15vw;
     cursor: pointer;
     background-color: #d7fff0;
+    box-shadow: 0px 0px 5px #18a557;
 }
 
 .completeContainer input {

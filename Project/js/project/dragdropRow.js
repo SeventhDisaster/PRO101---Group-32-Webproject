@@ -1,11 +1,11 @@
 let draggingRow = false;
 
-function dragDropRow(task, columnIndex, rowIndex){
+function dragDropRow(task, cIndex, rIndex){
     task.setAttribute("draggable","true");
 
     task.addEventListener("dragstart", e => {
-        e.dataTransfer.setData("column", columnIndex);
-        e.dataTransfer.setData("row", rowIndex);
+        e.dataTransfer.setData("column", cIndex);
+        e.dataTransfer.setData("row", rIndex);
         e.dataTransfer.setData("isRow", true);
         task.style.opacity = "0.05"
         draggingRow = true;
@@ -31,31 +31,32 @@ function dragDropRow(task, columnIndex, rowIndex){
     task.addEventListener("drop", e =>{
         task.style.borderTop = "solid 0px #8dbdd8"
         if(!draggingColumn){
-            let targetColumn = columnIndex;
-            let targetRow = rowIndex;
-            let columnData = parseInt(e.dataTransfer.getData("column"));
-            let rowData = parseInt(e.dataTransfer.getData("row"));
+            let pc = project.columns;
+            let cTarget = cIndex;
+            let rTarget = rIndex;
+            let cData = parseInt(e.dataTransfer.getData("column"));
+            let rData = parseInt(e.dataTransfer.getData("row"));
             
-            console.log(project.columns[columnData].tasks[rowData]);
-            console.log("Above Task Moved From Column: " + columnData + " to Column: " + targetColumn);
-            console.log("Above Task Moved From Row: " + rowData + " to Row: " + targetRow);
+            console.log(pc[cData].tasks[rData]);
+            console.log("Above Task Moved From Column: " + cData + " to Column: " + cTarget);
+            console.log("Above Task Moved From Row: " + rData + " to Row: " + rTarget);
             
-            if(targetColumn !== columnData){
-                let thisColumn = project.columns[targetColumn];
-                let dataColumn = project.columns[columnData];
-                thisColumn.tasks.splice(targetRow,0,dataColumn.tasks[rowData]);
-                dataColumn.tasks.splice(rowData,1);
-            } else if(targetRow !== rowData){
-                let taskList = project.columns[targetColumn].tasks;
-                taskList.splice(targetRow,0,taskList[rowData]);
-                if(targetRow < rowData){
-                    rowData++;
-                    taskList.splice(rowData,1);
-                } else if (targetRow > rowData){
-                    if(rowData !== 0){
-                        rowData--;
+            if(cTarget !== cData){
+                let thisColumn = pc[cTarget];
+                let dataColumn = pc[cData];
+                thisColumn.tasks.splice(rTarget,0,dataColumn.tasks[rData]);
+                dataColumn.tasks.splice(rData,1);
+            } else if(rTarget !== rData){
+                let taskList = pc[cTarget].tasks;
+                taskList.splice(rTarget,0,taskList[rData]);
+                if(rTarget < rData){
+                    rData++;
+                    taskList.splice(rData,1);
+                } else if (rTarget > rData){
+                    if(rData !== 0){
+                        rData--;
                     }
-                    taskList.splice(rowData,1);
+                    taskList.splice(rData,1);
                 }
             }
             refreshBoard();
@@ -63,7 +64,7 @@ function dragDropRow(task, columnIndex, rowIndex){
     })
 }
 
-function dragDropNewRow(body, targetColumn){  
+function dragDropNewRow(body, cTarget){  
     
     body.addEventListener("dragover", e => {
         if(!draggingColumn){
@@ -82,15 +83,15 @@ function dragDropNewRow(body, targetColumn){
     body.addEventListener("drop", e => {
         body.style.borderTop = "solid 0px #8dbdd8"
         if(!draggingColumn){
-            let columnData = parseInt(e.dataTransfer.getData("column"));
-            let rowData = parseInt(e.dataTransfer.getData("row"));
+            let pc = project.columns;
+            let cData = parseInt(e.dataTransfer.getData("column"));
+            let rData = parseInt(e.dataTransfer.getData("row"));
+            console.log("Moved Task From ColRow: " + cData + "," + rData + " - To Column: " + cTarget);
     
-            console.log("Moved Task From ColRow: " + columnData + "," + rowData + " - To Column: " + targetColumn);
+            pc[cTarget].tasks.push(pc[cData].tasks[rData]);
     
-            project.columns[targetColumn].tasks.push(project.columns[columnData].tasks[rowData]);
-    
-            console.log(project.columns[columnData].tasks[rowData]);
-            project.columns[columnData].tasks.splice(rowData,1);
+            console.log(pc[cData].tasks[rData]);
+            pc[cData].tasks.splice(rData,1);
     
             refreshBoard();
         }

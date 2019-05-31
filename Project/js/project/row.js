@@ -1,21 +1,21 @@
 function renderRow(task, column, added, columnIndex, rowIndex){
-    let newTask = document.createElement("div");
+    let newTask = newElem("div");
     newTask.classList.add("colTask");
     column.appendChild(newTask);
 
     //Drag and drop on rows
     dragDropRow(newTask, columnIndex, rowIndex);
 
-    let taskHeader = document.createElement("h4");
-    taskHeader.classList.add("colTaskHead");
-    taskHeader.innerText = task.name;
-    newTask.appendChild(taskHeader);
+    let head = newElem("h4");
+    head.classList.add("colTaskHead");
+    head.innerText = task.name;
+    newTask.appendChild(head);
 
     
-    let taskDescription = document.createElement("p");
-    taskDescription.classList.add("colTaskDesc");
-    taskDescription.innerText = task.desc;
-    newTask.appendChild(taskDescription);
+    let desc = newElem("p");
+    desc.classList.add("colTaskDesc");
+    desc.innerText = task.desc;
+    newTask.appendChild(desc);
 
     let color = task.color;
     if(color){
@@ -25,6 +25,46 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     } else {
         newTask.style.backgroundColor = "#f3f3f3";
     }
+
+    if(task.isComplete){
+        let complete = newElem("div");
+        complete.innerText = "✓";
+        complete.classList.add("completeMark");
+        newTask.appendChild(complete);
+    }
+
+    if(task.priority > 0 && !task.isComplete){
+        let priority = newElem("div");
+        if(task.priority === 1){
+            priority.classList.add("highPri");
+        }
+        if (task.priority === 2){
+            priority.classList.add("criticalPri");
+        }
+        newTask.appendChild(priority);
+    }
+
+    if(task.due){
+        let due = newElem("div");
+        due.innerText = "      " + task.due;
+        due.classList.add("deadLine");
+        newTask.appendChild(due);
+    }
+
+    if(task.assignee.length > 0){
+        let assigneeContainer = newElem("div");
+        assigneeContainer.classList.add("assigneeContainer");
+        for(let member of task.assignee){
+            if(member > 0){
+                let memberImg = newElem("img");
+                memberImg.classList.add("assigneeMember");
+                memberImg.setAttribute("src",getImage(member));
+                assigneeContainer.appendChild(memberImg);
+            }
+        }
+        newTask.appendChild(assigneeContainer);
+    }
+
 
     /* Other Task Variables will be added here */
 

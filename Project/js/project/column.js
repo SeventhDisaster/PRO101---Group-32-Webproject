@@ -1,57 +1,64 @@
 function renderColumn(column, columnIndex){
-    let newColumn = document.createElement("div");
-    newColumn.classList.add("taskColumn");
+    let newC = newElem("div");
+    newC.classList.add("taskColumn");
 
     
-    let columnHead = document.createElement("div");
-    columnHead.classList.add("colHead");
-    newColumn.appendChild(columnHead)
+    let head = newElem("div");
+    head.classList.add("colHead");
+    newC.appendChild(head)
     
     //Drag & Drop For Columns
-    dragDropColumn(newColumn,columnHead,columnIndex);
+    dragDropColumn(newC,head,columnIndex);
+    let del = newElem("button");
+    del.classList.add("delColumn");
+    del.innerText = "X";
+    del.addEventListener("click", e =>{
+        renderAlert("column", columnIndex, null);
+    })
+    head.appendChild(del);
 
-    let columnTitle = document.createElement("input");
-    columnTitle.classList.add("columnTitle");
-    columnTitle.value = column.name;
-    columnTitle.placeholder = "Title...";
-    columnTitle.addEventListener("keyup", e => {
+    let title = newElem("input");
+    title.classList.add("columnTitle");
+    title.value = column.name;
+    title.placeholder = "Title...";
+    title.addEventListener("keyup", e => {
         //Push changes to title out on every keypress
-        column.name = columnTitle.value;
+        column.name = title.value;
         if(e.keyCode === 13){
             saveProjectChanges();
         }
     });
-    columnHead.appendChild(columnTitle);
+    head.appendChild(title);
 
     //Renders the button for adding new tasks
-    let taskAddBtn = document.createElement("button");
-    taskAddBtn.classList.add("addTaskBtn");
-    taskAddBtn.innerText = "+ Add Task +";
-    taskAddBtn.addEventListener("click",function(){
+    let addTask = newElem("button");
+    addTask.classList.add("addTaskBtn");
+    addTask.innerText = "+ Add Task +";
+    addTask.addEventListener("click",function(){
         refreshBoard();
         let addedTask = new Task();
         column.tasks.push(addedTask);
-        renderRow(addedTask,columnBody,true, columnIndex, column.tasks.length[-1]);
+        renderRow(addedTask,body,true, columnIndex, column.tasks.length[-1]);
         // Three last params are passed because of drag-drop
     })
-    newColumn.appendChild(taskAddBtn);
+    newC.appendChild(addTask);
     
-    let columnBody = document.createElement("div");
-    columnBody.classList.add("colBody");
-    newColumn.appendChild(columnBody);
+    let body = newElem("div");
+    body.classList.add("colBody");
+    newC.appendChild(body);
     
     //Render all of the tasks in the column
     for(let i = 0; i < column.tasks.length; i++){
         column.tasks[i].projectIndex = projectIndex;
         column.tasks[i].columnIndex = project.columns.indexOf(column);
         column.tasks[i].rowIndex = i;
-        renderRow(column.tasks[i], columnBody, false, columnIndex, i);
+        renderRow(column.tasks[i], body, false, columnIndex, i);
     }
 
     //TARGET FOR ROW-DRAG-DROP
-    let rowDropTarget = document.createElement("div");
-    rowDropTarget.classList.add("rowTaker");
-    columnBody.appendChild(rowDropTarget);
-    dragDropNewRow(rowDropTarget, columnIndex);
-    boardContainer.appendChild(newColumn);
+    let rowTarget = newElem("div");
+    rowTarget.classList.add("rowTaker");
+    body.appendChild(rowTarget);
+    dragDropNewRow(rowTarget, columnIndex);
+    boardContainer.appendChild(newC);
 }

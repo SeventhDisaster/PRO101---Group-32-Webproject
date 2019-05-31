@@ -1,24 +1,24 @@
 //This file contains the JS in-depth details on all the tasks.
 
 
-let detailWindow = document.getElementById("taskDetailContainer");
+let detailWindow = getElemById("taskDetailContainer");
 
 function renderDetailWindow(task, column, row){
     
     // Clear detailWindow before re-render
     detailWindow.innerHTML = ""; 
     
-    let taskActionContainer = document.createElement("div");
-    taskActionContainer.classList.add("taskActions");
-    detailWindow.appendChild(taskActionContainer);
-    renderTaskExtraAction(task, taskActionContainer, column, row);
+    let container = newElem("div");
+    container.classList.add("taskActions");
+    detailWindow.appendChild(container);
+    renderTaskExtraAction(task, container, column, row);
     
-    let detailContainer = document.createElement("div");
+    let detailContainer = newElem("div");
     detailContainer.classList.add("detailContainer");
     detailWindow.appendChild(detailContainer);
 
     renderTaskName(task,detailContainer); //detailTaskName.js
-    let descColorContainer = document.createElement("div");
+    let descColorContainer = newElem("div");
         descColorContainer.classList.add("descriptionAndColor");
         detailContainer.appendChild(descColorContainer);
     renderTaskDesc(task,descColorContainer); //detailTaskDesc.js
