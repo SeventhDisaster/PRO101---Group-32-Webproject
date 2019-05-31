@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #434343;
+    overflow: hidden;
 }
 #blueLeft {
     position: absolute;
@@ -17,6 +18,8 @@ body {
     width: 20%;
     height: 100%;
     background-color: #68a7ca;
+    transform: skewX(-15deg);
+    left: -10%;
 }
 #blueRight {
     position: absolute;
@@ -24,7 +27,8 @@ body {
     width: 20%;
     height: 100%;
     background-color: #68a7ca;
-    right: 0%;
+    right: -10%;
+    transform: skewX(-15deg);
 }
 #logo {
     left: 0%;
@@ -32,31 +36,27 @@ body {
     width: 15%;
     height: 15%;
     top: 0%;
-    z-index: 3
-    
-    
+    z-index: 3;
 }
 #about {
     position: absolute;
-    right: 45%;
+    right: 43%;
     top: -5%;
     font-size: 500%;
     z-index: 2;
     color: #b3d3e6;
     text-decoration: inherit;
-    font-family: monospace;
+    font-family: 'verdana';
     overflow: hidden;
-
-    
 }
 .lineUnderFoot {
     position: absolute;
     z-index: 2;
     height: 0.1%;
-    width: 20%;
-    background-image: radial-gradient(circle, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
-    top: 12%;
-    right: 41%;
+    width: 16%;
+    background-image: radial-gradient(circle, rgba(0,0,0,1),rgba(0,0,0,0));
+    top: 11%;
+    right: 42%;
 }
 #nexTask {
      position: absolute;
@@ -66,7 +66,7 @@ body {
     z-index: 2;
     color: white;
     text-decoration: inherit;
-    font-family: sans-serif  
+    font-family: 'arial'; 
 }
 #nexTask1 {
     position: absolute;
@@ -76,17 +76,16 @@ body {
     z-index: 2;
     color: white;
     text-decoration: inherit;
-    font-family: sans-serif  
+    font-family: 'arial';  
 }
 #team {
     position: absolute;
     z-index: 2;
-    color: #68a7ca;
+    color: #d8e9f3;
     font-size: 200%;
-    font-family: monospace;
-    right: 46%;
-    top: 50%;
-    
+    font-family: 'Georgia';
+    right: 43.5%;
+    top: 55%;
 }
 /*ANDREAS*/
 #andreasPic {
@@ -99,20 +98,20 @@ body {
 #andreasTxt {
     position: absolute;
     z-index: 2;
-    top: 66%;
-    left: 20.5%;
+    top: 68%;
+    left: 21.5%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #andSubTxt {
     position: absolute;
     z-index: 2;
-    top: 71%;
-    left: 21.1%;
+    top: 72%;
+    left: 22%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*HELENE*/
-
 #helenePic {
     position: absolute;
     z-index: 2;
@@ -123,22 +122,20 @@ body {
 #heleneTxt {
     position: absolute;
     z-index: 2;
-    top: 72.5%;
-    left: 33.5%;
+    top: 72%;
+    left: 34.2%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #helSubTxt {
     position: absolute;
     z-index: 2;
     top: 76%;
-    left: 33%;
+    left: 34.1%;
     color: #ffd7de;
+    font-family: 'arial';
 }
-
-
 /*KRISTER*/
-
 #kristerPic {
     position: absolute;
     z-index: 2;
@@ -149,20 +146,20 @@ body {
 #kristerTxt {
     position: absolute;
     z-index: 2;
-    top: 66%;
-    left: 43%;
+    top: 68%;
+    left: 44.2%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #kriSubTxt {
     position: absolute;
     z-index: 2;
-    top: 71%;
-    left: 45%;
+    top: 72%;
+    left: 46.1%;
     color: #ffd7de;
+    font-family: 'arial';
 }
 /*ZEMEN*/
-
 #zemenPic {
     position: absolute;
     z-index: 2;
@@ -174,39 +171,40 @@ body {
     position: absolute;
     z-index: 2;
     top: 72.5%;
-    left: 57.5%;
+    left: 58.6%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #zemSubTxt {
     position: absolute;
     z-index: 2;
     top: 76%;
-    left: 59%;
+    left: 59.7%;
     color: #ffd7de;
+    font-family: 'arial';
 }
-
 /*SIMEN*/
 #simenPic {
     position: absolute;
     z-index: 2;
-    width: 9%;
-    height: 20%;
+    width: 10%;
+    height: 18%;
     right: 21%;
     bottom: 5%;
 }
 #simenTxt {
     position: absolute;
     z-index: 2;
-    top: 66%;
-    right: 20%;
+    top: 68%;
+    right: 19.3%;
     color: #b3d3e6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia';
 }
 #simSubTxt {
     position: absolute;
     z-index: 2;
-    top: 70%;
-    right: 22%;
+    top: 72%;
+    right: 23.3%;
     color: #ffd7de;
+    font-family: 'arial';
 }
