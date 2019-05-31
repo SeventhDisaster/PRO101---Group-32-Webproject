@@ -23,8 +23,13 @@ if (!getStorage("users")) {
     users = getStorage("users");
 }
 
-
 var user = users[getStorage("activeUser")-1];
+
+if (!getStorage("projects")) {
+    setStorage("projects", projects);
+} else {
+    projects = getStorage("projects");
+}
 
 
 function confirmLogin () {
@@ -81,6 +86,12 @@ function logout() {
 function saveUserChanges () {
 
     setStorage("users", users);
+
+}
+
+function saveProjectChanges () {
+
+    setStorage("projects", projects);
 
 }
 
