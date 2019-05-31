@@ -105,9 +105,9 @@ body{
     z-index: 5; 
     position: fixed;  
     height: auto; 
-    width: 600px;
+    width: 50%;
     left: 35%;
-    top: 25%; 
+    top: 10%; 
     text-align: center; 
     border: 2px solid rgb(0,0,0, 0.3);
     transform: skewX(-5deg);
@@ -121,11 +121,11 @@ body{
 @keyframes loginSlideIn {
     from {
         left: 0%; 
-        top: 25%; 
+        top: 10%; 
         z-index: 4; 
     } to {
         left: 35%; 
-        top: 25%; 
+        top: 10%; 
         z-index: 4;
     }
 }
@@ -134,6 +134,16 @@ body{
     font-size: 40px;
     font-family: Montserrat; 
     color: #f3f3f3; 
+}
+
+#wrongLogin {
+
+    background-color: red;
+    display: none;
+    padding: 10px;
+    color: white;
+    font-family: Montserrat; 
+
 }
 
 .h3 {
