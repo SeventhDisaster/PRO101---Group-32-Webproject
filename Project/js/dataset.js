@@ -127,7 +127,7 @@ let projects = [
                     {
                         name: "Sample Task 4",
                         desc: "Description Sample",
-                        due: "2019-02-06",
+                        due: "2019-06-2019",
                         color: null,
                         assignee: [], //Empty Array - No Assignment
                         priority: 2,

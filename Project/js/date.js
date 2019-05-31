@@ -4,19 +4,19 @@ function stringToDate(str) {
     let indx = 0;
 
     for (var i = 0; i < str.length; i++) {
-        if (str[i] === "/") {
+        if (str[i] === "-") {
             indx++;
             continue;
         }
         date[indx] += str[i]
     }
 
-    return new Date(date[2], date[1] - 1, date[0]);
+    return new Date(date[0], date[1]-1 , date[2]);
 }
 
 function dateToString(date) {
 
-    return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+    return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
 }
 
 function timeBetweenDate(from, to) {
