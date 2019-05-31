@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../stylesheets/login.css">
-     <script src="../js/login/login.js"></script>
+    <script type="text/javascript" src="../js/dataset.js"></script>
     <script type="text/javascript" src="../js/data_managment.js"></script>
+    <script src="../js/login/login.js"></script>
+    
     <title>Login</title>
 </head>
     <body>
@@ -33,28 +35,28 @@
     
     <!-- login form -->
      
-<form id='loginForm'  >
+<div id='loginForm'  >
     <h3 class=h3>Login to see your tasks</h3>
+    <h3 id="wrongLogin">Wrong username or password!</h3>
     <input type="text" placeholder="Username" id="userName">
-    <input type="password" placeholder="Password" id="passWord">
-    <button type='submit'><a href="../subsite/frontpage.html" style="text-decoration: none">Login</a></button>
+    <input type="password" placeholder="Password" id="password">
+    <button id="loginButton">Login</button>
     <label id="registerButton" for='formSwitch'><span>Create user</span></label>
-</form>
+</div>
     
     <!-- Register new user -->
     
-<form id='registerForm' >
+<div id='registerForm' >
     <h3 class=h3> Create a new user here</h3>
   <input type="text" placeholder="Username" id="newUsername">
   <input type="password" placeholder="Password" id="newPassword">
   <input type="password" placeholder="Retype Password" id="newPasswordCopy">
-  <button type='submit'><a href="../subsite/frontpage.html" style="text-decoration: none" >Login</a></button>
+  <button id="createUser">Create</button>
   <label id="backButton" for='formSwitch'>Back</label>
-</form>
+</div>
         
     </div>
 
 <!--end loginBox -->  
-    
     </body>
 </html>

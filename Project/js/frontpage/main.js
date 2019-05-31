@@ -1,17 +1,6 @@
 window.addEventListener("load", setup);
 
-let notifications = [{
-	msg: "You have been assigned a task!",
-	date: "27. May",
-	href: "board.html?project=0&columns=0&tasks=0"
-}, {
-	msg: "Added to project!",
-	date: "27. May",
-	href: "board.html?project=0"
-}];
-
 let fullnameList;
-
 
 function setup() {
 
@@ -31,9 +20,6 @@ function setup() {
 
 function renderNotifications () {
 
-	for (var i = notifications.length - 1; i >= 0; i--) {
-		newNotification(notifications[i]);
-	}
 	for (var i = 0; i < user.notifications.length; i++) {
 		newNotification(user.notifications[i]);
 	}
@@ -59,7 +45,8 @@ function getProjectsThisWeek() {
         for (var j = 0; j < projects[i].columns.length; j++) {
             var a = projects[i].columns[j];
             for (var x = 0; x < a.tasks.length; x++) {
-            	let hoursUntil = timeBetweenDate(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()), stringToDate(a.tasks[x].due));
+
+            	let hoursUntil = timeBetweenDate(stringToDate(a.tasks[x].due));
             	// console.log(hoursUntil/24);
                 if (hoursUntil / 24 <= 7 && hoursUntil / 24 >= 0) {
 
@@ -115,17 +102,13 @@ function renderTasks(arr) {
 
     	let link = 'board.html?project=' + arr[i].project + '&columns=' + arr[i].columns + '&tasks=' + arr[i].task;
 
-        let time;
-        if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()) {
-            time = "Today";
-           
-            newNotification("Deadline approaching!", formatMonthToString(), link);
+        let time = getTimeTo(currentDate, stringToDate(arr[i].taskInfo.due), (e, link)=>{
+            if (e === "Today") {
+                console.log(link);
+                newNotification({msg: "Deadline approaching!", date: formatMonthToString(), href: link});
+            }
+        }, link);
         
-        } else if (stringToDate(arr[i].taskInfo.due).getDate() === currentDate.getDate()+1) {
-            time = "Tomorrow"
-        } else {
-            time = Math.ceil(timeBetweenDate(stringToDate(arr[i].taskInfo.due)) / 24) + "d";
-        }
 
         let template = '<td onclick="window.location.href = \'' + link + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
 

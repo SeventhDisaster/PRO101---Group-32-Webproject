@@ -25,11 +25,11 @@ if (!getStorage("users")) {
 
 var user = users[getStorage("activeUser")-1];
 
-if (!getStorage("projects")) {
-    setStorage("projects", projects);
-} else {
-    projects = getStorage("projects");
-}
+// if (!getStorage("projects")) {
+//     setStorage("projects", projects);
+// } else {
+//     projects = getStorage("projects");
+// }
 
 
 function confirmLogin () {
@@ -74,8 +74,13 @@ function clearStorage() {
 
 // Sets userinfo to activeUser
 function login(user) {
-    setStorage("activeUser", user.id);
-    location.href = "frontpage.html"
+
+    if (user) {
+        setStorage("activeUser", user.id);
+        location.href = "frontpage.html"
+        return true;
+    }
+    return false;
 }
 
 function logout() {
@@ -147,6 +152,8 @@ function pushNotification (userid, msg, href) {
     }
 
     users[userid-1].notifications.push(notification);
+
+    console.log(users[userid-1]);
 
     saveUserChanges();
 
