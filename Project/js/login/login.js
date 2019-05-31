@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 window.addEventListener("load", login);
 
 document.getElementById("passWord").required=true; 
@@ -6,7 +5,6 @@ document.getElementById("passWord").required=true;
 document.getElementById("newPassword").required=true; 
 
 document.getElementById("newPasswordCopy").required=true; 
-=======
 window.onload = setup;
 
 function setup () {
@@ -32,4 +30,3 @@ function setup () {
 	    }
 	});	
 }
->>>>>>> 93288b061499837748a37f5e005a4e22885883ae
