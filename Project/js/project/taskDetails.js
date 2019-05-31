@@ -4,21 +4,31 @@
 let detailWindow = document.getElementById("taskDetailContainer");
 
 function renderDetailWindow(task){
-
+    
     // Clear detailWindow before re-render
     detailWindow.innerHTML = ""; 
     
-    renderTaskName(task,detailWindow); //detailTaskName.js
+    let taskActionContainer = document.createElement("div");
+    taskActionContainer.classList.add("taskActions");
+    detailWindow.appendChild(taskActionContainer);
+    renderTaskExtraAction(task, taskActionContainer);
+    
+    let detailContainer = document.createElement("div");
+    detailContainer.classList.add("detailContainer");
+    detailWindow.appendChild(detailContainer);
+
+    renderTaskName(task,detailContainer); //detailTaskName.js
     let descColorContainer = document.createElement("div");
         descColorContainer.classList.add("descriptionAndColor");
-        detailWindow.appendChild(descColorContainer);
+        detailContainer.appendChild(descColorContainer);
     renderTaskDesc(task,descColorContainer); //detailTaskDesc.js
     renderTaskColor(task,descColorContainer); //detailTaskColor.js
-    renderTaskMembers(task, detailWindow); //detailTaskMember.js
-    renderTaskDeadline(task,detailWindow); //detailTaskDate.js
-    renderTaskPriority(task,detailWindow); //detailTaskPriority.js
-    renderTaskSubtasklist(task,detailWindow); //detailTaskSubtask.js
-    renderActionButtons(task, detailWindow); //detailTaskAction.js
+    renderTaskMembers(task, detailContainer); //detailTaskMember.js
+    renderTaskDeadline(task,detailContainer); //detailTaskDate.js
+    renderTaskPriority(task,detailContainer); //detailTaskPriority.js
+    renderTaskSubtasklist(task,detailContainer); //detailTaskSubtask.js
+    renderActionButtons(task, detailContainer); //detailTaskAction.js
+
 }
 
 function openDetailWindow(){

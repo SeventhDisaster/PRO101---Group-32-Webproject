@@ -13,8 +13,13 @@ function renderColumn(column, columnIndex){
     let columnTitle = document.createElement("input");
     columnTitle.classList.add("columnTitle");
     columnTitle.value = column.name;
+    columnTitle.placeholder = "Title...";
     columnTitle.addEventListener("keyup", e => {
+        //Push changes to title out on every keypress
         column.name = columnTitle.value;
+        if(e.keyCode === 13){
+            saveProjectChanges();
+        }
     });
     columnHead.appendChild(columnTitle);
 
