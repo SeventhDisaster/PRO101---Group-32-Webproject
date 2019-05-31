@@ -1,4 +1,4 @@
-window.addEventListener("load", login);
+/*window.addEventListener("load", login);
 
 document.getElementById("passWord").required=true; 
 
@@ -6,7 +6,7 @@ document.getElementById("newPassword").required=true;
 
 document.getElementById("newPasswordCopy").required=true; 
 window.onload = setup;
-
+*/
 function setup () {
 	document.getElementById("createUser").addEventListener("click", () => {
 
