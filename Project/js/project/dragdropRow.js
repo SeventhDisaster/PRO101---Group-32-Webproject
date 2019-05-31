@@ -7,6 +7,7 @@ function dragDropRow(task, columnIndex, rowIndex){
         e.dataTransfer.setData("column", columnIndex);
         e.dataTransfer.setData("row", rowIndex);
         e.dataTransfer.setData("isRow", true);
+        task.style.opacity = "0.05"
         draggingRow = true;
     });
 
@@ -24,6 +25,7 @@ function dragDropRow(task, columnIndex, rowIndex){
 
     task.addEventListener("dragend", e =>{
         draggingRow = false;
+        task.style.opacity = "1"
     })
 
     task.addEventListener("drop", e =>{

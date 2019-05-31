@@ -1,4 +1,4 @@
-function renderTaskExtraAction(task, container){
+function renderTaskExtraAction(task, container, column, row){
 
     //Complete Checkbox
     let compContainer = document.createElement("div");
@@ -31,6 +31,10 @@ function renderTaskExtraAction(task, container){
     let delContainer = document.createElement("div");
     delContainer.classList.add("taskDeleteContainer");
     container.appendChild(delContainer);
+
+    delContainer.addEventListener("click", e => {
+        renderAlert("task", column, row);
+    })
 
     let delX = document.createElement("div");
     delX.innerText = "X";

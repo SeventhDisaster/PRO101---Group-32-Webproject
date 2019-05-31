@@ -10,6 +10,7 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     taskHeader.classList.add("colTaskHead");
     taskHeader.innerText = task.name;
     newTask.appendChild(taskHeader);
+
     
     let taskDescription = document.createElement("p");
     taskDescription.classList.add("colTaskDesc");
@@ -30,7 +31,7 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     newTask.addEventListener("click",function(){
         closeDetailWindow();
         function wait(){
-            renderDetailWindow(task);
+            renderDetailWindow(task, columnIndex, rowIndex);
         };
         setTimeout(wait,100);
     })

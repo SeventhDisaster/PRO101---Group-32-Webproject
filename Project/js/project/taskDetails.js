@@ -3,7 +3,7 @@
 
 let detailWindow = document.getElementById("taskDetailContainer");
 
-function renderDetailWindow(task){
+function renderDetailWindow(task, column, row){
     
     // Clear detailWindow before re-render
     detailWindow.innerHTML = ""; 
@@ -11,7 +11,7 @@ function renderDetailWindow(task){
     let taskActionContainer = document.createElement("div");
     taskActionContainer.classList.add("taskActions");
     detailWindow.appendChild(taskActionContainer);
-    renderTaskExtraAction(task, taskActionContainer);
+    renderTaskExtraAction(task, taskActionContainer, column, row);
     
     let detailContainer = document.createElement("div");
     detailContainer.classList.add("detailContainer");
