@@ -4,7 +4,7 @@ let fullnameList;
 
 function setup() {
 
-	//confirmLogin();
+	confirmLogin();
 
     let fullname = user.name;
     fullnameList = document.getElementsByClassName("fullnameInput");
