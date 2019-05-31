@@ -34,7 +34,7 @@ let projects = [
     {
         name: "NexTask Initiation Project",
         description: "This is a test project on NexTask.\n\nAn agile project management service that takes basis on the 'Kanban' whiteboard task management workflow.\n\nThe service allows for easy creation and management of tasks upon several additional quality of work options.\n\nThis project serves as our PRO101 exam prototype.\nMade by: Krister, Andreas, Simen, Helene & Zemen",
-        team: [1,2,3,4,5,6],
+        team: [1,2,3,4,5],
         columns: [
             {
                 name: "To-do",

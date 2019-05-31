@@ -32,7 +32,7 @@ function renderTaskMembers(task, parent){
                 assignButtonActive = true;
             }
         });
-
+        console.log(project.team);
         for(let member of project.team){
             let addMember = document.createElement("img");
             addMember.setAttribute("src",getImage(member));

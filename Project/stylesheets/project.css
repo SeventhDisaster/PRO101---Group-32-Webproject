@@ -806,6 +806,13 @@ input[type=date]::-webkit-inner-spin-button {
     width: 100%;
     height: 100%;
 }
+.taskComplete:hover{
+    left: -50vw;
+}
+
+.taskComplete:hover ~ .taskCompleteLabel{
+    left: -50vw;
+}
 
 .taskDelete{
 
