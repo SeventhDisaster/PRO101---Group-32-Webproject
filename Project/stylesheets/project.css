@@ -158,7 +158,7 @@ select::-ms-expand{
 
 #projectDescription{
     direction: ltr;
-    margin-right: 16%;
+    margin-right: 20%;
     border-style: none;
     background-color: rgba(0,0,0,0);
     color: #434343;
@@ -168,7 +168,7 @@ select::-ms-expand{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     height: 1000px;
-    width: 80%;
+    width: 70%;
     border-radius: 5px;
     overflow: auto;
     text-align: left;
@@ -203,6 +203,26 @@ select::-ms-expand{
     height: 100vh;
     z-index: 2;
     overflow-x: auto;
+}
+
+#boardContainer::-webkit-scrollbar{
+    height: 20px !important;
+    transition: .2s ease !important;
+}
+
+#boardContainer::-webkit-scrollbar:hover{
+    height: 30px !important;
+    opacity: .8 !important;
+}
+
+
+#boardContainer::-webkit-scrollbar-thumb{
+    background-color: rgba(59, 59, 59, 0.4) !important;
+    border-radius: 5px !important;
+}
+
+#boardContainer::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(36, 36, 36, 0.9) !important;
 }
 
 .taskColumn{
@@ -255,8 +275,19 @@ select::-ms-expand{
     margin-top: -10%;
     background-color: #b3d3e6;
     z-index: 3;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     transition: .1s ease;
+}
+
+.colHead input{
+    position: relative;
+    text-overflow: ellipsis;
+    width: 80%;
+    margin: auto;
 }
 
 .colHead:hover{
@@ -290,7 +321,7 @@ select::-ms-expand{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    max-height: 80%;
+    height: 85%;
     overflow-y: auto;
     transition: .2s ease;
 }
@@ -311,14 +342,6 @@ select::-ms-expand{
     filter: grayscale(0);
     margin: 5px 0px;
     cursor: pointer;
-}
-
-.incomingRow{
-    border-top: solid 30px #8dbdd8; 
-}
-
-.incomingRow *{
-    pointer-events: none !important;
 }
 
 .colTaskHead{
@@ -348,29 +371,43 @@ select::-ms-expand{
     
 }
 
+.rowTaker{
+    height: 100%;
+    width: 100%;
+    transition: .2s ease;
+}
+
 /* ============================================================================================== */
 /* TASK DETAIL BOX BELOW */
 /* */ 
 #taskDetailContainer{
-    background-color: #f3f3f3;
     position: fixed;
-    display: grid;
-    grid-template-columns: 50% 20% 30%;
-    grid-template-rows: 13% 20% 50px auto 15%;
-    grid-auto-flow: column;
+    background-color: #f3f3f3;
     transform: skewX(-6deg);
     z-index: 30;
     height: 60vh;
     width: 60vw;
     bottom: 0px;
     right: -100vw;
-    opacity: 0.5;
+    opacity: 0.9;
     transition: .2s ease;
     box-shadow: 0px 0px 5px #434343;
 }
 
 #taskDetailContainer:hover{
     opacity: 1;
+}
+
+.detailContainer{
+    z-index: 35;
+    background-color: #f3f3f3;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: 13% 20% 50px auto 15%;
+    grid-auto-flow: column;
+    height: 100%;
+    width: 100%;
 }
 
 .taskName{
@@ -737,4 +774,46 @@ input[type=date]::-webkit-inner-spin-button {
     margin-top: -15px;
     background-color: rgb(255, 190, 190)  !important;
     box-shadow: 0px 0px 10px 0px rgba(200, 67, 67,0.5);
+}
+
+.taskActions{
+    position: absolute;
+    z-index: 30;
+    top: 2vh;
+    left: -8vw;
+    width: 500px;
+    height: 18vh;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 8vw auto;
+    grid-template-rows: 50% 50%;
+    box-shadow: 0px 0px 5px #434343;
+}
+
+.taskComplete{
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+}
+
+.taskCompleteLabel{
+    grid-row: 1;
+    grid-column: 2;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+.taskComplete:hover{
+    left: -50vw;
+}
+
+.taskComplete:hover ~ .taskCompleteLabel{
+    left: -50vw;
+}
+
+.taskDelete{
+
 }

@@ -2,10 +2,13 @@ window.addEventListener("load", s =>{
     renderBoard();
 })
 
+
 let url = new URL(location.href);
 let pURL = parseInt(url.searchParams.get("project"));
 let projectIndex = pURL;
 let project = projects[projectIndex];
+
+projects.push(new Project("ProjectName", "Descript", [3], []));
 
 if(pURL === undefined){
     alert("No project found");
@@ -49,4 +52,5 @@ if(pURL === undefined){
 function refreshBoard(){
     boardContainer.innerHTML = "";
     renderBoard();
+    saveProjectChanges();
 }

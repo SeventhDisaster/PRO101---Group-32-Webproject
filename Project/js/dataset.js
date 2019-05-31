@@ -42,7 +42,7 @@ let projects = [
                     {
                         name: "Make the board page",
                         desc: "Description Sample",
-                        due: "2019-03-07",
+                        due: "2019-05-31",
                         color: null,
                         assignee: [1,2],
                         priority: 1,
@@ -62,7 +62,7 @@ let projects = [
                     {
                         name: "Create some fancy CSS",
                         desc: "Like how long lines get cut short! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                        due: "2019-02-06",
+                        due: "2019-06-01",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -72,7 +72,7 @@ let projects = [
                     {
                         name: "Implement detail window",
                         desc: "A lot more complex than expected",
-                        due: "2019-02-06",
+                        due: "2019-07-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -82,7 +82,7 @@ let projects = [
                     {
                         name: "Cry",
                         desc: "Life is suffering :')",
-                        due: "2019-02-06",
+                        due: "2019-07-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -92,7 +92,7 @@ let projects = [
                     {
                         name: "Figure things out",
                         desc: "Do things with that.",
-                        due: "2019-02-06",
+                        due: "2019-07-06",
                         color: null,
                         assignee: [4,3],
                         priority: 2,
@@ -107,7 +107,7 @@ let projects = [
                     {
                         name: "Fix Drag-&-Drop bugs",
                         desc: "This one involves dragging to an unspecified index.",
-                        due: "2019-02-06",
+                        due: "2019-06-06",
                         color: null,
                         assignee: [1],
                         priority: 2,
@@ -127,7 +127,7 @@ let projects = [
                     {
                         name: "Sample Task 4",
                         desc: "Description Sample",
-                        due: "2019-02-06",
+                        due: "2019-06-06",
                         color: null,
                         assignee: [], //Empty Array - No Assignment
                         priority: 2,
