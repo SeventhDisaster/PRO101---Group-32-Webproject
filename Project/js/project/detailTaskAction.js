@@ -24,7 +24,6 @@ function renderActionButtons(task, parent){
                 name: subtaskText.value
             });
         }
-
         let detailContent = {
             name: document.getElementById("name").value,
             desc: document.getElementById("description").value,
@@ -32,8 +31,10 @@ function renderActionButtons(task, parent){
             assignee: assignedMemberList,
             date: document.getElementById("deadline").value,
             priority: parseInt(document.getElementById("priority").selectedIndex),
+            isComplete: document.getElementById("complete").checked,
             subtask: subtaskList
         }
+        console.log(detailContent.isComplete);
         console.log("Task Selected: " + task.projectIndex + " "+ task.columnIndex + " " + task.rowIndex);
         
         applyChanges(task,detailContent);

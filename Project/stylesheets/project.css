@@ -813,6 +813,7 @@ input[type=date]::-webkit-inner-spin-button {
 .completeContainer:hover{
     left: -15vw;
     cursor: pointer;
+    background-color: #d7fff0;
 }
 
 .completeContainer input {
@@ -823,13 +824,11 @@ input[type=date]::-webkit-inner-spin-button {
     width: 0;
   }
 
-.completeContainer input:checked .taskComplete{
-    background-color: #237323;
+.completeContainer input:checked ~ *{
+    background-color: #4ada92;
+    color: #f3f3f3;
 }
 
-.completeContainer input:checked .taskCompleteLabel{
-    background-color: #237323;
-}
 
 .taskComplete{
     position: relative;
@@ -838,8 +837,9 @@ input[type=date]::-webkit-inner-spin-button {
     height: 100%;
     font-size: 6.4vh;
     font-weight: bold;
-    margin-left: 1vw;
+    padding-left: 1vw;
     color: #434343;
+    transition: .2s ease;
 }
 
 .taskCompleteLabel{
@@ -848,9 +848,13 @@ input[type=date]::-webkit-inner-spin-button {
     line-height: 9vh;
     font-size: 4vh;
     font-weight: 5px;
-    margin-left: 1vw;
     width: 100%;
     height: 100%;
+    transition: .2s ease;
+}
+
+.taskCompleteLabel:hover{
+    cursor: pointer;
 }
 
 .taskDeleteContainer{
@@ -870,6 +874,12 @@ input[type=date]::-webkit-inner-spin-button {
 .taskDeleteContainer:hover{
     left: -15vw;
     cursor: pointer;
+    background-color: #704242 !important;
+    box-shadow: 0px 0px 5px #500000;
+}
+
+.taskDeleteContainer:hover * {
+    color: #f3f3f3;
 }
 
 .taskDeleteX{

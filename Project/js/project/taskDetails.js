@@ -46,6 +46,7 @@ function applyChanges(task,content){
     task.assignee = content.assignee;
     task.due = content.date;
     task.priority = content.priority;
+    task.isComplete = content.isComplete;
     task.subtasks = content.subtask;
     refreshBoard();
 }

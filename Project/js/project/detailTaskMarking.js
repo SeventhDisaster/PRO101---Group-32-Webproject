@@ -7,11 +7,10 @@ function renderTaskExtraAction(task, container){
 
     let checkbox = document.createElement("input");
     checkbox.id = "complete";
-    checkbox.checked = true;
     checkbox.setAttribute("type","checkBox");
     checkbox.setAttribute("name","complete")
     compContainer.appendChild(checkbox);
-
+    
     let customCheckbox = document.createElement("span");
     customCheckbox.classList.add("taskComplete")
     customCheckbox.innerText = "✓";
@@ -23,7 +22,10 @@ function renderTaskExtraAction(task, container){
     label.setAttribute("for","complete");
     compContainer.appendChild(label);
 
-
+    console.log(task.isComplete);
+    if(task.isComplete){
+         checkbox.checked = true;
+    }
 
     //Delete Button
     let delContainer = document.createElement("div");
