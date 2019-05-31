@@ -382,7 +382,7 @@ select::-ms-expand{
     width: 60vw;
     bottom: 0px;
     right: -100vw;
-    opacity: 0.5;
+    opacity: 0.9;
     transition: .2s ease;
     box-shadow: 0px 0px 5px #434343;
 }

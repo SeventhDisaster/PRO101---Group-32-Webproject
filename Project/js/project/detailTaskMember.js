@@ -20,7 +20,7 @@ function renderTaskMembers(task, parent){
         assignButtonActive = false;
         let btnListContainer = document.createElement("div");
         btnListContainer.style.height = (project.team.length * 40) + "px";
-        btnListContainer.style.bottom = (project.team.length * 100) + "%";
+        btnListContainer.style.bottom = "400%";
         assignMemberBtn.addEventListener("click", e => {
             if(assignButtonActive){
                 btnListContainer.classList.remove("addAssignListShown");
