@@ -37,6 +37,10 @@ select::-ms-expand{
     display: none;
 }
 
+label{
+    font-family: "montserrat", sans-serif;
+}
+
 ::-webkit-scrollbar{
     width: 5px;
     height: 5px;
@@ -298,17 +302,18 @@ select::-ms-expand{
 .addTaskBtn{
     width: 100%;
     height: 30px;
-    font-size: 25px;
+    font-size: 16px;
     margin: 3px 0px;
     border-style: none;
     transition: .2s ease;
     background-color: rgba(67, 67, 67,0);
+    color: #c3c3c3;
     text-align: center;
 }
 
 .addTaskBtn:hover{
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     height: 35px;
     background-color: rgba(67, 67, 67,0.1);
     
@@ -779,41 +784,106 @@ input[type=date]::-webkit-inner-spin-button {
 .taskActions{
     position: absolute;
     z-index: 30;
-    top: 2vh;
-    left: -8vw;
-    width: 500px;
+    top: 8vh;
+    left: -5vw;
+    width: 700px;
     height: 18vh;
-    background-color: red;
     display: grid;
-    grid-template-columns: 8vw auto;
     grid-template-rows: 50% 50%;
+}
+
+.taskActions:hover{
+    cursor: pointer;
+}
+
+.completeContainer{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    left: 0px;
+    grid-row: 1;
+    grid-template-columns: 5vw auto;
+    grid-template-rows: 100%;
+    transition: .2s ease;
+    background-color: #f3f3f3;
     box-shadow: 0px 0px 5px #434343;
+}
+
+.completeContainer:hover{
+    left: -15vw;
+    cursor: pointer;
+}
+
+.completeContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.completeContainer input:checked .taskComplete{
+    background-color: #237323;
+}
+
+.completeContainer input:checked .taskCompleteLabel{
+    background-color: #237323;
 }
 
 .taskComplete{
     position: relative;
-    grid-row: 1;
     grid-column: 1;
-    background-color: blue;
     width: 100%;
     height: 100%;
+    font-size: 6.4vh;
+    font-weight: bold;
+    margin-left: 1vw;
+    color: #434343;
 }
 
 .taskCompleteLabel{
-    grid-row: 1;
+    position: relative;
     grid-column: 2;
-    background-color: green;
+    line-height: 9vh;
+    font-size: 4vh;
+    font-weight: 5px;
+    margin-left: 1vw;
     width: 100%;
     height: 100%;
 }
-.taskComplete:hover{
-    left: -50vw;
+
+.taskDeleteContainer{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: 5vw auto;
+    grid-template-rows: 100%;
+    transition: .2s ease;
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 5px #434343;
 }
 
-.taskComplete:hover ~ .taskCompleteLabel{
-    left: -50vw;
+.taskDeleteContainer:hover{
+    left: -15vw;
+    cursor: pointer;
 }
 
-.taskDelete{
+.taskDeleteX{
+    grid-column: 1;
+    font-family: "montseratt", sans-serif;
+    font-size: 6.4vh;
+    margin: 1vh 1vw 1vh 1vw;
+    color: #434343;
+}
 
+.taskDelDelete{
+    grid-column: 2;
+    font-family: "montserrat", sans-serif;
+    font-weight: 5px;
+    font-size: 4vh;
+    margin: 2vh 1vw;
 }

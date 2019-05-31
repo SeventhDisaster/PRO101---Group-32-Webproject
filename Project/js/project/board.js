@@ -34,18 +34,18 @@ if(pURL === undefined){
         boardContainer.append(newColumnBtn);
 
         
-        if(typeof(pURL) == "number"){
-            let cURL = parseInt(url.searchParams.get("columns"));
-            if(cURL === undefined){console.log("No URL-Param for Task-Selection. No task loaded")}
-            if(typeof(cURL) == "number" && cURL > -1){
-                let tURL = parseInt(url.searchParams.get("tasks"));
-                console.log("Loaded Task from URL-Parm:\n Project: " + pURL + "\nColumns: " + cURL + "\nTasks: " + tURL);
-            
-                console.log("Loaded Task:" + projects[pURL].columns[cURL].tasks[tURL]);
-                renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
-            }
-        }
     }
+
+    let cURL = parseInt(url.searchParams.get("columns"));
+    if(cURL === undefined){console.log("No URL-Param for Task-Selection. No task loaded")}
+    if(typeof(cURL) == "number" && cURL > -1){
+        let tURL = parseInt(url.searchParams.get("tasks"));
+        console.log("Loaded Task from URL-Parm:\n Project: " + pURL + "\nColumns: " + cURL + "\nTasks: " + tURL);
+    
+        console.log("Loaded Task:" + projects[pURL].columns[cURL].tasks[tURL]);
+        renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
+    }
+    
 }
 
 //Call on this function to refresh the entire board

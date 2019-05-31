@@ -26,7 +26,7 @@ function renderColumn(column, columnIndex){
     //Renders the button for adding new tasks
     let taskAddBtn = document.createElement("button");
     taskAddBtn.classList.add("addTaskBtn");
-    taskAddBtn.innerText = "+";
+    taskAddBtn.innerText = "+ Add Task +";
     taskAddBtn.addEventListener("click",function(){
         refreshBoard();
         let addedTask = new Task();
