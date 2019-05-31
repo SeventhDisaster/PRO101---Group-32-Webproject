@@ -1,3 +1,5 @@
+let draggingRow = false;
+
 function dragDropRow(task, columnIndex, rowIndex){
     task.setAttribute("draggable","true");
 
@@ -5,21 +7,24 @@ function dragDropRow(task, columnIndex, rowIndex){
         e.dataTransfer.setData("column", columnIndex);
         e.dataTransfer.setData("row", rowIndex);
         e.dataTransfer.setData("isRow", true);
+        draggingRow = true;
     });
 
     task.addEventListener("dragover", e => {
-        e.dataTransfer.dropEffect = "move";
-        task.style.borderTop = "solid 30px #8dbdd8"
-        e.preventDefault();
-    });
-
-    task.addEventListener("dragenter", e => {
-        task.style.borderTop = "solid 30px #8dbdd8"
+        if(!draggingColumn){
+            e.dataTransfer.dropEffect = "move";
+            task.style.borderTop = "solid 30px #8dbdd8"
+            e.preventDefault();
+        }
     });
 
     task.addEventListener("dragleave", e => {
         task.style.borderTop = "solid 0px #8dbdd8"
     });
+
+    task.addEventListener("dragend", e =>{
+        draggingRow = false;
+    })
 
     task.addEventListener("drop", e =>{
         task.style.borderTop = "solid 0px #8dbdd8"
@@ -51,7 +56,6 @@ function dragDropRow(task, columnIndex, rowIndex){
                     taskList.splice(rowData,1);
                 }
             }
-            
             refreshBoard();
         }   
     })
@@ -60,13 +64,17 @@ function dragDropRow(task, columnIndex, rowIndex){
 function dragDropNewRow(body, targetColumn){  
     
     body.addEventListener("dragover", e => {
-        e.dataTransfer.dropEffect = "move";
-        body.style.borderTop = "solid 30px #8dbdd8";
+        if(!draggingColumn){
+            e.dataTransfer.dropEffect = "move";
+            body.style.borderTop = "solid 30px #8dbdd8";
+        }
         e.preventDefault();
     })
     
     body.addEventListener("dragleave", e =>{
-        body.style.borderTop = "solid 0px #8dbdd8"
+        if(!draggingColumn){
+            body.style.borderTop = "solid 0px #8dbdd8"
+        }
     })
     
     body.addEventListener("drop", e => {
