@@ -36,7 +36,7 @@
 <form id='loginForm'  >
     <h3 class=h3>Login to see your tasks</h3>
     <input type="text" placeholder="Username" id="userName">
-    <input type="password" placeholder="Password" id="passWord">
+    <input type="password" placeholder="Password" id="passWord" required>
     <button type='submit'><a href="../subsite/frontpage.html" style="text-decoration: none">Login</a></button>
     <label id="registerButton" for='formSwitch'><span>Create user</span></label>
 </form>
@@ -46,8 +46,8 @@
 <form id='registerForm' >
     <h3 class=h3> Create a new user here</h3>
   <input type="text" placeholder="Username" id="newUsername">
-  <input type="password" placeholder="Password" id="newPassword">
-  <input type="password" placeholder="Retype Password" id="newPasswordCopy">
+  <input type="password" placeholder="Password" id="newPassword" required>
+  <input type="password" placeholder="Retype Password" id="newPasswordCopy" required>
   <button type='submit'><a href="../subsite/frontpage.html" style="text-decoration: none" >Login</a></button>
   <label id="backButton" for='formSwitch'>Back</label>
 </form>

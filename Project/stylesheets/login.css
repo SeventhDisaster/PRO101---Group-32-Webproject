@@ -27,7 +27,7 @@ body{
 /* Information about NexTask */
 #aboutContainer {
     background-color: #d8e9f3; 
-    width: 500px; 
+    width: 50%; 
     height: auto; 
     position: fixed;  
     transform: skewX(-5deg);
@@ -74,20 +74,23 @@ body{
     animation-name: aboutAnimation; 
     animation-duration: 1s; 
     animation-fill-mode: forwards;
+    
 }
 
 @keyframes aboutAnimation{
     from {
         display: none;
-        left: 1px;
-        top: 350px; 
+        left: 0%;
+        top: 20%; 
         z-index: -1px; 
     }
     to {
         display:block;
-        left: 460px; 
-        top: 350px; 
+        left: 60%; 
+        top: 20%; 
         z-index: -1px;
+        
+        
     }
 }
 
@@ -115,7 +118,7 @@ body{
     box-shadow: 20px 15px 15px #434343;
     display: block; 
     animation-name: loginSlideIn;
-    animation-duration: 3s; 
+    animation-duration: 2s; 
 }
 
 @keyframes loginSlideIn {

@@ -14,9 +14,9 @@ function renderTaskColor(task,parent){
 
     let defaultPalette = [
         ["#747474", "#929292", "#c4c4c4", "#e7e7e7", "#fcfcfc"],
-        ["#4076e0", "#4097e0", "#40bfe0", "#40d7e0", "#74ff8b"],
-        ["#ff6699", "#ff8c73", "#ffab54", "#ffd12e", "#eeee77"],
-        ["#fdff49", "#fff84d", "#ffef4d", "#ffe651", "#ffde57"]
+        ["#6eb5ff", "#ace7ff", "#85e3ff", "#c4faf8", "#aff8db"],
+        ["#bffcc6", "#dbffd6", "#f3ffe3", "#ffffd1", "#f7e368"],
+        ["#ffabab", "#ffc9de", "#ecd4ff", "#fcc2ff", "#f6a6ff"]
     ]
 
     let colorPickContainer = document.createElement("div");
