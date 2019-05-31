@@ -49,4 +49,5 @@ if(pURL === undefined){
 function refreshBoard(){
     boardContainer.innerHTML = "";
     renderBoard();
+    saveProjectChanges();
 }

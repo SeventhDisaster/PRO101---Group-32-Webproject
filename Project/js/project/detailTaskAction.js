@@ -29,7 +29,6 @@ function renderActionButtons(task, parent){
             name: document.getElementById("name").value,
             desc: document.getElementById("description").value,
             color: document.getElementById("colorType").value,
-            //assignee: document.getElementById("members").dataset.list.split(",").map(a=>{return parseInt(a)}), //Dangerous line do not touch
             assignee: assignedMemberList,
             date: document.getElementById("deadline").value,
             priority: parseInt(document.getElementById("priority").selectedIndex),

@@ -310,7 +310,7 @@ select::-ms-expand{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    max-height: 80%;
+    height: 85%;
     overflow-y: auto;
     transition: .2s ease;
 }
@@ -331,14 +331,6 @@ select::-ms-expand{
     filter: grayscale(0);
     margin: 5px 0px;
     cursor: pointer;
-}
-
-.incomingRow{
-    border-top: solid 30px #8dbdd8; 
-}
-
-.incomingRow *{
-    pointer-events: none !important;
 }
 
 .colTaskHead{
@@ -366,6 +358,12 @@ select::-ms-expand{
     overflow: hidden;
     max-width: 70%;
     
+}
+
+.rowTaker{
+    height: 100%;
+    width: 100%;
+    transition: .2s ease;
 }
 
 /* ============================================================================================== */

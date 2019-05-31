@@ -43,5 +43,10 @@ function renderColumn(column, columnIndex){
         renderRow(column.tasks[i], columnBody, false, columnIndex, i);
     }
 
+    //TARGET FOR ROW-DRAG-DROP
+    let rowDropTarget = document.createElement("div");
+    rowDropTarget.classList.add("rowTaker");
+    columnBody.appendChild(rowDropTarget);
+    dragDropNewRow(rowDropTarget, columnIndex);
     boardContainer.appendChild(newColumn);
 }
