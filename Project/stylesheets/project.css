@@ -511,7 +511,6 @@ label{
 }
 
 .colTaskDesc{
-    transform: skewX(5deg);
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     margin: 0px 30% 0px 10px;
@@ -519,6 +518,7 @@ label{
     white-space: normal;
     overflow: hidden;
     max-width: 70%;
+    max-height: 5em;
     padding-bottom: 10px;
     
 }
