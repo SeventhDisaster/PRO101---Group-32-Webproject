@@ -1,24 +1,24 @@
 function renderTaskMembers(task, parent){
 
-    let assignee = newElem("div");
+    const assignee = newElem("div");
     assignee.classList.add("assignedMembers")
     assignee.id = "members";
 
-        let currentList = task.assignee;
+        const currentList = task.assignee;
 
-        let assignTitle = newElem("h4");
+        const assignTitle = newElem("h4");
         assignTitle.classList.add("assignTitle");
         assignTitle.innerText = "Assigned Members: ";
         assignee.appendChild(assignTitle);
 
-        let assignMemberBtn = newElem("button");
+        const assignMemberBtn = newElem("button");
         assignMemberBtn.innerText = "+";
         assignMemberBtn.classList.add("assignMemberBtn");
         assignee.appendChild(assignMemberBtn);
 
         // Opening the group memberlist
         assignButtonActive = false;
-        let btnListContainer = newElem("div");
+        const btnListContainer = newElem("div");
         btnListContainer.style.height = (project.team.length * 40) + "px";
         btnListContainer.style.bottom = (project.team.length * 80) + "%";
         assignMemberBtn.addEventListener("click", e => {
@@ -34,7 +34,7 @@ function renderTaskMembers(task, parent){
         });
 
         for(let member of project.team){
-            let addMember = newElem("img");
+            const addMember = newElem("img");
             addMember.setAttribute("src",getImage(member));
             addMember.dataset.id = member;
             addMember.addEventListener
@@ -53,7 +53,7 @@ function renderTaskMembers(task, parent){
             btnListContainer.appendChild(addMember);
         }
         
-        let assignedMemberList = newElem("div");
+        const assignedMemberList = newElem("div");
         assignedMemberList.classList.add("assignedMemberList");
         assignee.appendChild(assignedMemberList);
 
@@ -67,7 +67,7 @@ function renderTaskMembers(task, parent){
             for(let member of project.team){
                 for(let assignation of task.assignee){
                     if(member == assignation){
-                        let setMember = newElem("img");
+                        const setMember = newElem("img");
                         setMember.classList.add("memberIcon")
                         setMember.setAttribute("src",getImage(member));
                         setMember.id = "User" + member;
@@ -86,7 +86,7 @@ function renderTaskMembers(task, parent){
                 }
             }
             if(task.assignee.length == 0){
-                let noMember = newElem("p");
+                const noMember = newElem("p");
                 noMember.classList.add("noMemberIcon")
                 noMember.innerText = "No members assigned";
                 assignedMemberList.appendChild(noMember);

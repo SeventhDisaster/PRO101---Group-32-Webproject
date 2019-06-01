@@ -1,11 +1,11 @@
 function renderTaskSubtasklist(task, parent){
-    let subTaskList = newElem("div");
+    const subTaskList = newElem("div");
     subTaskList.classList.add("subtaskList");
     subTaskList.id = "subtasks";
     
     subTaskList.innerHTML = ""; //Clear the existing set of subtasks to set up the correct ones.
 
-    let addSubTaskBtn = newElem("button");
+    const addSubTaskBtn = newElem("button");
     addSubTaskBtn.innerText = "+   Add Subtask   +";
     addSubTaskBtn.classList.add("addSubTaskBtn");
     subTaskList.appendChild(addSubTaskBtn);
@@ -23,20 +23,20 @@ function renderTaskSubtasklist(task, parent){
 }
 
 function renderSubtasks(subtask, list, index, task){
-    let container = newElem("div");
+    const container = newElem("div");
     container.classList.add("subtaskContainer");
 
 
     //Subtask checkmark
-    let newSubtaskCheck = newElem("label");
+    const newSubtaskCheck = newElem("label");
     newSubtaskCheck.classList.add("subtaskCheckContainer");
     
-    let checkBox = newElem("input");
+    const checkBox = newElem("input");
     checkBox.id = "subStatus" + index; //Used to retrieve data on Apply
     checkBox.setAttribute("type","checkBox");
     checkBox.checked = subtask.isComplete;
     newSubtaskCheck.appendChild(checkBox);
-    let customCheckBox = newElem("span");
+    const customCheckBox = newElem("span");
     customCheckBox.innerText = "✓";
     customCheckBox.classList.add("subTaskCheckbox");
     customCheckBox.addEventListener("click", e => {
@@ -52,7 +52,7 @@ function renderSubtasks(subtask, list, index, task){
     newSubtaskCheck.appendChild(customCheckBox);
     
     //Remove Subtask Button
-    let removeSubTaskBtn = newElem("button");
+    const removeSubTaskBtn = newElem("button");
     removeSubTaskBtn.innerText = "X";
     removeSubTaskBtn.classList.add("removeSubTaskBtn");
     removeSubTaskBtn.addEventListener("click", e => {
@@ -62,7 +62,7 @@ function renderSubtasks(subtask, list, index, task){
     
     
     //Subtask Name
-    let newSubtaskText = newElem("input");
+    const newSubtaskText = newElem("input");
     newSubtaskText.id = "subText" + index; //Used to retrieve data on Apply
     newSubtaskText.classList.add("subtask");
     newSubtaskText.setAttribute("placeholder","Type to add subtask..");

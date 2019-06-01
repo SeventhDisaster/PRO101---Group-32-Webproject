@@ -31,23 +31,23 @@ function dragDropRow(task, cIndex, rIndex){
     task.addEventListener("drop", e =>{
         task.style.borderTop = "solid 0px #8dbdd8"
         if(!draggingColumn){
-            let pc = project.columns;
-            let cTarget = cIndex;
-            let rTarget = rIndex;
-            let cData = parseInt(e.dataTransfer.getData("column"));
-            let rData = parseInt(e.dataTransfer.getData("row"));
+            const pc = project.columns;
+            const cTarget = cIndex;
+            const rTarget = rIndex;
+            const cData = parseInt(e.dataTransfer.getData("column"));
+            const rData = parseInt(e.dataTransfer.getData("row"));
             
             console.log(pc[cData].tasks[rData]);
             console.log("Above Task Moved From Column: " + cData + " to Column: " + cTarget);
             console.log("Above Task Moved From Row: " + rData + " to Row: " + rTarget);
             
             if(cTarget !== cData){
-                let thisColumn = pc[cTarget];
-                let dataColumn = pc[cData];
+                const thisColumn = pc[cTarget];
+                const dataColumn = pc[cData];
                 thisColumn.tasks.splice(rTarget,0,dataColumn.tasks[rData]);
                 dataColumn.tasks.splice(rData,1);
             } else if(rTarget !== rData){
-                let taskList = pc[cTarget].tasks;
+                const taskList = pc[cTarget].tasks;
                 taskList.splice(rTarget,0,taskList[rData]);
                 if(rTarget < rData){
                     rData++;
@@ -83,9 +83,9 @@ function dragDropNewRow(body, cTarget){
     body.addEventListener("drop", e => {
         body.style.borderTop = "solid 0px #8dbdd8"
         if(!draggingColumn){
-            let pc = project.columns;
-            let cData = parseInt(e.dataTransfer.getData("column"));
-            let rData = parseInt(e.dataTransfer.getData("row"));
+            const pc = project.columns;
+            const cData = parseInt(e.dataTransfer.getData("column"));
+            const rData = parseInt(e.dataTransfer.getData("row"));
             console.log("Moved Task From ColRow: " + cData + "," + rData + " - To Column: " + cTarget);
     
             pc[cTarget].tasks.push(pc[cData].tasks[rData]);

@@ -8,17 +8,17 @@ function renderDetailWindow(task, column, row){
     // Clear detailWindow before re-render
     detailWindow.innerHTML = ""; 
     
-    let container = newElem("div");
+    const container = newElem("div");
     container.classList.add("taskActions");
     detailWindow.appendChild(container);
     renderTaskExtraAction(task, container, column, row);
     
-    let detailContainer = newElem("div");
+    const detailContainer = newElem("div");
     detailContainer.classList.add("detailContainer");
     detailWindow.appendChild(detailContainer);
 
     renderTaskName(task,detailContainer); //detailTaskName.js
-    let descColorContainer = newElem("div");
+    const descColorContainer = newElem("div");
         descColorContainer.classList.add("descriptionAndColor");
         detailContainer.appendChild(descColorContainer);
     renderTaskDesc(task,descColorContainer); //detailTaskDesc.js

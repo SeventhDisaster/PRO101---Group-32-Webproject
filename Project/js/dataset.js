@@ -2,7 +2,13 @@
 //Normally, this would be done using a database instead, but for prototype purposes, data is stored as Javascript objects.
 
 //Data
-function Project(name = "", description = "", team = [], columns = []){
+const instructionTask = "Click on tasks to open the task editor." +
+"\nUse the task editor to change task details and/or complete and delete them." +
+"\nYou can assign members by clicking on the little + icon in the editor, and you can unassign them by clicking on their icons in the assigned members list" +
+"\nYou can click-and-drag Tasks and Columns on the board to organize your project however you want" +
+"\n\nGet your projects moving with NexTask!";
+
+function Project(name = "", description = "", team = [], columns = [new Column("To Do:",[new Task("Create your project",instructionTask)]), new Column("In Progress",[]), new Column("Complete:",[])]){
     this.name = name;
     this.description = description;
     this.team = team;

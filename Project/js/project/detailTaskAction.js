@@ -1,7 +1,7 @@
 function renderActionButtons(task, parent){
 
     //Confirm changes - Push out to dataset
-    let confirmBtn = newElem("button");
+    const confirmBtn = newElem("button");
     confirmBtn.classList.add("taskConfirm");
     confirmBtn.classList.add("taskActionButton");
     confirmBtn.innerText = "Confirm";
@@ -15,16 +15,16 @@ function renderActionButtons(task, parent){
         }
 
         // Subtask object handling
-        let subtaskList = [];
+        const subtaskList = [];
         for(let i = 0; i < task.subtasks.length; i++){
-            let subtaskStatus = getElemById("subStatus" + i)
-            let subtaskText = getElemById("subText" + i);
+            const subtaskStatus = getElemById("subStatus" + i)
+            const subtaskText = getElemById("subText" + i);
             subtaskList.push({
                 isComplete: subtaskStatus.checked,
                 name: subtaskText.value
             });
         }
-        let detailContent = {
+        const detailContent = {
             name: getElemById("name").value,
             desc: getElemById("description").value,
             color: getElemById("colorType").value,
@@ -46,7 +46,7 @@ function renderActionButtons(task, parent){
 
 
     //Abort changes - Don't push out to dataset
-    let cancelBtn = newElem("button");
+    const cancelBtn = newElem("button");
     cancelBtn.classList.add("taskCancel");
     cancelBtn.classList.add("taskActionButton");
     cancelBtn.innerText = "Cancel";

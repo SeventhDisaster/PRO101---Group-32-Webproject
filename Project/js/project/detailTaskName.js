@@ -1,5 +1,5 @@
 function renderTaskName(task, parent){
-    let name = newElem("input");
+    const name = newElem("input");
     name.value = task.name;
     name.classList.add("taskName");
     name.setAttribute("type","text");

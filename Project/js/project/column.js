@@ -1,15 +1,15 @@
 function renderColumn(column, columnIndex){
-    let newC = newElem("div");
+    const newC = newElem("div");
     newC.classList.add("taskColumn");
 
     
-    let head = newElem("div");
+    const head = newElem("div");
     head.classList.add("colHead");
     newC.appendChild(head)
     
     //Drag & Drop For Columns
     dragDropColumn(newC,head,columnIndex);
-    let del = newElem("button");
+    const del = newElem("button");
     del.classList.add("delColumn");
     del.innerText = "X";
     del.addEventListener("click", e =>{
@@ -17,7 +17,7 @@ function renderColumn(column, columnIndex){
     })
     head.appendChild(del);
 
-    let title = newElem("input");
+    const title = newElem("input");
     title.classList.add("columnTitle");
     title.value = column.name;
     title.placeholder = "Title...";
@@ -31,19 +31,19 @@ function renderColumn(column, columnIndex){
     head.appendChild(title);
 
     //Renders the button for adding new tasks
-    let addTask = newElem("button");
+    const addTask = newElem("button");
     addTask.classList.add("addTaskBtn");
     addTask.innerText = "+ Add Task +";
     addTask.addEventListener("click",function(){
         refreshBoard();
-        let addedTask = new Task();
+        const addedTask = new Task();
         column.tasks.push(addedTask);
         renderRow(addedTask,body,true, columnIndex, column.tasks.length[-1]);
         // Three last params are passed because of drag-drop
     })
     newC.appendChild(addTask);
     
-    let body = newElem("div");
+    const body = newElem("div");
     body.classList.add("colBody");
     newC.appendChild(body);
     
@@ -56,7 +56,7 @@ function renderColumn(column, columnIndex){
     }
 
     //TARGET FOR ROW-DRAG-DROP
-    let rowTarget = newElem("div");
+    const rowTarget = newElem("div");
     rowTarget.classList.add("rowTaker");
     body.appendChild(rowTarget);
     dragDropNewRow(rowTarget, columnIndex);

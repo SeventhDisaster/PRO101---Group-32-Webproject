@@ -1,5 +1,5 @@
 function renderTaskDeadline(task, parent){
-    let deadline = newElem("input");
+    const deadline = newElem("input");
     deadline.value = task.due;
     deadline.classList.add("taskDeadline");
     deadline.setAttribute("type","date");

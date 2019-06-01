@@ -15,7 +15,7 @@ if(pURL === undefined){
 } else {
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
 
-    let boardContainer = getElemById("boardContainer");
+    const boardContainer = getElemById("boardContainer");
 
     renderProjectInfo(project);
 
@@ -23,11 +23,11 @@ if(pURL === undefined){
         for(let i = 0; i < project.columns.length; i++){
             renderColumn(project.columns[i], i)
         }
-        let addColumn = newElem("button");
+        const addColumn = newElem("button");
         addColumn.classList.add("addColumnBtn");
         addColumn.innerText = "+";
         addColumn.addEventListener("click", e => {
-            let addedColumn = new Column();
+            const addedColumn = new Column();
             project.columns.push(addedColumn);
             refreshBoard();
         })
@@ -36,10 +36,10 @@ if(pURL === undefined){
         
     }
 
-    let cURL = parseInt(url.searchParams.get("columns"));
+    const cURL = parseInt(url.searchParams.get("columns"));
     if(cURL === undefined){console.log("No URL-Param for Task-Selection. No task loaded")}
     if(typeof(cURL) == "number" && cURL > -1){
-        let tURL = parseInt(url.searchParams.get("tasks"));
+        const tURL = parseInt(url.searchParams.get("tasks"));
         console.log("Loaded Task from URL-Parm:\n Project: " + pURL + "\nColumns: " + cURL + "\nTasks: " + tURL);
     
         console.log("Loaded Task:" + projects[pURL].columns[cURL].tasks[tURL]);

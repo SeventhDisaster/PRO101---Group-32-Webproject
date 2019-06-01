@@ -1,5 +1,5 @@
 function renderTaskDesc(task, parent){
-    let description = newElem("textarea");
+    const description = newElem("textarea");
         description.classList.add("taskDescription");
         description.setAttribute("type","text");
         description.setAttribute("placeholder", "Type the task description here");
