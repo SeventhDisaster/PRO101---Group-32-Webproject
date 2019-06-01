@@ -1,5 +1,11 @@
+//Load Project on page load completion
 window.addEventListener("load", s =>{
-    renderBoard();
+    //Throw an exception if user isn't logged in or project is off
+    try{
+        renderBoard(); 
+    } catch(err) {
+        console.error("Invalid user or Invalid Project: " + err);
+    }
 })
 
 
@@ -7,16 +13,27 @@ let url = new URL(location.href);
 let pURL = parseInt(url.searchParams.get("project"));
 let projectIndex = pURL;
 let project = projects[projectIndex];
+const boardContainer = getElemById("boardContainer");
 
-projects.push(new Project("ProjectName", "Descript", [3], []));
+confirmLogin(); //Make sure a user is logged in
 
-if(pURL === undefined){
-    alert("No project found");
+//Make sure the current user is part of the project
+let validUser = false;
+if((pURL >= 0 && pURL < projects.length) && pURL !== NaN){
+    if(project.team.includes(user.id)){
+        validUser = true; 
+    }
+}
+
+// Make sure project exists in the dataset
+if(url.searchParams.get("project") === null || pURL >= projects.length || !validUser){
+    render404page(boardContainer, validUser) //User not allowed to view project
+
 } else {
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
-
-    const boardContainer = getElemById("boardContainer");
-
+    console.log("Logged in as user: " + user.name);
+    
+    projects.push(new Project()); //Project for testing purposes
     renderProjectInfo(project);
 
     function renderBoard(){
@@ -31,9 +48,7 @@ if(pURL === undefined){
             project.columns.push(addedColumn);
             refreshBoard();
         })
-        boardContainer.append(addColumn);
-
-        
+        boardContainer.append(addColumn);        
     }
 
     const cURL = parseInt(url.searchParams.get("columns"));
@@ -45,12 +60,11 @@ if(pURL === undefined){
         console.log("Loaded Task:" + projects[pURL].columns[cURL].tasks[tURL]);
         renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
     }
-    
 }
 
 //Call on this function to refresh the entire board
 function refreshBoard(){
     boardContainer.innerHTML = "";
-    renderBoard();
     saveProjectChanges();
+    renderBoard();
 }

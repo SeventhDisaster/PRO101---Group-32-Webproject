@@ -9,12 +9,20 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     const head = newElem("h4");
     head.classList.add("colTaskHead");
     head.innerText = task.name;
+    if(task.name === ""){
+        head.innerText = "Unnamed Task";
+        head.style.color = "#9b9b9b";
+    }
     newTask.appendChild(head);
 
     
     const desc = newElem("p");
     desc.classList.add("colTaskDesc");
     desc.innerText = task.desc;
+    if(task.desc === ""){
+        desc.innerText = "- No Description -";
+        desc.style.color = "#9b9b9b";
+    }
     newTask.appendChild(desc);
 
     let color = task.color;

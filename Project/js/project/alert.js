@@ -2,20 +2,20 @@ const page = getElemById("pageContainer");
 
 function renderAlert(type, column, row){
     const container = newElem("div");
-    container.classList.add("alertContainer");
+    setClasses(container,["alertContainer","fullWidth","fullHeight"]);
     page.appendChild(container);
     
     const fade = newElem("div");
-    fade.classList.add("alertFade");
+    setClasses(fade,["alertFade","fullWidth","fullHeight"]);
     container.appendChild(fade);
 
     const window = newElem("div");
-    window.classList.add("alertWindow");
+    setClasses(window,["alertWindow"]);
     container.appendChild(window);
 
     const warning = newElem("h1");
-    warning.innerText = "Are you sure you want to deconste this " + type + "?";
-    warning.classList.add("alertText");
+    warning.innerText = "Are you sure you want to delete this " + type + "?";
+    setClasses(warning,["alertText","fullWidth"]);
     window.appendChild(warning);
     
     const hr = newElem("hr");
@@ -23,15 +23,15 @@ function renderAlert(type, column, row){
 
     const no = newElem("button");
     no.innerText = "No";
-    setClasses(no,["alertNo","alertButton"]);
+    setClasses(no,["alertNo","alertButton","clickable"]);
     window.appendChild(no);
     no.addEventListener("click", e =>{
-        removeAlert()
+        removeAlert();
     })
 
     const yes = newElem("button");
     yes.innerText = "Yes";
-    setClasses(yes,["alertYes","alertButton"]);
+    setClasses(yes,["alertYes","alertButton","clickable"]);
     window.appendChild(yes);
     yes.addEventListener("click", e =>{
         if(type === "task"){

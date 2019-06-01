@@ -34,8 +34,8 @@ function dragDropRow(task, cIndex, rIndex){
             const pc = project.columns;
             const cTarget = cIndex;
             const rTarget = rIndex;
-            const cData = parseInt(e.dataTransfer.getData("column"));
-            const rData = parseInt(e.dataTransfer.getData("row"));
+            let cData = parseInt(e.dataTransfer.getData("column"));
+            let rData = parseInt(e.dataTransfer.getData("row"));
             
             console.log(pc[cData].tasks[rData]);
             console.log("Above Task Moved From Column: " + cData + " to Column: " + cTarget);
@@ -53,9 +53,6 @@ function dragDropRow(task, cIndex, rIndex){
                     rData++;
                     taskList.splice(rData,1);
                 } else if (rTarget > rData){
-                    if(rData !== 0){
-                        rData--;
-                    }
                     taskList.splice(rData,1);
                 }
             }

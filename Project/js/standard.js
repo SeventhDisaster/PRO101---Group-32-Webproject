@@ -1,3 +1,14 @@
+//////////////////////////////////////////////////////////////////////////////
+//      This file contains quick functions for
+//      document element creation and handling
+//
+//   -   newElem("div") --> Creates a new div tag
+//   -   getElemByid("id") --> Gives the node of input id
+//   -   setClasses(node, ["a","b"]) --> Gives node the classes a and b
+//
+////////////////////////////////////////////////////////////////////////////
+
+
 // Short createElement
 function newElem(tag){
     return document.createElement(tag);
