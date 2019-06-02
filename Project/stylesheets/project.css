@@ -638,7 +638,7 @@ label{
 }
 
 .warningMark{
-    background-image: linear-gradient(to left, rgb(255, 160, 160), rgba(0,0,0,0))
+    background-image: linear-gradient(to left, rgba(255, 147, 147,.6), rgba(0,0,0,0))
 }
 
 .highPri{
@@ -757,7 +757,11 @@ label{
 }
 
 .taskName:hover{
-    background-color: #f1fffe;
+    filter: brightness(1.05);
+}
+
+.taskName:focus{
+    filter: brightness(1.08) grayscale(.5);
 }
 
 .descriptionAndColor{
