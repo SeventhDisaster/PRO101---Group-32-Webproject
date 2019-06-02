@@ -25,11 +25,11 @@ if (!getStorage("users")) {
 
 var user = users[getStorage("activeUser")-1];
 
-// if (!getStorage("projects")) {
-//     setStorage("projects", projects);
-// } else {
-//     projects = getStorage("projects");
-// }
+if (!getStorage("projects")) {
+    setStorage("projects", projects);
+} else {
+    projects = getStorage("projects");
+}
 
 
 function confirmLogin () {

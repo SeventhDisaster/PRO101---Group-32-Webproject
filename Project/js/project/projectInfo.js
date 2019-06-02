@@ -62,7 +62,7 @@ function renderProjectInfo(project){
             status.style.color = "#434343";
             break;
     }
-    
+
     status.addEventListener("change", e =>{
         project.status = status.selectedIndex;
         renderProjectInfo(project);
@@ -143,4 +143,6 @@ function renderProjectInfo(project){
 
     //Theme Selector
 
+
+    saveProjectChanges();
 }

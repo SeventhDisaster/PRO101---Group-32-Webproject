@@ -429,10 +429,8 @@ label{
     opacity: .5;
 }
 
-.leadUser::after{
-    content: " " url(../img/TinyCrownIcon.png);
-    color: #ad7d14;
-    opacity: .5;
+.leadUser{
+    color: #6d5522;
 }
 
 .searchTitle{
