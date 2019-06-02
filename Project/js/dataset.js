@@ -8,10 +8,11 @@ const instructionTask = "Click on tasks to open the task editor." +
 "\nYou can click-and-drag Tasks and Columns on the board to organize your project however you want" +
 "\n\nGet your projects moving with NexTask!";
 
-function Project(name = "", description = "", team = [user.id], columns = [new Column("To Do:",[new Task("Create your project",instructionTask)]), new Column("In Progress",[]), new Column("Complete:",[])]){
+function Project(name = "", description = "", team = [user.id], status = 0, columns = [new Column("To Do:",[new Task("Create your project",instructionTask)]), new Column("In Progress",[]), new Column("Complete:",[])]){
     this.name = name;
     this.description = description;
     this.team = team;
+    this.status = status;
     this.columns = columns;
 }
 
@@ -41,6 +42,7 @@ let projects = [
         name: "NexTask Initiation Project",
         description: "This is a test project on NexTask.\n\nAn agile project management service that takes basis on the 'Kanban' whiteboard task management workflow.\n\nThe service allows for easy creation and management of tasks upon several additional quality of work options.\n\nThis project serves as our PRO101 exam prototype.\nMade by: Krister, Andreas, Simen, Helene & Zemen",
         team: [1,2,3,4,5],
+        status: 0,
         columns: [
             {
                 name: "To-do",

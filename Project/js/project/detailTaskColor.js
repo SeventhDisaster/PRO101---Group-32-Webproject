@@ -3,7 +3,7 @@ function renderTaskColor(task,parent){
         colorType.id = "colorType";
         colorType.value = task.color;
         colorType.setAttribute("type","text");
-        colorType.setAttribute("placeholder","#Hex Color");
+        colorType.setAttribute("placeholder","Type here to set task color");
         colorType.classList.add("taskColorSet");
         colorType.addEventListener("keyup", e => {
             colorType.style.backgroundColor = colorType.value;
