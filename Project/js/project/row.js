@@ -37,10 +37,20 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     if(task.isComplete){
         const complete = newElem("div");
         complete.innerText = "✓";
-        complete.classList.add("completeMark");
+        setClasses(complete,["statusMark","completeMark","fullHeight"]);
         newTask.appendChild(complete);
     }
 
+    if(!added){
+        let currentDate = new Date();
+        if(!task.isComplete && (stringToDate(task.due) <= currentDate) && task.due){
+            const warning = newElem("div");
+            warning.innerText = "!";
+            setClasses(warning,["statusMark","warningMark","fullHeight"]);
+            newTask.appendChild(warning);
+        }
+    }
+        
     if(task.priority > 0 && !task.isComplete){
         const priority = newElem("div");
         if(task.priority === 1){

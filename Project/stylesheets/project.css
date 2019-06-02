@@ -619,10 +619,9 @@ label{
     
 }
 
-.completeMark{
+.statusMark{
     position: absolute;
     width: 80%;
-    height: 100%;
     font-size: 50px;
     text-align: right;
     overflow: hidden;
@@ -632,7 +631,14 @@ label{
     font-weight: bold;
     color: white;
     opacity: .6;
+}
+
+.completeMark{
     background-image: linear-gradient(to left, rgba(160, 255, 218,1), rgba(0,0,0,0))
+}
+
+.warningMark{
+    background-image: linear-gradient(to left, rgb(255, 160, 160), rgba(0,0,0,0))
 }
 
 .highPri{
