@@ -8,6 +8,9 @@ function renderAlert(type, column, row){
     const fade = newElem("div");
     setClasses(fade,["alertFade","fullWidth","fullHeight"]);
     container.appendChild(fade);
+    fade.addEventListener("click", e =>{
+        removeAlert();
+    })
 
     const window = newElem("div");
     setClasses(window,["alertWindow"]);

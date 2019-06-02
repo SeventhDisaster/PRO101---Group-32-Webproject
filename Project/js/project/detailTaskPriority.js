@@ -4,6 +4,7 @@ function renderTaskPriority(task,parent){
 
         const priorityNorm = newElem("option");
         priorityNorm.innerText = "Normal";
+        priorityNorm.style.color = "#434343";
         priority.appendChild(priorityNorm);
 
         const priorityHigh = newElem("option");
@@ -17,6 +18,20 @@ function renderTaskPriority(task,parent){
         priority.appendChild(priorityCrit);
 
     priority.selectedIndex = task.priority;
+    switch(task.priority){ 
+        case 0:
+            priority.style.color = "#434343";
+            break;
+        case 1:
+            priority.style.color = "orange";
+            break;
+        case 2:
+            priority.style.color = "red";
+            break;
+        default:
+            priority.style.color = "#434343";
+            break;
+    }
     parent.appendChild(priority);
     priority.id = "priority"
 }
