@@ -13,17 +13,17 @@ function dragDropColumn(newColumn, columnHead, columnIndex){
                 if(e.dataTransfer.getData("isRow") === "true"){
                     newColumn.style.backgroundColor = "red";
                 } else {
-                    newColumn.style.borderLeft = "solid 10px #8dbdd8"
-                    newColumn.style.borderRight = "solid 10px #8dbdd8"
-                    newColumn.style.backgroundColor = "#e0f7f8";
+                    newColumn.style.borderLeft = "solid 10px #8bd0f8"
+                    newColumn.style.borderRight = "solid 10px #8bd0f8"
+                    newColumn.style.backgroundColor = "#e2fffa";
                 }
             }
             e.preventDefault();
         });
 
         columnHead.addEventListener("dragleave", e => {
-            newColumn.style.borderLeft = "solid 0px #8dbdd8"
-            newColumn.style.borderRight = "solid 0px #8dbdd8"
+            newColumn.style.borderLeft = "solid 0px #8bd0f8"
+            newColumn.style.borderRight = "solid 0px #8bd0f8"
             newColumn.style.backgroundColor = "";
             console.log("Leave");
         });
@@ -57,8 +57,8 @@ function dragDropColumn(newColumn, columnHead, columnIndex){
                     console.log("Removed from " + columnData);
                     project.columns.splice(columnData,1);
                 }
-                newColumn.style.borderLeft = "solid 0px #8dbdd8";
-                newColumn.style.borderRight = "solid 0px #8dbdd8";
+                newColumn.style.borderLeft = "solid 0px #8bd0f8";
+                newColumn.style.borderRight = "solid 0px #8bd0f8";
                 newColumn.style.backgroundColor = "";
                 refreshBoard();
             }
