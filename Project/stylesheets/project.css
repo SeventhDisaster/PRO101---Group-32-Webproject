@@ -225,7 +225,7 @@ label{
 
 #sidebarContainer{
     position: fixed;
-    background-image: linear-gradient(to bottom, #b3d3e6, #d3fcf6 );
+    background-image: linear-gradient(to bottom, #94d1f5, #9df7e9 );
     left: -20vw;
     width: 40vw;
     height: 100vh;
@@ -373,6 +373,7 @@ label{
 #memberListContainer{
     grid-row: 3;
     grid-column: 1/3;
+    margin-left: 5px;
     direction: rtl;
     overflow: auto;
 }
@@ -518,7 +519,7 @@ label{
     height: 15%;
     width: 100%;
     margin-top: -10%;
-    background-color: #b3d3e6;
+    background-image: linear-gradient(to bottom, #8bd0f8, #91ddf0 );
     z-index: 3;
     overflow: hidden;
     white-space: nowrap;

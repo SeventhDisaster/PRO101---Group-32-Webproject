@@ -172,7 +172,8 @@ let users = [
         password: "KaffeIsLoveKaffeIsLife",
         imagePath: "../img/Profile_pictures/Krister.jpg",
         notifications: [],
-        achievements: []
+        achievements: [],
+        theme: 1
     },
     {
         id: 2,
@@ -180,7 +181,8 @@ let users = [
         password: "correct horse battery staple",
         imagePath: "../img/Profile_pictures/Andreas.jpg",
         notifications: [],
-        achievements: []
+        achievements: [],
+        theme: 1
     },
     {
         id: 3,
@@ -188,7 +190,8 @@ let users = [
         password: "123456789",
         imagePath: "../img/Profile_pictures/Helene.jpg",
         notifications: [],
-        achievements: []
+        achievements: [],
+        theme: 1
     },
     {
         id: 4,
@@ -196,7 +199,8 @@ let users = [
         password: "password432",
         imagePath: "../img/Profile_pictures/Simen.jpg",
         notifications: [],
-        achievements: []
+        achievements: [],
+        theme: 1
     },
     {
         id: 5,
@@ -204,6 +208,7 @@ let users = [
         password: "password123",
         imagePath: "../img/Profile_pictures/Zemen.jpg",
         notifications: [],
-        achievements: []
+        achievements: [],
+        theme: 1
     },
 ]

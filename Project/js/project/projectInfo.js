@@ -37,7 +37,7 @@ function renderProjectInfo(project){
         name.innerText = userName;
         setClasses(name,["memberName"]);
         if(member === user.id){
-            setClasses(name,["thisUser"]);
+            setClasses(name,["thisUser"]); //Show which user you are on the list
         }
         field.appendChild(name);
     }

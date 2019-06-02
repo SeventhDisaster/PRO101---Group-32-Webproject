@@ -54,7 +54,8 @@ function createUser(name, password) {
         password: password,
         notifications: [],
         achievements: [],
-        imagePath: null
+        imagePath: null,
+        theme: 1
     }
 
     //setStorage(name + "/" + password, USER);
