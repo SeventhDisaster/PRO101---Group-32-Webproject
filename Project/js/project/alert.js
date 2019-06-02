@@ -1,10 +1,11 @@
 const page = getElemById("pageContainer");
+const container = getElemById("alertContainer");
 
-function renderAlert(type, column, row){
-    const container = newElem("div");
-    setClasses(container,["alertContainer","fullWidth","fullHeight"]);
-    page.appendChild(container);
-    
+function renderAlert(type, column, row){ 
+    container.style.top = "0vh"; //Slide down
+    container.style.opacity = "1"; //Appear
+    container.innerHTML = ""; //Clear elements before re-render.
+
     const fade = newElem("div");
     setClasses(fade,["alertFade","fullWidth","fullHeight"]);
     container.appendChild(fade);
@@ -47,9 +48,11 @@ function renderAlert(type, column, row){
         closeDetailWindow();
         refreshBoard();
     })
+
     
 
     function removeAlert(){
-        page.removeChild(container);
+        container.style.top = "-100vh"; //Slide up
+        container.style.opacity = "0"; //Disappear
     }
 }

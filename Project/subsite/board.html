@@ -14,6 +14,7 @@
     <button onclick="clearStorage()" style="position: absolute; width: 200px; height: 30px; z-index: 100000; background-color: white">Clear Localstorage</button>
 
     <section id="pageContainer">
+        
         <div id="sidebarContainer">
             <div id="sideBarContent">
                 <img id="logo" src="../img/NexTaskLogoWhite.svg">
@@ -32,18 +33,21 @@
                     <button id="addTeamBtn" class="noDefaultBorder clickable quickTransition">+ Add Team +</button>
                     <hr>
                     <div id="memberListContainer" class="fullHeight fullWidth flexDown">
-
+                        
                     </div>
                 </div>
                 <!-- Theme selector TBA -->
             </div>
         </div>
-
+        
         <!-- All board columns and rows are generated inside here -->
         <div id="boardContainer"></div>
         
         <!-- Task Editor is rendered here -->
         <div id="taskDetailContainer"></div>
+        
+        <!-- Delete alert rendered here -->
+        <div id="alertContainer" class="fullHeight fullWidth"></div>
     </section>
 
     <script src="../js/standard.js"></script>
