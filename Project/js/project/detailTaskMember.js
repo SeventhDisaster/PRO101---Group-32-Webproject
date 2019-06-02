@@ -26,41 +26,57 @@ function renderTaskMembers(task, parent){
                 btnListContainer.classList.remove("addAssignListShown");
                 assignee.removeChild(btnListContainer);
                 assignButtonActive = false;
+                btnListContainer.innerHTML = "";
             } else {
                 btnListContainer.classList.add("addAssignListShown");
                 assignee.appendChild(btnListContainer);
                 assignButtonActive = true;
+                // Render team member assigning to 
+                for(let member of project.team){
+                    const listing = newElem("div");
+                    listing.id = "memberListing" + member;
+                    setClasses(listing,["addMemberListing","fullWidth","clickable","quickTransition"]);
+                    btnListContainer.appendChild(listing);
+                    listing.addEventListener("click", e => {
+                        if(!currentList.includes(member)){
+                            task.assignee.push(member);
+                            listing.style.opacity = ".3";
+                            pushNotification(member, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
+                            renderMemberList(task);
+                        } else {
+                            alert("User already assigned to this task");
+                        }
+                    });
+                    
+                    const addMember = newElem("img");
+                    addMember.setAttribute("src",getImage(member));
+                    addMember.dataset.id = member;
+                    addMember.addEventListener
+                    addMember.classList.add("memberIcon");
+                    listing.appendChild(addMember);
+                    
+                    const name = newElem("p");
+                    name.innerText = users[member - 1].name;
+                    listing.appendChild(name);
+                    
+                    if(currentList.includes(member)){
+                        listing.style.opacity = ".3";
+                    }
+                    console.log("aa")
+                }
             }
         });
-
-        for(let member of project.team){
-            const addMember = newElem("img");
-            addMember.setAttribute("src",getImage(member));
-            addMember.dataset.id = member;
-            addMember.addEventListener
-            addMember.classList.add("memberIcon");
-
-            //Assign Member to Task
-            addMember.addEventListener("click", e => {
-                if(!currentList.includes(member)){
-                    task.assignee.push(member);
-                    pushNotification(member, "You have been assigned a task!", "board.html?project=" + task.projectIndex + "&columns="+ task.columnIndex + "&tasks="+ task.rowIndex);
-                    renderMemberList(task);
-                } else {
-                    alert("User already assigned to this task");
-                }
-            });
-            btnListContainer.appendChild(addMember);
-        }
         
-        const assignedMemberList = newElem("div");
-        assignedMemberList.classList.add("assignedMemberList");
-        assignee.appendChild(assignedMemberList);
-
-        function renderMemberList(){
-            //Render assigned members on task
-            if(currentList[0] === 0){
-                currentList = [];
+            
+            
+            const assignedMemberList = newElem("div");
+            assignedMemberList.classList.add("assignedMemberList");
+            assignee.appendChild(assignedMemberList);
+            
+            function renderMemberList(){
+                //Render assigned members on task
+                if(currentList[0] === 0){
+                    currentList = [];
             }
 
             assignedMemberList.innerHTML = "";
@@ -78,6 +94,7 @@ function renderTaskMembers(task, parent){
                             console.log(currentList);
                             currentList.splice(currentList.indexOf(member),1);
                             renderMemberList(task);
+                            getElemById("memberListing" + member).style.opacity = "1";
                             assignee.dataset.list = currentList;
                         });
 

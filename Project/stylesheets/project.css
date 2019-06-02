@@ -108,6 +108,15 @@ label{
     justify-content: flex-start;
 }
 
+.memberIcon{
+    object-fit: cover;
+    border-radius: 100%;
+    transition: .2s ease;
+    height: 30px;
+    width: 30px;
+    margin: auto 5px;
+}
+
 /* Alert Styling */
 
 #alertContainer{
@@ -145,7 +154,6 @@ label{
 
 .alertFade{
     position: relative;
-    background-color: #411a1a;
     opacity: .4;
 }
 
@@ -269,7 +277,7 @@ label{
     margin-right: 4vw;
 }
 
-#projectName{
+.projectName{
     grid-row: 4;
     grid-column: 1/5;
     background-color: rgba(0,0,0,0);
@@ -288,11 +296,11 @@ label{
     border-radius: 5px;
 }
 
-#projectName:hover{
+.projectName:hover{
     background-color: rgba(255,255,255,0.3)
 }
 
-#descContainer{
+.descContainer{
     grid-row: 5;
     grid-column: 1/5;
     margin-left: 3px;
@@ -302,7 +310,7 @@ label{
     border-radius: 10px;
 }
 
-#projectDescription{
+.projectDescription{
     direction: ltr;
     margin-right: 20%;
     border-style: none;
@@ -318,11 +326,11 @@ label{
     text-align: left;
 }
 
-#projectDescription:hover{
+.projectDescription:hover{
     background-color: rgba(255,255,255,0.3)
 }
 
-#projectStatus{
+.projectStatus{
     grid-row: 2;
     grid-column: 4;
     border-style: none;
@@ -334,7 +342,7 @@ label{
     text-overflow: ellipsis; 
 }
 
-#teamList{
+.teamList{
     grid-row: 6;
     grid-column: 1/5;
     display: grid;
@@ -343,7 +351,7 @@ label{
     grid-template-columns: 40% auto;
 }
 
-#teamList hr{
+.teamList hr{
     grid-row: 2;
     grid-column: 1/3;
     margin: 0px;
@@ -353,34 +361,37 @@ label{
     grid-row: 1;
     grid-column: 1;
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 2vh;
     margin: 10px;
     overflow: hidden;
 }
 
-#addTeamBtn{
+.addTeamBtn{
     grid-row: 1;
     grid-column: 2;
     font-weight: bold;
+    font-size: .9vw;
     color: #434343;
     opacity: .3;
     margin: 20px 3px 3px 10px;
 }
 
-#addTeamBtn:hover{
+.addTeamBtn:hover{
     background-color: #ffffff;
     opacity: .9;
 }
 
-#memberListContainer{
+.memberListContainer{
     grid-row: 3;
     grid-column: 1/3;
     margin-left: 5px;
     direction: rtl;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 25vh;
 }
 
-#memberListContainer *{
+.memberListContainer *{
     direction: ltr;
 }
 
@@ -390,7 +401,7 @@ label{
     display: grid;
     grid-template-columns: 50px auto 50px;
     grid-template-rows: 100%;
-    margin-top: 3px; 
+    margin-top: 10px; 
 }
 
 
@@ -408,6 +419,7 @@ label{
     grid-row: 1;
     margin-left: 0px;
     line-height: -70%;
+    font-size: .8vw;
     margin-top: 1vh;
 }
 
@@ -415,6 +427,84 @@ label{
     content: "(You) ";
     color: #434343;
     opacity: .5;
+}
+
+.leadUser::after{
+    content: " " url(../img/TinyCrownIcon.png);
+    color: #ad7d14;
+    opacity: .5;
+}
+
+.searchTitle{
+    position: absolute;
+    text-align: center;
+    margin-top: 7vh;
+    font-size: 3vh;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.searchBar{
+    background-color: white;
+    box-shadow: 0px 0px 3px #434343;
+    grid-column: 1/3;
+    grid-row: 1;
+    border-radius: 20px;
+    width: 70%;
+    padding: 0px 20px;
+    height: 40px;
+    margin: 15vh auto;
+}
+
+::selection{
+    border-radius: 20px;
+}
+
+.searchResult{
+    grid-row: 3;
+    grid-column: 1/3;
+    width: 60%;
+    height: 25vh;
+    margin: -10vh auto 0px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #434343;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.userListing{
+    display: grid;
+    grid-template-columns: 30% 50px auto;
+    grid-template-rows: 100%;
+    padding: 5px; 
+    height: 30px;
+}
+
+.userListing:hover{
+    background-color: #d6f7ff;
+}
+
+.userListing img{
+    grid-column: 2;
+}
+
+.userListing p{
+    font-family: "Monterrat", sans-serif;
+    margin: auto 10px;
+    grid-column: 3;
+}
+
+.closeMAlert{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    box-shadow: 0px 0px 10px #434343;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: #f5f5f5;
 }
 
 /* KANBAN BOARD CONTAINER AND CONTENT */
@@ -865,7 +955,7 @@ label{
     position: relative;
     grid-column: 2;
     grid-row: 1;
-    width: 40px;
+    width: 20vw;
     height: auto;
     bottom: 300%;
     display: flex;
@@ -883,11 +973,6 @@ label{
     transition: .1s ease;
 }
 
-.addAssignListShown .memberIcon:hover{
-    transform: skewX(-1deg) scale(1.1);
-    cursor: pointer;
-}
-
 .assignedMemberList{
     height:100%;
     width: auto;
@@ -899,22 +984,23 @@ label{
     overflow-x: auto;
     overflow-y: hidden; 
 }
-.noMemberIcon{
-    font-family: monospace;
-    height: 50%;
-    padding: auto;
-    color: #434343;
-    opacity: .5;
+
+.addMemberListing{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 100%;
+    font-family: "Open Sans", sans-serif;
 }
 
-.memberIcon{
-    transform: skewX(5deg);
-    object-fit: cover;
-    border-radius: 100%;
-    transition: .2s ease;
-    height: 30px;
-    width: 30px;
-    margin: auto 5px;
+.addMemberListing p{
+    margin: 1vh;
+}
+
+.addMemberListing:hover{
+    background-color: #b2fafa;
 }
 
 .assignedMemberList .memberIcon:hover{

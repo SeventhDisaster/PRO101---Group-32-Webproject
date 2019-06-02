@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- In charge of this page: Krister Emanuelsen -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,10 @@
     <title id="tabTitle">NexTask Project</title>
 </head>
 <body>
-    
-    <button onclick="clearStorage()" style="position: absolute; width: 200px; height: 30px; z-index: 100000; background-color: white">Clear Localstorage</button>
-
     <section id="pageContainer">
-        
+        <!-- All project information is rendered here (projectInfo.js)-->
         <div id="sidebarContainer">
-            <div id="sideBarContent">
-                <img id="logo" src="../img/NexTaskLogoWhite.svg">
-                <hr>
-                <input id="projectName" placeholder="Project Name" type="text">
-                <div id="descContainer" class="fullHeight">
-                    <textarea id="projectDescription" type="text" spellcheck="false" placeholder="Project Description"></textarea>
-                </div>
-                <select id="projectStatus">
-                    <option>• On Track</option>
-                    <option>• At Risk</option>
-                    <option>• Behind Schedule!</option>
-                </select>
-                <div id="teamList">
-                    <h4 class="fullWidth fullHeight teamHeader" >Team:</h4>
-                    <button id="addTeamBtn" class="noDefaultBorder clickable quickTransition">+ Add Team +</button>
-                    <hr>
-                    <div id="memberListContainer" class="fullHeight fullWidth flexDown">
-                        
-                    </div>
-                </div>
-                <!-- Theme selector TBA -->
-            </div>
+            <div id="sideBarContent"></div>
         </div>
         
         <!-- All board columns and rows are generated inside here -->
@@ -53,8 +30,8 @@
     <script src="../js/standard.js"></script>
     <script src="../js/date.js"></script>
     <script src="../js/dataset.js"></script>
-    <script src="../js/project/alert.js"></script>
     <script src="../js/data_managment.js"></script>
+    <script src="../js/project/alert.js"></script>
     <script src="../js/project/project404.js"></script>
     <script src="../js/project/projectInfo.js"></script>
     <script src="../js/project/taskDetails.js"></script>
@@ -76,21 +53,3 @@
     
 </body>
 </html>
-
-<!-- Below is a sample hard-coded column for testing and css Purposes
- <div class="taskColumn">
-    <div class="colHead">
-         <h3>HARDCODED</h3>
-    </div>
-    <button class="addTaskBtn">+</button>
-    <div class="colBody">
-        <div class="colTask">
-            <h4 class="colTaskHead">Sample Task</h4>
-            <p class="colTaskDesc"> This is a sample description that is longer</p>
-        </div>
-    <div class="colTask">
-        <h4 class="colTaskHead">Sample Task</h4>
-        <p class="colTaskDesc">Description</p>
-    </div>
-</div>
- -->
