@@ -1,347 +1,241 @@
 body {
     margin: auto;
 }
-#scene {
+/*gives everything inside main Container these values*/
+#mainC * {
+    z-index: 1;
     position: absolute;
+}
+/*size values*/
+#mainC {
+    position: relative;
     width: 100vw;
     height: 100vh;
+}
+/*plain white background*/
+#background {
+    width: 100%;
+    height: 100%;
     background-color: #d8e9f3;
-    overflow: hidden;
-    
-    
 }
-
-#logo {
-    left: 2%;
-    position: absolute;
-    width: 15%;
+/*footer section*/
+#footC {
+    bottom: 0%;
+    width: 100%;
     height: 15%;
-    top: 4%;
-    z-index: 5;
-    /*transform: skewX(-5deg);*/
-    overflow: hidden;
-    
-}
-
-/*Video*/
-#demo {
-    position: absolute;
     z-index: 1;
-    background-color: black;
-    width: 46%;
-    height: 56%;
-    right: 27%;
-    top: 28%;
+    position: absolute;
     overflow: hidden;
-    
+    background-color: #b3d3e6;  
 }
-
-#play {
-    width: 8%;
+/*git container*/
+#gitC {
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#gitPic {
+    width: 5%;
+    right: 2%;
+    bottom: 4%;
+    z-index: 2;
     cursor: pointer;
-    right: 45%;
-    top: 50%;
     position: absolute;
-    z-index: 1;
 }
-
-/*mantras*/
-#m3{
+#gitTxt {
+    right: 1%;
+    top: -13%;
+    font-family: "arial";
+    font-size: 1.1em;
+}
+/*resource container*/
+#rscC {
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#rsc {
+    right: 20%;
+    top: -13%; 
+    font-family: "arial";
+}
+#loginTxt {
     position: absolute;
-    z-index: 5;
-    width: 50%;
-    bottom: 2%;
+    right: 21.2%;
+    bottom: 8.5%; 
+    font-family: "arial"; 
+    color: black;
+    z-index: 2;
+}
+#mainPgTxt {
+    position: absolute;
+    right: 20.4%;
+    bottom: 5.5%;  
+    font-family: "arial"; 
+    z-index: 2;
+    color: black;
+}
+#taskBrdTxt {
+    right: 20.2%;
+    bottom: 2.5%; 
+    font-family: "arial"; 
+    color: black;
+    z-index: 2;
+    position: absolute;
+}
+/*mantras*/
+#m1 {
+    width: 35%;
+    top: -30%;
     left: 0%;
     font-size: 300%;
-    font-family: 'arial'; 
-    
+    font-family: 'arial';
+    z-index: 2;
 }
-/*class for recoloring av ordet "matters"*/
+/*class for recoloring the word "matters"*/
 .wordMatters {
     color: #6600cc;
-    z-index: 1;
-    font-style: 
 }
-
-#m4 {
-    position: absolute;
-    z-index: 4;
-    width: 50vw;
-    bottom: 1%;
+#m2 {
+    width: 30%;
+    bottom: 15%;
     left: 10%;
     font-size: 3vmin;
     font-family: 'arial'; 
-    
+    z-index: 2;
+   
 }
-/*class for recoloring av ordet "NexTask"*/
+/*class for recoloring the word "NexTask"*/
 .wordNexTask {
     color: #6600cc;
-    z-index: 1;
-    
+}
+#topContainer {
+    top: 0%;
+    width: 100%;
+    height: 5%;
+    position: relative;
+}
+/*black color at top*/
+#topLogo {
+    background-color: #434343;
+    width: 100%;
+    height: 80%;
+}
+/*container for "fancy" white line design*/
+#menuLineContainer {
+    width: 35%;
+    height: 100%;
+    right: 0%;
 }
 
+/*white straight line*/
+#stLine1 {
+    background-color: whitesmoke;
+    color: white;
+    width: 83%;
+    height: 10%;
+    right: 0%;
+    top: 8%;
+}
+/*skewed line*/
+#stLine2 {
+    background-color: whitesmoke;
+    color: white;
+    width: 10%;
+    height: 70%;
+    left: 5%;
+    bottom: 22%;
+    transform: skewX(-50deg);
+        
+}
+/*3x black line within white*/
+#stLine3 {
+    background-color: black;
+    width: 0.5%;
+    height: 70%;
+    left: 7%;
+    bottom: 22%;
+    transform: skewX(-50deg);
+}
+#stLine4 {
+    background-color: black;
+    width: 0.5%;
+    height: 70%;
+    left: 9.6%;
+    bottom: 22%;
+    transform: skewX(-50deg);
+}
+#stLine5 {
+    background-color: black;
+    width: 0.5%;
+    height: 70%;
+    left: 12.5%;
+    bottom: 22%;
+    transform: skewX(-50deg);
+}
+/*blue background holding logo and Get Started button*/
+#blueBck {
+    background-color: #68a7ca;
+    width: 100%;
+    height: 15%;
+    top: 4%;
+}
+#logo {
+    left: -3%;
+    width: 15%;
+    height: 15%;
+    top: 4%;
+    overflow: hidden;
+}
 #getStartedButton {
+    position: absolute;
+    z-index: 2;
     background-color: #4390bc;
     color: #f2f2f2;
     font-size: 200%;
-    font-family: sans-serif, cursive;
-    position: absolute;
+    font-family: 'arial';
     width: 35%;
     height: 7%;
     top: 8%;
     right: 32%;
-    z-index: 1;
     cursor: pointer;
     border: none;
     box-shadow: -1px 1px 15px #000;
-    
-    
 }
-/*ER NÅ BLÅ*/
-#purpBckgr {
-    z-index: 1;
-    position: absolute;
-    background-color: #68a7ca;
-    width: 100%;
-    height: 15%;
-    left: 0%;
-    top: 4.2%;
-    overflow: hidden;
-
-}
-
-
-#about {
-    position: absolute;
-    right: 25%;
-    color: #d9d9d9;
-    position: absolute;
-    z-index: 4;
-    font-size: 2vmin;
-    cursor: pointer;
-    top: 0%;
-    font-family: 'Montserrat';
-}
-
-
-
-#ex2 {
-    position: absolute;
-    right: 30%;
-    color: #d9d9d9;
-    position: absolute;
-    z-index: 1;
-    font-size: 2vmin;
-    cursor: pointer;
-    top: 0%;
-    font-family: 'Montserrat';
-}
-
-#topLogo {
-    position: absolute;
-    background-color: #434343;
-    width: 100vw;
-    height: 15vh;
-    
-}
-
+/*button top right*/
 #loginBtn {
-    width: 12%;
-    height: 3.3%;
     position: absolute;
+    top: 1%;
+    right: 0%;
+    width: 8%;
+    height: 3%;
+    z-index: 2;
     background-color: #9555af;
     color: #f2f2f2;
-    font-size: 2vmin;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'arial';
     border: 0.1px solid black;
-    top: 0.9%;
-    right: 0%;
-    z-index: 5;
     cursor: pointer;
-
+    font-size: 2vmin;
 }
-
-#menuLineContainer {
+/*about top right*/
+#about {
     position: absolute;
-    width: 40%;
-    height: 15%;
-    z-index: 1;
-    right: 0%;
+    right: 10%;
+    color: #d9d9d9;
+    z-index: 2;
+    font-size: 2vmin;
+    cursor: pointer;    
+    font-family: 'arial';
 }
-
-/*skrå line*/
-#stLine1 {
-    position: absolute;
-    z-index: 3;
-    background-color: whitesmoke;
-    color: white;
-    width: 1%;
-    height: 25%;
-    left: -2.6%;
-    top: 2%;
-    transform: skewX(-50deg);
-        
-}
-/*rett line over menu*/
-#stLine2 {
-    position: absolute;
-    z-index: 3;
-    background-color: whitesmoke;
-    color: white;
-    width: 99%;
-    height: 2.1%;
-    right: 0%;
-    top: 2.1%;
-    
-}
-/*siden skrå line*/
-#stLine3 {
+/*video player in middle*/
+#demoVid {
     position: absolute;
     z-index: 2;
-    background-color: whitesmoke;
-    color: white;
-    width: 10%;
-    height: 25%;
-    left: -1.7%;
-    top: 2%;
-    transform: skewX(-50deg);
-        
+    top: 26%;
+    left: 26.5%;
+    width: 46.6%;
+    height: 50%;
+    border: none;
 }
-/*3x black line i hvit skrå blockline*/
-#stLine4 {
-    position: absolute;
-    z-index: 4;
-    background-color: black;
-    width: 0.5%;
-    height: 25%;
-    left: 6%;
-    top: 2%;
-    transform: skewX(-50deg);
-        
-}
-
-#stLine5 {
-    position: absolute;
-    z-index: 4;
-    background-color: black;
-    width: 0.5%;
-    height: 25%;
-    left: 3%;
-    top: 2%;
-    transform: skewX(-50deg);
-        
-}
-#stLine6 {
-    position: absolute;
-    z-index: 4;
-    background-color: black;
-    width: 0.5%;
-    height: 25%;
-    left: 0.1%;
-    top: 2%;
-    transform: skewX(-50deg);
-        
-}
-/*end black lines*/
-
-
-.midCl {
-    position: absolute;
-    z-index: 1;
-    width: 0.2vw;
-    height: 75vh;
-    background-color: black;
-    top: 15%;
-    right: 40%;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-/*footer*/
-#footCont {
-    position: absolute;
-    z-index: 3;
-    background-color: white;
-    width: 100%;
-    height: 15.1%;
-    bottom: 0%;
-    right: 0%;
-    overflow: hidden;
-    background-color: #b3d3e6;
-}
-.lineUnderFoot {
-    position: absolute;
-    z-index: 3;
-    height: 1%;
-    width: 10%;
-    background-image: radial-gradient(circle, rgba(0,0,0,1),rgba(0,0,0,0));
-    bottom: 87%;
-    right: 0.4%;
-}
-#lineUnderFoot1 {
-    right: 17.5%;
-}
-#git {
-    width: 5%;
-    right: 2.5%;
-    bottom: 30%;
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 2;
-}
-#gitTxt {
-    z-index: 3;
-    font-size: 120%;
-    position: absolute;
-    right: 1%;
-    bottom: 75%;
-    font-family: 'arial'; 
-    
-    
-}
-#rsc {
-    z-index: 4;
-    font-size: 120%;
-    position: absolute;
-    right: 19.5%;
-    bottom: 75%;
-    font-family: 'arial'; 
-    
-}
-#loginTxt {
-    z-index: 4;
-    font-size: 100%;
-    position: absolute;
-    right: 21%;
-    bottom: 55%;
-    font-family: 'arial';  
-    cursor: pointer;
-}
-#mainPgTxt {
-     z-index: 4;
-    font-size: 100%;
-    position: absolute;
-    right: 20%;
-    bottom: 35%;
-    font-family: 'arial'; 
-    cursor: pointer;
-}
-#taskBrdTxt {
-    z-index: 4;
-    font-size: 100%;
-    position: absolute;
-    right: 19.8%;
-    bottom: 15%;
-    font-family: 'arial'; 
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-

@@ -2,8 +2,8 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    
 }
+/*main scene*/
 #scene {
     position: absolute;
     z-index: 1;
@@ -38,6 +38,7 @@ body {
     top: 0%;
     z-index: 3;
 }
+/*about text*/
 #about {
     position: absolute;
     right: 43%;
@@ -49,6 +50,7 @@ body {
     font-family: 'verdana';
     overflow: hidden;
 }
+/*class for styling line under word "about"*/
 .lineUnderFoot {
     position: absolute;
     z-index: 2;
@@ -58,6 +60,7 @@ body {
     top: 11%;
     right: 42%;
 }
+/*info text*/
 #nexTask {
      position: absolute;
     right: 20.5%;
@@ -78,6 +81,7 @@ body {
     text-decoration: inherit;
     font-family: 'arial';  
 }
+/*team text*/
 #team {
     position: absolute;
     z-index: 2;
