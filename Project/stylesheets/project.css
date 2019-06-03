@@ -16,6 +16,7 @@ hr{
     border-style: none;
     background-image: linear-gradient(to right, rgba(64,64,64,1), rgba(255,255,255,0));
     height: 1px;
+    width: 95%;
 }
 
 textarea{
@@ -63,8 +64,14 @@ label{
     background-color: rgba(36, 36, 36, 0.9);
 }
 
-/* Often used style settings */
+::selection{
+    background-color: #434343;
+    color: white;
+}
 
+/* =========================================================================== */
+/* Often used style settings                                                   */
+/* =========================================================================== */
 .fullWidth{
     width: 100%;
 }
@@ -117,8 +124,9 @@ label{
     margin: auto 5px;
 }
 
+/* =========================================================================== */
 /* Alert Styling */
-
+/* =========================================================================== */
 #alertContainer{
     position: absolute;
     top: -100vh;
@@ -189,7 +197,78 @@ label{
     margin: 5%;
 }
 
-/* Error page Styling */
+/* Adding new users version of the alert */
+.searchTitle{
+    position: absolute;
+    text-align: center;
+    margin-top: 7vh;
+    font-size: 3vh;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.searchBar{
+    background-color: white;
+    box-shadow: 0px 0px 3px #434343;
+    grid-column: 1/3;
+    grid-row: 1;
+    border-radius: 20px;
+    width: 70%;
+    padding: 0px 20px;
+    height: 40px;
+    margin: 15vh auto;
+}
+
+.searchResult{
+    grid-row: 3;
+    grid-column: 1/3;
+    width: 60%;
+    height: 25vh;
+    margin: -10vh auto 0px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #434343;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.userListing{
+    display: grid;
+    grid-template-columns: 30% 50px auto;
+    grid-template-rows: 100%;
+    padding: 5px; 
+    height: 30px;
+}
+
+.userListing:hover{
+    background-color: #d6f7ff;
+}
+
+.userListing img{
+    grid-column: 2;
+}
+
+.userListing p{
+    font-family: "Monterrat", sans-serif;
+    margin: auto 10px;
+    grid-column: 3;
+}
+
+.closeMAlert{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    box-shadow: 0px 0px 10px #434343;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+/* =========================================================================== */
+/* Error Page (No project found / Unauthorized) Styles                         */
+/* =========================================================================== */
 .notFoundJoke{
     position: absolute;
     top: 10vh;
@@ -218,8 +297,9 @@ label{
     overflow: hidden;
 }
 
-
-/* Sidebar Styling ============================================ */
+/* ============================================================================= */
+/* Sidebar Styling                                                               */
+/* ============================================================================= */
 
 @keyframes slightBob{
     0%{
@@ -235,15 +315,19 @@ label{
 
 #sidebarContainer{
     position: fixed;
-    background-image: linear-gradient(to bottom, #94d1f5, #9df7e9 );
+    background-image: linear-gradient(#94d1f5, #9df7e9 );
     left: -20vw;
     width: 40vw;
     height: 100vh;
     transform: skewX(-5deg);
     z-index: 5;
     box-shadow: 0px 0px 5px #4390bc;
+    transition: .2s ease;
 }
 
+.lightChildtext * {
+    color: #f3f3f3 !important;
+}
 
 #sideBarContent{
     position: relative;
@@ -253,7 +337,7 @@ label{
     width: 22vw;
     display: grid;
     grid-template-columns: 30% 10% 10% 50%; 
-    grid-template-rows: 10% 5% 10px 70px 25% 35% 15%; 
+    grid-template-rows: 10% 5% 3px 70px 25% 35% 50px 3px 15%; 
 }
 
 #logo{
@@ -270,10 +354,9 @@ label{
     opacity: 1;
 }
 
-#sideBarContent hr{
+#sideBarContent .hr1{
     grid-row: 3;
     grid-column: 1/5;
-    width: 100%;
     margin-right: 4vw;
 }
 
@@ -433,79 +516,92 @@ label{
     color: #6d5522;
 }
 
-.searchTitle{
-    position: absolute;
-    text-align: center;
-    margin-top: 7vh;
-    font-size: 3vh;
-    grid-column: 1/3;
-    grid-row: 1;
+
+/* Theme Listing */
+
+.styleName{
+    grid-column: 1/5;
+    grid-row: 7;
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-top: 1vh;
 }
 
-.searchBar{
-    background-color: white;
-    box-shadow: 0px 0px 3px #434343;
-    grid-column: 1/3;
-    grid-row: 1;
-    border-radius: 20px;
+.styleSky::after{
+    content: " Sky";
+    color: #1f86c5;
+}
+
+.styleFire::after{
+    content: " Fire";
+    color: #8d352a;
+}
+
+.styleForest::after{
+    content: " Forest";
+    color: #1b5720;
+}
+
+.styleTundra::after{
+    content: " Tundra";
+    color: #8a8a8a;
+}
+
+.styleOcean::after{
+    content: " Ocean";
+    color: #2a36a7;
+}
+
+.styleLove::after{
+    content: " Love";
+    color: #681b68;
+}
+
+.styleGold::after{
+    content: " Gold";
+    color: #88682c;
+}
+.styleDark::after{
+    content: " Dark";
+    color: #d1d1d1;
+}
+
+.hr2{
+    grid-column: 1/5;
+    grid-row: 8;
+    margin-right: 20vw;
+    margin-top: 0;
     width: 70%;
-    padding: 0px 20px;
-    height: 40px;
-    margin: 15vh auto;
 }
 
-::selection{
-    border-radius: 20px;
-}
-
-.searchResult{
-    grid-row: 3;
-    grid-column: 1/3;
-    width: 60%;
-    height: 25vh;
-    margin: -10vh auto 0px auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px #434343;
-    background-color: white;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.userListing{
+.styleContainer{
+    grid-column: 1/5;
+    grid-row: 9;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    width: 75%;
     display: grid;
-    grid-template-columns: 30% 50px auto;
-    grid-template-rows: 100%;
-    padding: 5px; 
-    height: 30px;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 30% 30% auto;
 }
 
-.userListing:hover{
-    background-color: #d6f7ff;
+@keyframes selected{
+    from{border: solid 1px rgba(255,255,255,1)}
+    to{border: solid 10px rgba(255,255,255,0)}
 }
 
-.userListing img{
-    grid-column: 2;
+.style{
+    margin: 5%;
+    box-shadow: 0px 0px 10px rgba(64,64,64,.4);
 }
 
-.userListing p{
-    font-family: "Monterrat", sans-serif;
-    margin: auto 10px;
-    grid-column: 3;
+.styleSelected{
+    animation: selected .5s infinite linear; 
 }
 
-.closeMAlert{
-    position: absolute;
-    border-radius: 5px;
-    width: 100%;
-    height: 50px;
-    bottom: 0;
-    box-shadow: 0px 0px 10px #434343;
-    font-size: 1vw;
-    font-weight: bold;
-    background-color: #f5f5f5;
-}
-
+/* ============================================================================== */
 /* KANBAN BOARD CONTAINER AND CONTENT */
+/* ============================================================================== */
 
 #boardContainer{
     position: relative;
@@ -514,7 +610,7 @@ label{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    background-image: linear-gradient(to left, #f2f8f8 , #e8f9fa); 
+    background-color: #ffffff; 
     height: 100vh;
     z-index: 2;
     overflow-x: auto;
@@ -799,7 +895,7 @@ label{
 
 /* ============================================================================================== */
 /* TASK DETAIL BOX BELOW */
-/* */ 
+/* ============================================================================================== */ 
 #taskDetailContainer{
     position: fixed;
     background-color: #f3f3f3;
@@ -913,6 +1009,12 @@ label{
     display: grid;
     grid-template-columns: 40% 40px auto;
     grid-template-rows: 100%;
+}
+
+.noMemberIcon{
+    font-family: "Open Sans", sans-serif;
+    opacity: .4;
+    margin: 1.3vh;
 }
 
 .assignTitle{

@@ -40,6 +40,10 @@ if(url.searchParams.get("project") === null || pURL >= projects.length || !valid
         for(let i = 0; i < project.columns.length; i++){
             renderColumn(project.columns[i], i)
         }
+
+        const theme = styles[user.theme];
+        boardContainer.style.backgroundColor= theme.light;
+
         const addColumn = newElem("button");
         addColumn.classList.add("addColumnBtn");
         addColumn.innerText = "+";

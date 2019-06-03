@@ -5,6 +5,15 @@ function renderColumn(column, columnIndex){
     
     const head = newElem("div");
     head.classList.add("colHead");
+
+    const theme = styles[user.theme];
+    head.style.backgroundImage = "linear-gradient(to bottom, " + theme.main +","+ theme.sub +")"
+    if(user.theme === 7){
+        setClasses(head,["lightChildtext"]);
+    } else {
+        removeClasses(head,["lightChildtext"]);
+    }
+
     newC.appendChild(head)
     
     //Drag & Drop For Columns

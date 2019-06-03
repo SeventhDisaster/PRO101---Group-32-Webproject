@@ -25,3 +25,9 @@ function setClasses(element, classArray){
         element.classList.add(x);
     }
 }
+
+function removeClasses(element, classArray){
+    for(let x of classArray){
+        element.classList.remove(x);
+    }
+}

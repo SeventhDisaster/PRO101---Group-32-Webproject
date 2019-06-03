@@ -1,10 +1,22 @@
 // This JS file contains info displayed on the sidebar (Project Information)
+let sideContainer = getElemById("sidebarContainer"); //The container
 let side = getElemById("sideBarContent");
 const tabTitle = getElemById("tabTitle");
 
 
+
 function renderProjectInfo(project){
     side.innerHTML = "";
+
+    //Set Style according to user theme
+    const theme = styles[user.theme];
+    sideContainer.style.backgroundImage = "linear-gradient(to bottom, " + theme.main +","+ theme.sub +")"
+    sideContainer.style.boxShadow = "0px 0px 15px" + theme.main;
+    if(user.theme === 7){
+        setClasses(side,["lightChildtext"]);
+    } else {
+        removeClasses(side,["lightChildtext"]);
+    }
 
     //Logo at the top of the sidebar
     const logo = newElem("img");
@@ -12,8 +24,9 @@ function renderProjectInfo(project){
     logo.id = "logo";
     side.appendChild(logo);
 
-
-    side.appendChild(newElem("hr"));
+    const hr1 = newElem("hr");
+    setClasses(hr1,["hr1"]);
+    side.appendChild(hr1);
 
     //Project name (and tab title)
     const name = newElem("input");
@@ -134,6 +147,7 @@ function renderProjectInfo(project){
         }
         if(owner){
             setClasses(name,["leadUser"]); //Display which user is project leader
+            icon.style.borderLeft = "solid 5px #ffff9e";
         }
         field.appendChild(name);
         owner = false;
@@ -142,7 +156,54 @@ function renderProjectInfo(project){
 
 
     //Theme Selector
+    const styleHead = newElem("h3");
+    setClasses(styleHead,["styleName"]);
+    styleHead.innerText = "Theme: ";
+    side.appendChild(styleHead);
+    switch(user.theme){
+        case 0: setClasses(styleHead,["styleSky"]); break;
+        case 1: setClasses(styleHead,["styleFire"]); break;
+        case 2: setClasses(styleHead,["styleForest"]); break;
+        case 3: setClasses(styleHead,["styleTundra"]); break;
+        case 4: setClasses(styleHead,["styleOcean"]); break;
+        case 5: setClasses(styleHead,["styleLove"]); break;
+        case 6: setClasses(styleHead,["styleGold"]); break;
+        case 7: setClasses(styleHead,["styleDark"]); break;
+        default: setClasses(styleHead,["styleSky"]); break;
+    }
 
+    const hr2 = newElem("hr");
+    setClasses(hr2,["hr2"]);
+    side.appendChild(hr2);
+
+    const styleCont = newElem("div");
+    setClasses(styleCont,["styleContainer"]);
+    side.appendChild(styleCont);
+
+    for(let i = 0; i < styles.length; i++){
+        const styleBtn = newElem("button");
+        if(i < 4){
+            styleBtn.style.gridColumn = (i+1);
+            styleBtn.style.gridRow = "1";
+        } else {
+            styleBtn.style.gridColumn = (i+1) - 4;
+            styleBtn.style.gridRow = "2";
+        }
+        styleBtn.style.backgroundImage = "linear-gradient(to right,"+ styles[i].main +","+ styles[i].sub +")"
+        setClasses(styleBtn,["clickable","noDefaultBorder","style","quickTransition"]);
+        if(user.theme === i){
+            setClasses(styleBtn,["styleSelected"]);
+        }
+        styleCont.appendChild(styleBtn);
+
+        styleBtn.addEventListener("click", e =>{
+            user.theme = i;
+            saveUserChanges();
+            saveProjectChanges();
+            renderProjectInfo(project);
+            refreshBoard();
+        })
+    }
 
     saveProjectChanges();
 }

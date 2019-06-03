@@ -1,6 +1,8 @@
 let draggingRow = false;
 
 function dragDropRow(task, cIndex, rIndex){
+    const theme = styles[user.theme];
+
     task.setAttribute("draggable","true");
 
     task.addEventListener("dragstart", e => {
@@ -14,13 +16,13 @@ function dragDropRow(task, cIndex, rIndex){
     task.addEventListener("dragover", e => {
         if(!draggingColumn){
             e.dataTransfer.dropEffect = "move";
-            task.style.borderTop = "solid 30px #8dbdd8"
+            task.style.borderTop = "solid 30px "+ theme.main;
             e.preventDefault();
         }
     });
 
     task.addEventListener("dragleave", e => {
-        task.style.borderTop = "solid 0px #8dbdd8"
+        task.style.borderTop = "solid 0px "+ theme.main;
     });
 
     task.addEventListener("dragend", e =>{
@@ -29,7 +31,7 @@ function dragDropRow(task, cIndex, rIndex){
     })
 
     task.addEventListener("drop", e =>{
-        task.style.borderTop = "solid 0px #8dbdd8"
+        task.style.borderTop = "solid 0px "+ theme.main;
         if(!draggingColumn){
             const pc = project.columns;
             const cTarget = cIndex;
@@ -62,23 +64,24 @@ function dragDropRow(task, cIndex, rIndex){
 }
 
 function dragDropNewRow(body, cTarget){  
-    
+    const theme = styles[user.theme];    
+
     body.addEventListener("dragover", e => {
         if(!draggingColumn){
             e.dataTransfer.dropEffect = "move";
-            body.style.borderTop = "solid 30px #8dbdd8";
+            body.style.borderTop = "solid 30px "+ theme.main;;
         }
         e.preventDefault();
     })
     
     body.addEventListener("dragleave", e =>{
         if(!draggingColumn){
-            body.style.borderTop = "solid 0px #8dbdd8"
+            body.style.borderTop = "solid 0px "+ theme.main;
         }
     })
     
     body.addEventListener("drop", e => {
-        body.style.borderTop = "solid 0px #8dbdd8"
+        body.style.borderTop = "solid 0px "+ theme.main;
         if(!draggingColumn){
             const pc = project.columns;
             const cData = parseInt(e.dataTransfer.getData("column"));

@@ -123,7 +123,7 @@ function renderAlert(type, column, row){
         }
 
         const close = newElem("button");
-        setClasses(close,["clickable","noDefaultBorder","closeMAlert"])
+        setClasses(close,["clickable","noDefaultBorder","closeMAlert","quickTransition"])
         close.innerText = "Close window";
         close.addEventListener("click", e =>{
             removeAlert();

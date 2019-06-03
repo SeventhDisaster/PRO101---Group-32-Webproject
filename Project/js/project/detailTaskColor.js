@@ -11,7 +11,7 @@ function renderTaskColor(task,parent){
         colorType.style.backgroundColor = colorType.value;
         parent.appendChild(colorType);
         
-
+    // If the pallette needs changing that can be done here
     let defaultPalette = [
         ["#747474", "#929292", "#c4c4c4", "#e7e7e7", "#fcfcfc"],
         ["#6eb5ff", "#ace7ff", "#85e3ff", "#c4faf8", "#aff8db"],
