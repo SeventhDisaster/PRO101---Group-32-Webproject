@@ -89,14 +89,19 @@ body {
 	z-index: 2 !important;
 	background-color: #434343;
 	width: 100%;
-	height: 144px !important;
+	height: auto !important;
+}
+
+#projectsAvailable{
+    overflow: auto !important;
+    max-height: 500px !important;
 }
 
 .dropdown>*{
 	width: 100%;
 	position: absolute;
 	right: 0;
-	top: 0 !im;
+    background-color: #434343;
 }
 
 .disabled {
