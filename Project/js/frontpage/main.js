@@ -15,11 +15,15 @@ function setup() {
     let images = document.getElementsByClassName("userImage");
 
     for (var i = 0; i < images.length; i++) {
-        images[i].src = user.imagePath;
+        images[i].src = getImage(user.id);
     }
 
     renderNotifications(notifications);
     renderTasks(getProjectsThisWeek());
+
+    const vid = getElemById("video");
+    const theme = styles[user.theme];
+    vid.style.filter = theme.filter;
 
 }
 
