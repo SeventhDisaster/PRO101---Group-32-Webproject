@@ -29,8 +29,17 @@ function setup() {
 
     const blocks = getElemById("blockContainer")
     blocks.style.backgroundImage = "linear-gradient(to bottom,"+ theme.main + "," + theme.sub + ")";
+    
+    const navBar = getElemById("navbar")
+    const proAv = getElemById("projectsAvailable")
+    const navProf = getElemById("navProfile");
+    navBar.style.backgroundImage = "linear-gradient(to right,"+ theme.main + "," + theme.sub + ")";
+    proAv.style.backgroundImage = "linear-gradient(to bottom,"+ theme.main + "," + theme.sub + ")";
+    navProf.style.backgroundImage = "linear-gradient(to bottom,"+ theme.main + "," + theme.sub + ")";
+
     if(user.theme !== 7){
         setClasses(blocks,["blackText"]);
+        setClasses(navBar,["blackText"]);
     }
 
     renderProjectTab();
