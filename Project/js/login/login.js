@@ -11,6 +11,7 @@ window.onload = setup;
 function setup () {
 	document.getElementById("createUser").addEventListener("click", () => {
 
+		// Creating a new user
 	    login(
 	        createUser(
 	            document.getElementById("newUsername").value, document.getElementById("newPassword").value
@@ -21,6 +22,7 @@ function setup () {
 
 	document.getElementById("loginButton").addEventListener("click", () => {
 
+		// Logging into an existing user
 	    if (!login(
 		        getUser(
 		            document.getElementById("userName").value, document.getElementById("password").value
