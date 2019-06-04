@@ -8,6 +8,14 @@ window.addEventListener("load", s =>{
     }
 })
 
+/* =========================================================================================================== */
+/* Requirements to gain access to the NexTask board page:                                                      */
+/*                                                                                                             */
+/* 1: User must be logged in - If not, redirects to login page                                                 */
+/* 2: User must be part of the project team - If not, Permission denied page (project404.js)                   */
+/* 3: Project must be requested in the URL (../board.html?project=index") and...                               */
+/*    the project must exist in the projects array (dataset.js). - If not, 404 not found page (project404.js)  */
+/* =========================================================================================================== */
 
 let url = new URL(location.href);
 let pURL = parseInt(url.searchParams.get("project"));

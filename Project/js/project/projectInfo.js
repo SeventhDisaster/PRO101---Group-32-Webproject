@@ -10,7 +10,11 @@ function renderProjectInfo(project){
 
     //Set Style according to user theme
     const theme = styles[user.theme];
-    sideContainer.style.backgroundImage = "linear-gradient(to bottom, " + theme.main +","+ theme.sub +")"
+    console.log(theme);
+    console.log(styles);
+    console.log(user.theme);
+    console.log(user)
+    sideContainer.style.backgroundImage = "linear-gradient(to bottom, " + theme.main +", "+ theme.sub + ")";
     sideContainer.style.boxShadow = "0px 0px 15px" + theme.main;
     if(user.theme === 7){
         setClasses(side,["lightChildtext"]);
@@ -37,6 +41,9 @@ function renderProjectInfo(project){
     name.addEventListener("keyup", e => {
         project.name = name.value;
         tabTitle.innerText = project.name;
+        if(project.name == ""){
+            tabTitle.innerHTML = "Unnamed Project";
+        }
     })
     side.appendChild(name);
     tabTitle.innerText = project.name;

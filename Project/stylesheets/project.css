@@ -337,7 +337,7 @@ label{
     width: 22vw;
     display: grid;
     grid-template-columns: 30% 10% 10% 50%; 
-    grid-template-rows: 10% 5% 3px 70px 25% 35% 50px 3px 15%; 
+    grid-template-rows: 10% 5% 3px 70px 25% 35% 5% 3px 15%; 
 }
 
 #logo{

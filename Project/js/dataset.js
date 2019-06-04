@@ -184,7 +184,7 @@ let users = [
         imagePath: "../img/Profile_pictures/Andreas.jpg",
         notifications: [],
         achievements: [],
-        theme: 1
+        theme: 4
     },
     {
         id: 3,
@@ -193,7 +193,7 @@ let users = [
         imagePath: "../img/Profile_pictures/Helene.jpg",
         notifications: [],
         achievements: [],
-        theme: 1
+        theme: 4
     },
     {
         id: 4,
@@ -211,6 +211,6 @@ let users = [
         imagePath: "../img/Profile_pictures/Zemen.jpg",
         notifications: [],
         achievements: [],
-        theme: 1
+        theme: 5
     },
 ]
