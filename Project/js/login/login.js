@@ -22,7 +22,7 @@ function setup () {
 
 	    if (!login(
 		        getUser(
-		            document.getElementById("userName").value, document.getElementById("password").value
+		            document.getElementById("userName").value, document.getElementById("passWord").value
 		        )
 	    	)
 	    ) {
