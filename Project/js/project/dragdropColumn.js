@@ -4,8 +4,10 @@ function dragDropColumn(newColumn, columnHead, columnIndex){
     const theme = styles[user.theme];
     
     columnHead.setAttribute("draggable","true");
+
     columnHead.addEventListener("dragstart", e => {
         e.dataTransfer.setData("column", columnIndex);
+        newColumn.style.opacity = ".3";
         draggingColumn = true;
     });
 
@@ -32,6 +34,7 @@ function dragDropColumn(newColumn, columnHead, columnIndex){
 
     columnHead.addEventListener("dragend", e =>{
         draggingColumn = false;
+        newColumn.style.opacity = "1";
     })
 
     columnHead.addEventListener("drop", e =>{
