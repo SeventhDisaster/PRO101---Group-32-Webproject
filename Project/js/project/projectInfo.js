@@ -48,6 +48,7 @@ function renderProjectInfo(project){
         if(project.name == ""){
             tabTitle.innerHTML = "Unnamed Project";
         }
+        saveProjectChanges();
     })
     side.appendChild(name);
     tabTitle.innerText = project.name;
@@ -90,6 +91,7 @@ function renderProjectInfo(project){
     status.addEventListener("change", e =>{
         project.status = status.selectedIndex;
         renderProjectInfo(project);
+        saveProjectChanges();
     })
     side.appendChild(status);
 
@@ -97,6 +99,9 @@ function renderProjectInfo(project){
     // Description section of the sidebar
     const descCont = newElem("div");
     setClasses(descCont,["descContainer","fullHeight"]);
+    descCont.addEventListener("keyup", e=>{
+        saveProjectChanges();
+    })
     side.appendChild(descCont);
 
     const desc = newElem("textarea");
