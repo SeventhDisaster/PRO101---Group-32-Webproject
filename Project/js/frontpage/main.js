@@ -29,6 +29,9 @@ function setup() {
 
     const blocks = getElemById("blockContainer")
     blocks.style.backgroundImage = "linear-gradient(to bottom,"+ theme.main + "," + theme.sub + ")";
+    if(user.theme !== 7){
+        setClasses(blocks,["blackText"]);
+    }
 }
 
 function renderNotifications () {
