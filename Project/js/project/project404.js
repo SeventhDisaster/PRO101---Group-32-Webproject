@@ -1,14 +1,15 @@
 // This file is used for error page rendering.
 // If no target project is input in the URL it will give project not found.
 
-function render404page(page, invalidUser){
+function render404page(page, projectID, validUser){
+    console.log(validUser);
     const sidebar = getElemById("sidebarContainer");
     sidebar.style.display = "none";
 
     const title = newElem("h1");
     setClasses(title,["notFoundJoke","centerText","fullWidth"]);
     page.appendChild(title)
-    if(invalidUser){
+    if((projectID < projects.length && projectID >= 0) && !validUser){
         title.innerText = "Permission Denied!"
     } else {
         title.innerText = "Oh no, you're in trouble";
@@ -16,7 +17,7 @@ function render404page(page, invalidUser){
 
 
     const actualTitle = newElem("h3");
-    if(invalidUser){
+    if((projectID < projects.length && projectID >= 0) && !validUser){
         actualTitle.innerText = "You are not a part of this project's team. You do not have access to it."
     } else {
         actualTitle.innerText = "Just kidding, this is a 404 - Not Found error message. Your project wasn't found.."

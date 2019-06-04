@@ -30,7 +30,7 @@ if((pURL >= 0 && pURL < projects.length) && pURL !== NaN){
 
 // Make sure project exists in the dataset
 if(url.searchParams.get("project") === null || pURL >= projects.length || !validUser){
-    render404page(boardContainer, validUser) //User not allowed to view project
+    render404page(boardContainer, pURL, validUser) //User not allowed to view project
 
 } else {
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
