@@ -3,17 +3,17 @@ function renderTaskPriority(task,parent){
     priority.classList.add("prioritySetter");
 
         const priorityNorm = newElem("option");
-        priorityNorm.innerText = "Normal";
+        priorityNorm.innerText = "Normal Priority";
         priorityNorm.style.color = "#434343";
         priority.appendChild(priorityNorm);
 
         const priorityHigh = newElem("option");
-        priorityHigh.innerText = "High";
+        priorityHigh.innerText = "High Priority";
         priorityHigh.style.color = "orange";
         priority.appendChild(priorityHigh);
 
         const priorityCrit = newElem("option");
-        priorityCrit.innerText = "Critical";
+        priorityCrit.innerText = "Critical Priority";
         priorityCrit.style.color = "red";
         priority.appendChild(priorityCrit);
 

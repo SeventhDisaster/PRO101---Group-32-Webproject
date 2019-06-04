@@ -1,11 +1,6 @@
 //Load Project on page load completion
 window.addEventListener("load", s =>{
-    //Throw an exception if user isn't logged in or project is off
-    try{
-        renderBoard(); 
-    } catch(err) {
-        console.error("Invalid user or Invalid Project: " + err);
-    }
+    renderBoard(); 
 })
 
 /* =========================================================================================================== */

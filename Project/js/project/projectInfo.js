@@ -26,6 +26,10 @@ function renderProjectInfo(project){
     const logo = newElem("img");
     logo.setAttribute("src","../img/logoSampleWhite.svg");
     logo.id = "logo";
+    setClasses(logo,["clickable"]);
+    logo.addEventListener("click", e => {
+        redirectTo("frontpage.html");
+    });
     side.appendChild(logo);
 
     const hr1 = newElem("hr");
@@ -53,15 +57,15 @@ function renderProjectInfo(project){
     setClasses(status,["projectStatus"]);
 
     const op1 = newElem("option");
-    op1.innerText = "• On Track"
+    op1.innerText = "On Track"
     op1.style.color = "green";
     const op2 = newElem("option");
 
-    op2.innerText = "• At Risk"
+    op2.innerText = "At Risk"
     op2.style.color = "orange";
     const op3 = newElem("option");
 
-    op3.innerText = "• Behind Schedule"
+    op3.innerText = "Behind Schedule"
     op3.style.color = "red";
     status.appendChild(op1);
     status.appendChild(op2);
