@@ -20,11 +20,15 @@ function setup() {
 
     renderNotifications(notifications);
     renderTasks(getProjectsThisWeek());
+    
+    // Theme settings for the dashboard
+    const theme = styles[user.theme];
 
     const vid = getElemById("video");
-    const theme = styles[user.theme];
     vid.style.filter = theme.filter;
 
+    const blocks = getElemById("blockContainer")
+    blocks.style.backgroundImage = "linear-gradient(to bottom,"+ theme.main + "," + theme.sub + ")";
 }
 
 function renderNotifications () {
@@ -37,7 +41,7 @@ function renderNotifications () {
 
 function newNotification(obj) {
 	
-	let notificationContainer = document.getElementById("notificationContainer");;
+	let notificationContainer = getElemById("notificationContainer");;
     let template = '<td onclick="window.location.href = \'' + obj.href + '\' " title="Goto"><span class="message">' + obj.msg + '</span><span class="dateBox"><span>' + obj.date + '</span></span></td>';
     let dom = document.createElement("tr");
     
@@ -112,7 +116,7 @@ function getProjectsThisWeek() {
 
 function renderTasks(arr) {
 
-    let taskContainer = document.getElementById("taskContainer");
+    let taskContainer = getElemById("taskContainer");
 
     for (var i = 0; i < arr.length; i++) {
 
