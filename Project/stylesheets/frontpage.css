@@ -71,7 +71,7 @@ body {
 	z-index: 2 !important;
 	background-color: #434343;
 	width: 100%;
-	height: 100%;
+	height: 200px !important;
 }
 
 .dropdown>*{
@@ -79,7 +79,7 @@ body {
 	position: absolute;
 	right: 0;
 	top: 0;
-	height: auto;
+
 	
 }
 
