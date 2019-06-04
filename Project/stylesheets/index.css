@@ -89,7 +89,7 @@ body {
 #m1 {
     width: 35%;
     top: -30%;
-    left: 0%;
+    left: 3%;
     font-size: 300%;
     font-family: 'arial';
     z-index: 2;
@@ -105,11 +105,12 @@ body {
     font-size: 3vmin;
     font-family: 'arial'; 
     z-index: 2;
-   
+    margin: left 50%;
 }
 /*class for recoloring the word "NexTask"*/
 .wordNexTask {
     color: #6600cc;
+    
 }
 #topContainer {
     top: 0%;
@@ -183,7 +184,7 @@ body {
     top: 4%;
 }
 #logo {
-    left: -3%;
+    left: 0%;
     width: 15%;
     height: 15%;
     top: 4%;
@@ -225,9 +226,10 @@ body {
     right: 10%;
     color: #d9d9d9;
     z-index: 2;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     cursor: pointer;    
     font-family: 'arial';
+    top: -1%;
 }
 /*video player in middle*/
 #demoVid {
