@@ -28,7 +28,7 @@ function renderProjectInfo(project){
     logo.id = "logo";
     setClasses(logo,["clickable"]);
     logo.addEventListener("click", e => {
-        redirectTo("frontpage.html");
+        redirectTo("dashboard.html");
     });
     side.appendChild(logo);
 
