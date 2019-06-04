@@ -36,7 +36,6 @@ if(url.searchParams.get("project") === null || pURL >= projects.length || !valid
     console.log("Loaded Project from ULR-Param: Project: " + pURL);
     console.log("Logged in as user: " + user.name);
     
-    projects.push(new Project()); //Project for testing purposes
     renderProjectInfo(project);
 
     function renderBoard(){
