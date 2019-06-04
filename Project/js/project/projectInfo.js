@@ -161,14 +161,14 @@ function renderProjectInfo(project){
     styleHead.innerText = "Theme: ";
     side.appendChild(styleHead);
     switch(user.theme){
-        case 0: setClasses(styleHead,["styleSky"]); break;
-        case 1: setClasses(styleHead,["styleFire"]); break;
-        case 2: setClasses(styleHead,["styleForest"]); break;
+        case 0: setClasses(styleHead,["styleSunset"]); break;
+        case 1: setClasses(styleHead,["styleForest"]); break;
+        case 2: setClasses(styleHead,["styleOcean"]); break;
         case 3: setClasses(styleHead,["styleTundra"]); break;
-        case 4: setClasses(styleHead,["styleOcean"]); break;
-        case 5: setClasses(styleHead,["styleLove"]); break;
-        case 6: setClasses(styleHead,["styleGold"]); break;
-        case 7: setClasses(styleHead,["styleDark"]); break;
+        case 4: setClasses(styleHead,["styleSky"]); break;
+        case 5: setClasses(styleHead,["styleCherry"]); break;
+        case 6: setClasses(styleHead,["styleDesert"]); break;
+        case 7: setClasses(styleHead,["styleNight"]); break;
         default: setClasses(styleHead,["styleSky"]); break;
     }
 

@@ -175,7 +175,7 @@ let users = [
         imagePath: "../img/Profile_pictures/Krister.jpg",
         notifications: [],
         achievements: [],
-        theme: 1
+        theme: 7
     },
     {
         id: 2,

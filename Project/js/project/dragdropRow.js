@@ -69,7 +69,7 @@ function dragDropNewRow(body, cTarget){
     body.addEventListener("dragover", e => {
         if(!draggingColumn){
             e.dataTransfer.dropEffect = "move";
-            body.style.borderTop = "solid 30px "+ theme.main;;
+            body.style.borderTop = "solid 30px "+ theme.main;
         }
         e.preventDefault();
     })

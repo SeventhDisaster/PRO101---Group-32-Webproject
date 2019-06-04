@@ -532,8 +532,8 @@ label{
     color: #1f86c5;
 }
 
-.styleFire::after{
-    content: " Fire";
+.styleSunset::after{
+    content: " Sunset";
     color: #8d352a;
 }
 
@@ -552,17 +552,17 @@ label{
     color: #2a36a7;
 }
 
-.styleLove::after{
-    content: " Love";
+.styleCherry::after{
+    content: " Cherry";
     color: #681b68;
 }
 
-.styleGold::after{
-    content: " Gold";
+.styleDesert::after{
+    content: " Desert";
     color: #88682c;
 }
-.styleDark::after{
-    content: " Dark";
+.styleNight::after{
+    content: " Night";
     color: #d1d1d1;
 }
 
@@ -586,8 +586,8 @@ label{
 }
 
 @keyframes selected{
-    from{border: solid 1px rgba(255,255,255,1)}
-    to{border: solid 10px rgba(255,255,255,0)}
+    from{border: solid 3px rgba(255,255,255,1)}
+    to{border: solid 3px rgba(255,255,255,.5)}
 }
 
 .style{
