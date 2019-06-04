@@ -37,6 +37,20 @@ body {
 	display: block !important;
 	z-index: 1;
 }
+#projectTab {
+    display: block !important;
+    z-index: 1;
+}
+
+#projectTab>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
 
 #profile>div {
 	height: 100%;
@@ -61,6 +75,10 @@ body {
 	position: relative;
 }
 
+#projectTab:hover .dropdown{
+    display: block !important;
+}
+
 #profile:hover .dropdown{
 	display: block !important;
 }
@@ -78,7 +96,7 @@ body {
 	width: 100%;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 0 !im;
 }
 
 .disabled {

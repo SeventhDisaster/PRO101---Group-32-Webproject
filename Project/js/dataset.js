@@ -8,7 +8,7 @@ const instructionTask = "Click on tasks to open the task editor." +
 "\nYou can click-and-drag Tasks and Columns on the board to organize your project however you want" +
 "\n\nGet your projects moving with NexTask!";
 
-function Project(name = "", description = "", team = [user.id], status = 0, columns = [new Column("To Do:",[new Task("Create your project",instructionTask)]), new Column("In Progress",[]), new Column("Complete:",[])]){
+function Project(name = "New Project", description = "", team = [user.id], status = 0, columns = [new Column("To Do:",[new Task("Create your project",instructionTask)]), new Column("In Progress",[]), new Column("Complete:",[])]){
     this.name = name;
     this.description = description;
     this.team = team;

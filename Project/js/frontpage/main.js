@@ -32,6 +32,42 @@ function setup() {
     if(user.theme !== 7){
         setClasses(blocks,["blackText"]);
     }
+
+    renderProjectTab();
+
+}
+
+function renderProjectTab () {
+
+    let domP = getElemById("projectsAvailable");
+    domP.innerHTML = "";
+
+    var btntemp = '<span>+ Add Project +</span>';
+
+    var btnD = newElem("div");
+    btnD.innerHTML = btntemp;
+    btnD.onclick = ()=>{projects.push(new Project()); saveProjectChanges(); renderProjectTab()};
+
+    
+
+    domP.appendChild(btnD);
+
+    for (var i = 0; i < projects.length; i++) {
+        
+        if (!projects[i].team.includes(user.id)) {
+            continue;
+        }
+
+        var temp = "<span>&nbsp;&nbsp; - " + projects[i].name + "</span>"
+        var dom = newElem("div");
+        
+        dom.innerHTML = temp;
+        let link = 'board.html?project=' + i;
+        dom.setAttribute("onclick", "redirectTo('" + link + "')");
+
+        domP.appendChild(dom);
+    }
+
 }
 
 function renderNotifications () {
