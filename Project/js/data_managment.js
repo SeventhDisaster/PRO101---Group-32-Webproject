@@ -78,7 +78,7 @@ function login(user) {
 
     if (user) {
         setStorage("activeUser", user.id);
-        location.href = "frontpage.html"
+        location.href = "dashboard.html"
         return true;
     }
     return false;
