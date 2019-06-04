@@ -71,7 +71,7 @@ body {
 	z-index: 2 !important;
 	background-color: #434343;
 	width: 100%;
-	height: 200px !important;
+	height: 144px !important;
 }
 
 .dropdown>*{
@@ -79,12 +79,18 @@ body {
 	position: absolute;
 	right: 0;
 	top: 0;
+}
 
-	
+.disabled {
+	cursor: not-allowed !important;
 }
 
 .dropdown>div>div {
 	padding: 10px;
+}
+
+.dropdown>div>div:hover {
+	background-color: #222;
 }
 
 
