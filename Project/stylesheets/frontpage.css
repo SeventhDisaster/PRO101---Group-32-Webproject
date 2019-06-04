@@ -14,7 +14,7 @@ body {
     display: flex;
     color: white;
     font-size: 24px;
-
+    z-index: 10;
 
     border-bottom-style: solid;
 }
@@ -31,6 +31,57 @@ body {
 #navbar>div:not(:first-of-type) {
     border-left-style: solid;
 }
+
+#profile {
+	width: 50% !important;
+	display: block !important;
+}
+
+#profile>div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+#profile>div>span{
+    margin-left: auto;
+}
+
+#profile> div > img{
+    margin-right: 30px;
+}
+
+.dropdownStart {
+	display: inline-block;
+}
+
+#profile:hover .dropdown, #profile>.dropdown:hover .dropdown{
+	display: block !important;
+}
+
+.dropdown{
+	display: none !important;
+	position: relative;
+	z-index: 2 !important;
+}
+
+.dropdown>*{
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #434343;
+	z-index: 10;
+}
+
+.dropdown>div>div {
+	padding: 10px;
+}
+
 
 #navbar>div:hover {
     background-color: #222222;
@@ -54,6 +105,7 @@ body {
 
 #logo>* {
     height: 100%;
+    transform: skewX(15deg);
 }
 
 #container {
@@ -136,7 +188,7 @@ body {
 
 .blocks>div {
     height: calc(100% - 65px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .title {
@@ -280,4 +332,9 @@ a {
     object-fit: cover;
     z-index: -1;
 
+}
+
+.image {
+	height: calc(100% - 20px);
+	margin: 10px;
 }

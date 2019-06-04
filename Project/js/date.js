@@ -3,6 +3,10 @@ function stringToDate(str) {
     let date = ["", "", ""];
     let indx = 0;
 
+    if (!str) {
+    	return;
+    }
+
     for (var i = 0; i < str.length; i++) {
         if (str[i] === "-") {
             indx++;

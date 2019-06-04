@@ -12,6 +12,11 @@ function setup() {
 
     fillDomList(fullnameList, fullname);
 
+    let images = document.getElementsByClassName("userImage");
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].src = user.imagePath;
+    }
 
     renderNotifications(notifications);
     renderTasks(getProjectsThisWeek());
@@ -42,9 +47,18 @@ function getProjectsThisWeek() {
     let arr = [];
 
     for (var i = 0; i < projects.length; i++) {
+
+        if (!projects[i].team.includes(user.id)) {
+            continue;
+        }
+
         for (var j = 0; j < projects[i].columns.length; j++) {
             var a = projects[i].columns[j];
             for (var x = 0; x < a.tasks.length; x++) {
+
+                if (!a.tasks[x].due) {
+                    continue;
+                }
 
             	let hoursUntil = timeBetweenDate(stringToDate(a.tasks[x].due));
             	// console.log(hoursUntil/24);

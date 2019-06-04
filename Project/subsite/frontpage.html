@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Frontpage</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
-	<meta charset="utf-8">
-
-	<link rel="stylesheet" type="text/css" href="../stylesheets/frontpage.css">
-	<script type="text/javascript" src="../js/dataset.js"></script>
-	<script type="text/javascript" src="../js/date.js"></script>
-	<script type="text/javascript" src="../js/data_managment.js"></script>
-	<script type="text/javascript" src="../js/frontpage/main.js"></script>
-
+    <title>Frontpage</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="icon" href="../img/favicon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frontpage.css">
+    <script type="text/javascript" src="../js/dataset.js"></script>
+    <script type="text/javascript" src="../js/date.js"></script>
+    <script type="text/javascript" src="../js/data_managment.js"></script>
+    <script type="text/javascript" src="../js/frontpage/main.js"></script>
 </head>
 
 <body>
-
-	<nav id="navbar">
-
-		<div id="logo">
-			<img src="../img/NexTaskLogoWhite.svg">
-		</div>
-		<div>
-			<span>Projects</span>
-		</div>
-		
-		<div>
-			<span>Username [image]</span>
-			<div style="display: none;">
-				<span>My profile</span>
-				<span>acievements</span>
-				<span>Settings</span>
-				<span>logout</span>
-			</div>
-		</div>
-		
-	</nav>
-
-	<div id="container">
-		<div id="frontImg">
-			<video id="video" loop="loop" autoplay="autoplay" muted="muted" src="../img/background.mp4"></video> 
-			<span>Welcome back, <span class="fullnameInput">Username</span>!</span>
-		</div>
-
-		<div id="blockContainer">
-			<div id="notifications" class="blocks">
-				<h2 class="title">Notifications!</h2>
-
-				<div class="indent">
-					<table class="messageList">
-						<tbody id="notificationContainer">
-							<!-- <tr>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../img/LogoSampleWhite.svg">
+        </div>
+        <div>
+            <span>Projects</span>
+        </div>
+        <div id="profile">
+            <div>
+                <span class="fullnameInput">Username [image]</span>
+                <img class="userImage image"></img>
+            </div>
+            <div class="dropdownStart">
+                <div class="dropdown">
+                    <div>
+                        <span>My profile</span>
+                    </div>
+                    <div>
+                    	<span>acievements</span>
+                    </div>
+                    <div>
+                    	<span>Settings</span>
+                    </div>
+                    <div>
+                    	<span>logout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="container">
+        <div id="frontImg">
+            <video id="video" loop="loop" autoplay="autoplay" muted="muted" src="../img/background.mp4"></video>
+            <span>Welcome back, <span class="fullnameInput">Username</span>!</span>
+        </div>
+        <div id="blockContainer">
+            <div id="notifications" class="blocks">
+                <h2 class="title">Notifications!</h2>
+                <div class="indent">
+                    <table class="messageList">
+                        <tbody id="notificationContainer">
+                            <!-- <tr>
 								<td title="Goto">
 
 									<span class="message">Added to task!</span>
@@ -74,18 +80,16 @@
 									</span>
 								</td>
 							</tr> -->
-						</tbody>
-					</table>
-				</div>
-				
-			</div>
-			<div id="weeklyTasks" class="blocks">
-				<h2 class="title">Tasks this week!</h2>
-
-				<div class="indent">
-					<table class="messageList">
-						<tbody id="taskContainer">
-							<!-- <tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="weeklyTasks" class="blocks">
+                <h2 class="title">Tasks this week!</h2>
+                <div class="indent">
+                    <table class="messageList">
+                        <tbody id="taskContainer">
+                            <!-- <tr>
 								<td>
 
 									<span class="message">Design!</span>
@@ -94,89 +98,79 @@
 									</span>
 								</td>
 							</tr> -->
-						</tbody>
-						
-					</table>
-				</div>
-				
-			</div>
-			<div id="achievements" class="blocks">
-				<h2 class="title">Close achievements!</h2>
-				
-				<div id="achievementsContainer" class="indent">
-					<a href="achievements.html#name">
-						<div class="achievement" title="Log in 3 days in a row!">
-							<div class="image" style="background-color: black;">
-								
-							</div>
-							<div class="achievementTxt">
-								<div>
-									<span>3 days!</span>
-								</div>
-							</div>
-							<div class="progressbar">
-								<div class="progress"></div>
-							</div>
-						</div>
-					</a>
-
-					<div class="achievement" title="Log in 3 days in a row!">
-						<div class="image" style="background-color: black;">
-							
-						</div>
-						<div class="achievementTxt">
-							<div>
-								<span>3 days!</span>
-							</div>
-						</div>
-						<div class="progressbar">
-							<div class="progress"></div>
-						</div>
-					</div>
-					<div class="achievement" title="Log in 3 days in a row!">
-						<div class="image" style="background-color: black;">
-							
-						</div>
-						<div class="achievementTxt">
-							<div>
-								<span>3 days!</span>
-							</div>
-						</div>
-						<div class="progressbar">
-							<div class="progress"></div>
-						</div>
-					</div>
-					<div class="achievement" title="Log in 3 days in a row!">
-						<div class="image" style="background-color: black;">
-							
-						</div>
-						<div class="achievementTxt">
-							<div>
-								<span>3 days!</span>
-							</div>
-						</div>
-						<div class="progressbar">
-							<div class="progress"></div>
-						</div>
-					</div>
-					<div class="achievement" title="Log in 3 days in a row!">
-						<div class="image" style="background-color: black;">
-							
-						</div>
-						<div class="achievementTxt">
-							<div>
-								<span>3 days!</span>
-							</div>
-						</div>
-						<div class="progressbar">
-							<div class="progress"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="achievements" class="blocks">
+                <h2 class="title">Close achievements!</h2>
+                <div id="achievementsContainer" class="indent">
+                    <a href="achievements.html#name">
+                        <div class="achievement" title="Log in 3 days in a row!">
+                            <div class="image" style="background-color: black;">
+                            </div>
+                            <div class="achievementTxt">
+                                <div>
+                                    <span>3 days!</span>
+                                </div>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="achievement" title="Log in 3 days in a row!">
+                        <div class="image" style="background-color: black;">
+                        </div>
+                        <div class="achievementTxt">
+                            <div>
+                                <span>3 days!</span>
+                            </div>
+                        </div>
+                        <div class="progressbar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="achievement" title="Log in 3 days in a row!">
+                        <div class="image" style="background-color: black;">
+                        </div>
+                        <div class="achievementTxt">
+                            <div>
+                                <span>3 days!</span>
+                            </div>
+                        </div>
+                        <div class="progressbar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="achievement" title="Log in 3 days in a row!">
+                        <div class="image" style="background-color: black;">
+                        </div>
+                        <div class="achievementTxt">
+                            <div>
+                                <span>3 days!</span>
+                            </div>
+                        </div>
+                        <div class="progressbar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="achievement" title="Log in 3 days in a row!">
+                        <div class="image" style="background-color: black;">
+                        </div>
+                        <div class="achievementTxt">
+                            <div>
+                                <span>3 days!</span>
+                            </div>
+                        </div>
+                        <div class="progressbar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
