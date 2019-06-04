@@ -114,6 +114,7 @@ function renderAlert(type, column, row){
                             project.team.push(u.id);
                             listinCont.style.opacity = ".3"
                             renderProjectInfo(project);
+                            saveProjectChanges();
                         }
                     })
                     result.appendChild(listinCont);
