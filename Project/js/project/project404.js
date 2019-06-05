@@ -30,7 +30,7 @@ function render404page(page, projectID, validUser){
     setClasses(goBack,["noDefaultBorder","clickable", "fullWidth", "notFoundBtn","shadow","quickTransition"]);
     goBack.innerText = "Click here to go back to the project page";
     goBack.addEventListener("click", e => {
-        redirectTo("frontpage.html"); //Change to project page later
+        redirectTo("dashboard.html"); //Change to project page later
     })
     page.appendChild(goBack);
     
