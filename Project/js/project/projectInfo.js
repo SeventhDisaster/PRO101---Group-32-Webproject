@@ -162,7 +162,43 @@ function renderProjectInfo(project){
             icon.style.borderLeft = "solid 5px #ffff9e";
         }
         field.appendChild(name);
-        owner = false;
+
+        //Filter board on assigned users
+        const filterCont = newElem("label");
+        setClasses(filterCont,["memberFilter","fullHeight","fullWidth"])
+        field.appendChild(filterCont)
+
+        const filterCheck = newElem("input");
+        filterCheck.setAttribute("type","checkbox");
+        filterCheck.id = "filter" + member;
+        setClasses(filterCheck,["noDefaultBorder","filterCheckbox"]);
+        filterCont.appendChild(filterCheck);
+
+        const filterCustom = newElem("img");
+        filterCustom.setAttribute("src","../../../Project/img/eyeIcon.svg");
+        setClasses(filterCustom,["clickable","customCheckbox"]);
+        filterCont.appendChild(filterCustom);
+        
+        if(user.theme === 7){
+            filterCont.style.backgroundColor = "rgba(255,255,255,.7)";
+        }
+
+        //Filter click event
+        filterCont.addEventListener("click", e =>{
+            filterOn = [];
+            for(let t of project.team){
+                if(getElemById("filter" + t).checked){
+                    filterApplied = true; 
+                    filterOn.push(t); //Member ID is in here
+                }
+            }
+            if(filterOn.length === 0){
+                filterApplied = false;
+            }
+            refreshBoard();
+        })
+
+        owner = false; //After the first member is made, every next member is not an owner
     }
     teamCont.appendChild(list);
 

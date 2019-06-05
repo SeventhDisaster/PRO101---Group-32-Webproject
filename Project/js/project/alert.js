@@ -71,7 +71,7 @@ function renderAlert(type, column, row){
         setClasses(title,["searchTitle","fullWidth"]);
         window.appendChild(title);
 
-        if(users.id = project.team[0]){
+        if(user.id === project.team[0]){
             const leaderText = newElem("p");
             leaderText.innerText = "As project leader, you can remove members. This will unassign them from all tasks"
             setClasses(leaderText,["leaderText","fullWidth"])

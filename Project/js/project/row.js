@@ -1,3 +1,6 @@
+let filterApplied = false; //By default, no filter is applied
+let filterOn = [];
+
 function renderRow(task, column, added, columnIndex, rowIndex){
     const newTask = newElem("div");
     newTask.classList.add("colTask");
@@ -83,9 +86,6 @@ function renderRow(task, column, added, columnIndex, rowIndex){
         newTask.appendChild(assigneeContainer);
     }
 
-
-    /* Other Task Variables will be added here */
-
     newTask.addEventListener("click",function(){
         closeDetailWindow();
         function wait(){
@@ -101,4 +101,16 @@ function renderRow(task, column, added, columnIndex, rowIndex){
 
     //Append to column
     column.appendChild(newTask);
+
+    //Filtering
+    console.error(filterApplied);
+    console.log(filterOn);
+    if(filterApplied){
+        newTask.style.display = "none"; //Default all to none
+        for(let m of filterOn){
+            if(task.assignee.includes(m)){
+                newTask.style.display = "block";
+            }
+        }
+    }
 }
