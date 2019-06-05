@@ -36,13 +36,10 @@ body {
     width: 15%;
     height: 15%;
     top: 3%;
-
 }
 #about {
- 
     margin: 0;
     font-size: 500%;
-
     color: #b3d3e6;
     text-decoration: inherit;
     font-family: 'verdana';
@@ -50,7 +47,6 @@ body {
 }
 .lineUnderFoot {
     position: absolute;
-   
     height: 0.1%;
     width: 16%;
     background-image: radial-gradient(circle, rgba(0,0,0,1),rgba(0,0,0,0));
@@ -58,11 +54,9 @@ body {
     right: 42%;
 }
 #textC {
-
     width: 60%;
     display: block;
     margin: 0 auto 0 auto;
-  
 }
 .text {
     font-size: 25px;
@@ -70,16 +64,13 @@ body {
     text-decoration: inherit;
     font-family: 'arial'; 
 }
-
 #getStartedButton {
-
     background-color: #4390bc;
     color: #f2f2f2;
     font-size: 200%;
     font-family: 'arial';
     width: 35%;
     height: 7%;
-
     cursor: pointer;
     border: none;
     box-shadow: -1px 1px 15px #000;
@@ -96,14 +87,12 @@ body {
     justify-content: center;
     margin: 0 auto 0 auto;
 }
-
 #container {
     display: block;
     height: 100vh;
     text-align: center;
     overflow: auto;
 }
-
 .memberContainer {
     position: relative;
     bottom: 0%;
@@ -111,10 +100,8 @@ body {
     display: block;
     text-align: center;
     margin: 0 10px 0 10px;
-}
-/*ANDREAS*/
+}              
 .memberPic {
-   
     width: 100%;
 }
 .cTxt {

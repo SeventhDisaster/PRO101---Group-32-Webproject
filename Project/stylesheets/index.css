@@ -23,10 +23,10 @@ body {
     bottom: 0%;
     width: 100%;
     height: 15%;
-    z-index: 1;
-    position: absolute;
-    overflow: hidden;
-    background-color: #b3d3e6;  
+    background-color: #b3d3e6;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
 }
 /*git container*/
 #gitC {
@@ -50,40 +50,24 @@ body {
     font-size: 1.1em;
 }
 /*resource container*/
-#rscC {
-    bottom: 0%;
+#resourceContainer {
+    position: relative;
+    width: 10%;
+    left: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+.rscText {
+    font-family: 'arial';
+    font-size: 1vw;
+    margin-top: 1px;
     width: 100%;
     height: 100%;
-    position: relative;
-}
-#rsc {
-    right: 20%;
-    top: -13%; 
-    font-family: "arial";
-}
-#loginTxt {
-    position: absolute;
-    right: 21.2%;
-    bottom: 8.5%; 
-    font-family: "arial"; 
-    color: black;
-    z-index: 2;
-}
-#mainPgTxt {
-    position: absolute;
-    right: 20.4%;
-    bottom: 5.5%;  
-    font-family: "arial"; 
-    z-index: 2;
-    color: black;
-}
-#taskBrdTxt {
-    right: 20.2%;
-    bottom: 2.5%; 
-    font-family: "arial"; 
-    color: black;
-    z-index: 2;
-    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    display: block;
 }
 /*mantras*/
 #m1 {
