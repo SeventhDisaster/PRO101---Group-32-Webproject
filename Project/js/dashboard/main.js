@@ -67,7 +67,7 @@ function renderProjectTab () {
             continue;
         }
 
-        var temp = "<span onclick='redirectTo(\"board.html?project=" + i + "\")' style='width: 100%'>&nbsp;&nbsp; - " + projects[i].name + "</span> <div onclick='projects.splice(" + i + ", 1); saveProjectChanges(); renderProjectTab(); renderTasks(getProjectsThisWeek()); renderNotifications()' id='removeProject'>x</div>"
+        var temp = "<span onclick='redirectTo(\"board.html?project=" + i + "\")' style='width: 100%'>&nbsp;&nbsp; - " + projects[i].name + "</span> <div onclick='if(confirm(\"Are you sure?\")){projects.splice(" + i + ", 1); saveProjectChanges(); renderProjectTab(); renderTasks(getProjectsThisWeek()); renderNotifications()}' id='removeProject'>x</div>"
         var dom = newElem("div");
 
         dom.style.display = "flex";
