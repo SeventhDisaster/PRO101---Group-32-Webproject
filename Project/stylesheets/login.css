@@ -8,12 +8,13 @@ body{
 /*Start:  Sidebar container, same as Board.html*/
 #loginSideContainer{
     position: fixed;
-    background-image: linear-gradient(to bottom, #68a7ca, #e0f7f8 );
+    background-image: linear-gradient(to bottom, #94d1f5, #9df7e9 );
     left: -20vw;
     width: 40vw;
     height: 100vh;
     transform: skewX(-5deg);
     z-index: 5;
+    top: 0;
     box-shadow: 0px 0px 5px #434343;
 }
 
@@ -30,10 +31,12 @@ body{
     width: 50%; 
     height: auto; 
     position: fixed;  
-    transform: skewX(-5deg);
+    left: -20%;
+    top: 30%; 
     border: 2px solid #f3f3f3; 
-    box-shadow: 20px 15px 15px #434343;
-    display: none; 
+    box-shadow: 10px 10px 3px rgba(69,69,69,.2);
+    display: block; 
+    transition: .2s ease;
 }
 
 #infoTextHead {
@@ -70,28 +73,7 @@ body{
 
 
 #loginSideContainer:hover #aboutContainer{
-    display: block;
-    animation-name: aboutAnimation; 
-    animation-duration: 1s; 
-    animation-fill-mode: forwards;
-    
-}
-
-@keyframes aboutAnimation{
-    from {
-        display: none;
-        left: 0%;
-        top: 20%; 
-        z-index: -1px; 
-    }
-    to {
-        display:block;
-        left: 60%; 
-        top: 20%; 
-        z-index: -1px;
-        
-        
-    }
+    left: 60%; 
 }
 
 #loginSideContainer hr{
@@ -109,21 +91,24 @@ body{
     position: fixed;  
     height: auto; 
     width: 50%;
-    left: 35%;
+    left: -100%;
     top: 10%; 
     text-align: center; 
     border: 2px solid rgb(0,0,0, 0.3);
     transform: skewX(-5deg);
-    background-color: #8dbdd8; 
-    box-shadow: 20px 15px 15px #434343;
+    background-color: #94d1f5; 
+    box-shadow: 10px 10px 3px rgba(69,69,69,.2);
     display: block; 
     animation-name: loginSlideIn;
-    animation-duration: .5s; 
+    animation-duration: .5s;
+    animation-delay: .3s; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 @keyframes loginSlideIn {
     from {
-        left: 0%; 
+        left: -100%; 
         top: 10%; 
         z-index: 4; 
     } to {
@@ -161,12 +146,11 @@ input {
     padding:10px;
     width: 70%;
     border:2px solid #8dbdd8;
-    transform: skewX(-5deg); 
     text-align: center; 
     font-size: 18px; 
     font-family: sans-serif; 
-    background-color: #68a7ca;
-    transition-duration:0.25; 
+    background-color: #d3f0ff;
+    transition: .1s ease; 
 }
 
 input:hover{

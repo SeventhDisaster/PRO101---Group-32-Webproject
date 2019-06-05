@@ -60,7 +60,9 @@ function renderAlert(type, column, row){
         
         
     // ==============================================================================
-    // "Alert Window" reused for team adding
+    // "Alert Window" is reused for team adding
+    // ============================================================================== 
+
     } else if (type === "addMember"){
         fade.style.backgroundColor = "#59b8be";
 
@@ -68,6 +70,13 @@ function renderAlert(type, column, row){
         title.innerText = "Click to add users to the team for this project";
         setClasses(title,["searchTitle","fullWidth"]);
         window.appendChild(title);
+
+        if(users.id = project.team[0]){
+            const leaderText = newElem("p");
+            leaderText.innerText = "As project leader, you can remove members. This will unassign them from all tasks"
+            setClasses(leaderText,["leaderText","fullWidth"])
+            window.appendChild(leaderText);
+        }
 
         const search = newElem("input");
         search.addEventListener("keyup", e => {
@@ -92,33 +101,70 @@ function renderAlert(type, column, row){
                 if(u.name.substring(0, x).toLowerCase() == searchIn){
                     const listinCont = newElem("div");
                     setClasses(listinCont,["userListing","fullWidth","clickable", "quickTransition"])
-                    if(project.team.includes(u.id)){
-                        listinCont.style.opacity = ".3";
-                    }
+                    
+                    // Removing users from the team.
+                    // NOTE: Team leader (team index 0) CANNOT be removed from the project
 
+                    if(user.id = project.team[0]){
+                        if(u.id !== project.team[0] && project.team.includes(u.id)){
+
+                            const remove = newElem("button");
+                            remove.innerText = "X";
+                            setClasses(remove,["removeMember","noDefaultBorder","clickable","fullWidth","fullHeight"])
+                            remove.addEventListener("click", e => {
+
+                                // Unassign the removed member from all the tasks in the project
+                                for(let c = 0; c < project.columns.length; c++){
+                                    for(let t = 0; t < project.columns[c].tasks.length; t++){
+                                        const taskAssignee = project.columns[c].tasks[t].assignee;
+                                        if(taskAssignee.includes(u.id)){
+                                            taskAssignee.splice(taskAssignee.indexOf(u.id),1);
+                                            console.log("Unnassigned " + u.name + " from task: " + project.columns[c].tasks[t].name);
+                                        }
+                                    }
+                                }
+
+                                // Remove the member from the project
+                                project.team.splice(project.team.indexOf(u.id),1);
+                                console.log("Removed " + u.name + " from project team.")
+
+                                // Save and refresh everything
+                                saveProjectChanges();
+                                refreshBoard();
+                                renderProjectInfo(project);
+                                renderUserList(searchIn);
+
+                            })
+                            listinCont.appendChild(remove);
+                        }
+                    }
+                    
                     const uImg = newElem("img");
                     uImg.setAttribute("src", getImage(u.id));
                     setClasses(uImg,["memberIcon"])
                     listinCont.appendChild(uImg);
-
+                    
                     const uName = newElem("p");
                     uName.innerText = u.name;
                     listinCont.appendChild(uName);
-
+                    
                     listinCont.appendChild(uName);
                     
-                    listinCont.addEventListener("click", e => {
-                        if(project.team.includes(u.id)){
-                            alert("This user is already part of the team!");
-                        } else {
-                            project.team.push(u.id);
-                            listinCont.style.opacity = ".3"
-                            renderProjectInfo(project);
-                            saveProjectChanges();
-                        }
-                    })
-                    result.appendChild(listinCont);
+                    if(project.team.includes(u.id)){
+                        uImg.style.opacity = ".3";
+                        uName.style.opacity = ".3";
+                    }
 
+                    if(!project.team.includes(u.id)){
+                        listinCont.addEventListener("click", e => {
+                            project.team.push(u.id);
+                            renderUserList(searchIn);
+                            renderProjectInfo(project);
+                            saveProjectChanges(); 
+                        })
+                    }
+                    result.appendChild(listinCont);
+                    
                 }
             }
         }

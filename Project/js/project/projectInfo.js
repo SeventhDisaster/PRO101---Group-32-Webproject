@@ -10,10 +10,6 @@ function renderProjectInfo(project){
 
     //Set Style according to user theme
     const theme = styles[user.theme];
-    console.log(theme);
-    console.log(styles);
-    console.log(user.theme);
-    console.log(user)
     sideContainer.style.backgroundImage = "linear-gradient(to bottom, " + theme.main +", "+ theme.sub + ")";
     sideContainer.style.boxShadow = "0px 0px 15px" + theme.main;
     if(user.theme === 7){

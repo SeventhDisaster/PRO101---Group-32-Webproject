@@ -62,8 +62,8 @@ if(url.searchParams.get("project") === null || pURL >= projects.length || !valid
     if(typeof(cURL) == "number" && cURL > -1){
         const tURL = parseInt(url.searchParams.get("tasks"));
         console.log("Loaded Task from URL-Parm:\n Project: " + pURL + "\nColumns: " + cURL + "\nTasks: " + tURL);
-    
-        console.log("Loaded Task:" + projects[pURL].columns[cURL].tasks[tURL]);
+        console.log(projects[pURL].columns[cURL].tasks[tURL]);
+
         renderDetailWindow(projects[pURL].columns[cURL].tasks[tURL]);
     }
 }
