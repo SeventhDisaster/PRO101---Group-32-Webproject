@@ -63,6 +63,13 @@ body {
 
 #removeProject {
     margin-left: auto;
+    padding: 0 10px;
+    background-color: red;
+    color: white !important;
+}
+
+#removeProject:hover {
+    transform: scale(1.2);
 }
 
 #profile>div {

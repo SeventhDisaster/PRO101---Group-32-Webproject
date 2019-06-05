@@ -67,14 +67,14 @@ function renderProjectTab () {
             continue;
         }
 
-        var temp = "<span>&nbsp;&nbsp; - " + projects[i].name + "</span> <span id='removeProject'> asdas</span>"
+        var temp = "<span onclick='redirectTo(\"board.html?project=" + i + "\")' style='width: 100%'>&nbsp;&nbsp; - " + projects[i].name + "</span> <div onclick='projects.splice(" + i + ", 1); saveProjectChanges(); renderProjectTab();' id='removeProject'>x</div>"
         var dom = newElem("div");
 
-        dom.style.display = "block";
+        dom.style.display = "flex";
         
         dom.innerHTML = temp;
         let link = 'board.html?project=' + i;
-        dom.setAttribute("onclick", "redirectTo('" + link + "')");
+       // dom.setAttribute("onclick", "redirectTo('" + link + "')");
 
         domP.appendChild(dom);
     }
