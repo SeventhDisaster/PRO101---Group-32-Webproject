@@ -6,15 +6,14 @@ body {
 }
 #scene {
     position: absolute;
-    z-index: 1;
     width: 100%;
     height: 100%;
     background-color: #434343;
     overflow: hidden;
+    z-index: -1;
 }
 #blueLeft {
     position: absolute;
-    z-index: 2;
     width: 30%;
     height: 100%;
     background-color: #68a7ca;
@@ -24,7 +23,6 @@ body {
 }
 #blueRight {
     position: absolute;
-    z-index: 2;
     width: 30%;
     height: 100%;
     background-color: #68a7ca;
@@ -38,14 +36,13 @@ body {
     width: 15%;
     height: 15%;
     top: 3%;
-    z-index: 3;
+
 }
 #about {
-    position: absolute;
-    right: 43%;
-    top: -5%;
+ 
+    margin: 0;
     font-size: 500%;
-    z-index: 2;
+
     color: #b3d3e6;
     text-decoration: inherit;
     font-family: 'verdana';
@@ -53,7 +50,7 @@ body {
 }
 .lineUnderFoot {
     position: absolute;
-    z-index: 2;
+   
     height: 0.1%;
     width: 16%;
     background-image: radial-gradient(circle, rgba(0,0,0,1),rgba(0,0,0,0));
@@ -61,228 +58,85 @@ body {
     right: 42%;
 }
 #textC {
-    position: relative;
-    z-index: 2;
-    width: 70%;
-    height: 20%;
-    top: 10%;
-    left: 19%;
+
+    width: 60%;
+    display: block;
+    margin: 0 auto 0 auto;
+  
 }
-#nexTask {
-    position: absolute;
-    right: 15%;
-    top: 10%;
-    font-size: 200%;
-    z-index: 2;
+.text {
+    font-size: 25px;
     color: white;
     text-decoration: inherit;
     font-family: 'arial'; 
 }
-#nexTask1 {
-    position: absolute;
-    right: 45%;
-    top: 65%;
-    font-size: 180%;
-    z-index: 2;
-    color: white;
-    text-decoration: inherit;
-    font-family: 'arial';  
-}
-#nexTask2 {
-    position: absolute;
-    right: 21%;
-    top: 100%;
-    font-size: 180%;
-    z-index: 2;
-    color: white;
-    text-decoration: inherit;
-    font-family: 'arial';  
-}
+
 #getStartedButton {
-    position: absolute;
-    z-index: 2;
+
     background-color: #4390bc;
     color: #f2f2f2;
     font-size: 200%;
     font-family: 'arial';
     width: 35%;
     height: 7%;
-    top: 42%;
-    right: 32%;
+
     cursor: pointer;
     border: none;
     box-shadow: -1px 1px 15px #000;
 }
-#team {
-    position: absolute;
-    z-index: 2;
+#teamTxt {
     color: #d8e9f3;
     font-size: 200%;
     font-family: 'Georgia';
-    right: 43.5%;
-    top: 50%;
 }
 #teamC {
-    position: relative;
-    z-index: 2;
     width: 60%;
     height: 30%;
-    top: 45%;
-    left: 15%;
     display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
 }
-#andC {
+
+#container {
+    display: block;
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+}
+
+.memberContainer {
     position: relative;
     bottom: 0%;
     width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    text-align: center;
+    margin: 0 10px 0 10px;
 }
 /*ANDREAS*/
-#andreasPic {
+.memberPic {
    
     width: 100%;
 }
-#andreasTxt {
+.cTxt {
     color: #b3d3e6;
     font-family: 'Georgia';
     font-size: 1vw;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
-    text-align: center;
 }
-#andSubTxt {
+.subTxt {
     color: #ffd7de;
     font-family: 'arial';
     width: 100%;
     font-size: 1vw;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
 }
-#gitA {
+.gitImg {
     width: 50%;
     cursor: pointer;
     margin-left: auto;
 }
-#helC {
-    position: relative;
-    bottom: 0%;
-    left: 20%;
-    width: 15%;
-    z-index: 2;
-}
-/*HELENE*/
-#helenePic {
-    z-index: 2;
-    width: 100%;
-}
-#heleneTxt {
-    color: #b3d3e6;
-    font-family: 'Georgia';
-    font-size: 1vw;
-}
-#helSubTxt {
-    color: #ffd7de;
-    font-family: 'arial';
-    width: 100%;
-    font-size: 1vw;
-}
-#gitH {
-    z-index: 2;
-    position: absolute;
-    width: 7%;
-    bottom: 100%;
-    left: 36.8%;
-    cursor: pointer;  
-}
-#kriC {
-    position: relative;
-    width: 15%;
-    z-index: 2;
-}
-/*KRISTER*/
-#kristerPic {
-    z-index: 2;
-    width: 100%;
-}
-#kristerTxt {
-    color: #b3d3e6;
-    font-family: 'Georgia';
-    font-size: 1vw;
-}
-#kriSubTxt {
-    color: #ffd7de;
-    font-family: 'arial';
-    width: 100%;
-    font-size: 1vw;
-}
-#gitK {
-    z-index: 2;
-    position: absolute;
-    width: 7%;
-    bottom: 100%;
-    left: 48.7%;
-    cursor: pointer;   
-}
-#zemC {
-    position: relative;
-    width: 15%;
-    z-index: 2;
-}
-/*ZEMEN*/
-#zemenPic {
-    z-index: 2;
-    width: 100%;
-}
-#zemenTxt {
-    color: #b3d3e6;
-    font-family: 'Georgia';
-    font-size: 1vw;
-}
-#zemSubTxt {
-    color: #ffd7de;
-    font-family: 'arial';
-    width: 100%;
-    font-size: 1vw;
-}
-#gitZ {
-    z-index: 2;
-    position: absolute;
-    width: 7%;
-    bottom: 100%;
-    left: 60.8%;
-    cursor: pointer;   
-}
-#simC {
-    position: relative;
-    width: 15%;
-    z-index: 2;
-}
-/*SIMEN*/
-#simenPic {
-    z-index: 2;
-    width: 100%;
-}
-#simenTxt {
-    color: #b3d3e6;
-    font-family: 'Georgia';
-    font-size: 1vw;
-}
-#simSubTxt {
-    color: #ffd7de;
-    font-family: 'arial';
-    width: 100%;
-    font-size: 1vw;
-}
-#gitS {
-    z-index: 2;
-    position: absolute;
-    width: 7%;
-    bottom: 100%;
-    left: 71.5%;
-    cursor: pointer;   
-}
+
 

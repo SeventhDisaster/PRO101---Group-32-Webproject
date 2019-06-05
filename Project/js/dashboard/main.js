@@ -67,8 +67,10 @@ function renderProjectTab () {
             continue;
         }
 
-        var temp = "<span>&nbsp;&nbsp; - " + projects[i].name + "</span>"
+        var temp = "<span>&nbsp;&nbsp; - " + projects[i].name + "</span> <span id='removeProject'> asdas</span>"
         var dom = newElem("div");
+
+        dom.style.display = "block";
         
         dom.innerHTML = temp;
         let link = 'board.html?project=' + i;
@@ -130,31 +132,6 @@ function getProjectsThisWeek() {
             }
         }
     }
-	
-	// Not ideal, but quick fix. Efficiency is not a priority when dealing with small arrays and good time.
-    
-    // let temp = [];
-    // for (var i = 0; i < arr.length; i++) {
-    //     temp.push(timeBetweenDate(stringToDate(arr[i].taskInfo.due)));
-    // }
-
-
-
-    // temp = temp.sort(function(a, b) { return a - b });
-    // let temp2 = [];
-
-    // for (var j = 0; j < temp.length; j++) {
-    //     for (var i = 0; i < arr.length; i++) {
-
-    //         if (timeBetweenDate(stringToDate(arr[i].taskInfo.due)) === temp[j]) {
-    //             temp2.push(arr[i]);
-    //             arr.splice(i, 1);
-    //             break;
-    //         }
-
-    //     }
-    // }
-
 
     let sorted = arr.sort(function (a, b){return timeBetweenDate(stringToDate(a.taskInfo.due))-timeBetweenDate(stringToDate(b.taskInfo.due))})
 

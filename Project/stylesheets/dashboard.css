@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -48,7 +59,10 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+}
 
+#removeProject {
+    margin-left: auto;
 }
 
 #profile>div {
@@ -186,6 +200,35 @@ body {
 #achievements {
     display: block;
     color: white;
+}
+
+.emptyClass{
+
+    display: none;
+}
+
+.emptyClass > tr > td > span {
+    text-align: center;
+}
+
+.emptyClass > tr:hover {
+
+    box-shadow: none;
+    cursor: default;
+    background-color: rgba(0,0,0,0);
+
+}
+
+#notificationContainer:empty ~ .emptyClass{
+
+    display: block !important;
+
+}
+
+#taskContainer:empty ~ .emptyClass{
+
+    display: block !important;
+
 }
 
 /*
