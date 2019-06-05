@@ -124,7 +124,7 @@ function renderProjectInfo(project){
 
     const addBtn = newElem("button");
     setClasses(addBtn,["addTeamBtn", "noDefaultBorder", "clickable", "quickTransition"]);
-    addBtn.innerText = "+ Add Team +"
+    addBtn.innerText = "+ Manage Team +"
     addBtn.addEventListener("click", e =>{
         renderAlert("addMember", null, null); // alert.js
     })

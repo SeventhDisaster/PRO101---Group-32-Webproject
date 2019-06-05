@@ -105,7 +105,7 @@ function renderAlert(type, column, row){
                     // Removing users from the team.
                     // NOTE: Team leader (team index 0) CANNOT be removed from the project
 
-                    if(user.id = project.team[0]){
+                    if(user.id === project.team[0]){
                         if(u.id !== project.team[0] && project.team.includes(u.id)){
 
                             const remove = newElem("button");
