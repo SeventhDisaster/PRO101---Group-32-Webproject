@@ -129,181 +129,171 @@ body {
     height: 30%;
     top: 45%;
     left: 15%;
-    /*background-color: white;*/
 }
 #andC {
-    position: absolute;
+    position: relative;
     bottom: 0%;
     width: 15%;
     z-index: 2;
 }
 /*ANDREAS*/
 #andreasPic {
-    position: absolute;
     z-index: 2;
     width: 100%;
     left: 0%;
-    bottom: 0%;
+    bottom: 50%;
+    /*max-width: 100%;*/
 }
 #andreasTxt {
-    position: relative;
-    z-index: 2;
-    bottom: 400%;
-    left: 1%;
     color: #b3d3e6;
     font-family: 'Georgia';
     font-size: 1vw;
 }
 #andSubTxt {
-    position: relative;
-    z-index: 2;
-    bottom: 340%;
-    left: 11%;
     color: #ffd7de;
     font-family: 'arial';
     width: 100%;
     font-size: 1vw;
-   
 }
 #gitA {
-    z-index: 2;
-    position: relative;
-    width: 40%;
-    bottom: 1000%;
-    left: 34.5%;
+    z-index: 3;
+    position: absolute;
+    width: 7%;
+    bottom: 100%;
+    left: 3%;
     cursor: pointer;
 }
-/*HELENE*/
-/*
-#helenePic {
-    position: absolute;
-    z-index: 2;
-    width: 15%;
+#helC {
+    position: relative;
+    bottom: 100%;
     left: 20%;
-    bottom: 0%;
+    width: 15%;
+    z-index: 2;
+    background-color: white;
+}
+/*HELENE*/
+#helenePic {
+    z-index: 2;
+    width: 100%;
+    left: 0%;
+    bottom: 50%;
 }
 #heleneTxt {
-    position: absolute;
-    z-index: 2;
-    top: 68%;
-    left: 34.2%;
     color: #b3d3e6;
     font-family: 'Georgia';
+    font-size: 1vw;
 }
 #helSubTxt {
-    position: absolute;
-    z-index: 2;
-    top: 72%;
-    left: 34.1%;
     color: #ffd7de;
     font-family: 'arial';
+    width: 100%;
+    font-size: 1vw;
 }
 #gitH {
     z-index: 2;
     position: absolute;
-    width: 4%;
-    top: 62%;
+    width: 7%;
+    bottom: 100%;
     left: 36.8%;
     cursor: pointer;  
-}/*
-/*KRISTER*/
-/*
-#kristerPic {
-    position: absolute;
-    z-index: 2;
+}
+#kriC {
+    position: relative;
+    bottom: 206%;
     width: 15%;
     left: 40%;
-    bottom: 0%;
+    z-index: 2;
+}
+/*KRISTER*/
+#kristerPic {
+    z-index: 2;
+    width: 100%;
+    left: 0%;
+    bottom: 50%;
 }
 #kristerTxt {
-    position: absolute;
-    z-index: 2;
-    top: 68%;
-    left: 44.2%;
     color: #b3d3e6;
     font-family: 'Georgia';
+    font-size: 1vw;
 }
 #kriSubTxt {
-    position: absolute;
-    z-index: 2;
-    top: 72%;
-    left: 46.1%;
     color: #ffd7de;
     font-family: 'arial';
+    width: 100%;
+    font-size: 1vw;
 }
 #gitK {
     z-index: 2;
     position: absolute;
-    width: 4%;
-    top: 62%;
+    width: 7%;
+    bottom: 100%;
     left: 48.7%;
     cursor: pointer;   
-}/*
-/*ZEMEN*/
-/*
-#zemenPic {
-    position: absolute;
-    z-index: 2;
-    width: 15%;
+}
+#zemC {
+    position: relative;
+    bottom: 296%;
     left: 60%;
-    bottom: 0%;
+    width: 15%;
+    z-index: 2;
+}
+/*ZEMEN*/
+#zemenPic {
+    z-index: 2;
+    width: 100%;
+    left: 0%;
+    bottom: 50%;
 }
 #zemenTxt {
-    position: absolute;
-    z-index: 2;
-    top: 68%;
-    left: 58.6%;
     color: #b3d3e6;
     font-family: 'Georgia';
+    font-size: 1vw;
 }
 #zemSubTxt {
-    position: absolute;
-    z-index: 2;
-    top: 72%;
-    left: 59.7%;
     color: #ffd7de;
     font-family: 'arial';
+    width: 100%;
+    font-size: 1vw;
 }
 #gitZ {
     z-index: 2;
     position: absolute;
-    width: 4%;
-    top: 62%;
+    width: 7%;
+    bottom: 100%;
     left: 60.8%;
     cursor: pointer;   
-}/*
-/*SIMEN*/
-/*
-#simenPic {
-    position: absolute;
-    z-index: 2;
-    width: 15%;
-    height: 18%;
+}
+#simC {
+    position: relative;
+    bottom: 370%;
     left: 80%;
-    bottom: 0%;
+    width: 15%;
+    z-index: 2;
+}
+/*SIMEN*/
+#simenPic {
+    z-index: 2;
+    width: 100%;
+    left: 0%;
+    bottom: 50%;
 }
 #simenTxt {
-    position: absolute;
-    z-index: 2;
-    top: 68%;
-    right: 19.3%;
     color: #b3d3e6;
     font-family: 'Georgia';
+    font-size: 1vw;
 }
 #simSubTxt {
-    position: absolute;
-    z-index: 2;
-    top: 72%;
-    right: 23.3%;
     color: #ffd7de;
     font-family: 'arial';
+    width: 100%;
+    font-size: 1vw;
 }
 #gitS {
     z-index: 2;
     position: absolute;
-    width: 4%;
-    top: 62%;
+    width: 7%;
+    bottom: 100%;
     left: 71.5%;
     cursor: pointer;   
 }
-/*
+
