@@ -176,9 +176,9 @@ function renderProjectInfo(project){
 
         const filterCustom = newElem("img");
         if(user.theme === 7){
-            filterCustom.setAttribute("src", "../../../Project/img/eyeIconWhite.svg");
+            filterCustom.setAttribute("src", "../img/eyeIconWhite.svg");
         } else {
-            filterCustom.setAttribute("src","../../../Project/img/eyeIcon.svg");
+            filterCustom.setAttribute("src","../img/eyeIcon.svg");
         }
         filterCustom.setAttribute("alt","filter");
         setClasses(filterCustom,["clickable","customCheckbox"]);
