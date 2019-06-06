@@ -222,7 +222,7 @@ label{
     margin-top: 5vh;
     font-size: 1.5vw;
     white-space: nowrap;
-    text-overflow: hidden;
+
     
 }
 
@@ -537,7 +537,7 @@ label{
     grid-column: 2;
     grid-row: 1;
     margin-left: 0px;
-    line-height: -70%;
+
     font-size: .8vw;
     margin-top: 1vh;
 }
@@ -567,10 +567,10 @@ label{
 
 @keyframes pulse{
     from{
-        box-shadow: 0px, 0px,0px rgba(255,255,255,1)
+        box-shadow: 0px 0px 0px rgba(255,255,255,1);
     }
     to{
-        box-shadow: 0px, 0px, 20px rgba(255,255,255,0)
+        box-shadow: 0px 0px 20px rgba(255,255,255,0);
     }
 }
 
@@ -1038,7 +1038,7 @@ label{
     border-style: none;
     padding: 3px 0px 3px 10px;
     text-align: start;
-    text-overflow: wrap;
+
     grid-row: 1/3;
     resize: none;
     transition: .1s ease;
@@ -1212,11 +1212,11 @@ input[type=date]::-webkit-inner-spin-button {
 
 .addSubTaskBtn{
     background-color: #ececec !important;
-    border-top: 2px rgba(50,50,50 .4);
+    border-top: 2px rgba(50,50,50, .4);
     font-size: 20px;
     color: gray;
     border-style: none;
-    font-style: bold;
+
     height: 30px;
     transition: .05s ease;
 }
@@ -1352,7 +1352,7 @@ input[type=date]::-webkit-inner-spin-button {
 
 .taskConfirm:hover{
     cursor: pointer;
-    grid-column: 1-5;
+    grid-column: 1/5;
     margin-top: -15px;
     background-color: rgb(190, 255, 190)  !important;
     box-shadow: 0px 0px 10px 0px rgba(67, 200, 67,0.5);
@@ -1366,7 +1366,7 @@ input[type=date]::-webkit-inner-spin-button {
 
 .taskCancel:hover{
     cursor: pointer;
-    grid-column: 1-5;
+    grid-column: 1/5;
     margin-top: -15px;
     background-color: rgb(255, 190, 190)  !important;
     box-shadow: 0px 0px 10px 0px rgba(200, 67, 67,0.5);
@@ -1439,7 +1439,7 @@ input[type=date]::-webkit-inner-spin-button {
     grid-column: 2;
     line-height: 9vh;
     font-size: 4vh;
-    font-weight: 5px;
+
     width: 100%;
     height: 100%;
     transition: .2s ease;
@@ -1485,7 +1485,7 @@ input[type=date]::-webkit-inner-spin-button {
 .taskDelDelete{
     grid-column: 2;
     font-family: "montserrat", sans-serif;
-    font-weight: 5px;
+
     font-size: 4vh;
     margin: 2vh 1vw;
 }

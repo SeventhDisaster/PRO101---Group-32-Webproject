@@ -250,6 +250,7 @@ function renderProjectInfo(project){
             saveUserChanges();
             saveProjectChanges();
             renderProjectInfo(project);
+            filterApplied = false;
             refreshBoard();
         })
     }
