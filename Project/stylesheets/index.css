@@ -119,6 +119,12 @@ body {
     white-space: nowrap;
     left: -40%;
 }
+.mantraLower {
+    margin-top: -35px;
+    position: relative !important;
+    white-space: nowrap;
+    left: -40%;
+}
 /*class for recoloring the word "matters"*/
 .wordMatters {
     color: #6600cc;
