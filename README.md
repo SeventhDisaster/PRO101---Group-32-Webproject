@@ -2,7 +2,8 @@
 The exam repository for our PRO101 Exam group
 
 
-These users have a sample project for easy testing.
+
+These users have a sample project for easy testing:
 
 
 | User | Password | Level |
