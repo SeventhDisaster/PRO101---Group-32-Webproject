@@ -20,7 +20,7 @@ function renderProjectInfo(project){
 
     //Logo at the top of the sidebar
     const logo = newElem("img");
-    logo.setAttribute("src","../img/logoSampleWhite.svg");
+    logo.setAttribute("src","../img/LogoSampleWhite.svg");
     logo.id = "logo";
     setClasses(logo,["clickable"]);
     logo.addEventListener("click", e => {
