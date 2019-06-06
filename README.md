@@ -6,13 +6,14 @@ These users have a sample project for easy testing.
 
 
 Test user (project leader):
+
   Username: Krister Emanuelsen
   
   Password: KaffeIsLoveKaffeIsLife
-  
+
+
 Test user (project member):
 
-  Username: Andreas Østby
-  
+  Username: Andreas Østby  
   
   Password: correct horse battery staple
