@@ -1,120 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Frontpage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
-    </head>
-
-    <style>
-        
-        .card {
-          position: absolute;
-          border-radius: 5%;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          width: 500px; 
-          height: 550px;
-          margin: 0 auto;
-          border: 2px solid;
-          background-color: gray;
-          text-align: center;
-        }
-        
-        .card * {  
-            position: relative;
-        }
-
-        .title {
-          color: grey;
-          font-size: 18px;
-        }
-        
-        #profilePic{    
-            display: block;
-            box-shadow: 4px 4px 4px -1px darkgrey;
-            border-radius: 50%;
-            left: 25%;
-            width: 50%;
-            height: 50%;
-        }
-        
-        button {
-          display: inline-block;
-          border-radius: 2.5%;
-          cursor: grabbing;
-          font-size: 20px;
-          width: 49%;
-          height: 50px;
-          bottom: -25px;
-        }
-        
-        #button1{
-            background-color: rgb(50,205,50);
-            color: darkmagenta;
-            border: 2px solid rgb(0,128,0);
-            box-shadow: 1px 1px 1px 1px rgb(0,128,0);
-            left: 0;
-        }
-        #button2{
-            background-color: rgb(255,205,0);
-            color: darkmagenta;
-            border: 2px solid rgb(255,165,0);
-            box-shadow: 1px 1px 1px 1px rgb(255,165,0);
-            right: 0;
-        }
-
-        button:hover{
-            opacity: 0.8;
-        }
-        
-        #title{
-            color: darkslategrey;
-        }
-        
-        #linkIcon{
-            width: 25px;
-            height: 25px;
-        }
-        
-    </style>
-    
+        <link rel="stylesheet" type="text/css" href="../stylesheets/profile.css">
+    </head>    
     
     <body>
         
-        <div class="card">
+        <div id="main">
             
-            <img id="profilePic" src="../img/Zemen/profile_pic.png" alt="firstName">
-          
-            <h1 id="fullName"></h1>   
-            <h2 id="title"></h2>
-            <h3 id="school"></h3>
-            
-            <a href="https://github.com"> 
-                <img id="linkIcon" src="../img/Zemen/github_icon.png"> 
-            </a>
-            
-            <div>
-                <button id="button1">Add Friend</button>     
-                <button id="button2">Message</button>   
+            <div id="profile">
+                
+                <div id="pBox1">
+                    <img id="profilePic" src="../img/Zemen/profile_pic.png" alt="name">
+                    <span id="edit">Edit Picture</span>
+
+
+                    <span id="fullName"></span>   
+                    <span id="title"></span>
+                    <span id="school"></span>
+
+                    <a href="https://github.com"> 
+                        <img id="linkIcon" src="../img/Zemen/github_icon.png" > 
+                    </a>
+                </div>
+
+                <div id="pBox2">
+                    <button id="addBtn">Add Friend</button>     
+                    <button id="msgBtn" onclick="ToggleMsgBox()">Message</button>
+                </div>
+                
+                <div id="pBox3">
+                    <a href="account.html">
+                    <button id="accountBtn" class="pBox3Btns">Account</button>
+                    </a>
+                    
+                    <a href="settings.html">
+                    <button id="settingsBtn" class="pBox3Btns">Settings</button>
+                    </a> 
+                    
+                    <a href="../subsite/about.html">
+                    <button id="aboutBtn" class="pBox3Btns">About</button>
+                    </a>   
+                    
+                    <a href=".html">
+                    <button id="logOutBtn" class="pBox3Btns">Log out</button>
+                    </a>
+                </div>
+                
             </div>
         
+            <div id="msgBox">
+                <textarea id="msg"></textarea>
+                
+                <span id="charCount">0 characters</span>
+                <button id="sendMsgBtn">Send</button>   
+                <button id="cancelMsgBtn" onclick="ToggleMsgBox()">Cancel</button>
+            </div>
+            
+            <span class="poles" id="pole1"></span>
+            <span class="poles" id="pole2"></span>
+           
         </div>
         
         
-        
-        <script>
-
-        var firstName = "Zemen";
-        var lastName = "Tedros";
-        var fullName = firstName + " " + lastName;
-        var title = "Programmer";
-        var school = "Høyskolen Krisitiania";
-
-        document.getElementById("fullName").innerHTML = fullName;
-        document.getElementById("title").innerHTML = title;
-        document.getElementById("school").innerHTML = school;
-
-        </script>
-        
+        <script type="text/javascript" src="../js/profile.js"></script> 
     </body>
     
 </html>
