@@ -6,38 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-    <title>NexTask Landing Page</title>
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+    <title>NexTask</title>
 </head>
     <body>
+        <!--other-->
         <a href="subsite/dashboard.html"><button id="loginBtn">Login</button></a>
-        <a href="subsite/about.html"><h3 id="about">About</h3></a>
         <a href="subsite/dashboard.html"><button id="getStartedButton">Get started</button></a>
         <iframe id="demoVid" src="https://www.youtube.com/embed/nRToWGwWA3w?controls=1"></iframe>
 <!--maincontainer-->
 <div id="mainC">
     <!--white background-->
     <div id="background"></div>
-        <!--footer section-->
+        <!--footer start-->
         <div id="footC">
             <!--git container-->
-            <!--<div id="gitC">
+            <div id="gitC">
                 <h3 id="gitTxt">Find us on Github</h3>
                 <a href="subsite/about.html"><img id="gitPic" src="img/Simen/github.png"></a>
-            </div>--> 
+            </div>
+            <!--resource section-->
             <div id="resourceContainer">
-                <h3 id="rscText">Resources</h3>
-                <a href="subsite/login.html"><h4 id="linkLogin">Login</h4></a>
-                <a href="subsite/dashboard.html"><h4 id="linkMainPage">Mainpage</h4></a>
-                <a href="subsite/board.html"><h4 id="linkTaskBoard">Taskboard</h4></a>
+                <h3 class="rscTxt">Resources</h3>
+                <div class="linkC">
+                    <a href="subsite/login.html" class="rscLinks">Login</a>
+                    <a href="subsite/dashboard.html" class="rscLinks">Mainpage</a>
+                </div>
             </div>
+            <!--bottom left text-->
             <div id="mantraC">
-                    <p id="m1">Spend time on what&nbsp; 
-                    <!--word classes is recolor of respective words-->
-                    <span class="wordMatters">matters</span></p>
-                    <p id="m2">-&nbsp;<span class="wordNexTask">NexTask</span><span style="margin-left: 4em;">helps you move forward</span></p>
+                <p class="mantras">Spend time on what&nbsp; 
+                <!--word classes is recolor of respective words-->
+                <span class="wordMatters">matters</span></p>
+                <p class="mantras">-&nbsp;<span class="wordNexTask">NexTask</span>
+                <span style="margin-left: 4em;">helps you move forward</span></p>
             </div>
-             
-         </div>
+        <!--footer end-->
+        </div>
         <!--start top container-->
         <div id="topContainer">
             <!--black background top-->
@@ -49,12 +54,13 @@
                 <div id=stLine3></div>
                 <div id=stLine4></div>
                 <div id=stLine5></div>
+                <a href="subsite/about.html" id="about">About</a>
             </div>
         </div>
         <!--end top container-->
-    <!--blue background under logo + get startede button-->
+    <!--blue background under logo + get started button-->
     <div id="blueBck"></div>
-    <img id="logo" src="img/LogoSampleWhite.svg">
+    <img id="logo" src="img/NexTaskLogoWhite.svg">
 </div>
     </body>
 </html>

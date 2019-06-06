@@ -3,7 +3,7 @@ body {
     width: 100vw;
     height: 100vh;
     
-}
+}/*background*/
 #scene {
     position: absolute;
     width: 100%;
@@ -12,6 +12,7 @@ body {
     overflow: hidden;
     z-index: -1;
 }
+/*blues sides start*/
 #blueLeft {
     position: absolute;
     width: 30%;
@@ -30,6 +31,8 @@ body {
     transform: skewX(-10deg);
     overflow: hidden;
 }
+/*blues sides end*/
+/*logo top left*/
 #logo {
     left: -1%;
     position: absolute;
@@ -37,6 +40,7 @@ body {
     height: 15%;
     top: 3%;
 }
+/*text at top*/
 #about {
     margin: 0;
     font-size: 500%;
@@ -45,6 +49,7 @@ body {
     font-family: 'verdana';
     overflow: hidden;
 }
+/*underline under about*/
 .lineUnderFoot {
     position: absolute;
     height: 0.1%;
@@ -53,17 +58,20 @@ body {
     top: 11%;
     right: 42%;
 }
+/*info text at top*/
 #textC {
     width: 60%;
     display: block;
     margin: 0 auto 0 auto;
 }
+/*class for both*/
 .text {
     font-size: 25px;
     color: white;
     text-decoration: inherit;
     font-family: 'arial'; 
 }
+/*button that links*/
 #getStartedButton {
     background-color: #4390bc;
     color: #f2f2f2;
@@ -75,11 +83,13 @@ body {
     border: none;
     box-shadow: -1px 1px 15px #000;
 }
+/*meet the team*/
 #teamTxt {
     color: #d8e9f3;
     font-size: 200%;
     font-family: 'Georgia';
 }
+/*container for everything at bottom*/
 #teamC {
     width: 60%;
     height: 30%;
@@ -87,12 +97,14 @@ body {
     justify-content: center;
     margin: 0 auto 0 auto;
 }
+/*main container*/
 #container {
     display: block;
     height: 100vh;
     text-align: center;
     overflow: auto;
 }
+/*holds all the classes*/
 .memberContainer {
     position: relative;
     bottom: 0%;
@@ -100,10 +112,12 @@ body {
     display: block;
     text-align: center;
     margin: 0 10px 0 10px;
-}              
+}    
+/*member picture*/
 .memberPic {
     width: 100%;
 }
+/*names*/
 .cTxt {
     color: #b3d3e6;
     font-family: 'Georgia';
@@ -112,6 +126,7 @@ body {
     margin-bottom: 10px;
     width: 100%;
 }
+/*courses for each member*/
 .subTxt {
     color: #ffd7de;
     font-family: 'arial';
@@ -120,6 +135,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/*clickable git pic that links*/
 .gitImg {
     width: 50%;
     cursor: pointer;

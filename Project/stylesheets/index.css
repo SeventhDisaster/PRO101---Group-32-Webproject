@@ -30,86 +30,104 @@ body {
     overflow: hidden;
 }
 /*git container*/
-/*#gitC {
+#gitC {
     position: relative;
     bottom: 0%;
     height: 100%;
-}*/
+    width: 15%;
+    display: block;
+    left: 90%;
+}
+/*text over github pic*/
+#gitTxt {
+    font-family: 'arial';
+    font-size: 1vw;
+    margin-top: -1px;
+    left: 5%;
+    white-space: nowrap;
+    height: 100%;
+    text-align: center;
+    display: block;
+}
+#gitPic {
+    position: relative;
+    width: 30%;
+    left: 20%;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
 /*resource container*/
 #resourceContainer {
     position: relative;
-    width: 10%;
+    width: 100px;
     left: 30%;
     height: 100%;
-    display: flex;
+    display: block;
     text-align: center;
     margin: 0 auto 0 auto;
-    /*overflow: hidden;*/
 }
-#rscText {
+/*text class*/
+.rscTxt {
     font-family: 'arial';
     font-size: 1vw;
-    margin-top: 1px;
+    margin-top: -1px;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     text-align: center;
     display: block;
 }
-#mantraC {
-    visibility: hidden;
-}
-
-#linkLogin {
+/*links*/
+.linkC {
+    font-family: 'arial';
     font-size: 0.9vw;
-    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    display: block;
-    margin-top: 30px;
-    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    cursor: pointer;
+}
+/*class for resource links*/
+.rscLinks {
+    margin-top: 8px;
+    position: relative !important;
+    text-decoration-line: none;
     color: #434343;
 }
-#linkMainPage {
-    font-size: 0.9vw;
-    cursor: pointer;
-    margin-left: 70px;
-    margin-top: 60px;
-    color: #434343;  
-}
-#linkTaskBoard {
-    font-size: 0.9vw;
-    cursor: pointer;
-    margin-left: 67px;
-    margin-top: 90px;
-    color: #434343;  
+/*container mantras*/
+#mantraC {
+    font-family: 'arial';
+    font-size: 2vw;
+    margin-top: 1px;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    left: 5%;
 }
 /*mantras*/
-#m1 {
-    width: 35%;
-    top: -30%;
-    left: 3%;
-    font-size: 300%;
-    font-family: 'arial';
-    z-index: 2;
+.mantras {
+    margin-top: 10px;
+    position: relative !important;
+    white-space: nowrap;
+    left: -40%;
 }
 /*class for recoloring the word "matters"*/
 .wordMatters {
     color: #6600cc;
 }
-#m2 {
-    width: 30%;
-    bottom: 15%;
-    left: 10%;
-    font-size: 3vmin;
-    font-family: 'arial'; 
-    z-index: 2;
-    margin: left 50%;
-}
 /*class for recoloring the word "NexTask"*/
 .wordNexTask {
     color: #6600cc;
-    
 }
+/*top container*/
 #topContainer {
     top: 0%;
     width: 100%;
@@ -128,7 +146,6 @@ body {
     height: 100%;
     right: 0%;
 }
-
 /*white straight line*/
 #stLine1 {
     background-color: whitesmoke;
@@ -147,7 +164,6 @@ body {
     left: 5%;
     bottom: 22%;
     transform: skewX(-50deg);
-        
 }
 /*3x black line within white*/
 #stLine3 {
@@ -181,13 +197,16 @@ body {
     height: 15%;
     top: 4%;
 }
+/*on the left*/
 #logo {
     left: 0%;
     width: 15%;
     height: 15%;
     top: 4%;
     overflow: hidden;
+    transform: skewX(-15deg);
 }
+/*button middle*/
 #getStartedButton {
     position: absolute;
     z-index: 2;
@@ -202,6 +221,7 @@ body {
     cursor: pointer;
     border: none;
     box-shadow: -1px 1px 15px #000;
+    white-space: nowrap;
 }
 /*button top right*/
 #loginBtn {
@@ -211,7 +231,7 @@ body {
     width: 8%;
     height: 3%;
     z-index: 2;
-    background-color: #9555af;
+    background-color: #4390bc;
     color: #f2f2f2;
     font-family: 'arial';
     border: 0.1px solid black;
@@ -220,14 +240,16 @@ body {
 }
 /*about top right*/
 #about {
-    position: absolute;
-    right: 10%;
-    color: #d9d9d9;
-    z-index: 2;
-    font-size: 2.5vmin;
-    cursor: pointer;    
+    position: relative;
+    width: 10%;
+    height: 40%;
+    left: 60%;
+    top: 38%;
+    color: #f3f3f3;
     font-family: 'arial';
-    top: -1%;
+    cursor: pointer;
+    font-size: 2vmin;
+    text-decoration: none;
 }
 /*video player in middle*/
 #demoVid {
