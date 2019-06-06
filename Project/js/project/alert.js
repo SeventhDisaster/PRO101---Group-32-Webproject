@@ -119,14 +119,12 @@ function renderAlert(type, column, row){
                                         const taskAssignee = project.columns[c].tasks[t].assignee;
                                         if(taskAssignee.includes(u.id)){
                                             taskAssignee.splice(taskAssignee.indexOf(u.id),1);
-                                            console.log("Unnassigned " + u.name + " from task: " + project.columns[c].tasks[t].name);
                                         }
                                     }
                                 }
 
                                 // Remove the member from the project
                                 project.team.splice(project.team.indexOf(u.id),1);
-                                console.log("Removed " + u.name + " from project team.")
 
                                 // Save and refresh everything
                                 saveProjectChanges();

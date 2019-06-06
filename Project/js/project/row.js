@@ -103,8 +103,6 @@ function renderRow(task, column, added, columnIndex, rowIndex){
     column.appendChild(newTask);
 
     //Filtering
-    console.error(filterApplied);
-    console.log(filterOn);
     if(filterApplied){
         newTask.style.display = "none"; //Default all to none
         for(let m of filterOn){

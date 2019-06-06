@@ -1,0 +1,63 @@
+Welcome to NexTask
+
+NexTask is an agile project management service that allows you to effectively collaborate on group projects through simple but effective ways to organize and control task assignments.
+
+The service utilizes the "kanban" approach towards task management, which focuses on creating notes for tasks and moving them around on a "board".
+
+As soon as you have created your user and logged in, you will become familiar with your dashboard.
+The dashboard is kept simple and clean to allow you to easily reach the projects and tasks you need to see.
+
+The notifications tab at the bottom will alert you whenever you have been assigned a task on one of your projects. While the "Tasks this week" tab will display your tasks that are due this week. 
+
+When you hover your mouse over the "Project" tab of the navigation menu, you will find the place all of your projects are accessed. 
+Here, you can create new projects and delete existing ones. 
+You are always automatically assigned to be the Team Leader of the projects you create!
+
+
+This is the board page. This is where you will be managing your tasks along with the team members you add to the project!
+By default, your board will have the three columns "To-Do", "In Progress" and "Complete", along with a tutorial task that explains some of the features of the board page.
+
+On the left side of the screen you have the Project detail sidebar.
+Here you can change the name of the project, and you can update the description for it as well.
+
+The project's status can be changed by using the dropdown menu next to the logo. Here you can show your team how far along the project is.
+
+Below, you can manage your project team. Clicking on the "Manage team" button, gives you a pop-up window where you can search the userbase and add members you want to work together with.
+By clicking on them in the search result, you can add them to your team.
+
+Only the person who created the project is allowed to remove team members. This can be done by clicking the small x icon again in the manage team window.
+
+Before we continue on to the Themes, let's take a look at the board itself.
+
+You are free to click and drag tasks between each column, and you can even re-organize the columns by clicking and dragging their headers.
+
+You can create tasks by clicking the "Add Task" button beneath the column's header. This will open up the Task Editor window.
+
+Inside of the Task Editor, you are able to modify each task on the board to great lengths.
+
+You can change the color of the task to any hex or rgb value you want, or you can pick from the preset 20 colors provided for you.
+
+By clicking the + icon next to "Assigned members" you can assign specific team members to tasks on the project, this will give those members a notification on their dashboard.
+If you want to unassign a member from a task, just click on their icon again to remove them.
+
+Next to that, you can set the task's deadline from the calendar dropdown, or write in the date yourself. If an unfinished task is due today, or the date has already passed, it will show a warning sign on the board.
+
+You also have the priority setting, here you can set a priority on each task to show your team how important this task is. It is indicated on the board by a slight red or orange bar depending on priority level.
+
+On each task you can add an infinite amount of "Subtasks", each subtask can be given it's own name, and changed to whatever you would like them to be. They can also be deleted and marked as complete by pressing the two buttons next to them.
+
+Finally, the two tickers on the left side of the task editor, can be used to mark a task as complete, or delete a task. 
+Don't worry about accidentally clicking the delete button, as it will give you an alert just in case.
+When a task is marked as complete, it will be tinted green and recieve a little checkmark as an indicator. The priority indication will be hidden on completed tasks.
+
+Changes you make to tasks are reflected on the board as soon as you hit confirm, and you can see almost every detail about a task just by hovering over them or by one glance at the board.
+
+To end things off, let's go back to the theme selector. Each theme is specific to the user you are. So feel free to pick whichever one you like the most. It will not be the same for other users.
+By clicking on a theme you can customize the way you want your project site to look! 
+
+As soon as you select your new theme, it will stay that way until you decide to change it again.
+
+If you want to ever go back to your dashboard to visit another project, you can simply click on the logo at the top of the sidebar. The theme you select will carry over and also affect the look of your personal dashboard.
+
+Thank you for using our service, and
+Let's move on, to our next task!

@@ -1,3 +1,22 @@
+/*
+
+CSS Style Sections - Based on line they start
+
+- Line 20: General Document Styles
+- Line 91: Often Used Element Styles
+- Line 146: Alertbox styling
+- Line 305: Error Page styling
+- Line 336: Sidebar (Project info) Styles
+- Line 676: General Board Styling (Columns and Rows)
+- Line 971: Task Editor Styling (All of it)
+
+Ideally a lot of lines would be cleared and classes re-used more often.
+But due to time constraints I've been unable to do so for this page in particular.
+Early on I used one class on everything, but later on started converting to multiple classes per element.
+Just know that this document would be re-done more efficiently given more time.
+
+*/
+
 body{
     margin: 0;
     overflow: hidden;
@@ -539,7 +558,6 @@ label{
 .memberFilter .customCheckbox{
     position: relative;
     margin: 0px;
-    margin-right: -5px;
     width: 100%;
     padding-right: 2px;
     opacity: .2;
@@ -950,7 +968,7 @@ label{
 }
 
 /* ============================================================================================== */
-/* TASK DETAIL BOX BELOW */
+/* TASK EDITOR WINDOW*/
 /* ============================================================================================== */ 
 #taskDetailContainer{
     position: fixed;

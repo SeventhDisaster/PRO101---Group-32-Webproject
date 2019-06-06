@@ -175,13 +175,14 @@ function renderProjectInfo(project){
         filterCont.appendChild(filterCheck);
 
         const filterCustom = newElem("img");
-        filterCustom.setAttribute("src","../../../Project/img/eyeIcon.svg");
+        if(user.theme === 7){
+            filterCustom.setAttribute("src", "../../../Project/img/eyeIconWhite.svg");
+        } else {
+            filterCustom.setAttribute("src","../../../Project/img/eyeIcon.svg");
+        }
+        filterCustom.setAttribute("alt","filter");
         setClasses(filterCustom,["clickable","customCheckbox"]);
         filterCont.appendChild(filterCustom);
-        
-        if(user.theme === 7){
-            filterCont.style.backgroundColor = "rgba(255,255,255,.7)";
-        }
 
         //Filter click event
         filterCont.addEventListener("click", e =>{

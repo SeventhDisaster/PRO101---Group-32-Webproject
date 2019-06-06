@@ -22,7 +22,6 @@ function renderTaskExtraAction(task, container, column, row){
     label.setAttribute("for","complete");
     compContainer.appendChild(label);
 
-    console.log(task.isComplete);
     if(task.isComplete){
          checkbox.checked = true;
     }
