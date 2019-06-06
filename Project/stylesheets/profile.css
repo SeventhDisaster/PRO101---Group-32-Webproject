@@ -1,0 +1,215 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Main container */
+#main {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Profile Box */
+#profile{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 20%; 
+    height: 75%;
+    right: 0;
+    border: 5px solid #b3d3e6;
+    background-color: #68a7ca;
+    z-index: 0;
+}
+
+/* Profile BOX 1 */
+#pBox1{
+    width: 100%;
+    height: 45%;
+    background-color: #68a7ca;
+}
+#pBox1 *{
+    position: relative;
+    display: inline-block;
+}
+
+#profilePic{
+    top: 2.5%;
+    width: 45%;
+    height: 55%;
+    border: 2px solid #68a7ca;
+    border-radius: 50%;
+    background-color: #8dbdd8;
+}
+#profilePic:hover{
+    transform: scale(1.125);
+}
+#profilePic:hover + #edit{
+    display: block;
+}
+#edit{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 40%;
+    color: #ffd7de;
+    font-size: 1vw;
+    top: 16.5vh;
+}
+
+#fullName{
+    display: block;
+    color: #434343;
+    font-size: 1.5vw;
+}
+
+#title{
+    display: block;
+    color: #b3d3e6;
+    font-size: 0.75vw;
+    top: 0.75vh;
+}
+
+#school{
+    display: block;
+    color: #d8e9f3;
+    font-size: 0.85vw;
+    top: 1.75vh;
+}
+
+#linkIcon{
+    width: 5%;
+    height: 5%;
+    top: 2.5vh;
+}
+
+button{
+    cursor: grabbing;
+    color: #434344;
+}
+button:hover{
+    opacity: 0.8;
+}
+/* Profile BOX 2 */
+#pBox2{
+    width: 100%;
+    height: 10%;
+    background-color: #68a7ca;
+}
+#pBox2 *{
+    position: relative;
+    display: inline-block;
+    font-size: 2.25vh;
+}
+
+#addBtn{
+    border: 2px solid #b3d3e6;
+    width: 48.5%;
+    height: 100%;
+    background-color: #d7fff0;
+}
+
+#msgBtn{   
+    width: 48.5%;
+    height: 100%;
+    border: 2px solid #b3d3e6;
+    background-color: #fff5d7;
+}
+
+/* Profile Box 3 */
+#pBox3{
+    width: 100%;
+    height: 45%;
+    border: 0.1vh;    
+    background-color: #68a7ca;
+}
+#pBox3 *{
+    position: relative;
+    display: inline-block;
+    font-size: 2.25vh;
+}
+
+.pBox3Btns{
+    width: 20vw;
+    height: 8.45vh;
+    border: 0.1vw solid #8dbdd8;
+    background-color: #d8e9f3;
+}
+
+/* Message Box */
+#msgBox{
+    position: absolute;
+    display: none;
+    width: 25%;
+    height: 35%;
+    right: 22%;
+    top: 38.5%;
+    border: 10px solid #fff5d7;
+    background-color: #fff5d7;
+}
+@keyframes OpenMsgBox{
+    0%{width: 0%;}
+    100%{width: 25%;}
+}
+@keyframes CloseMsgBox{
+    0%{width: 25%;}
+    100%{width: 0%;}
+}
+
+#msg{
+    width: 99%;
+    height: 90%;
+    border: 1px solid #8dbdd8;
+    background-color: #f3f3f3;
+    color: #434343;
+    z-index: 0;
+}
+
+#sendMsgBtn{
+    width: 20%;
+    color: #434343;
+    border: 1px solid #8dbdd8;
+    background-color: #d7fff0;
+}
+
+#cancelMsgBtn{
+    width:20%;
+    color: #434343;
+    border: 1px solid #8dbdd8;
+    background-color: #d8e9f3;
+}
+
+#charCount{
+    position: absolute;
+    font-size: 0.75vw;
+    left: 0;
+}
+
+/* Poles */
+.poles{
+    display: none;
+    position: absolute;
+    width: 10vw;
+    height: 1vh;
+    right: 12.5%;
+    color: #68a7ca;
+    background-color: #434343;
+    border: 5px solid #68a7ca;
+    z-index: -1;
+}
+
+#pole1{ 
+    top: 45%;
+}
+
+#pole2{
+    top: 66%;
+}
+
+
+
+
