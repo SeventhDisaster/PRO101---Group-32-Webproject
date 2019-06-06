@@ -1,9 +1,10 @@
 function renderTaskSubtasklist(task, parent){
+    parent.innerHTML = ""; //Clear the existing set of subtasks to set up the correct ones.
+    
     const subTaskList = newElem("div");
     subTaskList.classList.add("subtaskList");
     subTaskList.id = "subtasks";
     
-    subTaskList.innerHTML = ""; //Clear the existing set of subtasks to set up the correct ones.
 
     const addSubTaskBtn = newElem("button");
     addSubTaskBtn.innerText = "+   Add Subtask   +";
@@ -22,7 +23,7 @@ function renderTaskSubtasklist(task, parent){
     parent.appendChild(subTaskList);
 }
 
-function renderSubtasks(subtask, list, index, task){
+function renderSubtasks(subtask, list, index, task, parent){
     const container = newElem("div");
     container.classList.add("subtaskContainer");
 
@@ -57,7 +58,7 @@ function renderSubtasks(subtask, list, index, task){
     removeSubTaskBtn.classList.add("removeSubTaskBtn");
     removeSubTaskBtn.addEventListener("click", e => {
         task.subtasks.splice(index,1);
-        renderDetailWindow(task);
+        renderTaskSubtasklist(task, parent);
     });
     
     

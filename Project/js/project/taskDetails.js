@@ -23,10 +23,16 @@ function renderDetailWindow(task, column, row){
         detailContainer.appendChild(descColorContainer);
     renderTaskDesc(task,descColorContainer); //detailTaskDesc.js
     renderTaskColor(task,descColorContainer); //detailTaskColor.js
+
     renderTaskMembers(task, detailContainer); //detailTaskMember.js
     renderTaskDeadline(task,detailContainer); //detailTaskDate.js
     renderTaskPriority(task,detailContainer); //detailTaskPriority.js
-    renderTaskSubtasklist(task,detailContainer); //detailTaskSubtask.js
+
+    const subTaskContainer = newElem("div");
+    setClasses(subTaskContainer,["subTaskListContainer","fullWidth","fullHeight"]);
+    renderTaskSubtasklist(task,subTaskContainer); //detailTaskSubtask.js
+    detailContainer.appendChild(subTaskContainer);
+
     renderActionButtons(task, detailContainer); //detailTaskAction.js
 
 }
