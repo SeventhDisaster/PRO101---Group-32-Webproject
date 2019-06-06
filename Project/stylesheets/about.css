@@ -46,7 +46,7 @@ body {
     font-size: 500%;
     color: #b3d3e6;
     text-decoration: inherit;
-    font-family: 'verdana';
+    font-family: 'Montserrat';
     overflow: hidden;
 }
 /*underline under about*/
@@ -69,14 +69,14 @@ body {
     font-size: 25px;
     color: white;
     text-decoration: inherit;
-    font-family: 'arial'; 
+    font-family: sans-serif; 
 }
 /*button that links*/
 #getStartedButton {
     background-color: #4390bc;
     color: #f2f2f2;
     font-size: 200%;
-    font-family: 'arial';
+    font-family: 'Montserrat';
     width: 35%;
     height: 7%;
     cursor: pointer;
@@ -87,7 +87,7 @@ body {
 #teamTxt {
     color: #d8e9f3;
     font-size: 200%;
-    font-family: 'Georgia';
+    font-family: sans-serif;
 }
 /*container for everything at bottom*/
 #teamC {
@@ -120,7 +120,7 @@ body {
 /*names*/
 .cTxt {
     color: #b3d3e6;
-    font-family: 'Georgia';
+    font-family: sans-serif;
     font-size: 1vw;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -129,7 +129,7 @@ body {
 /*courses for each member*/
 .subTxt {
     color: #ffd7de;
-    font-family: 'arial';
+    font-family: 'Montserrat';
     width: 100%;
     font-size: 1vw;
     margin-top: 10px;
