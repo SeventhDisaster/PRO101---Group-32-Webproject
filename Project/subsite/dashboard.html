@@ -53,7 +53,7 @@
                     
                     <!-- Change profile image -->
                     <div onclick="
-                    var p = prompt('Enter image url'); 
+                    var p = prompt('Enter image url:'); 
                     if(p){
                         user.imagePath = p;
                         saveUserChanges();
@@ -92,7 +92,7 @@
                     <!-- The list -->
                     <table class="messageList">
                         <tbody id="notificationContainer"></tbody>
-                        
+
                         <!-- If empty -->
                         <tbody class="emptyClass">
                             <tr>

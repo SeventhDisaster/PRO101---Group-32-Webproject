@@ -1,0 +1,1235 @@
+commit 1f908dd31a04aceb8eafb2919ceee3aa389c4cf3
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu Jun 6 11:43:08 2019 +0200
+
+    Fixed filter icon
+
+commit 1c3e00677c8f0f7e23c393f67fb39a39f5c7fae8
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu Jun 6 11:38:12 2019 +0200
+
+    Saved logo origin, removed console logs, Included thumbnail documentation, Added filter icons, Commended the beginning of board CSS, removed early test.txt documents
+
+commit 4f4d2aea4fb9e65c87213843759364dd0b3d235e
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Thu Jun 6 11:35:36 2019 +0200
+
+    Commented and added the ability to change profile picture
+
+commit c3bccbc22663862e723c3b128d55452e41eed18b
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Thu Jun 6 11:10:05 2019 +0200
+
+    [edit in txt file]
+
+commit 26acc53ed1c8d38eb94184ec04fcc10df752efdb
+Author: simen <simenelserud@hotmail.com>
+Date:   Thu Jun 6 09:30:12 2019 +0200
+
+    Updated video, footer left
+
+commit 02753e3f0db36e540438fe5bc49f5aba1c1fa106
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Thu Jun 6 08:30:57 2019 +0200
+
+    Add files via upload
+
+commit a6e9eb48858149d9e8e9a9061d71507261f73226
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Thu Jun 6 08:28:18 2019 +0200
+
+    Add files via upload
+
+commit 4747743da262bd26086b4246d6466e88305f049f
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Thu Jun 6 08:27:17 2019 +0200
+
+    Update profile.html
+
+commit c8e909a84651b9ce90d56f03995b07114d2a3412
+Author: simen <Logitechg9>
+Date:   Wed Jun 5 16:01:57 2019 +0200
+
+    About page done. Index not so much...
+
+commit a902c363da337ac1c07d8ace143447d29041718c
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 15:31:08 2019 +0200
+
+    Implemented task filtering based on assigned users
+
+commit 2dc3676fa97ea3dc4f1c1df6def9a7023bc56bb1
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed Jun 5 14:43:10 2019 +0200
+
+    [Adding about html to login]
+
+commit c8943020a33171cd0c08a9f86e013d9539c67d6e
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed Jun 5 14:07:44 2019 +0200
+
+    debugg
+
+commit 9a4f11f3d80f0659c162d0c15cd9fa2f09a86074
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed Jun 5 14:04:50 2019 +0200
+
+    debugg
+
+commit 01980cd1ef6b03fe31913c5ccfda8ee96cc99846
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed Jun 5 13:52:22 2019 +0200
+
+    debugg
+
+commit e6bf97cb84c983056920cb5c0520743ce7d4e2a1
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed Jun 5 13:48:21 2019 +0200
+
+    Can now delete projects
+
+commit 0ed666ec743516549f0c2599e47d1f2cd010c89f
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed Jun 5 13:36:25 2019 +0200
+
+    Made about page responsive
+
+commit dc817531a7a82f4931ed5462057883bc72752f09
+Author: simen <Logitechg9>
+Date:   Wed Jun 5 12:56:24 2019 +0200
+
+    Andreas plz help
+
+commit f5f40e84ef79e7ed3aeb23da19ea8f485cc5c396
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 12:42:19 2019 +0200
+
+    Fixed user leader management bug
+
+commit 7d43f5bd99d98a00d709148dc0022ff6000c6b53
+Merge: cf42ae3 00114d6
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed Jun 5 12:36:41 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit cf42ae3c6728b0aa8e1528cef2281a8aa102213f
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed Jun 5 12:36:09 2019 +0200
+
+    [added documentation]
+
+commit 00114d6df9be37b747934f8b763b64a5068a4e89
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 12:30:14 2019 +0200
+
+    Project team leaders can now remove team members from the project. This will also unassign them from every task
+
+commit fe72f962a4eef2f9ea714b1e14a02b0ce042e4df
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 11:21:06 2019 +0200
+
+    Adjusted login page CSS animations, colors and shadows
+
+commit 2e5b5a8a2be5c073f536f97712e04bfa8f6f3233
+Merge: 37620b1 66d40d0
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 10:58:43 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Needed merge
+
+commit 37620b18ccd97e14f5b7edf6a6e868aff26f1fe6
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed Jun 5 10:58:35 2019 +0200
+
+    Fixed 404 reference to dashboard
+
+commit 66d40d0e0d73d5697891ee5885bfd5bbb284aaeb
+Author: simen <simenelserud@hotmail.com>
+Date:   Wed Jun 5 02:28:55 2019 +0200
+
+    Frustration grows...
+
+commit d18b01f239b662219da7b4d1c4dd69d38b3b6d62
+Merge: 88bab1b dd70026
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Tue Jun 4 19:56:38 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    needed
+
+commit 88bab1b660543e5caa0f5d76cd986466b68e194d
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Tue Jun 4 16:53:22 2019 +0200
+
+    Removed old files
+
+commit dd700260af569900a52011e0b87eb9c44ad77fd8
+Author: simen <Logitechg9>
+Date:   Tue Jun 4 16:10:35 2019 +0200
+
+    Minor tweaks
+
+commit e97f510a44c44950daef664999c714e66b76d054
+Merge: 200f35f 8d5b834
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 15:58:21 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Soup
+
+commit 200f35fdeca23e61bd7498eba26242e2b9816ddf
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 15:58:17 2019 +0200
+
+    Changed reference from 'Frontpage' to 'Dashboard'
+
+commit 8d5b834d745a3fbd941451e5b797b9ba32ba7d81
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:58:03 2019 +0200
+
+    Changed frontpage name to dashboard
+
+commit 84099cb7145ebea7dd5021da2a689a14166208f5
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:57:25 2019 +0200
+
+    Changed frontpage name to dashboard
+
+commit 9db6af7599748f84a01a8deaf854274f688a93df
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:52:59 2019 +0200
+
+    Removed achievement block
+
+commit db79eea3fb2be7facd1830f30e901717a9e916ae
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 15:49:57 2019 +0200
+
+    Changed style settings for dashboard
+
+commit 5b8b42f2e349f6bcaebe857530d5e5d829ac99f1
+Author: simen <Logitechg9>
+Date:   Tue Jun 4 15:43:33 2019 +0200
+
+    Fiks?
+
+commit 00134bce7de5ac633e36665f54b037703d461cef
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 15:32:24 2019 +0200
+
+    Fixed permission denied/404notfound page
+
+commit 43a686fbaa11cbbdc4da56cc665a65128ec180b1
+Author: simen <Logitechg9>
+Date:   Tue Jun 4 15:29:12 2019 +0200
+
+    Changes index + about
+
+commit b16c0ed5745b075687495a1657763499fbcefbce
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:14:25 2019 +0200
+
+    Dynamic dropdown menu for projects
+
+commit 00d24a313806cc954fbe32ab3a6a7477c58f081f
+Merge: 3359065 7a00272
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:07:33 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit 7a0027228d932350f36dac60372849e248022b00
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 15:07:06 2019 +0200
+
+    Made sure changes are saved on project detail edits
+
+commit 33590659e30601c16c5306690ac2059d930c101c
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 15:03:36 2019 +0200
+
+    Completed dropdown menu for projects
+
+commit d4bf4cb0c595c5734840e43a4e0fda4c16cd3003
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:54:04 2019 +0200
+
+    Improved visual feedback when dragging column
+
+commit 8976e40e02e7d07879700b70ee4703cde5447dff
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:41:24 2019 +0200
+
+    Removed test push
+
+commit 3042f7f6838dc0d033fee0e572733c87d849c32c
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:39:17 2019 +0200
+
+    Commented for standard.js
+
+commit 1f0348603f82f20c8d310cbc5420aaac98383314
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:23:05 2019 +0200
+
+    Added comments to login.js
+
+commit d53b1781a5aaa842a0a700f2a61205c58230b674
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:21:59 2019 +0200
+
+    Fixed theme / style settings on dashboard
+
+commit ea693436e26e041a638e759db70c567a1ac48ff4
+Merge: 1f59176 d15f2ff
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 14:10:32 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit 1f59176f5875033b35080e2a541bf8ea4d9c7c18
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 14:10:03 2019 +0200
+
+    Completed dropdown menu
+
+commit d15f2ff5ed2e2937969309051d5e43b539a14ff7
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 14:09:12 2019 +0200
+
+    Set color style for dashboard
+
+commit efd82b2e656885cca6e844722708b3ee8c4276ba
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 13:56:15 2019 +0200
+
+    Extended themes to dashboard along with the board, Filter applies to the dashboard video
+
+commit 52540610e43e8df5857b4837332eb1d1425a7572
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 13:50:19 2019 +0200
+
+    Add library
+
+commit c8295216dd02ff60b650b3d114c4a49768fe7525
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 13:43:53 2019 +0200
+
+    Add library
+
+commit 22e40b32345dfd6286ab28924b96aa5d9bf2e26f
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 13:37:05 2019 +0200
+
+    Changed frontpage BG, Fixed Detail Priority, Updated Project/info
+
+commit f4884821d9022a657cb93f7ad8ad074a6b72b322
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 13:35:33 2019 +0200
+
+    Fixed login bug
+
+commit e927bc5a49d45ad8acb537c61eea31cdd439d6ac
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue Jun 4 12:37:50 2019 +0200
+
+    Fixed date bug, added dropdownmenu
+
+commit f36455050b97b3648ca12f194e958ad8de031c4b
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Tue Jun 4 12:04:35 2019 +0200
+
+    [Changes to login]
+
+commit 175fc72c8f5a9231e86abb447ec07d7d6440c28d
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue Jun 4 11:37:46 2019 +0200
+
+    Set user themes for our default users
+
+commit 47e2dd8d471792937ed359599a06ba8599e1ba6b
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Tue Jun 4 08:59:13 2019 +0200
+
+    Set up user themes and modified what was necessary for it to work
+
+commit aed2900493b632692352858ed45a2f751f23dddc
+Author: simen <simenelserud@hotmail.com>
+Date:   Mon Jun 3 19:07:14 2019 +0200
+
+    Index.html/css redone + about tweaks
+
+commit 03f9bb85299c3ec119b8eda37f2c2755dbd4bf20
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Mon Jun 3 14:51:36 2019 +0200
+
+    Display team leader, User-based theme selection, Color adjustment, projectInfo near completion, removeClasses added to standard, Stylesheet adjustments, More bugfixes
+
+commit e551751979bb9a0052227e627b9514e6bd25e5c1
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 23:33:03 2019 +0200
+
+    Finished pretty much everything except for theme selection
+
+commit e16247a75c2b654499b3331050f82cd934701b65
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 23:06:02 2019 +0200
+
+    Improved task member assignment, improved clarity on team member assignment
+
+commit cf05369541e9f72fa398d18d64eb2e9d27cc61b4
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 18:55:26 2019 +0200
+
+    Gave project a status attribute
+
+commit 96ff0e24b4dfee3057c38bdd1a8c5f73006cafc8
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 18:44:40 2019 +0200
+
+    Made alert opening/closing smooth
+
+commit a1d761ccc90c05d34e43002a9d87d69ecb806523
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 18:01:18 2019 +0200
+
+    Added updated logos
+
+commit cf879d6c2dd5d63c6a44b127230277f8c34ac4cd
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 17:04:33 2019 +0200
+
+    Improved task color selection, set name input to chosen color
+
+commit a3d920f9c5f945c480e828e1da843c2ed1412db9
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 16:54:37 2019 +0200
+
+    Implemented task deadline warning
+
+commit 7898b70976f45c39268d550038780beceb7ac20d
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 16:36:48 2019 +0200
+
+    Added theme attribute to users for theme selection
+
+commit bd2368f0e228fbf0af836ca21859e68218b53266
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 16:17:44 2019 +0200
+
+    Continued work on sidebar, added team rendering, edited favicon
+
+commit a2cc9efc84242c7ca1694857c219c8557ba267bc
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 00:40:38 2019 +0200
+
+    Limited task description length on board
+
+commit ab24c3c49ab2f30f2d1b4cb255d31deb7f43aa28
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sun Jun 2 00:28:25 2019 +0200
+
+    Implemented 404 page, Project User validation, Fixed row drag-drop bug, Adjusted project constructor, reformatted SOME css
+
+commit 6e842bbc87daf453e2ef90cb9c9c7c2e91209942
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Sat Jun 1 13:48:36 2019 +0200
+
+    Constified variaables. Not so many lets anymore
+
+commit 93dd46ffc831f1712eea3e0aaaffc26cf593cdac
+Author: simen <simenelserud@hotmail.com>
+Date:   Sat Jun 1 11:59:28 2019 +0200
+
+    Reposition and deleted dupe index.css
+
+commit 2fb14ff8b4ae9c0e06e4b69afb4e0a63fcf7afcc
+Author: simen <simenelserud@hotmail.com>
+Date:   Fri May 31 22:00:53 2019 +0200
+
+    Link to page update
+
+commit 8d3eaf9f81d677dff0b7ad2ba21d5f0b450b4207
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Fri May 31 21:07:02 2019 +0200
+
+    Board task display update, massive refactor, addition of standards.js for shorter lines of code, increased readability, fixed bugs, sparked up page
+
+commit 5466408dfdeaa83095da52b8cfb8d062b27db382
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Fri May 31 18:22:46 2019 +0200
+
+    Pls fix
+
+commit ed18da6dac7e743ae42a43ae12c34201bbf8db3b
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Fri May 31 18:21:18 2019 +0200
+
+    merge
+
+commit 157ef994a1bce90f574d2665cf5faf20221f1590
+Merge: aed6cbc 7da65f0
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Fri May 31 18:19:18 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge
+
+commit aed6cbc84332e5987da739a4e2433cba9da37071
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Fri May 31 18:18:54 2019 +0200
+
+    Added deletion alert window
+
+commit 7da65f0ef2d94df7b1d62abb16c3f92ae478c21f
+Author: simen <simenelserud@hotmail.com>
+Date:   Fri May 31 18:18:47 2019 +0200
+
+    Minor tweak
+
+commit 2868d47c7e4c2c821ec3ac8ae614c13538d6120e
+Author: simen <simenelserud@hotmail.com>
+Date:   Fri May 31 18:14:37 2019 +0200
+
+    Small fix
+
+commit 3026cc1b9bdb59f122fc97f5b3119fa9998fb128
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 15:40:12 2019 +0200
+
+    Finished mark-as-complete function. Gets updated and stored
+
+commit 3c2539dc0498dabfad9190d2ace426d22198fe91
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 15:12:17 2019 +0200
+
+    Continued work on complete/delete mark
+
+commit 3d008c0d729ef86bf4ac9f5af0b04f7860f41d28
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 31 14:34:26 2019 +0200
+
+    navbar designed
+
+commit b0e6738aee75c7be7a9bcb12a16769b6c58876de
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 31 14:25:21 2019 +0200
+
+    video fix
+
+commit a3005d363b96ccdb6842c3f74932a1a983253456
+Merge: 01a784f 93288b0
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Fri May 31 14:14:55 2019 +0200
+
+    [Color pallare, for colo]
+
+commit 01a784fc2a549e3554d40ebff4920e68ac17dba9
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Fri May 31 14:07:09 2019 +0200
+
+    [Colors for detailtaskColor]
+
+commit 93288b061499837748a37f5e005a4e22885883ae
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 14:06:00 2019 +0200
+
+    Datasetfix
+
+commit 3bc837aee4fa0a3fddd220c6d66c647775a12cc3
+Merge: fac4f51 c2ed4ef
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 14:01:38 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Needed Merge
+
+commit fac4f51e0c775b51dbb5bb2143252dac1bf64df2
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 14:01:31 2019 +0200
+
+    Fixed member list styling. Working on Task mark and deletion
+
+commit c2ed4ef85987e70f9ed85d594c27a4731714876f
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 31 13:58:22 2019 +0200
+
+    Implemented login feature
+
+commit ad7c68586b774aee8f8131c5e160aa0354bfb9c7
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 12:59:49 2019 +0200
+
+    fixed memeber height
+
+commit 65b232b66ab868d13a11e436bd1518a807c6899f
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 12:39:31 2019 +0200
+
+    Added Drag and Drop failsaves
+
+commit ed78a31d1bb3b64cbd5cbc0a1e3a0e5638ff17d7
+Merge: 085094f 02d76b5
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 12:27:40 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge
+
+commit 085094fbc82acfa88566f1224d4b303b2831f370
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 12:27:29 2019 +0200
+
+    Completed Drag & Drop System
+
+commit 02d76b50b1e141c561dd00191b0c74e9c2b6a754
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 31 12:09:01 2019 +0200
+
+    Fixed dates.js to use the right format
+
+commit 565421dfad6d787e8667fa8a30114bf5b3c6e6bb
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 31 11:38:17 2019 +0200
+
+    Added project saving
+
+commit 5a9745e70fb25524ee051c6a15a027a21df458b0
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 31 11:07:43 2019 +0200
+
+    CSS and Scrollbar fixes
+
+commit b94101ce0dd3ee7cb557a6b93384b3e4a706e828
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 23:27:52 2019 +0200
+
+    Project Details Updated TODO: Work on that. Colors changed, Alternating default colors on rows
+
+commit 53fec991262cedfa4faaf54c4eb123db03b0055d
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 20:52:55 2019 +0200
+
+    Implemented drag & drop on rows and columns. TODO: Fix row-drag buggit add *
+
+commit 87f1033ca82c8b7bd55edf85c97b9d0048c62de3
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 18:01:04 2019 +0200
+
+    Created baseline for dragdropRow refactored board.js
+
+commit 10b8da15e94d7deb4ce6202521a957096280b1ee
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 17:30:19 2019 +0200
+
+    Added Column Drag-and-Dropping
+
+commit 15ed50bd66d7c4b457d3a728fc9ce4e20cb15e67
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 15:42:42 2019 +0200
+
+    Fixed remaining detailwindow bugs, added dragdrop.js - TODO
+
+commit 32347359b2a98b4631d282b2a8bdf53312591880
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 14:36:30 2019 +0200
+
+    Created and finsihed color selection
+
+commit b533d1bd1f3c48f30a2436010f7b037c8f954396
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 13:36:31 2019 +0200
+
+    Added isComplete boolean to tasks for completion marking
+
+commit 7c32661c2b08c485dcd4dd7be65900332bf32767
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 13:14:39 2019 +0200
+
+    Finished subtask system
+
+commit fa2e84cdd2cc6b6358eb586907f2d4b7a34f165e
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Thu May 30 11:44:38 2019 +0200
+
+    Updated subtask object: Status 0/1 is now isComplete true/false
+
+commit b077ccc0aa0d6f5bc27b28705bc648d43f78e155
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Wed May 29 23:29:42 2019 +0200
+
+    Continued work on member assignment and subtasks
+
+commit 61f350e6e51e269223fe88bee37bcbe93a4a4347
+Author: simen <simenelserud@hotmail.com>
+Date:   Wed May 29 21:21:38 2019 +0200
+
+    Aboutpage changes
+
+commit e2cb33a8d16c8c233f0a34bbdf205b138551ba84
+Author: simen <simenelserud@hotmail.com>
+Date:   Wed May 29 20:43:11 2019 +0200
+
+    Changes aboutpage
+
+commit 8bd6023e856625e3f88b514fe1466707e0dfc048
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Wed May 29 20:05:18 2019 +0200
+
+    Priority selection and update enabled
+
+commit 5761cd0c549f23581d8f0f8db5b034df494da03b
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Wed May 29 19:22:21 2019 +0200
+
+    Date format fix, Task Detail window bug fix, Date update implemented
+
+commit 0f16e71bcce0d410e279029cce6cc58bd949922e
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Wed May 29 17:04:45 2019 +0200
+
+    Project Loading now REQUIRES a URL input
+
+commit 30c4cfe8fcb911b710c9fa3a9c095de403df782e
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Wed May 29 15:46:58 2019 +0200
+
+    Massive update: link to tasks from frontpage, refactoring, js-file separation, overall structure update
+
+commit 3b930ff8c2b654fc5a91a02b710376ba5ed5b580
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed May 29 15:34:37 2019 +0200
+
+    [loginEdits]
+
+commit 9fbb6eb95c23de973919aa5f3cb937d3bbb5a2f9
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed May 29 15:13:20 2019 +0200
+
+    [loginUpdate]
+
+commit 5020bf55f87e72acf7f51b2cb7e6cf0fcdef44d9
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Wed May 29 15:10:05 2019 +0200
+
+    [loginBox]
+
+commit 95ea6e6d4cc72a17fa812756d466d16e8a550187
+Author: Helene Margel <helene@quesnay.com>
+Date:   Wed May 29 14:53:27 2019 +0200
+
+    [loginPage updated]
+
+commit adbe19bc4bce8b30d09b483566aa93d32eae1178
+Author: simen <Logitechg9>
+Date:   Wed May 29 14:46:47 2019 +0200
+
+    Update landpage, aboutpage, added old images
+
+commit dbeca70b7e8516d20be246509fd29102609635dc
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 14:33:15 2019 +0200
+
+    Bug fix
+
+commit ce6ca0a57485d8a69755cc81f46a5eb721a37b28
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 14:18:55 2019 +0200
+
+    Fixed user handling, made it possible to make notifications
+
+commit 620ba093515e807de5de4fbb6184f40f013a8409
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 13:34:57 2019 +0200
+
+    added push notification function
+
+commit 93b7b86901fc8ded862a745266cd4dbd1942b8ac
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 12:49:56 2019 +0200
+
+    fixed comment
+
+commit fd3595d6994bbeb3ac9b6d4c7540e9605a9e842f
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 12:44:47 2019 +0200
+
+    Added helpfull commands
+
+commit cc050b72e5006da5ebda3d81f7270affa384f4fc
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Wed May 29 12:02:26 2019 +0200
+
+    Added user login
+
+commit 11d91b3beda4ac77468519f8a66a47c927f8428e
+Author: Helene Margel <helene@quesnay.com>
+Date:   Wed May 29 10:49:37 2019 +0200
+
+    [LoginBox on seperate page]
+
+commit e5671ed879a55a8dc05fc9619b3d461505c92fe8
+Merge: cc2db5b 63773d3
+Author: simen <Logitechg9>
+Date:   Tue May 28 16:39:57 2019 +0200
+
+    Update
+
+commit cc2db5b278fcfc274418acfc793660d6145d85ee
+Author: simen <Logitechg9>
+Date:   Tue May 28 16:37:47 2019 +0200
+
+    Landpage tweaks
+
+commit 63773d3281766ceaac019c1cacb9833c591de314
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 16:35:36 2019 +0200
+
+    Board CSS update
+
+commit aa29225fc790870d8462bf5e33a43411c60b1afc
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 16:30:42 2019 +0200
+
+    Fixed bugs + board updates
+
+commit b4f1fa95a354b31eb847a6c0f337600582573821
+Author: Helene Margel <helene@quesnay.com>
+Date:   Tue May 28 16:26:21 2019 +0200
+
+    [loginBox]
+
+commit f6e724e358c27e0bac9f863c1229503a2ee9b972
+Merge: 4ed444d 7c5f344
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 15:52:54 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit 4ed444d30f1f70c8af4680df29a1209d3abd25c8
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 15:52:33 2019 +0200
+
+    Made navbar look nicer
+
+commit 7c5f3440984e43386fbf2ad684ea372a7d71cbd9
+Merge: b67db73 508d913
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 15:46:39 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge updates
+
+commit b67db73ba5e92e0f772d745cda001418174d9daf
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 15:46:34 2019 +0200
+
+    Implemented task un-assignment
+
+commit 508d913ef5a405e0f12ec74c3dc4bebdecfdc869
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 15:23:26 2019 +0200
+
+    Added the ability to save data to users computer
+
+commit c71bde3800ccbd13ea768005dda8178cb25b2d08
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 14:00:27 2019 +0200
+
+    added notification and achievements accomplished to users
+
+commit e6feb223b8f47167a92305cb6644244d5936b487
+Merge: 5c44144 07a831b
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 13:58:40 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Needed merge
+
+commit 5c44144f6adb6ec1f3a6b856867efed4de92d286
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 13:58:37 2019 +0200
+
+    Added more details
+
+commit 07a831b456c5e7162bbb6dbfa4912ab05113e824
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 13:55:00 2019 +0200
+
+    debug
+
+commit 661630c3157d5745781b5ea37fae361b90a6e43d
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 13:48:07 2019 +0200
+
+    Included date.js in html file, and removed redundansy in js file
+
+commit beec0d0894e326e8454bf98ef80e59fc1713af79
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 13:46:18 2019 +0200
+
+    Added date.js
+
+commit 0a7aca1d180842fdc3398005b8c1cdd47f91d771
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 13:24:50 2019 +0200
+
+    Added image path default
+
+commit ac0fa25e6f0524b569d5c6e57d1ebeb24fd1c4df
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 13:21:46 2019 +0200
+
+    Added image path
+
+commit 9f29c54e8c006724b93160058be8038fcf3243a8
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Tue May 28 12:58:28 2019 +0200
+
+    Fixed bugs on the board page, added default profile image
+
+commit c529435888725c1941969cd483d1a57a90d4367d
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 12:55:12 2019 +0200
+
+    Added user photos
+
+commit f81351ad2791b107737853103d15f5689aaa179b
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 12:50:50 2019 +0200
+
+    Made sorting more efficient
+
+commit 4e2ea8b393ae15128be7f7a457f2ecb1f53cbe8d
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Tue May 28 11:54:34 2019 +0200
+
+    Added objectsorting, notifications and redirecting
+
+commit f1d49f414937c44f664e0dfa2beb9ca6298297f8
+Author: simen <Logitechg9>
+Date:   Tue May 28 09:08:06 2019 +0200
+
+    Changes landpage
+
+commit 749d251eda106325eb4676d540891d166e88d61a
+Author: Krister <SeventhDisaster@outlook.com>
+Date:   Mon May 27 21:21:54 2019 +0200
+
+    Several Changes: CSS Improvements, New Task/Column implemented, Detail Window improved
+
+commit d99354a8489a80294e7107d88f18e36b20170e50
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 17:58:58 2019 +0200
+
+    Task Detail and project page update
+
+commit 4b35f2452022b7cbaf5d83e9774be98a83c74ca9
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 16:51:31 2019 +0200
+
+    Backup
+
+commit 80cc4a73e65bacfebbc06177c0d97bffa89b60a7
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 16:29:22 2019 +0200
+
+    Added task fetching and made tasks this week work
+
+commit dd8b67d165d428b5040bfd102c11ef393da6f896
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 16:17:45 2019 +0200
+
+    Task Window and Dataset update
+
+commit d36e3f451182f62ff5c99551e3588f4553d51c7e
+Author: simen <Logitechg9>
+Date:   Mon May 27 15:48:03 2019 +0200
+
+    First index commit
+
+commit 1bde59835ea95632bf5c562f42bbfefb4484f9c2
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 15:43:12 2019 +0200
+
+    Task Detail Window Update
+
+commit 4581c790abde95f4f2dac5a36ad05559aea448af
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Mon May 27 15:28:09 2019 +0200
+
+    Delete a
+
+commit 18db189b069d0c2d3bbacc3c3fe8d62c68b7912c
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Mon May 27 15:27:13 2019 +0200
+
+    Add files via upload
+
+commit f1c680064487e609e67ca6f4a72e5f392d57592b
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Mon May 27 15:26:59 2019 +0200
+
+    Create a
+
+commit 17fa2b552babd33df41aeaa0d86929ff7760cb8c
+Author: Zemen79 <48317889+Zemen79@users.noreply.github.com>
+Date:   Mon May 27 15:25:34 2019 +0200
+
+    Add files via upload
+
+commit 2dc1b8612aa8ac0ecdb2dc9fa630bc34c67143ec
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 14:50:25 2019 +0200
+
+    Added js and css files
+
+commit d3f37d332d806553c02197cc733b130371187a1c
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 14:20:59 2019 +0200
+
+    Added colors
+
+commit b1e84742274295c5293d1d535cc720d7226b8ac4
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 13:22:36 2019 +0200
+
+    updated desigmn v2
+
+commit 0b1363b5883a888659eb3b8cde8808841fb70617
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 12:40:08 2019 +0200
+
+    Filesystem changes
+
+commit f16906c706a2fccecb68aee9d939e014886da6ef
+Merge: 0ef4475 1ea1e7c
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 11:59:38 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge with master branch
+
+commit 0ef447545b6c20eaa824d2333e0878863e9511e5
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Mon May 27 11:59:28 2019 +0200
+
+    Dynamic Board Rendering implemented
+
+commit 1ea1e7ca3d662231c07cbbd29056fbc116449f7c
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Mon May 27 11:54:04 2019 +0200
+
+    updated desigmn
+
+commit 6bf9ea19401535e20f751a6be5f03ae92f222d0e
+Author: simen <Logitechg9>
+Date:   Mon May 27 10:32:53 2019 +0200
+
+    Updated
+
+commit 11e55ba59880a3b17c0c5c42cccc98352360cdfd
+Merge: bf9ee1e 1078837
+Author: simen <Logitechg9>
+Date:   Mon May 27 10:23:19 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit bf9ee1e22863c1d46f2a62342d5d208312d3de15
+Author: simen <Logitechg9>
+Date:   Mon May 27 10:22:09 2019 +0200
+
+    Tester fix
+
+commit 107883703285a06e3af9dd54a2ed0cc3c9e0e6a2
+Author: simen <simenelserud@hotmail.com>
+Date:   Mon May 27 06:37:34 2019 +0200
+
+    Fourth commit
+
+commit 7e074ee36738f0ad23a12ec6ed87df4121d418d1
+Author: simen <simenelserud@hotmail.com>
+Date:   Mon May 27 06:06:38 2019 +0200
+
+    Third commit
+
+commit 67d696e5ef6855455fb06597e45ade5d4a5bb63c
+Author: simen <simenelserud@hotmail.com>
+Date:   Sun May 26 17:58:11 2019 +0200
+
+    Second commit
+
+commit 9cbb3f834a8622d3e481135a95ec8ad528470555
+Author: simen <simenelserud@hotmail.com>
+Date:   Sat May 25 04:30:07 2019 +0200
+
+    First commit landPage
+
+commit 74478c3486cb801d57ad54869f8c61e8e9399575
+Merge: b34b287 47845e8
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 15:47:51 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge
+
+commit b34b28749d548095fa6833499cb7994d94a1747b
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 15:47:45 2019 +0200
+
+    Created favicon and board update
+
+commit 47845e87297caaedacc3a2fe730c4ba1f7f92ee8
+Merge: 75ffe92 253baf4
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 15:45:54 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit 75ffe92c137b661fe94f9942fd6c1f53de4eb2b0
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 15:45:48 2019 +0200
+
+    updated
+
+commit 253baf4552feb050f79d0cfc7a6951efd7fe11e0
+Merge: b787cbc 885ebe1
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 15:32:55 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge frontpage
+
+commit b787cbcb53368c6341ba2dd0ba951729d42361ce
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 15:32:44 2019 +0200
+
+    Board update
+
+commit 885ebe153c48105da5533a05510106e5199a750f
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 15:32:35 2019 +0200
+
+    updated
+
+commit 461de7639e5e18cde9e3094adba1d1804eb6686b
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 15:07:24 2019 +0200
+
+    Board modified and some dataset added
+
+commit 14156f629c9f7928cc579e383a36c1f9113b8821
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 14:35:27 2019 +0200
+
+    updated
+
+commit e906a8677892bdbbeef91e9c9e768f48e9fbbfc5
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 14:15:05 2019 +0200
+
+    Board update
+
+commit cd9f3186e82c49f8257ceb4f65cafa435aa6a4f5
+Author: simen <Logitechg9>
+Date:   Fri May 24 14:13:26 2019 +0200
+
+    testUpdate
+
+commit fd3c55aa630704c13590221e83ae88ce597c8f0d
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 14:04:22 2019 +0200
+
+    update
+
+commit 139b986c6d5e0a4dbe68044ae10adda06d4e960c
+Merge: f005067 79fc52c
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 13:53:56 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merge current updated content
+
+commit f0050670ceaf6cf7116a8811b0065d0b0b0e64a2
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 13:53:48 2019 +0200
+
+    Updated board content
+
+commit 79fc52c7e992a40afb9646deb39e274f930cad6c
+Merge: 80daaf8 5ae3a83
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 12:55:38 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+
+commit 5ae3a83ccb7e6a94d5317257484712ed9b349953
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 12:55:08 2019 +0200
+
+    Board update
+
+commit 80daaf88a2719d9c18d4f41b8b4724e67f6a514e
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Fri May 24 12:54:58 2019 +0200
+
+    Added frontpage
+
+commit 77446d2b1c6fa6c37c0f032f1ecf4af982972e03
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 12:29:44 2019 +0200
+
+    Fixed filestructure
+
+commit f3e680284880c8cb1822fe1010833a6808336b33
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Fri May 24 12:12:49 2019 +0200
+
+    Added more files
+
+commit 0a4294e19e136e561dcb6bfa4e5998a6206431f0
+Author: simen <simenelserud@hotmail.com>
+Date:   Thu May 23 22:16:15 2019 +0200
+
+    test
+
+commit 52f1589f8da672286384f730890a74590cd32f1d
+Merge: 0947b6c 59f30e2
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu May 23 10:20:58 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Starting branch merge and testing
+
+commit 0947b6c5cca70b711428f2aec3035d26495dbf1a
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu May 23 10:13:29 2019 +0200
+
+    Created filestructure
+
+commit 59f30e278a3369b231a0546ffd454648693678e7
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu May 23 10:13:15 2019 +0200
+
+    Create README.md
+
+commit da95279a4b2fd42c54dbd1ec831998c7208d3c1a
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu May 23 10:00:01 2019 +0200
+
+    First Commit
