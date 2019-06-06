@@ -1,3 +1,120 @@
+commit 9c61b4292970f12b744a7f60ad6ee61f5a5aa24d
+Author: simen <Logitechg9>
+Date:   Thu Jun 6 16:13:05 2019 +0200
+
+    Font update index/about
+
+commit 62615d727ba23ff419d0e4116beb12faa8b386b9
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:07:24 2019 +0200
+
+    Update README.md
+
+commit c3fa30ad116cad584456e1dcf6c7a82ed83c81d9
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:06:57 2019 +0200
+
+    Update README.md
+
+commit 02026776e3c9e99506f0358001ae8dff0dbdcc3d
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:03:39 2019 +0200
+
+    Update README.md
+
+commit 9add6add8661908713536e03bb50efe8d585d04f
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:03:09 2019 +0200
+
+    Update README.md
+
+commit 53558ec2a4925935f8ba9daac4fa4e356f82586b
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:02:47 2019 +0200
+
+    Update README.md
+
+commit c4f577c59c1968daba67271c16eb5b01bc63a672
+Author: Andreas Østby <42382708+AndreasOstby@users.noreply.github.com>
+Date:   Thu Jun 6 16:02:06 2019 +0200
+
+    Update README.md
+
+commit 5bff6d8159fa044c552b52208021511f608a7b24
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Thu Jun 6 15:55:44 2019 +0200
+
+    Cleaned up folders
+
+commit c53b7cc8b9696d3f64e336c2a4d7aa7123666066
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Thu Jun 6 15:53:45 2019 +0200
+
+    [Txt update to webapp.txt file]
+
+commit 42c3d08c1e4fde9dd2e1acd0543dcf6b53e2e0e8
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Thu Jun 6 15:51:28 2019 +0200
+
+    [Move Asana txt]
+
+commit 74d5c9f462be87fe4abebb081dbb10ff43767eeb
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Thu Jun 6 15:49:35 2019 +0200
+
+    [Move of documentation files]
+
+commit 5d0be340e4bd557de5e952236d6d589b734006da
+Author: simen <Logitechg9>
+Date:   Thu Jun 6 15:45:11 2019 +0200
+
+    Finito?
+
+commit f869fe4e8ea59fc812359c7a2391e6cda2871540
+Author: simen <Logitechg9>
+Date:   Thu Jun 6 15:32:46 2019 +0200
+
+    Update index
+
+commit 86b2d4fa8aa5e8ed1e7ad9745221e01b339abb65
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Thu Jun 6 15:31:38 2019 +0200
+
+    Cleaned up folders
+
+commit 1301120373a7e09725351f36a96a40f1a7b5c3f9
+Merge: 67bf156 a143d23
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu Jun 6 15:30:34 2019 +0200
+
+    Merge branch 'master' of https://github.com/SeventhDisaster/PRO101---Group-32-Webproject
+    
+    Merging
+
+commit 67bf1569a84638cff1c95f2f8353821e7ed0b78e
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu Jun 6 15:30:24 2019 +0200
+
+    Added theme color palette
+
+commit a143d23b2c6783450660a4b9d0a6281ac3f8ceda
+Author: Andreas Østby <andreas88-ostby@hotmail.com>
+Date:   Thu Jun 6 15:16:43 2019 +0200
+
+    Cleaned up folders
+
+commit 2969ac03957137859dfd77436e175c8fb34f1818
+Author: Helene Margel <margel.helene@gmail.com>
+Date:   Thu Jun 6 15:14:39 2019 +0200
+
+    [Prosjektrapport og refleksjonsnotat]
+
+commit 9fc208132a566f515ee33dcdcbb9b0727e202cef
+Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
+Date:   Thu Jun 6 15:11:34 2019 +0200
+
+    Updated Git Log file
+
 commit 574eca6184ebd989a0abd66e30f2131979ef67d0
 Merge: 995f54e 0d32529
 Author: Krister <37347340+SeventhDisaster@users.noreply.github.com>
