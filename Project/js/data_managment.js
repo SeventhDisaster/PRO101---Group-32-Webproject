@@ -17,6 +17,9 @@
 //                             confirmLogin();                              //
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
+
+// Gets data from localstorage and replaces it with standard data if it exists
+
 if (!getStorage("users")) {
     setStorage("users", users);
 } else {
@@ -46,6 +49,8 @@ function redirectTo (href) {
 
 }
 
+
+// Creates a user and returns it
 function createUser(name, password) {
 
     let USER = {
@@ -144,6 +149,7 @@ function getStorage(key) {
 
 }
 
+// Pushes and saves notifications
 function pushNotification (userid, msg, href) {
 
     let notification = {
@@ -168,6 +174,7 @@ function pushNotification (userid, msg, href) {
 
 }
 
+// Gets the profile picture of the user, returns standar if not set
 function getImage(id) {
     if (users[id - 1].imagePath) {
         return users[id - 1].imagePath;

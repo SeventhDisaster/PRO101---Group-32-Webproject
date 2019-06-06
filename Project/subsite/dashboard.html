@@ -17,79 +17,83 @@
 
 <body>
     <nav id="navbar">
+        
         <div onclick="redirectTo('../index.html')" id="logo">
             <img src="../img/LogoSampleWhite.svg">
         </div>
+        
+        <!-- Projects -->
         <div id="projectTab">
             <div>
             	<span>Projects</span>
             </div>
+
+            <!-- Dropdown -->
             <div class="dropdown">
-                <div id="projectsAvailable">
-                    <!-- <div onclick="(()=>{projects.push(new Project()); saveProjectChanges(); renderProjectTab()})()">
-                        <span>+ Add Project +</span>
-                    </div> -->
-                    <!-- <div onclick="redirectTo('board.html?project=0')">
-                    	<span>&nbsp;&nbsp; - NexTask Initiation Project</span>
-                    </div> -->
-                </div>
+                <div id="projectsAvailable"></div>
             </div>
         </div>
+        
+        <!-- Profile -->
         <div id="profile">
+
             <div>
                 <span class="fullnameInput">Username</span>
                 <img class="userImage image"></img>
             </div>
+
+            <!-- Dropdown -->
             <div class="dropdown">
                 <div id="navProfile">
+                    
+                    <!-- Profile -->
                     <div onclick="redirectTo('profile.html')">
-                        <span>My profile</span>
+                        <span>Profile</span>
                     </div>
-                   <!--  <div class="disabled">
-                    	<span>Acievements</span>
-                    </div> -->
+                    
+                    <!-- Change profile image -->
+                    <div onclick="
+                    var p = prompt('Enter image url'); 
+                    if(p){
+                        user.imagePath = p;
+                        saveUserChanges();
+                        location.reload();
+                    }
+                    ">
+                        <span>Change profile picture</span>
+                    </div>
+
+                    <!-- Logout -->
                     <div onclick="logout()">
                     	<span>Logout</span>
                     </div>
+                
                 </div>
             </div>
+
         </div>
     </nav>
     <div id="container">
+
+        <!-- Video -->
         <div id="frontImg">
             <video id="video" loop="loop" autoplay="autoplay" muted="muted" src="../img/background.mp4"></video>
             <span>Welcome back, <span class="fullnameInput">Username</span>!</span>
         </div>
+        
+        <!-- Block container -->
         <div id="blockContainer">
+
+            <!-- Notification container -->
             <div id="notifications" class="blocks">
                 <h2 class="title">Notifications!</h2>
                 <div class="indent">
-                    <table class="messageList">
-                        <tbody id="notificationContainer"><!-- <tr>
-                                <td title="Goto">
 
-                                    <span class="message">Added to task!</span>
-                                    <span class="dateBox">
-                                        <span>3. May</span>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="message">Deadline approaching!</span>
-                                    <span class="dateBox lightblue">
-                                        <span>6. May</span>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="message">New message!</span>
-                                    <span class="dateBox yellow">
-                                        <span>7. May</span>
-                                    </span>
-                                </td>
-                            </tr> --></tbody>
+                    <!-- The list -->
+                    <table class="messageList">
+                        <tbody id="notificationContainer"></tbody>
+                        
+                        <!-- If empty -->
                         <tbody class="emptyClass">
                             <tr>
                                 <td>
@@ -98,21 +102,20 @@
                             </tr>
                         </tbody>
                     </table>
+
                 </div>
             </div>
+
+            <!-- Weekly tasks container -->
             <div id="weeklyTasks" class="blocks">
                 <h2 class="title">Tasks this week!</h2>
                 <div class="indent">
-                    <table class="messageList">
-                        <tbody id="taskContainer"><!-- <tr>
-								<td>
 
-									<span class="message">Design!</span>
-									<span class="dateBox">
-										<span>3. May</span>
-									</span>
-								</td>
-							</tr> --></tbody>
+                    <!-- The list -->
+                    <table class="messageList">
+                        <tbody id="taskContainer"></tbody>
+
+                        <!-- If empty -->
                         <tbody class="emptyClass">
                             <tr>
                                 <td>
@@ -121,75 +124,9 @@
                             </tr>
                         </tbody>
                     </table>
+
                 </div>
             </div>
-            <!-- <div id="achievements" class="blocks">
-                <h2 class="title">Close achievements!</h2>
-                <div id="achievementsContainer" class="indent">
-                    <a href="achievements.html#name">
-                        <div class="achievement" title="Log in 3 days in a row!">
-                            <div class="image" style="background-color: black;">
-                            </div>
-                            <div class="achievementTxt">
-                                <div>
-                                    <span>3 days!</span>
-                                </div>
-                            </div>
-                            <div class="progressbar">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="achievement" title="Log in 3 days in a row!">
-                        <div class="image" style="background-color: black;">
-                        </div>
-                        <div class="achievementTxt">
-                            <div>
-                                <span>3 days!</span>
-                            </div>
-                        </div>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="achievement" title="Log in 3 days in a row!">
-                        <div class="image" style="background-color: black;">
-                        </div>
-                        <div class="achievementTxt">
-                            <div>
-                                <span>3 days!</span>
-                            </div>
-                        </div>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="achievement" title="Log in 3 days in a row!">
-                        <div class="image" style="background-color: black;">
-                        </div>
-                        <div class="achievementTxt">
-                            <div>
-                                <span>3 days!</span>
-                            </div>
-                        </div>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="achievement" title="Log in 3 days in a row!">
-                        <div class="image" style="background-color: black;">
-                        </div>
-                        <div class="achievementTxt">
-                            <div>
-                                <span>3 days!</span>
-                            </div>
-                        </div>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </body>

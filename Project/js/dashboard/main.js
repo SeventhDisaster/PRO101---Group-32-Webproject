@@ -4,6 +4,7 @@ let fullnameList;
 
 function setup() {
 
+    // Checking if user is logged in, else redirects them to login page
 	confirmLogin();
 
     let fullname = user.name;
@@ -12,6 +13,8 @@ function setup() {
 
     fillDomList(fullnameList, fullname);
 
+
+    // Replacing all images with users profile pic
     let images = document.getElementsByClassName("userImage");
 
     for (var i = 0; i < images.length; i++) {
@@ -92,7 +95,7 @@ function renderNotifications () {
 function newNotification(obj) {
 	
 	let notificationContainer = getElemById("notificationContainer");;
-    let template = '<td onclick="window.location.href = \'' + obj.href + '\' " title="Goto"><span class="message">' + obj.msg + '</span><span class="dateBox"><span>' + obj.date + '</span></span></td>';
+    let template = '<td onclick="window.location.href = \'' + obj.href + '\' " title="Goto"><span class="message">' + obj.msg + '</span><span class="dateBox"><span style="color: white !important">' + obj.date + '</span></span></td>';
     let dom = document.createElement("tr");
     
     dom.innerHTML = template;
@@ -100,6 +103,8 @@ function newNotification(obj) {
 
 }
 
+
+// Returns all projects your a part of this week and sorts them by time
 function getProjectsThisWeek() {
 
     let arr = [];
@@ -158,7 +163,7 @@ function renderTasks(arr) {
         }, link);
         
 
-        let template = '<td onclick="window.location.href = \'' + link + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span>' + time + '</span></span></td>'
+        let template = '<td onclick="window.location.href = \'' + link + '\'"><span class="message">' + arr[i].taskInfo.name + '!</span><span class="dateBox"><span style="color: white !important">' + time + '</span></span></td>'
 
         let dom = document.createElement("tr");
         dom.innerHTML = template;

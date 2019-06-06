@@ -1,14 +1,4 @@
-@font-face {
-  font-family: 'MyWebFont';
-  src: url('webfont.eot'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-
+/* General styling */
 body {
     margin: 0;
     padding: 0;
@@ -18,6 +8,44 @@ body {
     overflow: hidden;
 }
 
+tr:not(:first-of-type)>td {
+
+    border-top-color: black;
+    border-top-style: dotted;
+    border-top-width: 1px;
+
+}
+
+tr:not(:last-of-type) {
+    height: 65px;
+}
+
+td {
+    margin: 0;
+    display: flex;
+    padding: 20px 10px 20px 10px;
+    align-items: center;
+    transition: .2s ease;
+}
+
+
+tr{
+    transition: .1s ease;
+}
+
+tr:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px black;
+    background-color: rgba(255,255,255,.2);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Navbar styling */
 #navbar {
     width: 100%;
     height: 10%;
@@ -42,11 +70,32 @@ body {
     border-left-style: solid;
 }
 
-#profile {
-	width: 50% !important;
-	display: block !important;
-	z-index: 1;
+#navbar>div:hover {
+    background-color: rgba(0,0,0,.1);
+    cursor: pointer;
 }
+
+#navbar>div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+    /* Logo tab */
+#logo {
+    width: 200px !important;
+    /*padding: 5px;*/
+    flex-shrink: 0;
+
+}
+
+#logo>* {
+    height: 100%;
+    transform: skewX(15deg);
+}
+
+    /* Project tab */
 #projectTab {
     display: block !important;
     z-index: 1;
@@ -72,6 +121,22 @@ body {
     transform: scale(1.2);
 }
 
+#projectTab:hover .dropdown{
+    display: block !important;
+}
+
+#projectsAvailable{
+    overflow: auto !important;
+    max-height: 500px !important;
+}
+
+    /* Profile tab */
+#profile {
+    width: 50% !important;
+    display: block !important;
+    z-index: 1;
+}
+
 #profile>div {
 	height: 100%;
 	width: 100%;
@@ -90,19 +155,12 @@ body {
     margin-right: 30px;
 }
 
-.dropdownStart {
-	display: inline-block;
-	position: relative;
-}
-
-#projectTab:hover .dropdown{
+#profile:hover .dropdown{
     display: block !important;
 }
 
-#profile:hover .dropdown{
-	display: block !important;
-}
 
+/* Dropdown classes */
 .dropdown{
 	display: none !important;
 	position: absolute;
@@ -110,11 +168,6 @@ body {
 	background-color: #434343;
 	width: 100%;
 	height: auto !important;
-}
-
-#projectsAvailable{
-    overflow: auto !important;
-    max-height: 500px !important;
 }
 
 .dropdown>*{
@@ -137,31 +190,7 @@ body {
 }
 
 
-#navbar>div:hover {
-    background-color: rgba(0,0,0,.1);
-    cursor: pointer;
-}
-
-#navbar>div {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-
-
-#logo {
-    width: 200px !important;
-    /*padding: 5px;*/
-    flex-shrink: 0;
-
-}
-
-#logo>* {
-    height: 100%;
-    transform: skewX(15deg);
-}
-
+/* Styling front container */
 #container {
     height: 90%;
 }
@@ -202,61 +231,22 @@ body {
     object-fit: cover;
 }
 
-#notifications,
-#weeklyTasks,
-#achievements {
-    display: block;
-    color: white;
-}
-
-.emptyClass{
-
-    display: none;
-    opacity: 0.7;
-}
-
-.emptyClass > tr > td > span {
-    text-align: center;
-}
-
-.emptyClass > tr:hover {
-
-    box-shadow: none;
-    cursor: default;
-    background-color: rgba(0,0,0,0);
+#video {
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 
 }
 
-#notificationContainer:empty ~ .emptyClass{
-
-    display: block !important;
-
+.image {
+    height: calc(100% - 20px);
+    margin: 10px;
 }
 
-#taskContainer:empty ~ .emptyClass{
 
-    display: block !important;
-
-}
-
-/*
-	
-	#0082C7
-	#73616F
-	#E8846C
-	#4393a6
-
-	*/
-
-
-
-#achievements {
-
-    justify-content: center;
-    align-items: center;
-
-}
-
+/* Styles for blocks at the bottom */
 #blockContainer {
     width: 100%;
     height: 50%;
@@ -265,16 +255,13 @@ body {
 
 .blocks {
     display: flex;
-    /*background-color: rgb(255, 0, 0);*/
-    /*border-style: solid;*/
     width: 50%;
     padding: 5px 10px 5px 10px;
-    /*overflow-y: scroll;*/
-    /*border-color: black;*/
+
 }
 
 .blackText *{
-    color: #434343 !important;
+    color: #434343;
 }
 
 .blocks>div {
@@ -293,54 +280,12 @@ body {
     box-shadow: inset 0 0 10px #181818 ;
 }
 
-#achievementsContainer {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.achievement {
+/* Specific styling for the blocks */
+#notifications,
+#weeklyTasks {
     display: block;
-    min-width: 100px;
-    width: 33.33%;
-    height: 100px;
-    margin: 0 15px 0 15px;
-    margin-top: 10px;
-}
-
-.achievement>.image {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.achievementTxt {
-    display: flex;
-    margin: 5px 0 5px 0;
-
-}
-
-.achievementTxt>div {
-    margin: auto;
-}
-
-.progressbar {
-    width: 100%;
-    height: 8px;
-    border-radius: 10px;
-    background-color: black;
-    margin-top: 2px;
-    padding: 2px;
-}
-
-.progress {
-    width: 50%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: yellow;
+    color: white;
 }
 
 .message {
@@ -355,22 +300,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(250, 50, 50);
-    color: white;
+    color: white !important;
     border-radius: 5px;
     min-width: 30px;
     height: calc(1em + 12px);
-}
-
-.lightblue {
-    background-color: #63d3f5;
-}
-
-.purple {
-    background-color: #de0bde;
-}
-
-.yellow {
-    background-color: #ffd91e;
 }
 
 .messageList {
@@ -379,58 +312,34 @@ body {
     min-height: 100%;
 }
 
-tr:not(:first-of-type)>td {
 
-    border-top-color: black;
-    border-top-style: dotted;
-    border-top-width: 1px;
+/* Style if empty */
+#notificationContainer:empty ~ .emptyClass{
 
-}
-
-tr:not(:last-of-type) {
-    height: 65px;
-}
-
-td {
-    margin: 0;
-    display: flex;
-    padding: 20px 10px 20px 10px;
-    align-items: center;
-    transition: .2s ease;
-}
-
-
-tr{
-    transition: .1s ease;
-}
-
-tr:hover {
-    cursor: pointer;
-    box-shadow: 0 0 20px black;
-    background-color: rgba(255,255,255,.2);
-}
-
-table tr:nth-child(even)>td {
-    /*background-color: #eee;*/
-    /*box-shadow: inset black 0 0 5px;*/
+    display: block !important;
 
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
+#taskContainer:empty ~ .emptyClass{
 
-#video {
-    filter: blur(10px);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    display: block !important;
 
 }
 
-.image {
-	height: calc(100% - 20px);
-	margin: 10px;
+.emptyClass{
+
+    display: none;
+    opacity: 0.7;
+}
+
+.emptyClass > tr > td > span {
+    text-align: center;
+}
+
+.emptyClass > tr:hover {
+
+    box-shadow: none;
+    cursor: default;
+    background-color: rgba(0,0,0,0);
+
 }

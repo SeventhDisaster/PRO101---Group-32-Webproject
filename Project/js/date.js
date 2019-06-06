@@ -1,3 +1,5 @@
+
+// Accepts a string, returns a js date object
 function stringToDate(str) {
 
     let date = ["", "", ""];
@@ -18,11 +20,13 @@ function stringToDate(str) {
     return new Date(date[0], date[1] - 1, date[2]);
 }
 
+// Accepts date object, returns string
 function dateToString(date) {
 
     return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 }
 
+// Calculates time between the dates, returns hours
 function timeBetweenDate(from, to) {
 
     if (!to) {
@@ -81,6 +85,7 @@ function getMonthName(month) {
 
 }
 
+// Returns a nice format
 function formatMonthToString(day, month, year) {
 
     if (!day) {
@@ -102,6 +107,7 @@ function formatMonthToString(day, month, year) {
 
 }
 
+// Returns the date in more readable language; Today, Yesterday, Tommorrow
 function getTimeTo(date1, date2, f, arg) {
 
     switch (timeBetweenDate(new Date(date1.getFullYear(), date1.getMonth(), date1.getDate()), new Date(date2.getFullYear(), date2.getMonth(), date2.getDate()))/24) {
